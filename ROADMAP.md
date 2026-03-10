@@ -6,7 +6,7 @@
 
 ## Phase 1 — Foundation
 
-- [ ] 1.1 — Project scaffold
+- [x] 1.1 — Project scaffold
       Directories, .gitignore, GitHub Pages workflow stub
       Files: site/, skills/, .github/workflows/
 

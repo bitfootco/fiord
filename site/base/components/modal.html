@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Base / Modal</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 p-8">
+  <div class="max-w-2xl mx-auto">
+
+    <!-- Demo trigger (outside component markers) -->
+    <button
+      data-fiord-modal-open="modal-demo"
+      class="px-4 py-2 bg-slate-800 dark:bg-slate-200 text-white dark:text-slate-900 rounded-md text-sm font-medium hover:bg-slate-700 dark:hover:bg-slate-300 transition-colors"
+    >
+      Open Modal
+    </button>
+
+    <!-- FIORD:COMPONENT_START aesthetic="base" component="modal" -->
+    <div
+      id="modal-demo"
+      data-fiord-modal
+      class="hidden fixed inset-0 z-50 flex items-center justify-center"
+      aria-modal="true"
+      role="dialog"
+      aria-labelledby="modal-title"
+    >
+      <!-- Backdrop -->
+      <div
+        data-fiord-close
+        class="absolute inset-0 bg-black/50 dark:bg-black/70"
+        aria-hidden="true"
+      ></div>
+
+      <!-- Modal panel -->
+      <div class="relative z-10 w-full max-w-md mx-4 bg-white dark:bg-gray-800 rounded-lg shadow-xl">
+        <!-- Header -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-gray-200 dark:border-gray-700">
+          <h2 id="modal-title" class="text-base font-semibold text-gray-900 dark:text-gray-100">
+            Delete Project
+          </h2>
+          <button
+            data-fiord-close
+            class="p-1 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 rounded transition-colors"
+            aria-label="Close modal"
+          >
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Body -->
+        <div class="px-6 py-5">
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+            Are you sure you want to delete <strong class="text-gray-900 dark:text-gray-100">Project Atlas</strong>?
+            This action is permanent and cannot be undone. All associated data, including pipelines,
+            reports, and collaborator access, will be removed immediately.
+          </p>
+        </div>
+
+        <!-- Footer -->
+        <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-gray-200 dark:border-gray-700">
+          <button
+            data-fiord-close
+            class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 rounded-md hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+          >
+            Cancel
+          </button>
+          <button
+            class="px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600 transition-colors"
+          >
+            Delete Project
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+
+  <!-- FIORD:JS_START -->
+  <script>
+    (function () {
+      function openModal(modal) {
+        modal.classList.remove('hidden');
+        modal.removeAttribute('aria-hidden');
+        document.body.style.overflow = 'hidden';
+        const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus();
+      }
+
+      function closeModal(modal) {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Open triggers
+      document.querySelectorAll('[data-fiord-modal-open]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var targetId = trigger.getAttribute('data-fiord-modal-open');
+          var modal = document.getElementById(targetId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      // Close triggers (X button + Cancel button)
+      document.querySelectorAll('[data-fiord-modal]').forEach(function (modal) {
+        modal.querySelectorAll('[data-fiord-close]').forEach(function (closer) {
+          closer.addEventListener('click', function () {
+            closeModal(modal);
+          });
+        });
+      });
+
+      // Backdrop click closes modal
+      document.querySelectorAll('[data-fiord-modal]').forEach(function (modal) {
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal(modal);
+        });
+      });
+
+      // Escape key closes modal
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[data-fiord-modal]:not(.hidden)').forEach(function (modal) {
+            closeModal(modal);
+          });
+        }
+      });
+    })();
+  </script>
+  <!-- FIORD:JS_END -->
+
+</body>
+</html>
