@@ -2,7 +2,7 @@
 
 ## What This Is
 
-Fiord is an AI-native Tailwind component library hosted at **https://bitfootco.github.io/fiord**. Components are self-contained HTML files with Tailwind CDN classes, organized by aesthetic (visual identity). You fetch markup directly from the library and integrate it into the codebase — there is no package to install.
+Fiord is an AI-native Tailwind component library hosted at **https://fiord.design**. Components are self-contained HTML files with Tailwind CDN classes, organized by aesthetic (visual identity). You fetch markup directly from the library and integrate it into the codebase — there is no package to install.
 
 ---
 
@@ -26,7 +26,7 @@ Follow these steps in order.
 Fetch the manifest to understand what's available:
 
 ```
-GET https://bitfootco.github.io/fiord/manifest.json
+GET https://fiord.design/manifest.json
 ```
 
 This returns the full list of components (with paths and categories), available aesthetics (with descriptions), and the base URL. Read it fully before proceeding.
@@ -46,7 +46,7 @@ Available aesthetics are listed in `manifest.json` under `"aesthetics"`. Each ha
 Fetch the aesthetic's `meta.json` to understand the full design system before building:
 
 ```
-GET https://bitfootco.github.io/fiord/aesthetics/{name}/meta.json
+GET https://fiord.design/aesthetics/{name}/meta.json
 ```
 
 Read the palette, typography, spacing, borders, and shadows. Use this to extrapolate when building components not covered by the library, or when the user needs custom markup that should match the aesthetic.
@@ -57,12 +57,12 @@ Based on the user's task, identify which components from the catalog are require
 
 Use the **aesthetic's component directory** when available:
 ```
-https://bitfootco.github.io/fiord/aesthetics/{name}/components/{component}.html
+https://fiord.design/aesthetics/{name}/components/{component}.html
 ```
 
 Fall back to **base components** for any component not yet implemented in the aesthetic:
 ```
-https://bitfootco.github.io/fiord/base/components/{component}.html
+https://fiord.design/base/components/{component}.html
 ```
 
 ### Step 5: Fetch Each Component Page

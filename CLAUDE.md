@@ -458,3 +458,45 @@ The full set of components Fiord provides, organized by category. Every componen
 ## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) for the development roadmap and milestone tracking.
+
+---
+
+## Working Notes for Claude
+
+### Context efficiency — follow these rules strictly
+
+This project contains 42+ HTML component files that are large. Loading them all into the main context window will exhaust the token budget fast. To avoid this:
+
+**Use subagents for bulk file work.**
+Any task that touches more than ~3 files — reading, creating, or editing — should be delegated to an `Agent` tool call (subagent_type omitted = general-purpose). The subagent does the heavy lifting in its own context; only the result comes back.
+
+**Use Grep to extract, not Read.**
+When you need the markup from inside a component file, use `Grep` with `output_mode: "content"` to pull just the lines between sentinel comments. Do not Read the whole file to get 10 lines of markup.
+
+**Use Read with offset + limit.**
+If you must read a component file, use `offset` and `limit` to target only the section you need — never load a full 150-line HTML file to read 20 lines.
+
+**Never read multiple component files sequentially in the main context.**
+If a task requires reading several component files (e.g., building a category page), delegate it to a subagent. Do not loop through files in the main conversation.
+
+**Confirm the approach before starting large tasks.**
+If a task will require reading or writing more than 3 files, briefly describe the plan and confirm before executing. This prevents wasted context on a wrong approach.
+
+### Scaffold-first pattern — use this for all multi-component pages
+
+When building a page that will contain multiple components (category pages, demo pages, index pages):
+
+1. **Scaffold first.** Write the complete page structure using concept placeholders — semantic `<div>` blocks with a comment like `<!-- COMPONENT: button -->` marking where each component will go. No real component markup yet. Commit this skeleton before touching any component files.
+
+2. **Fill one at a time.** Read a single component file, extract its markup with Grep, insert it into the placeholder, done. Repeat per component. Each fill step touches exactly one file.
+
+3. **Never pull all components first.** Do not read 6 files then write the page. Read one, write it in, move to the next.
+
+### Subagent scope — keep it tiny
+
+Subagents that are given too much work (read 10 files, create 8 pages) will time out or produce incomplete output. Scope each subagent to a single, well-defined deliverable:
+- One page created or updated
+- One file read and summarised
+- One component extracted and returned
+
+If a task has multiple deliverables, run multiple sequential subagent calls rather than one large one. Prefer doing work directly in the main context (with targeted Grep/Read) over spawning an agent, unless the file count would genuinely flood context.

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Base / Data Display</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-900 font-sans">
+
+  <header class="bg-white border-b border-gray-200 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Data Display</h1>
+      </div>
+      <a href="index.html" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#card" class="text-gray-400 hover:text-gray-700 py-1">Card</a>
+      <a href="#table" class="text-gray-400 hover:text-gray-700 py-1">Table</a>
+      <a href="#stat" class="text-gray-400 hover:text-gray-700 py-1">Stat</a>
+      <a href="#badge" class="text-gray-400 hover:text-gray-700 py-1">Badge</a>
+      <a href="#avatar" class="text-gray-400 hover:text-gray-700 py-1">Avatar</a>
+      <a href="#list" class="text-gray-400 hover:text-gray-700 py-1">List</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="card">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Card</h2>
+        <p class="text-sm text-gray-500">Content container in basic, elevated, and interactive variants with consistent padding.</p>
+        <a href="components/card.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="space-y-6">
+          <div class="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+            <div class="mb-3 flex items-start justify-between">
+              <span class="inline-flex items-center rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">Engineering</span>
+              <span class="text-xs text-gray-400 dark:text-gray-500">Mar 8, 2026</span>
+            </div>
+            <h3 class="mb-2 text-base font-semibold text-gray-900 dark:text-gray-100">Migrating to the new API Gateway</h3>
+            <p class="text-sm leading-relaxed text-gray-600 dark:text-gray-400">We've completed the migration of all internal services to the new API Gateway. Response times improved by 40% and error rates dropped significantly across all regions.</p>
+            <div class="mt-4 flex items-center gap-3">
+              <img src="https://ui-avatars.com/api/?name=Tom+Ridley&background=6b7280&color=fff&size=32" alt="Tom Ridley" class="h-7 w-7 rounded-full">
+              <span class="text-xs text-gray-500 dark:text-gray-400">Tom Ridley · 5 min read</span>
+            </div>
+          </div>
+          <div class="rounded-lg border border-gray-200 bg-white p-6 shadow-md dark:border-gray-700 dark:bg-gray-800">
+            <div class="mb-4 flex items-center gap-4">
+              <div class="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-900 dark:bg-gray-100">
+                <svg class="h-6 w-6 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75M3.75 10.125v3.75" /></svg>
+              </div>
+              <div>
+                <p class="text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Starter Plan</p>
+                <p class="text-2xl font-bold text-gray-900 dark:text-gray-100">$29<span class="text-sm font-normal text-gray-500 dark:text-gray-400">/mo</span></p>
+              </div>
+            </div>
+            <button class="w-full rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 dark:bg-gray-100 dark:text-gray-900">Get started</button>
+          </div>
+          <div class="group cursor-pointer rounded-lg border border-gray-200 bg-white p-6 shadow-sm transition-all hover:border-gray-300 hover:shadow-md dark:border-gray-700 dark:bg-gray-800">
+            <div class="mb-3 flex items-center justify-between">
+              <span class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500"><span class="h-2 w-2 rounded-full bg-green-400"></span>Available</span>
+            </div>
+            <h3 class="mb-1 text-base font-semibold text-gray-900 dark:text-gray-100">Senior Frontend Engineer</h3>
+            <p class="mb-3 text-sm text-gray-500 dark:text-gray-400">Meridian · Remote · Full-time</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">React</span>
+              <span class="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">TypeScript</span>
+              <span class="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs text-gray-600 dark:bg-gray-700 dark:text-gray-300">$140–180k</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="table">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Table</h2>
+        <p class="text-sm text-gray-500">Data table with header row, striped rows, and horizontal scroll on small viewports.</p>
+        <a href="components/table.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <div class="overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+
+      <!-- Table header with search/filter -->
+      <div class="flex flex-col gap-3 border-b border-gray-200 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-gray-700">
+        <div>
+          <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Invoices</h2>
+          <p class="text-xs text-gray-500 dark:text-gray-400">48 total invoices</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative">
+            <svg class="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search invoices…"
+              class="rounded-md border border-gray-300 bg-white py-1.5 pl-8 pr-3 text-sm text-gray-900 placeholder-gray-400 focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-500"
+            >
+          </div>
+          <select class="rounded-md border border-gray-300 bg-white py-1.5 pl-3 pr-8 text-sm text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300">
+            <option>All statuses</option>
+            <option>Paid</option>
+            <option>Pending</option>
+            <option>Overdue</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Responsive table wrapper -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-gray-200 bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60">
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Invoice</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Date</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Customer</th>
+              <th class="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Amount</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+            <tr class="bg-white hover:bg-gray-50 dark:bg-transparent dark:hover:bg-gray-700/40">
+              <td class="px-4 py-3 font-mono text-xs font-medium text-gray-700 dark:text-gray-300">INV-2026-0091</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">Mar 8, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Priya+Nair&background=6b7280&color=fff&size=24" alt="Priya Nair" class="h-6 w-6 rounded-full">
+                  <span class="text-gray-900 dark:text-gray-100">Priya Nair</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-gray-900 dark:text-gray-100">$1,840.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">Paid</span>
+              </td>
+            </tr>
+            <tr class="bg-gray-50/50 hover:bg-gray-50 dark:bg-gray-800/20 dark:hover:bg-gray-700/40">
+              <td class="px-4 py-3 font-mono text-xs font-medium text-gray-700 dark:text-gray-300">INV-2026-0090</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">Mar 5, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=James+Okafor&background=6b7280&color=fff&size=24" alt="James Okafor" class="h-6 w-6 rounded-full">
+                  <span class="text-gray-900 dark:text-gray-100">James Okafor</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-gray-900 dark:text-gray-100">$3,200.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">Pending</span>
+              </td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50 dark:bg-transparent dark:hover:bg-gray-700/40">
+              <td class="px-4 py-3 font-mono text-xs font-medium text-gray-700 dark:text-gray-300">INV-2026-0089</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">Feb 28, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Lena+Fischer&background=6b7280&color=fff&size=24" alt="Lena Fischer" class="h-6 w-6 rounded-full">
+                  <span class="text-gray-900 dark:text-gray-100">Lena Fischer</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-gray-900 dark:text-gray-100">$620.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">Overdue</span>
+              </td>
+            </tr>
+            <tr class="bg-gray-50/50 hover:bg-gray-50 dark:bg-gray-800/20 dark:hover:bg-gray-700/40">
+              <td class="px-4 py-3 font-mono text-xs font-medium text-gray-700 dark:text-gray-300">INV-2026-0088</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">Feb 22, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Marco+Rossi&background=6b7280&color=fff&size=24" alt="Marco Rossi" class="h-6 w-6 rounded-full">
+                  <span class="text-gray-900 dark:text-gray-100">Marco Rossi</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-gray-900 dark:text-gray-100">$5,100.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">Paid</span>
+              </td>
+            </tr>
+            <tr class="bg-white hover:bg-gray-50 dark:bg-transparent dark:hover:bg-gray-700/40">
+              <td class="px-4 py-3 font-mono text-xs font-medium text-gray-700 dark:text-gray-300">INV-2026-0087</td>
+              <td class="px-4 py-3 text-gray-600 dark:text-gray-400">Feb 15, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Sofia+Andersen&background=6b7280&color=fff&size=24" alt="Sofia Andersen" class="h-6 w-6 rounded-full">
+                  <span class="text-gray-900 dark:text-gray-100">Sofia Andersen</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-gray-900 dark:text-gray-100">$2,475.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">Processing</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table footer -->
+      <div class="flex items-center justify-between border-t border-gray-200 px-4 py-3 dark:border-gray-700">
+        <p class="text-xs text-gray-500 dark:text-gray-400">Showing 5 of 48 invoices</p>
+        <div class="flex items-center gap-1">
+          <button class="rounded px-2 py-1 text-xs text-gray-500 hover:bg-gray-100 disabled:opacity-40 dark:text-gray-400 dark:hover:bg-gray-700" disabled>Previous</button>
+          <button class="rounded px-2 py-1 text-xs text-gray-500 hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700">Next</button>
+        </div>
+      </div>
+
+    </div>
+      </div>
+    </section>
+
+    <section id="stat">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Stat</h2>
+        <p class="text-sm text-gray-500">Key metric display showing a headline number, label, and optional trend indicator.</p>
+        <a href="components/stat.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Total Revenue -->
+      <div class="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Total Revenue</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            12%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-gray-900 dark:text-gray-100">$84,320</p>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">vs. $75,285 last month</p>
+      </div>
+
+      <!-- Active Users -->
+      <div class="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Active Users</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            3%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-gray-900 dark:text-gray-100">12,847</p>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">vs. 12,473 last month</p>
+      </div>
+
+      <!-- Conversion Rate -->
+      <div class="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Conversion Rate</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+            0.5%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-gray-900 dark:text-gray-100">3.24%</p>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">vs. 3.74% last month</p>
+      </div>
+
+      <!-- Avg Order Value -->
+      <div class="rounded-lg border border-gray-200 bg-white p-5 dark:border-gray-700 dark:bg-gray-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-gray-500 dark:text-gray-400">Avg Order Value</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            8%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-gray-900 dark:text-gray-100">$218</p>
+        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">vs. $202 last month</p>
+      </div>
+
+    </div>
+      </div>
+    </section>
+
+    <section id="badge">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Badge</h2>
+        <p class="text-sm text-gray-500">Compact status indicator and label tag in multiple semantic color variants.</p>
+        <a href="components/badge.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        
+    <!-- Status badges — pill -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Status — Pill</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-green-500"></span>
+          Active
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-yellow-500"></span>
+          Pending
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-red-100 px-3 py-1 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-red-500"></span>
+          Failed
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+          <span class="h-1.5 w-1.5 rounded-full bg-blue-500"></span>
+          Processing
+        </span>
+        <span class="inline-flex items-center gap-1.5 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-gray-400"></span>
+          Draft
+        </span>
+      </div>
+    </div>
+
+    <!-- Status badges — square -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Status — Square</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center rounded-md bg-green-100 px-2.5 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">Active</span>
+        <span class="inline-flex items-center rounded-md bg-yellow-100 px-2.5 py-1 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">Pending</span>
+        <span class="inline-flex items-center rounded-md bg-red-100 px-2.5 py-1 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">Failed</span>
+        <span class="inline-flex items-center rounded-md bg-blue-100 px-2.5 py-1 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">Processing</span>
+        <span class="inline-flex items-center rounded-md bg-gray-100 px-2.5 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">Draft</span>
+      </div>
+    </div>
+
+    <!-- Colored tags -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Tags</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center rounded-full bg-purple-100 px-3 py-1 text-xs font-medium text-purple-700 dark:bg-purple-900/30 dark:text-purple-400">Design</span>
+        <span class="inline-flex items-center rounded-full bg-pink-100 px-3 py-1 text-xs font-medium text-pink-700 dark:bg-pink-900/30 dark:text-pink-400">Marketing</span>
+        <span class="inline-flex items-center rounded-full bg-orange-100 px-3 py-1 text-xs font-medium text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">Engineering</span>
+        <span class="inline-flex items-center rounded-full bg-teal-100 px-3 py-1 text-xs font-medium text-teal-700 dark:bg-teal-900/30 dark:text-teal-400">Sales</span>
+        <span class="inline-flex items-center rounded-full bg-indigo-100 px-3 py-1 text-xs font-medium text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400">Product</span>
+        <span class="inline-flex items-center rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium text-cyan-700 dark:bg-cyan-900/30 dark:text-cyan-400">Support</span>
+      </div>
+    </div>
+
+    <!-- Badges with icons -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">With Icons</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          Verified
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-700 dark:bg-yellow-900/30 dark:text-yellow-400">
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+          Needs Review
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600 dark:bg-gray-700 dark:text-gray-300">
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          Scheduled
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-blue-100 px-3 py-1 text-xs font-medium text-blue-700 dark:bg-blue-900/30 dark:text-blue-400">
+          <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0l3.181 3.183a8.25 8.25 0 0013.803-3.7M4.031 9.865a8.25 8.25 0 0113.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+          Syncing
+        </span>
+      </div>
+    </div>
+
+    <!-- Dismissible tags -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Dismissible</p>
+      <div class="flex flex-wrap items-center gap-2">
+        <span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+          React
+          <button class="ml-0.5 rounded-full text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="Remove React tag">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+          TypeScript
+          <button class="ml-0.5 rounded-full text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="Remove TypeScript tag">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </span>
+        <span class="inline-flex items-center gap-1 rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+          Tailwind CSS
+          <button class="ml-0.5 rounded-full text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="Remove Tailwind CSS tag">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </span>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="avatar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Avatar</h2>
+        <p class="text-sm text-gray-500">User image in circle with fallback initials and size variants.</p>
+        <a href="components/avatar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        
+    <!-- Avatar with image -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">With Image</p>
+      <div class="flex items-center gap-4">
+        <img
+          src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=128"
+          alt="Sarah Chen"
+          class="h-12 w-12 rounded-full object-cover ring-2 ring-white dark:ring-gray-800"
+        >
+        <div>
+          <p class="text-sm font-medium text-gray-900 dark:text-gray-100">Sarah Chen</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">Product Designer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar with initials fallback -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Initials Fallback</p>
+      <div class="flex items-center gap-3">
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-gray-600 text-sm font-semibold text-white dark:bg-gray-500" aria-label="Tom Ridley">TR</div>
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-sm font-semibold text-white" aria-label="Priya Nair">PN</div>
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-600 text-sm font-semibold text-white" aria-label="James Okafor">JO</div>
+        <div class="flex h-12 w-12 items-center justify-center rounded-full bg-rose-600 text-sm font-semibold text-white" aria-label="Lena Fischer">LF</div>
+      </div>
+    </div>
+
+    <!-- Avatar sizes -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Sizes</p>
+      <div class="flex items-end gap-4">
+        <div class="flex flex-col items-center gap-1.5">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=32"
+            alt="Sarah Chen"
+            class="h-6 w-6 rounded-full object-cover"
+          >
+          <span class="text-xs text-gray-400 dark:text-gray-500">xs</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=32"
+            alt="Sarah Chen"
+            class="h-8 w-8 rounded-full object-cover"
+          >
+          <span class="text-xs text-gray-400 dark:text-gray-500">sm</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=64"
+            alt="Sarah Chen"
+            class="h-10 w-10 rounded-full object-cover"
+          >
+          <span class="text-xs text-gray-400 dark:text-gray-500">md</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=64"
+            alt="Sarah Chen"
+            class="h-14 w-14 rounded-full object-cover"
+          >
+          <span class="text-xs text-gray-400 dark:text-gray-500">lg</span>
+        </div>
+        <div class="flex flex-col items-center gap-1.5">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=128"
+            alt="Sarah Chen"
+            class="h-20 w-20 rounded-full object-cover"
+          >
+          <span class="text-xs text-gray-400 dark:text-gray-500">xl</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Avatar group (stacked) -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">Group (Stacked)</p>
+      <div class="flex items-center">
+        <img
+          src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=64"
+          alt="Sarah Chen"
+          class="h-9 w-9 rounded-full object-cover ring-2 ring-white dark:ring-gray-800"
+        >
+        <img
+          src="https://ui-avatars.com/api/?name=Tom+Ridley&background=10b981&color=fff&size=64"
+          alt="Tom Ridley"
+          class="-ml-2.5 h-9 w-9 rounded-full object-cover ring-2 ring-white dark:ring-gray-800"
+        >
+        <img
+          src="https://ui-avatars.com/api/?name=Priya+Nair&background=f59e0b&color=fff&size=64"
+          alt="Priya Nair"
+          class="-ml-2.5 h-9 w-9 rounded-full object-cover ring-2 ring-white dark:ring-gray-800"
+        >
+        <img
+          src="https://ui-avatars.com/api/?name=James+Okafor&background=ef4444&color=fff&size=64"
+          alt="James Okafor"
+          class="-ml-2.5 h-9 w-9 rounded-full object-cover ring-2 ring-white dark:ring-gray-800"
+        >
+        <div class="-ml-2.5 flex h-9 w-9 items-center justify-center rounded-full border-2 border-white bg-gray-100 ring-2 ring-white text-xs font-medium text-gray-600 dark:border-gray-800 dark:bg-gray-700 dark:ring-gray-800 dark:text-gray-300">
+          +4
+        </div>
+        <span class="ml-3 text-sm text-gray-500 dark:text-gray-400">8 members</span>
+      </div>
+    </div>
+
+    <!-- Avatar with online status -->
+    <div>
+      <p class="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400 dark:text-gray-500">With Status Indicator</p>
+      <div class="flex items-center gap-6">
+        <!-- Online -->
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="relative">
+            <img
+              src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=64"
+              alt="Sarah Chen"
+              class="h-11 w-11 rounded-full object-cover"
+            >
+            <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-green-400 ring-2 ring-white dark:ring-gray-800"></span>
+          </div>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Online</span>
+        </div>
+        <!-- Away -->
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="relative">
+            <img
+              src="https://ui-avatars.com/api/?name=Tom+Ridley&background=10b981&color=fff&size=64"
+              alt="Tom Ridley"
+              class="h-11 w-11 rounded-full object-cover"
+            >
+            <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-yellow-400 ring-2 ring-white dark:ring-gray-800"></span>
+          </div>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Away</span>
+        </div>
+        <!-- Offline -->
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="relative">
+            <img
+              src="https://ui-avatars.com/api/?name=Priya+Nair&background=f59e0b&color=fff&size=64"
+              alt="Priya Nair"
+              class="h-11 w-11 rounded-full object-cover"
+            >
+            <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-gray-400 ring-2 ring-white dark:ring-gray-800"></span>
+          </div>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Offline</span>
+        </div>
+        <!-- Busy -->
+        <div class="flex flex-col items-center gap-1.5">
+          <div class="relative">
+            <img
+              src="https://ui-avatars.com/api/?name=James+Okafor&background=ef4444&color=fff&size=64"
+              alt="James Okafor"
+              class="h-11 w-11 rounded-full object-cover"
+            >
+            <span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full bg-red-500 ring-2 ring-white dark:ring-gray-800"></span>
+          </div>
+          <span class="text-xs text-gray-400 dark:text-gray-500">Busy</span>
+        </div>
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="list">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">List</h2>
+        <p class="text-sm text-gray-500">Structured list in simple, icon-prefixed, and description variants.</p>
+        <a href="components/list.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        
+    <!-- Simple nav list -->
+    <div class="rounded-lg border border-gray-200 bg-white overflow-hidden dark:border-gray-700 dark:bg-gray-800">
+      <div class="border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Quick Links</h3>
+      </div>
+      <ul class="divide-y divide-gray-100 dark:divide-gray-700">
+        <li>
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <span>Getting started guide</span>
+            <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <span>API reference</span>
+            <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <span>Changelog</span>
+            <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <span>Community forums</span>
+            <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="flex items-center justify-between px-4 py-3 text-sm text-gray-700 hover:bg-gray-50 dark:text-gray-300 dark:hover:bg-gray-700/50">
+            <span>Status page</span>
+            <svg class="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Icon list (feature list) -->
+    <div class="rounded-lg border border-gray-200 bg-white p-6 dark:border-gray-700 dark:bg-gray-800">
+      <h3 class="mb-4 text-sm font-semibold text-gray-900 dark:text-gray-100">Everything you need to ship faster</h3>
+      <ul class="space-y-3">
+        <li class="flex items-start gap-3">
+          <svg class="mt-0.5 h-4 w-4 shrink-0 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <div>
+            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">CI/CD pipeline automation</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Deploy to any cloud provider with zero-config pipelines.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="mt-0.5 h-4 w-4 shrink-0 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <div>
+            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Automatic preview environments</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Every pull request gets its own isolated staging environment.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="mt-0.5 h-4 w-4 shrink-0 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <div>
+            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Environment variable management</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Secrets are encrypted at rest and never exposed in logs.</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <svg class="mt-0.5 h-4 w-4 shrink-0 text-gray-500 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+          </svg>
+          <div>
+            <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Usage analytics and alerts</span>
+            <p class="text-xs text-gray-500 dark:text-gray-400">Real-time dashboards with configurable threshold alerts.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Description list (key-value settings summary) -->
+    <div class="rounded-lg border border-gray-200 bg-white overflow-hidden dark:border-gray-700 dark:bg-gray-800">
+      <div class="flex items-center justify-between border-b border-gray-200 px-4 py-3 dark:border-gray-700">
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Account Settings</h3>
+        <a href="#" class="text-xs font-medium text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Edit</a>
+      </div>
+      <dl class="divide-y divide-gray-100 dark:divide-gray-700">
+        <div class="flex items-center justify-between px-4 py-3">
+          <dt class="text-xs font-medium text-gray-500 dark:text-gray-400">Full name</dt>
+          <dd class="text-sm text-gray-900 dark:text-gray-100">Sarah Chen</dd>
+        </div>
+        <div class="flex items-center justify-between px-4 py-3">
+          <dt class="text-xs font-medium text-gray-500 dark:text-gray-400">Email address</dt>
+          <dd class="text-sm text-gray-900 dark:text-gray-100">sarah.chen@meridian.io</dd>
+        </div>
+        <div class="flex items-center justify-between px-4 py-3">
+          <dt class="text-xs font-medium text-gray-500 dark:text-gray-400">Plan</dt>
+          <dd class="flex items-center gap-2 text-sm text-gray-900 dark:text-gray-100">
+            Pro
+            <span class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">Active</span>
+          </dd>
+        </div>
+        <div class="flex items-center justify-between px-4 py-3">
+          <dt class="text-xs font-medium text-gray-500 dark:text-gray-400">Member since</dt>
+          <dd class="text-sm text-gray-900 dark:text-gray-100">January 14, 2024</dd>
+        </div>
+        <div class="flex items-center justify-between px-4 py-3">
+          <dt class="text-xs font-medium text-gray-500 dark:text-gray-400">Two-factor auth</dt>
+          <dd class="text-sm text-gray-900 dark:text-gray-100">
+            <span class="inline-flex items-center gap-1 text-green-600 dark:text-green-400">
+              <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+              </svg>
+              Enabled
+            </span>
+          </dd>
+        </div>
+      </dl>
+    </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="border-t border-gray-100 mt-8 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between text-xs text-gray-400">
+      <span>Fiord — Base / Data Display</span>
+      <a href="index.html" class="hover:text-gray-600">← All categories</a>
+    </div>
+  </footer>
+
+</body>
+</html>
