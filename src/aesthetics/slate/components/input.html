@@ -1,0 +1,67 @@
+    <div class="space-y-5">
+
+      <!-- Default input -->
+      <div>
+        <label for="input-email" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+          Email address
+        </label>
+        <input
+          type="email"
+          id="input-email"
+          name="email"
+          placeholder="you@example.com"
+          class="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 shadow-sm focus:border-[#4F63D2] focus:outline-none focus:ring-2 focus:ring-[#4F63D2] focus:ring-offset-0 transition-colors dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-[#6B7BE0] dark:focus:ring-[#6B7BE0]"
+        />
+      </div>
+
+      <!-- Focused state (visual demo via ring classes) -->
+      <div>
+        <label for="input-name" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+          Full name
+        </label>
+        <input
+          type="text"
+          id="input-name"
+          name="name"
+          value="Jordan Reeves"
+          class="block w-full rounded-md border border-[#4F63D2] bg-white px-3 py-2 text-sm text-slate-900 shadow-sm outline-none ring-2 ring-[#4F63D2] ring-offset-0 transition-colors dark:border-[#6B7BE0] dark:bg-slate-800 dark:text-slate-100 dark:ring-[#6B7BE0]"
+        />
+        <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">This field is shown in a focused state.</p>
+      </div>
+
+      <!-- Error state -->
+      <div>
+        <label for="input-username" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+          Username
+        </label>
+        <input
+          type="text"
+          id="input-username"
+          name="username"
+          value="j reeves!"
+          aria-describedby="input-username-error"
+          aria-invalid="true"
+          class="block w-full rounded-md border border-red-400 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 transition-colors dark:border-red-500 dark:bg-slate-800 dark:text-slate-100"
+        />
+        <p id="input-username-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+          Username can only contain letters, numbers, hyphens, and underscores.
+        </p>
+      </div>
+
+      <!-- Disabled state -->
+      <div>
+        <label for="input-account-id" class="block text-sm font-medium text-slate-400 dark:text-slate-500 mb-1.5">
+          Account ID
+        </label>
+        <input
+          type="text"
+          id="input-account-id"
+          name="account_id"
+          value="acc_8f3k92mxp1"
+          disabled
+          class="block w-full rounded-md border border-slate-200 bg-slate-50 px-3 py-2 text-sm text-slate-400 shadow-sm cursor-not-allowed select-none dark:border-slate-700 dark:bg-slate-900 dark:text-slate-600"
+        />
+        <p class="mt-1.5 text-xs text-slate-400 dark:text-slate-500">Your account ID cannot be changed.</p>
+      </div>
+
+    </div>

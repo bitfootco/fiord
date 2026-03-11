@@ -1,0 +1,8 @@
+{
+  "aesthetic": "base",
+  "display_name": "Base",
+  "tailwind_config": null,
+  "font_import": null,
+  "body_class": "bg-gray-100 p-8 dark:bg-gray-900",
+  "wrapper_class": "max-w-2xl mx-auto space-y-8"
+}

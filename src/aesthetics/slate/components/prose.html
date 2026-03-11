@@ -1,0 +1,66 @@
+    <article class="max-w-prose mx-auto bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 px-8 py-10 shadow-[0_1px_2px_rgba(12,18,34,0.06),0_1px_1px_rgba(12,18,34,0.04)] dark:shadow-none">
+
+      <h1 class="font-['Outfit'] text-3xl font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight mb-2">
+        How connection pooling actually works
+      </h1>
+      <p class="text-sm text-slate-500 dark:text-slate-500 mb-8">
+        Published March 11, 2026 · 8 min read
+      </p>
+
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+        Opening a database connection is expensive. The TCP handshake, TLS negotiation, and PostgreSQL
+        authentication sequence can take 30–100ms — longer than many queries themselves. Connection
+        pooling solves this by keeping a set of established connections ready for reuse.
+      </p>
+
+      <h2 class="font-['Outfit'] text-xl font-semibold text-slate-900 dark:text-slate-100 tracking-tight mt-10 mb-4">
+        The pool lifecycle
+      </h2>
+
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+        When your application starts, the pool opens a configurable number of connections — the
+        <em>minimum pool size</em>. As load increases, the pool grows up to a <strong>maximum</strong>.
+        Connections that sit idle longer than the idle timeout are closed and removed.
+      </p>
+
+      <h3 class="font-['Outfit'] text-lg font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-3">
+        Choosing pool size
+      </h3>
+
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+        A common mistake is setting the pool size to match your thread count. This ignores how
+        PostgreSQL handles connections on the server side. Each connection consumes roughly 5–10 MB
+        of server memory. Better heuristics include:
+      </p>
+
+      <ul class="list-disc list-inside space-y-2 text-base text-slate-700 dark:text-slate-300 mb-6 pl-2">
+        <li>Start with <code class="text-sm font-['JetBrains_Mono'] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300">2 × CPU cores</code> on the database host</li>
+        <li>Monitor <code class="text-sm font-['JetBrains_Mono'] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300">pg_stat_activity</code> in production</li>
+        <li>Tune down if most connections are in the <em>idle</em> state</li>
+      </ul>
+
+      <h3 class="font-['Outfit'] text-lg font-semibold text-slate-900 dark:text-slate-100 mt-8 mb-3">
+        PgBouncer vs application-level pooling
+      </h3>
+
+      <ol class="list-decimal list-inside space-y-2 text-base text-slate-700 dark:text-slate-300 mb-6 pl-2">
+        <li>Application-level poolers (HikariCP, pgx) live in your process — lowest latency</li>
+        <li>PgBouncer runs as a sidecar — survives app restarts and consolidates connections</li>
+        <li>RDS Proxy manages credentials rotation without connection churn</li>
+      </ol>
+
+      <blockquote class="border-l-4 border-[#4F63D2] dark:border-[#6B7BE0] pl-5 my-8">
+        <p class="text-base text-slate-600 dark:text-slate-400 italic leading-relaxed">
+          "The right pool size is the smallest one that keeps your p99 latency acceptable under peak load.
+          Bigger pools cause more contention, not less."
+        </p>
+        <footer class="mt-2 text-sm text-slate-500 dark:text-slate-500">— Brandur Leach, Crunchy Data</footer>
+      </blockquote>
+
+      <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+        Before reaching for a proxy, instrument your application. Add connection acquisition time to
+        your traces. If p99 acquisition time is under 5ms, your current setup is likely fine.
+        Optimize the queries, not the pool.
+      </p>
+
+    </article>

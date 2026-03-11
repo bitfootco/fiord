@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "generate": "node scripts/generate.js",
+    "prebuild": "node scripts/generate.js"
   },
   "devDependencies": {
     "astro": "^5.0.0",

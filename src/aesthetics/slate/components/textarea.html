@@ -1,0 +1,42 @@
+    <div class="space-y-5">
+
+      <!-- Default textarea with character count hint -->
+      <div>
+        <div class="flex items-baseline justify-between mb-1.5">
+          <label for="textarea-bio" class="block text-sm font-medium text-slate-700 dark:text-slate-300">
+            Bio
+          </label>
+          <span class="text-xs text-slate-400 dark:text-slate-500">Max 280 characters</span>
+        </div>
+        <textarea
+          id="textarea-bio"
+          name="bio"
+          rows="4"
+          placeholder="Tell us a bit about yourself — your role, interests, or what you're working on."
+          class="block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 shadow-sm focus:border-[#4F63D2] focus:outline-none focus:ring-2 focus:ring-[#4F63D2] focus:ring-offset-0 resize-y transition-colors dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500 dark:focus:border-[#6B7BE0] dark:focus:ring-[#6B7BE0]"
+        ></textarea>
+        <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">Your bio will appear on your public profile.</p>
+      </div>
+
+      <!-- Error state -->
+      <div>
+        <div class="flex items-baseline justify-between mb-1.5">
+          <label for="textarea-description" class="block text-sm font-medium text-slate-700 dark:text-slate-300">
+            Project description
+          </label>
+          <span class="text-xs text-red-500 dark:text-red-400">312 / 300</span>
+        </div>
+        <textarea
+          id="textarea-description"
+          name="description"
+          rows="4"
+          aria-describedby="textarea-description-error"
+          aria-invalid="true"
+          class="block w-full rounded-md border border-red-400 bg-white px-3 py-2 text-sm text-slate-900 placeholder-slate-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 resize-y transition-colors dark:border-red-500 dark:bg-slate-800 dark:text-slate-100"
+        >We're building a distributed caching layer that intelligently prefetches data based on historical access patterns. The system uses a combination of LRU eviction and predictive warming to dramatically reduce cache misses in high-throughput API environments where latency is critical.</textarea>
+        <p id="textarea-description-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+          Description must be 300 characters or fewer. Please shorten your text by 12 characters.
+        </p>
+      </div>
+
+    </div>
