@@ -1,0 +1,483 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Slate / Demo" description="A realistic product page showcasing the Slate aesthetic as a cohesive design system.">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden" style="background: linear-gradient(180deg, #0A0F1A 0%, #0E1525 25%, #111B2E 50%, #0E1525 75%, #0A0F1A 100%);">
+
+    <!-- Subtle background treatment -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-[#4F63D2]/10 rounded-full translate-x-1/2 -translate-y-1/2 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-72 h-72 bg-slate-500/10 rounded-full -translate-x-1/3 translate-y-1/3 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative px-8 pt-20 pb-12 sm:px-16 sm:pt-28 text-center">
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-semibold text-slate-300 bg-white/10 rounded-full border border-white/15">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+        Now generally available
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-['Outfit'] text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight max-w-3xl mx-auto">
+        Ship faster with<br class="hidden sm:block"/>
+        confidence at every push
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg sm:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        Launchpad is the deployment platform for modern engineering teams.
+        Push to git, get a production URL. Zero-config builds, instant rollbacks,
+        and edge-first performance out of the box.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#4F63D2] rounded-md hover:bg-[#3D4FB8] transition-all shadow-lg shadow-[#4F63D2]/25"
+        >
+          Start deploying
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-slate-300 border border-slate-600 rounded-md hover:bg-white/5 hover:text-white transition-colors"
+        >
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Watch demo
+        </a>
+      </div>
+
+      <!-- Social proof -->
+      <p class="mt-8 text-xs text-slate-400">
+        Trusted by 8,200+ teams at companies including Stripe, Vercel, Linear, and Raycast
+      </p>
+    </div>
+
+    <!-- Mock product screenshot -->
+    <div class="relative mx-8 sm:mx-16 mb-10">
+      <div class="rounded-lg border border-slate-700 bg-slate-800/50 overflow-hidden shadow-2xl shadow-slate-950/50" is:raw>
+        <!-- Mock browser chrome -->
+        <div class="flex items-center gap-1.5 px-4 py-3 bg-slate-900 border-b border-slate-700">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+          <div class="ml-2 flex-1 max-w-xs h-5 bg-slate-800 rounded-sm"></div>
+        </div>
+        <!-- Mock dashboard -->
+        <div class="p-6 grid grid-cols-3 gap-4">
+          <div class="col-span-3 sm:col-span-1 bg-slate-900 rounded-lg border border-slate-700 p-4">
+            <div class="h-2 w-16 bg-slate-700 rounded mb-3"></div>
+            <div class="h-8 w-24 bg-slate-100 rounded mb-1"></div>
+            <div class="h-2 w-20 bg-emerald-900 rounded"></div>
+          </div>
+          <div class="col-span-3 sm:col-span-1 bg-slate-900 rounded-lg border border-slate-700 p-4">
+            <div class="h-2 w-20 bg-slate-700 rounded mb-3"></div>
+            <div class="h-8 w-20 bg-slate-100 rounded mb-1"></div>
+            <div class="h-2 w-16 bg-[#2A3180] rounded"></div>
+          </div>
+          <div class="col-span-3 sm:col-span-1 bg-slate-900 rounded-lg border border-slate-700 p-4">
+            <div class="h-2 w-14 bg-slate-700 rounded mb-3"></div>
+            <div class="h-8 w-28 bg-slate-100 rounded mb-1"></div>
+            <div class="h-2 w-12 bg-red-900 rounded"></div>
+          </div>
+          <div class="col-span-3 bg-slate-900 rounded-lg border border-slate-700 p-4 h-28">
+            <div class="h-2 w-24 bg-slate-700 rounded mb-4"></div>
+            <div class="flex items-end gap-1 h-14">
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:40%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:60%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:45%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:80%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:55%"></div>
+              <div class="flex-1 bg-[#F5F6FD]0 rounded-t" style="height:90%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:70%"></div>
+              <div class="flex-1 bg-slate-700 rounded-t" style="height:85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- STATS / PLATFORM METRICS -->
+  <section class="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+    <div class="text-center mb-10">
+      <h2 class="font-['Outfit'] text-3xl font-bold text-slate-900">Built for scale, proven in production</h2>
+      <p class="mt-3 text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+        Launchpad handles millions of deployments every month across teams of all sizes.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <div class="rounded-lg border border-slate-200 bg-white p-5">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Deployments</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            24%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900">3.2M</p>
+        <p class="mt-1 text-xs text-slate-500">this month across all teams</p>
+      </div>
+
+      <div class="rounded-lg border border-slate-200 bg-white p-5">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Uptime</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            0.01%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900">99.99%</p>
+        <p class="mt-1 text-xs text-slate-500">rolling 90-day average</p>
+      </div>
+
+      <div class="rounded-lg border border-slate-200 bg-white p-5">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Avg Build Time</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+            18%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900">14s</p>
+        <p class="mt-1 text-xs text-slate-500">down from 17s last quarter</p>
+      </div>
+
+      <div class="rounded-lg border border-slate-200 bg-white p-5">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500">Edge Regions</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            6
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900">42</p>
+        <p class="mt-1 text-xs text-slate-500">global points of presence</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="bg-white border-y border-slate-200 px-8 py-14 sm:px-12">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <h2 class="font-['Outfit'] text-3xl font-bold text-slate-900">
+          Everything your team needs to ship with confidence
+        </h2>
+        <p class="mt-3 text-base text-slate-600 max-w-xl mx-auto leading-relaxed">
+          From first push to global scale, Launchpad covers the entire deployment lifecycle so your team can focus on building product.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Feature 1 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Instant deploys</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Push to your main branch and get a production URL in seconds. Zero-config builds detect your framework automatically.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Instant rollbacks</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Every deployment is immutable. Roll back to any previous version with a single click, no rebuild required.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Edge-first CDN</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Your app is served from 42 regions worldwide. Static assets, server functions, and middleware all run at the edge.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Built-in SSL</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Automatic HTTPS for every deployment, including preview URLs. Managed certificates with zero configuration.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Deploy notifications</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Get notified on every deploy in Slack, Discord, or via webhook. Custom alerts for failed builds and performance regressions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#F5F6FD] shrink-0">
+            <svg class="w-5 h-5 text-[#3D4FB8]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Outfit'] text-sm font-semibold text-slate-900">Team collaboration</h3>
+            <p class="mt-1 text-sm text-slate-600 leading-relaxed">
+              Preview deployments for every pull request. Leave comments, approve changes, and merge with confidence across your team.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section class="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+    <div class="text-center mb-12">
+      <h2 class="font-['Outfit'] text-3xl font-bold text-slate-900">Simple, transparent pricing</h2>
+      <p class="mt-3 text-base text-slate-600">
+        Start free, scale when you're ready. All plans include a 14-day trial.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
+
+      <!-- Hobby -->
+      <div class="flex flex-col bg-white border border-slate-200 rounded-lg p-6">
+        <div class="mb-6">
+          <h3 class="font-['Outfit'] text-sm font-semibold text-slate-500 uppercase tracking-wide">Hobby</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-slate-900">$0</span>
+            <span class="text-sm text-slate-500">/month</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 leading-snug">
+            Perfect for personal projects and experiments.
+          </p>
+        </div>
+
+        <ul class="space-y-3 mb-8 flex-1" role="list">
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            3 projects
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            100 GB bandwidth/month
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Automatic HTTPS
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Preview deployments
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-400">
+            <svg class="w-4 h-4 text-slate-300 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            Edge functions
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-400">
+            <svg class="w-4 h-4 text-slate-300 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            Analytics
+          </li>
+        </ul>
+
+        <a
+          href="#"
+          class="block text-center px-4 py-2.5 text-sm font-semibold text-slate-700 border border-slate-300 rounded-md hover:bg-slate-50 transition-colors"
+        >
+          Get started free
+        </a>
+      </div>
+
+      <!-- Pro (highlighted) -->
+      <div class="flex flex-col bg-white border-2 border-[#4F63D2] rounded-lg p-6 relative shadow-lg shadow-[#4F63D2]/10">
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-[#3D4FB8] rounded-full">
+            Most Popular
+          </span>
+        </div>
+
+        <div class="mb-6">
+          <h3 class="font-['Outfit'] text-sm font-semibold text-[#3D4FB8] uppercase tracking-wide">Pro</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-slate-900">$20</span>
+            <span class="text-sm text-slate-500">/month per member</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 leading-snug">
+            For teams that need speed, collaboration, and scale.
+          </p>
+        </div>
+
+        <ul class="space-y-3 mb-8 flex-1" role="list">
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Unlimited projects
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            1 TB bandwidth/month
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Edge functions included
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Web analytics
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Password protection
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-400">
+            <svg class="w-4 h-4 text-slate-300 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            SSO + SAML
+          </li>
+        </ul>
+
+        <a
+          href="#"
+          class="block text-center px-4 py-2.5 text-sm font-semibold text-white bg-[#3D4FB8] rounded-md hover:bg-[#3545A0] transition-colors shadow-sm"
+        >
+          Start free trial
+        </a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="flex flex-col bg-white border border-slate-200 rounded-lg p-6">
+        <div class="mb-6">
+          <h3 class="font-['Outfit'] text-sm font-semibold text-slate-500 uppercase tracking-wide">Enterprise</h3>
+          <div class="mt-2 flex items-baseline gap-1">
+            <span class="text-4xl font-bold text-slate-900">Custom</span>
+          </div>
+          <p class="mt-2 text-sm text-slate-600 leading-snug">
+            For organizations with advanced security, compliance, and scale requirements.
+          </p>
+        </div>
+
+        <ul class="space-y-3 mb-8 flex-1" role="list">
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Unlimited everything
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Custom bandwidth limits
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            SSO + SAML + SCIM
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            99.99% uptime SLA
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            Dedicated support engineer
+          </li>
+          <li class="flex items-start gap-2.5 text-sm text-slate-700">
+            <svg class="w-4 h-4 text-[#0F8A6E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+            SOC 2 Type II certified
+          </li>
+        </ul>
+
+        <a
+          href="#"
+          class="block text-center px-4 py-2.5 text-sm font-semibold text-slate-700 border border-slate-300 rounded-md hover:bg-slate-50 transition-colors"
+        >
+          Contact sales
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden px-8 py-14 sm:px-16 text-center" style="background: linear-gradient(180deg, #0A0F1A 0%, #0E1525 25%, #111B2E 50%, #0E1525 75%, #0A0F1A 100%);">
+    <div class="absolute top-0 right-0 w-80 h-80 bg-[#4F63D2]/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="relative">
+      <h2 class="font-['Outfit'] text-3xl sm:text-4xl font-bold text-white leading-tight">
+        Ready to ship your next project?
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-slate-300 max-w-xl mx-auto leading-relaxed">
+        Join 8,200+ teams who deploy with confidence every day. Set up takes less than two minutes.
+        No credit card required.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white bg-[#4F63D2] rounded-md hover:bg-[#3D4FB8] transition-all shadow-lg shadow-[#4F63D2]/25"
+        >
+          Start deploying free
+        </a>
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white border border-slate-600 rounded-lg hover:bg-white/5 transition-colors"
+        >
+          Talk to sales
+        </a>
+      </div>
+      <p class="mt-5 text-sm text-slate-400">Free tier forever &middot; No credit card &middot; SOC 2 Type II certified</p>
+    </div>
+  </section>
+
+</SiteLayout>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Base / Input</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8 dark:bg-gray-900">
+  <div class="max-w-2xl mx-auto space-y-8">
+
+    <!-- FIORD:COMPONENT_START aesthetic="base" component="input" -->
+    <div class="space-y-5">
+
+      <!-- Default input -->
+      <div>
+        <label for="input-email" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+          Email address
+        </label>
+        <input
+          type="email"
+          id="input-email"
+          name="email"
+          placeholder="you@example.com"
+          class="block w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:border-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-0 transition-colors dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100 dark:placeholder-gray-500 dark:focus:border-gray-400 dark:focus:ring-gray-400"
+        />
+      </div>
+
+      <!-- Focused state (visual demo via ring classes) -->
+      <div>
+        <label for="input-name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+          Full name
+        </label>
+        <input
+          type="text"
+          id="input-name"
+          name="name"
+          value="Jordan Reeves"
+          class="block w-full rounded-md border border-gray-500 bg-white px-3 py-2 text-sm text-gray-900 shadow-sm outline-none ring-2 ring-gray-500 ring-offset-0 transition-colors dark:border-gray-400 dark:bg-gray-800 dark:text-gray-100 dark:ring-gray-400"
+        />
+        <p class="mt-1.5 text-xs text-gray-500 dark:text-gray-400">This field is shown in a focused state.</p>
+      </div>
+
+      <!-- Error state -->
+      <div>
+        <label for="input-username" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1.5">
+          Username
+        </label>
+        <input
+          type="text"
+          id="input-username"
+          name="username"
+          value="j reeves!"
+          aria-describedby="input-username-error"
+          aria-invalid="true"
+          class="block w-full rounded-md border border-red-400 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 transition-colors dark:border-red-500 dark:bg-gray-800 dark:text-gray-100"
+        />
+        <p id="input-username-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+          Username can only contain letters, numbers, hyphens, and underscores.
+        </p>
+      </div>
+
+      <!-- Disabled state -->
+      <div>
+        <label for="input-account-id" class="block text-sm font-medium text-gray-400 dark:text-gray-500 mb-1.5">
+          Account ID
+        </label>
+        <input
+          type="text"
+          id="input-account-id"
+          name="account_id"
+          value="acc_8f3k92mxp1"
+          disabled
+          class="block w-full rounded-md border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-400 shadow-sm cursor-not-allowed select-none dark:border-gray-700 dark:bg-gray-900 dark:text-gray-600"
+        />
+        <p class="mt-1.5 text-xs text-gray-400 dark:text-gray-500">Your account ID cannot be changed.</p>
+      </div>
+
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

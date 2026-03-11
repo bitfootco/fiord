@@ -1,0 +1,742 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Base / Navigation" description="Wayfinding components that help users move through an application or site. 6 components.">
+
+  <!-- Page header -->
+  <header class="bg-white border-b border-gray-200 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Navigation</h1>
+      </div>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#navbar" class="text-gray-400 hover:text-gray-700 py-1">Navbar</a>
+      <a href="#sidebar" class="text-gray-400 hover:text-gray-700 py-1">Sidebar</a>
+      <a href="#breadcrumb" class="text-gray-400 hover:text-gray-700 py-1">Breadcrumb</a>
+      <a href="#tabs" class="text-gray-400 hover:text-gray-700 py-1">Tabs</a>
+      <a href="#pagination" class="text-gray-400 hover:text-gray-700 py-1">Pagination</a>
+      <a href="#footer" class="text-gray-400 hover:text-gray-700 py-1">Footer</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="navbar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Navbar</h2>
+        <p class="text-sm text-gray-500">Top navigation bar with logo, link list, and action slot.</p>
+        <a href="/base/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="rounded-lg border border-gray-200 overflow-hidden">
+            <nav class="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800" aria-label="Main navigation">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6">
+        <div class="flex h-16 items-center justify-between">
+
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <div class="flex h-8 w-8 items-center justify-center rounded-md bg-gray-900 dark:bg-gray-100">
+              <svg class="h-5 w-5 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418" />
+              </svg>
+            </div>
+            <span class="text-base font-semibold text-gray-900 dark:text-gray-100">Meridian</span>
+          </div>
+
+          <!-- Desktop nav links -->
+          <div class="hidden items-center gap-1 md:flex">
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Product</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Solutions</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Pricing</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Docs</a>
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Blog</a>
+          </div>
+
+          <!-- Desktop CTA buttons -->
+          <div class="hidden items-center gap-2 md:flex">
+            <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-100">Log in</a>
+            <a href="#" class="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300">Sign up</a>
+          </div>
+
+          <!-- Mobile hamburger (non-functional, structural) -->
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded-md p-2 text-gray-500 hover:bg-gray-100 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500 md:hidden dark:text-gray-400 dark:hover:bg-gray-700"
+            aria-expanded="false"
+            aria-label="Open main menu"
+          >
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+      </div>
+    </section>
+
+    <section id="sidebar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Sidebar</h2>
+        <p class="text-sm text-gray-500">Vertical navigation panel with grouped links, icons, and active state.</p>
+        <a href="/base/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="rounded-lg border border-gray-200 overflow-hidden" style="max-height: 400px;">
+            <aside class="flex h-[600px] w-64 flex-col rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Sidebar navigation">
+
+      <!-- Logo -->
+      <div class="flex items-center gap-2 border-b border-gray-200 px-4 py-4 dark:border-gray-700">
+        <div class="flex h-8 w-8 items-center justify-center rounded-md bg-gray-900 dark:bg-gray-100">
+          <svg class="h-5 w-5 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3" />
+          </svg>
+        </div>
+        <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">Meridian</span>
+      </div>
+
+      <!-- Navigation -->
+      <nav class="flex-1 overflow-y-auto px-3 py-4" aria-label="Primary">
+        <ul class="space-y-0.5">
+
+          <!-- Dashboard — active -->
+          <li>
+            <a href="#" class="flex items-center gap-3 rounded-md bg-gray-100 px-3 py-2 text-sm font-medium text-gray-900 dark:bg-gray-700 dark:text-gray-100" aria-current="page">
+              <svg class="h-4 w-4 shrink-0 text-gray-600 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" />
+              </svg>
+              Dashboard
+            </a>
+          </li>
+
+          <!-- Projects -->
+          <li>
+            <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700/50 dark:hover:text-gray-100">
+              <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75V12A2.25 2.25 0 014.5 9.75h15A2.25 2.25 0 0121.75 12v.75m-8.69-6.44l-2.12-2.12a1.5 1.5 0 00-1.061-.44H4.5A2.25 2.25 0 002.25 6v12a2.25 2.25 0 002.25 2.25h15A2.25 2.25 0 0021.75 18V9a2.25 2.25 0 00-2.25-2.25h-5.379a1.5 1.5 0 01-1.06-.44z" />
+              </svg>
+              Projects
+              <span class="ml-auto inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-gray-200 px-1.5 text-xs font-medium text-gray-600 dark:bg-gray-600 dark:text-gray-300">12</span>
+            </a>
+          </li>
+
+          <!-- Team -->
+          <li>
+            <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700/50 dark:hover:text-gray-100">
+              <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+              </svg>
+              Team
+            </a>
+          </li>
+
+          <!-- Reports -->
+          <li>
+            <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700/50 dark:hover:text-gray-100">
+              <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+              </svg>
+              Reports
+            </a>
+          </li>
+
+          <!-- Divider -->
+          <li class="pt-3 pb-1">
+            <p class="px-3 text-xs font-medium uppercase tracking-wider text-gray-400 dark:text-gray-500">Workspace</p>
+          </li>
+
+          <!-- Settings -->
+          <li>
+            <a href="#" class="flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-700/50 dark:hover:text-gray-100">
+              <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              Settings
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <!-- User profile -->
+      <div class="border-t border-gray-200 px-3 py-3 dark:border-gray-700">
+        <button class="flex w-full items-center gap-3 rounded-md px-2 py-2 text-left hover:bg-gray-50 dark:hover:bg-gray-700/50">
+          <img
+            src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=32"
+            alt="Sarah Chen"
+            class="h-8 w-8 rounded-full shrink-0"
+          >
+          <div class="min-w-0 flex-1">
+            <p class="truncate text-sm font-medium text-gray-900 dark:text-gray-100">Sarah Chen</p>
+            <p class="truncate text-xs text-gray-500 dark:text-gray-400">sarah@meridian.io</p>
+          </div>
+          <svg class="h-4 w-4 shrink-0 text-gray-400" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 12a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+      </div>
+
+    </aside>
+      </div>
+    </section>
+
+    <section id="breadcrumb">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Breadcrumb</h2>
+        <p class="text-sm text-gray-500">Hierarchical path indicator with separator glyphs and truncation on long paths.</p>
+        <a href="/base/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+
+    <!-- Simple text breadcrumb -->
+    <nav aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1.5 text-sm">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Home</a>
+        </li>
+        <li class="text-gray-400 dark:text-gray-600" aria-hidden="true">/</li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Products</a>
+        </li>
+        <li class="text-gray-400 dark:text-gray-600" aria-hidden="true">/</li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Software</a>
+        </li>
+        <li class="text-gray-400 dark:text-gray-600" aria-hidden="true">/</li>
+        <li>
+          <span class="font-medium text-gray-900 dark:text-gray-100" aria-current="page">Developer Tools</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Breadcrumb with chevron icons -->
+    <nav aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1 text-sm">
+        <li>
+          <a href="#" class="flex items-center gap-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+            Home
+          </a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Products</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Software</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <span class="font-medium text-gray-900 dark:text-gray-100" aria-current="page">Developer Tools</span>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Breadcrumb with truncation (collapsed middle) -->
+    <nav aria-label="Breadcrumb">
+      <ol class="flex items-center gap-1 text-sm">
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Home</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <button class="rounded px-1.5 py-0.5 text-gray-500 hover:bg-gray-200 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-gray-200" aria-label="Show hidden breadcrumbs">
+            &hellip;
+          </button>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <a href="#" class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">Q1 2026</a>
+        </li>
+        <li aria-hidden="true">
+          <svg class="h-4 w-4 text-gray-400 dark:text-gray-600" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
+        </li>
+        <li>
+          <span class="font-medium text-gray-900 dark:text-gray-100" aria-current="page">Revenue Report</span>
+        </li>
+      </ol>
+    </nav>
+      </div>
+    </section>
+
+    <section id="tabs">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Tabs</h2>
+        <p class="text-sm text-gray-500">Tabbed content switcher with active underline and keyboard arrow-key navigation.</p>
+        <a href="/base/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <div class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
+
+      <!-- Tab list -->
+      <div class="flex border-b border-gray-200 dark:border-gray-700" role="tablist" aria-label="Account sections">
+        <button
+          role="tab"
+          data-fiord-tab="overview"
+          aria-selected="true"
+          aria-controls="panel-overview"
+          id="tab-overview"
+          class="relative px-5 py-3.5 text-sm font-medium text-gray-900 border-b-2 border-gray-900 -mb-px focus:outline-none dark:text-gray-100 dark:border-gray-100"
+        >
+          Overview
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="activity"
+          aria-selected="false"
+          aria-controls="panel-activity"
+          id="tab-activity"
+          class="relative px-5 py-3.5 text-sm font-medium text-gray-500 border-b-2 border-transparent -mb-px hover:text-gray-700 hover:border-gray-300 focus:outline-none dark:text-gray-400 dark:hover:text-gray-200 dark:hover:border-gray-600"
+        >
+          Activity
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="settings"
+          aria-selected="false"
+          aria-controls="panel-settings"
+          id="tab-settings"
+          class="relative px-5 py-3.5 text-sm font-medium text-gray-500 border-b-2 border-transparent -mb-px hover:text-gray-700 hover:border-gray-300 focus:outline-none dark:text-gray-400 dark:hover:text-gray-200 dark:hover:border-gray-600"
+        >
+          Settings
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="billing"
+          aria-selected="false"
+          aria-controls="panel-billing"
+          id="tab-billing"
+          class="relative px-5 py-3.5 text-sm font-medium text-gray-500 border-b-2 border-transparent -mb-px hover:text-gray-700 hover:border-gray-300 focus:outline-none dark:text-gray-400 dark:hover:text-gray-200 dark:hover:border-gray-600"
+        >
+          Billing
+        </button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="p-6">
+
+        <div role="tabpanel" data-fiord-panel="overview" id="panel-overview" aria-labelledby="tab-overview">
+          <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">Project Overview</h3>
+          <p class="mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+            Meridian is on track for a Q2 launch. The core API is feature-complete, and the frontend team has shipped all P0 components. Three outstanding integration tests need to be resolved before the release candidate is cut.
+          </p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="rounded-md bg-gray-50 p-3 dark:bg-gray-700/50">
+              <p class="text-xs text-gray-500 dark:text-gray-400">Open issues</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-gray-100">14</p>
+            </div>
+            <div class="rounded-md bg-gray-50 p-3 dark:bg-gray-700/50">
+              <p class="text-xs text-gray-500 dark:text-gray-400">PRs merged</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-gray-100">238</p>
+            </div>
+            <div class="rounded-md bg-gray-50 p-3 dark:bg-gray-700/50">
+              <p class="text-xs text-gray-500 dark:text-gray-400">Contributors</p>
+              <p class="text-2xl font-bold text-gray-900 dark:text-gray-100">8</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="activity" id="panel-activity" aria-labelledby="tab-activity" hidden>
+          <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">Recent Activity</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Tom+Ridley&background=10b981&color=fff&size=24" alt="Tom Ridley" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-gray-900 dark:text-gray-100">Tom Ridley</span>
+                <span class="text-gray-600 dark:text-gray-400"> merged PR #412 — </span>
+                <span class="font-medium text-gray-800 dark:text-gray-200">Fix race condition in auth refresh</span>
+                <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">2 hours ago</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Priya+Nair&background=f59e0b&color=fff&size=24" alt="Priya Nair" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-gray-900 dark:text-gray-100">Priya Nair</span>
+                <span class="text-gray-600 dark:text-gray-400"> opened issue #418 — </span>
+                <span class="font-medium text-gray-800 dark:text-gray-200">Pagination breaks on mobile Safari</span>
+                <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">5 hours ago</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=24" alt="Sarah Chen" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-gray-900 dark:text-gray-100">Sarah Chen</span>
+                <span class="text-gray-600 dark:text-gray-400"> deployed to </span>
+                <span class="font-medium text-gray-800 dark:text-gray-200">staging-v2.meridian.io</span>
+                <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">Yesterday at 4:12 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="settings" id="panel-settings" aria-labelledby="tab-settings" hidden>
+          <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">Project Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1" for="project-name">Project name</label>
+              <input id="project-name" type="text" value="Meridian" class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1" for="project-slug">URL slug</label>
+              <div class="flex rounded-md border border-gray-300 overflow-hidden dark:border-gray-600">
+                <span class="flex items-center bg-gray-50 px-3 text-xs text-gray-500 border-r border-gray-300 dark:bg-gray-700/50 dark:border-gray-600 dark:text-gray-400">app.meridian.io/</span>
+                <input id="project-slug" type="text" value="meridian-core" class="flex-1 bg-white px-3 py-2 text-sm text-gray-900 focus:outline-none dark:bg-gray-700 dark:text-gray-100">
+              </div>
+            </div>
+            <div class="pt-2">
+              <button class="rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300">Save changes</button>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="billing" id="panel-billing" aria-labelledby="tab-billing" hidden>
+          <h3 class="mb-3 text-sm font-semibold text-gray-900 dark:text-gray-100">Billing & Plan</h3>
+          <div class="mb-4 rounded-md border border-gray-200 p-4 dark:border-gray-700">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium text-gray-900 dark:text-gray-100">Pro Plan</p>
+                <p class="text-xs text-gray-500 dark:text-gray-400">$79/month · renews April 1, 2026</p>
+              </div>
+              <span class="inline-flex items-center rounded-full bg-green-100 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:bg-green-900/30 dark:text-green-400">Active</span>
+            </div>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Payment method: Visa ending in 4821</p>
+          <div class="mt-4 flex gap-2">
+            <button class="rounded-md border border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">Update payment</button>
+            <button class="rounded-md border border-gray-300 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-700">Download invoices</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+      </div>
+    </section>
+
+    <section id="pagination">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Pagination</h2>
+        <p class="text-sm text-gray-500">Page navigation controls with previous, next, and numbered page buttons.</p>
+        <a href="/base/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+            <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+      <!-- Results summary + items per page -->
+      <div class="flex items-center gap-3">
+        <p class="text-sm text-gray-600 dark:text-gray-400">
+          Showing <span class="font-medium text-gray-900 dark:text-gray-100">76–100</span> of <span class="font-medium text-gray-900 dark:text-gray-100">689</span> results
+        </p>
+        <div class="flex items-center gap-1.5">
+          <label for="per-page" class="text-xs text-gray-500 dark:text-gray-400">Per page</label>
+          <select
+            id="per-page"
+            class="rounded-md border border-gray-300 bg-white py-1 pl-2 pr-7 text-xs text-gray-700 focus:border-gray-400 focus:outline-none focus:ring-1 focus:ring-gray-400 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-300"
+          >
+            <option>10</option>
+            <option>25</option>
+            <option selected>25</option>
+            <option>50</option>
+            <option>100</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Page navigation -->
+      <nav aria-label="Pagination">
+        <ol class="flex items-center gap-1">
+
+          <!-- Previous -->
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-1 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+              aria-label="Previous page"
+            >
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+              Prev
+            </a>
+          </li>
+
+          <!-- Page 2 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 bg-white text-sm text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" aria-label="Page 2">2</a>
+          </li>
+
+          <!-- Page 3 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 bg-white text-sm text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" aria-label="Page 3">3</a>
+          </li>
+
+          <!-- Current — Page 4 -->
+          <li>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-900 bg-gray-900 text-sm font-medium text-white focus:outline-none dark:border-gray-100 dark:bg-gray-100 dark:text-gray-900"
+              aria-label="Page 4"
+              aria-current="page"
+            >4</a>
+          </li>
+
+          <!-- Page 5 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 bg-white text-sm text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" aria-label="Page 5">5</a>
+          </li>
+
+          <!-- Ellipsis -->
+          <li>
+            <span class="flex h-9 w-9 items-center justify-center text-sm text-gray-500 dark:text-gray-400" aria-hidden="true">&hellip;</span>
+          </li>
+
+          <!-- Last page — 28 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded-md border border-gray-300 bg-white text-sm text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700" aria-label="Page 28">28</a>
+          </li>
+
+          <!-- Next -->
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-1.5 text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-1 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-300 dark:hover:bg-gray-700"
+              aria-label="Next page"
+            >
+              Next
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+          </li>
+
+        </ol>
+      </nav>
+
+    </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Footer</h2>
+        <p class="text-sm text-gray-500">Site footer with multi-column link groups, logo, and copyright line.</p>
+        <a href="/base/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="rounded-lg border border-gray-200 overflow-hidden">
+            <footer class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Site footer">
+
+      <!-- Newsletter signup -->
+      <div class="border-b border-gray-200 px-6 py-8 dark:border-gray-700 sm:px-8">
+        <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div>
+            <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Stay up to date</h3>
+            <p class="mt-0.5 text-sm text-gray-500 dark:text-gray-400">Get product updates, engineering notes, and the occasional discount.</p>
+          </div>
+          <form class="flex gap-2 sm:shrink-0" onsubmit="return false;">
+            <input
+              type="email"
+              placeholder="you@company.com"
+              class="w-full rounded-md border border-gray-300 bg-white px-3 py-2 text-sm text-gray-900 placeholder-gray-400 focus:border-gray-500 focus:outline-none focus:ring-1 focus:ring-gray-500 sm:w-56 dark:border-gray-600 dark:bg-gray-700 dark:text-gray-100 dark:placeholder-gray-500"
+              aria-label="Email address"
+            >
+            <button
+              type="submit"
+              class="shrink-0 rounded-md bg-gray-900 px-4 py-2 text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:bg-gray-100 dark:text-gray-900 dark:hover:bg-gray-300"
+            >
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Link columns -->
+      <div class="grid grid-cols-2 gap-8 px-6 py-8 sm:px-8 md:grid-cols-4">
+
+        <!-- Product -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Product</h4>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Features</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Pricing</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Changelog</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Roadmap</a></li>
+            <li>
+              <a href="#" class="inline-flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">
+                Status
+                <span class="inline-flex h-1.5 w-1.5 rounded-full bg-green-400"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Company -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Company</h4>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">About</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Blog</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Careers</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Press</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Resources -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Resources</h4>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Documentation</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">API Reference</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Integrations</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Community</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Support</a></li>
+          </ul>
+        </div>
+
+        <!-- Legal -->
+        <div>
+          <h4 class="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400">Legal</h4>
+          <ul class="mt-4 space-y-2.5">
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Privacy Policy</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Terms of Service</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Cookie Policy</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">DPA</a></li>
+            <li><a href="#" class="text-sm text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100">Security</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="flex flex-col gap-4 border-t border-gray-200 px-6 py-6 sm:flex-row sm:items-center sm:justify-between sm:px-8 dark:border-gray-700">
+
+        <!-- Logo + copyright -->
+        <div class="flex items-center gap-2">
+          <div class="flex h-6 w-6 items-center justify-center rounded bg-gray-900 dark:bg-gray-100">
+            <svg class="h-3.5 w-3.5 text-white dark:text-gray-900" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3" />
+            </svg>
+          </div>
+          <span class="text-xs text-gray-500 dark:text-gray-400">&copy; 2026 Meridian, Inc. All rights reserved.</span>
+        </div>
+
+        <!-- Social links -->
+        <div class="flex items-center gap-4">
+          <a href="#" class="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="Twitter / X">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="GitHub">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" />
+            </svg>
+          </a>
+          <a href="#" class="text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300" aria-label="LinkedIn">
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+    </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JS: tabs -->
+  <script is:inline>
+    (function () {
+      const tabs = document.querySelectorAll('[data-fiord-tab]');
+      const panels = document.querySelectorAll('[data-fiord-panel]');
+
+      const activeTabClasses = [
+        'text-gray-900', 'border-gray-900',
+        'dark:text-gray-100', 'dark:border-gray-100'
+      ];
+      const inactiveTabClasses = [
+        'text-gray-500', 'border-transparent',
+        'hover:text-gray-700', 'hover:border-gray-300',
+        'dark:text-gray-400', 'dark:hover:text-gray-200', 'dark:hover:border-gray-600'
+      ];
+
+      function activateTab(targetTab) {
+        tabs.forEach(tab => {
+          const isTarget = tab.dataset.fiordTab === targetTab;
+          tab.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+          if (isTarget) {
+            inactiveTabClasses.forEach(c => tab.classList.remove(c));
+            activeTabClasses.forEach(c => tab.classList.add(c));
+          } else {
+            activeTabClasses.forEach(c => tab.classList.remove(c));
+            inactiveTabClasses.forEach(c => tab.classList.add(c));
+          }
+        });
+
+        panels.forEach(panel => {
+          if (panel.dataset.fiordPanel === targetTab) {
+            panel.removeAttribute('hidden');
+          } else {
+            panel.setAttribute('hidden', '');
+          }
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab.dataset.fiordTab));
+      });
+
+      // Keyboard navigation
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('keydown', e => {
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = tabs[(index + 1) % tabs.length];
+            next.focus();
+            activateTab(next.dataset.fiordTab);
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = tabs[(index - 1 + tabs.length) % tabs.length];
+            prev.focus();
+            activateTab(prev.dataset.fiordTab);
+          }
+        });
+      });
+    })();
+  </script>
+
+</SiteLayout>

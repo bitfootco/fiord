@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="640" height="200" viewBox="0 0 640 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="fiordGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6EE7F9"/>
+      <stop offset="50%" stop-color="#60A5FA"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(40,60)">
+    <rect x="0" y="0" width="64" height="14" rx="7" fill="url(#fiordGrad)"/>
+    <rect x="0" y="26" width="48" height="14" rx="7" fill="url(#fiordGrad)"/>
+    <rect x="0" y="52" width="32" height="14" rx="7" fill="url(#fiordGrad)"/>
+  </g>
+
+  <!-- Wordmark -->
+  <text x="140" y="120"
+        font-family="Inter, Helvetica, Arial, sans-serif"
+        font-size="80"
+        font-weight="600"
+        fill="#0F1C2E"
+        letter-spacing="-1">
+    fiord
+  </text>
+</svg>

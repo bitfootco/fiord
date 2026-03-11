@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Base / Radio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8 dark:bg-gray-900">
+  <div class="max-w-2xl mx-auto">
+
+    <!-- FIORD:COMPONENT_START aesthetic="base" component="radio" -->
+    <fieldset>
+      <legend class="text-sm font-medium text-gray-700 dark:text-gray-300">Subscription plan</legend>
+      <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5 mb-4">Choose the plan that works best for you.</p>
+
+      <div class="space-y-3">
+
+        <!-- Monthly -->
+        <label class="flex items-start gap-3 cursor-pointer rounded-md border border-gray-200 bg-white px-4 py-3 hover:border-gray-300 hover:bg-gray-50 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-50 transition-colors dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600 dark:hover:bg-gray-750 dark:has-[:checked]:border-gray-300">
+          <input
+            type="radio"
+            name="plan"
+            value="monthly"
+            class="mt-0.5 h-4 w-4 shrink-0 border-gray-300 text-gray-900 accent-gray-900 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:border-gray-600 dark:accent-gray-100"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Monthly</span>
+              <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">$12 / mo</span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Billed monthly. Cancel anytime.</p>
+          </div>
+        </label>
+
+        <!-- Annual -->
+        <label class="flex items-start gap-3 cursor-pointer rounded-md border border-gray-200 bg-white px-4 py-3 hover:border-gray-300 hover:bg-gray-50 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-50 transition-colors dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600 dark:has-[:checked]:border-gray-300">
+          <input
+            type="radio"
+            name="plan"
+            value="annual"
+            checked
+            class="mt-0.5 h-4 w-4 shrink-0 border-gray-300 text-gray-900 accent-gray-900 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:border-gray-600 dark:accent-gray-100"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                Annual
+                <span class="ml-2 inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">Save 20%</span>
+              </span>
+              <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">$9.60 / mo</span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Billed as $115 per year.</p>
+          </div>
+        </label>
+
+        <!-- Lifetime -->
+        <label class="flex items-start gap-3 cursor-pointer rounded-md border border-gray-200 bg-white px-4 py-3 hover:border-gray-300 hover:bg-gray-50 has-[:checked]:border-gray-900 has-[:checked]:bg-gray-50 transition-colors dark:border-gray-700 dark:bg-gray-800 dark:hover:border-gray-600 dark:has-[:checked]:border-gray-300">
+          <input
+            type="radio"
+            name="plan"
+            value="lifetime"
+            class="mt-0.5 h-4 w-4 shrink-0 border-gray-300 text-gray-900 accent-gray-900 focus:ring-2 focus:ring-gray-500 focus:ring-offset-2 dark:border-gray-600 dark:accent-gray-100"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">Lifetime</span>
+              <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">$299 once</span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">One-time payment. All future updates included.</p>
+          </div>
+        </label>
+
+        <!-- Team (disabled) -->
+        <label class="flex items-start gap-3 cursor-not-allowed opacity-50 rounded-md border border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-800">
+          <input
+            type="radio"
+            name="plan"
+            value="team"
+            disabled
+            class="mt-0.5 h-4 w-4 shrink-0 border-gray-300 text-gray-900 accent-gray-900 cursor-not-allowed dark:border-gray-600 dark:accent-gray-100"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-gray-900 dark:text-gray-100">
+                Team
+                <span class="ml-2 inline-flex items-center rounded-full bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">Coming soon</span>
+              </span>
+              <span class="text-sm font-semibold text-gray-900 dark:text-gray-100">$49 / mo</span>
+            </div>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Up to 10 team members, shared workspace and billing.</p>
+          </div>
+        </label>
+
+      </div>
+    </fieldset>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

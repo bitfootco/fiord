@@ -1,0 +1,326 @@
+{
+  "version": "1.0.0",
+  "base_url": "https://fiord.design",
+  "components": [
+    {
+      "name": "container",
+      "category": "layout",
+      "description": "Max-width wrapper with responsive horizontal padding for centering page content.",
+      "path": "/base/components/container.html",
+      "has_js": false
+    },
+    {
+      "name": "grid",
+      "category": "layout",
+      "description": "Responsive column grid with 2, 3, and 4 column variants and configurable gap.",
+      "path": "/base/components/grid.html",
+      "has_js": false
+    },
+    {
+      "name": "section",
+      "category": "layout",
+      "description": "Full-width content section with consistent vertical rhythm and optional background.",
+      "path": "/base/components/section.html",
+      "has_js": false
+    },
+    {
+      "name": "divider",
+      "category": "layout",
+      "description": "Horizontal rule and visual separator with optional label text.",
+      "path": "/base/components/divider.html",
+      "has_js": false
+    },
+    {
+      "name": "heading",
+      "category": "typography",
+      "description": "h1–h6 headings with aesthetic-appropriate sizing, weight, and line height.",
+      "path": "/base/components/heading.html",
+      "has_js": false
+    },
+    {
+      "name": "paragraph",
+      "category": "typography",
+      "description": "Body text with proper line height, measure, and muted secondary variant.",
+      "path": "/base/components/paragraph.html",
+      "has_js": false
+    },
+    {
+      "name": "prose",
+      "category": "typography",
+      "description": "Long-form content container for articles and blog posts with full typographic rhythm.",
+      "path": "/base/components/prose.html",
+      "has_js": false
+    },
+    {
+      "name": "code-block",
+      "category": "typography",
+      "description": "Monospaced code display with syntax-highlighted appearance and copy affordance.",
+      "path": "/base/components/code-block.html",
+      "has_js": false
+    },
+    {
+      "name": "button",
+      "category": "actions",
+      "description": "Primary, secondary, ghost, and destructive button variants with hover and focus states.",
+      "path": "/base/components/button.html",
+      "has_js": false
+    },
+    {
+      "name": "button-group",
+      "category": "actions",
+      "description": "Horizontally grouped action buttons with joined borders and shared context.",
+      "path": "/base/components/button-group.html",
+      "has_js": false
+    },
+    {
+      "name": "link",
+      "category": "actions",
+      "description": "Styled anchor with underline, hover, and focus states for inline and standalone use.",
+      "path": "/base/components/link.html",
+      "has_js": false
+    },
+    {
+      "name": "dropdown",
+      "category": "actions",
+      "description": "Click-triggered action menu with keyboard navigation and outside-click dismissal.",
+      "path": "/base/components/dropdown.html",
+      "has_js": true
+    },
+    {
+      "name": "input",
+      "category": "forms",
+      "description": "Text input with label, placeholder, helper text, and error state.",
+      "path": "/base/components/input.html",
+      "has_js": false
+    },
+    {
+      "name": "textarea",
+      "category": "forms",
+      "description": "Multiline text input with label, auto-resize affordance, and error state.",
+      "path": "/base/components/textarea.html",
+      "has_js": false
+    },
+    {
+      "name": "select",
+      "category": "forms",
+      "description": "Native select element with custom styled wrapper, label, and error state.",
+      "path": "/base/components/select.html",
+      "has_js": false
+    },
+    {
+      "name": "checkbox",
+      "category": "forms",
+      "description": "Styled checkbox with label, checked state, and indeterminate support.",
+      "path": "/base/components/checkbox.html",
+      "has_js": false
+    },
+    {
+      "name": "radio",
+      "category": "forms",
+      "description": "Styled radio button group with label and selected state.",
+      "path": "/base/components/radio.html",
+      "has_js": false
+    },
+    {
+      "name": "toggle",
+      "category": "forms",
+      "description": "On/off switch with animated thumb and accessible checked state.",
+      "path": "/base/components/toggle.html",
+      "has_js": false
+    },
+    {
+      "name": "form-group",
+      "category": "forms",
+      "description": "Composed form layout combining label, input, helper text, and validation error.",
+      "path": "/base/components/form-group.html",
+      "has_js": false
+    },
+    {
+      "name": "card",
+      "category": "data",
+      "description": "Content container in basic, elevated, and interactive variants with consistent padding.",
+      "path": "/base/components/card.html",
+      "has_js": false
+    },
+    {
+      "name": "table",
+      "category": "data",
+      "description": "Data table with header row, striped rows, and horizontal scroll on small viewports.",
+      "path": "/base/components/table.html",
+      "has_js": false
+    },
+    {
+      "name": "stat",
+      "category": "data",
+      "description": "Key metric display showing a headline number, label, and optional trend indicator.",
+      "path": "/base/components/stat.html",
+      "has_js": false
+    },
+    {
+      "name": "badge",
+      "category": "data",
+      "description": "Compact status indicator and label tag in multiple semantic color variants.",
+      "path": "/base/components/badge.html",
+      "has_js": false
+    },
+    {
+      "name": "avatar",
+      "category": "data",
+      "description": "User image in circle with fallback initials and size variants.",
+      "path": "/base/components/avatar.html",
+      "has_js": false
+    },
+    {
+      "name": "list",
+      "category": "data",
+      "description": "Structured list in simple, icon-prefixed, and description variants.",
+      "path": "/base/components/list.html",
+      "has_js": false
+    },
+    {
+      "name": "navbar",
+      "category": "navigation",
+      "description": "Top navigation bar with logo, link list, and action slot.",
+      "path": "/base/components/navbar.html",
+      "has_js": false
+    },
+    {
+      "name": "sidebar",
+      "category": "navigation",
+      "description": "Vertical navigation panel with grouped links, icons, and active state.",
+      "path": "/base/components/sidebar.html",
+      "has_js": false
+    },
+    {
+      "name": "breadcrumb",
+      "category": "navigation",
+      "description": "Hierarchical path indicator with separator glyphs and truncation on long paths.",
+      "path": "/base/components/breadcrumb.html",
+      "has_js": false
+    },
+    {
+      "name": "tabs",
+      "category": "navigation",
+      "description": "Tabbed content switcher with active underline and keyboard arrow-key navigation.",
+      "path": "/base/components/tabs.html",
+      "has_js": true
+    },
+    {
+      "name": "pagination",
+      "category": "navigation",
+      "description": "Page navigation controls with previous, next, and numbered page buttons.",
+      "path": "/base/components/pagination.html",
+      "has_js": false
+    },
+    {
+      "name": "footer",
+      "category": "navigation",
+      "description": "Site footer with multi-column link groups, logo, and copyright line.",
+      "path": "/base/components/footer.html",
+      "has_js": false
+    },
+    {
+      "name": "modal",
+      "category": "overlays",
+      "description": "Dialog overlay with backdrop, close button, focus trap, and Escape key dismissal.",
+      "path": "/base/components/modal.html",
+      "has_js": true
+    },
+    {
+      "name": "drawer",
+      "category": "overlays",
+      "description": "Slide-in panel from screen edge with backdrop and animated entrance.",
+      "path": "/base/components/drawer.html",
+      "has_js": true
+    },
+    {
+      "name": "tooltip",
+      "category": "overlays",
+      "description": "Hover-triggered short text label anchored to a target element.",
+      "path": "/base/components/tooltip.html",
+      "has_js": true
+    },
+    {
+      "name": "popover",
+      "category": "overlays",
+      "description": "Click-triggered rich content popup with arrow and outside-click dismissal.",
+      "path": "/base/components/popover.html",
+      "has_js": true
+    },
+    {
+      "name": "toast",
+      "category": "overlays",
+      "description": "Transient notification message that auto-dismisses with success, warning, and error variants.",
+      "path": "/base/components/toast.html",
+      "has_js": true
+    },
+    {
+      "name": "hero",
+      "category": "sections",
+      "description": "Full-width intro section with headline, subheading, and primary call-to-action.",
+      "path": "/base/components/hero.html",
+      "has_js": false
+    },
+    {
+      "name": "cta",
+      "category": "sections",
+      "description": "Call-to-action banner with headline, supporting text, and one or two action buttons.",
+      "path": "/base/components/cta.html",
+      "has_js": false
+    },
+    {
+      "name": "feature-grid",
+      "category": "sections",
+      "description": "Multi-feature showcase grid with icon, title, and short description per feature.",
+      "path": "/base/components/feature-grid.html",
+      "has_js": false
+    },
+    {
+      "name": "testimonial",
+      "category": "sections",
+      "description": "Pull quote with attribution name, title, and optional avatar.",
+      "path": "/base/components/testimonial.html",
+      "has_js": false
+    },
+    {
+      "name": "pricing-table",
+      "category": "sections",
+      "description": "Tier comparison layout with feature lists, price display, and highlighted recommended plan.",
+      "path": "/base/components/pricing-table.html",
+      "has_js": false
+    },
+    {
+      "name": "faq",
+      "category": "sections",
+      "description": "Collapsible question-and-answer list with accordion expand and collapse behavior.",
+      "path": "/base/components/faq.html",
+      "has_js": true
+    }
+  ],
+  "base": {
+    "description": "Neutral structural templates — unstyled, accessible, gray-scale. The unbranded foundation.",
+    "reference": "/base/index.html",
+    "components_path": "/base/components/"
+  },
+  "aesthetics": [
+    {
+      "name": "slate",
+      "display_name": "Slate",
+      "description": "Layered, decisive, geological. Cool blue-gray tones with sharp cleaved edges, matte surfaces, and indigo accents. Stratified shadows suggest metamorphic rock strata. Suited for developer tools, SaaS platforms, and technical products.",
+      "preview": "/aesthetics/slate/index.html",
+      "catalog": "/aesthetics/slate/catalog.html",
+      "meta": "/aesthetics/slate/meta.json",
+      "components_path": "/aesthetics/slate/components/"
+    }
+  ],
+  "categories": [
+    { "id": "layout", "label": "Layout", "components": ["container", "grid", "section", "divider"] },
+    { "id": "typography", "label": "Typography", "components": ["heading", "paragraph", "prose", "code-block"] },
+    { "id": "actions", "label": "Actions", "components": ["button", "button-group", "link", "dropdown"] },
+    { "id": "forms", "label": "Forms", "components": ["input", "textarea", "select", "checkbox", "radio", "toggle", "form-group"] },
+    { "id": "data", "label": "Data Display", "components": ["card", "table", "stat", "badge", "avatar", "list"] },
+    { "id": "navigation", "label": "Navigation", "components": ["navbar", "sidebar", "breadcrumb", "tabs", "pagination", "footer"] },
+    { "id": "overlays", "label": "Overlays", "components": ["modal", "drawer", "tooltip", "popover", "toast"] },
+    { "id": "sections", "label": "Page Sections", "components": ["hero", "cta", "feature-grid", "testimonial", "pricing-table", "faq"] }
+  ]
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Slate / Stat</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        slate: {
+          50: '#F7F8FA', 100: '#EEF0F4', 200: '#D2D7E2', 300: '#A3ADBE',
+          400: '#7B8598', 500: '#5B6578', 600: '#3A4459', 700: '#2A3550',
+          800: '#1A2235', 900: '#131927', 950: '#0A0F1A'
+        }
+      }}}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 p-8 font-['Plus_Jakarta_Sans'] dark:bg-slate-900">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- FIORD:COMPONENT_START aesthetic="slate" component="stat" -->
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+      <!-- Total Revenue -->
+      <div class="rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Total Revenue</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            12%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900 dark:text-slate-100">$84,320</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">vs. $75,285 last month</p>
+      </div>
+
+      <!-- Active Users -->
+      <div class="rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Active Users</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            3%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900 dark:text-slate-100">12,847</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">vs. 12,473 last month</p>
+      </div>
+
+      <!-- Conversion Rate -->
+      <div class="rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Conversion Rate</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3" />
+            </svg>
+            0.5%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900 dark:text-slate-100">3.24%</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">vs. 3.74% last month</p>
+      </div>
+
+      <!-- Avg Order Value -->
+      <div class="rounded-lg border border-slate-200 bg-white p-5 dark:border-slate-700 dark:bg-slate-800">
+        <div class="flex items-start justify-between">
+          <p class="text-xs font-medium uppercase tracking-wide text-slate-500 dark:text-slate-400">Avg Order Value</p>
+          <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">
+            <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+            </svg>
+            8%
+          </span>
+        </div>
+        <p class="mt-2 text-3xl font-bold tabular-nums text-slate-900 dark:text-slate-100">$218</p>
+        <p class="mt-1 text-xs text-slate-500 dark:text-slate-400">vs. $202 last month</p>
+      </div>
+
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

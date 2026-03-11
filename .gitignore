@@ -1,0 +1,12 @@
+.DS_Store
+*.DS_Store
+**/.DS_Store
+
+# Astro build output — built in CI, never commit
+dist/
+
+# Astro generated types — regenerated on build/dev
+.astro/
+
+# Dependencies
+node_modules/

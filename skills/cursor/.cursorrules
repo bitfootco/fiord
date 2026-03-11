@@ -1,0 +1,53 @@
+# Fiord Design Library — Cursor Rules
+
+Fiord is an AI-native Tailwind component library at https://fiord.design. Components are self-contained HTML with Tailwind CDN classes, organized by aesthetic (visual identity). You fetch markup directly — there is no package to install.
+
+## When to Activate
+
+Use this protocol whenever the user asks for UI components, page sections, frontend markup, Tailwind-based design, page layouts, or any visual/frontend work where a component library would help.
+
+## Discovery Protocol
+
+Always follow these steps in order.
+
+### 1. Fetch the Manifest
+
+Fetch `https://fiord.design/manifest.json` to get the full component catalog, available aesthetics with descriptions, and URL paths. Read it fully before proceeding.
+
+### 2. Select an Aesthetic
+
+An aesthetic is a complete visual identity, not a theme toggle. If the user specified one, use it. If not, recommend one based on project context (domain, tone, existing design) and confirm with the user. Aesthetic descriptions are in the manifest under `"aesthetics"`.
+
+### 3. Fetch the Design Language
+
+Fetch `https://fiord.design/aesthetics/{name}/meta.json` to get the aesthetic's palette, typography, spacing, borders, shadows, and motion tokens. You will need these to extrapolate when building custom components.
+
+### 4. Identify Needed Components
+
+Match the user's task to components in the manifest's `"categories"` array. Use the aesthetic's component path when available: `https://fiord.design/aesthetics/{name}/components/{component}.html`. Fall back to base: `https://fiord.design/base/components/{component}.html`.
+
+### 5. Fetch Component Pages
+
+Fetch each component HTML page. The full page includes preview chrome and CDN scripts — ignore those. You only need the content between sentinel comments.
+
+### 6. Extract Markup
+
+Extract the markup between `<!-- FIORD:COMPONENT_START -->` and `<!-- FIORD:COMPONENT_END -->`. For interactive components (modals, drawers, tabs, tooltips, dropdowns, FAQs), also extract the optional JS block between `<!-- FIORD:JS_START -->` and `<!-- FIORD:JS_END -->`.
+
+### 7. Integrate
+
+Paste extracted markup into the codebase. Apply framework adaptations:
+
+- **React/JSX:** `class` -> `className`, `for` -> `htmlFor`, self-close void elements, replace inline scripts with hooks.
+- **Vue/Svelte/Astro:** HTML is largely compatible. Move inline scripts to framework `<script>` blocks.
+- **Static HTML:** No changes needed.
+- **Tailwind setup:** If the project uses PostCSS/Vite/CLI instead of CDN, remove `<script src="https://cdn.tailwindcss.com">`. All utility classes remain identical. Move Google Fonts `<link>` tags to the project's root `<head>`.
+
+## Rules
+
+- Never embed component markup in project rules or prompts. Always fetch fresh from the library.
+- Never hardcode an aesthetic choice without basis. Select based on project context or ask the user.
+- Use `meta.json` to extrapolate. When building components not in the library, use the aesthetic's design tokens to create matching markup.
+- Dark mode is included. All components have `dark:` prefixed classes. One file handles both modes.
+- Components are self-contained. No shared CSS, no imports between components.
+- Inline `style` attributes on some components are intentional (custom fonts, gradients Tailwind cannot express). Keep them.

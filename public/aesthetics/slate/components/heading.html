@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Slate / Heading</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        slate: {
+          50: '#F7F8FA', 100: '#EEF0F4', 200: '#D2D7E2', 300: '#A3ADBE',
+          400: '#7B8598', 500: '#5B6578', 600: '#3A4459', 700: '#2A3550',
+          800: '#1A2235', 900: '#131927', 950: '#0A0F1A'
+        }
+      }}}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 dark:bg-slate-950 p-8 font-['Plus_Jakarta_Sans']">
+  <div class="max-w-2xl mx-auto">
+
+    <!-- FIORD:COMPONENT_START aesthetic="slate" component="heading" -->
+    <div class="space-y-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8 shadow-[0_1px_2px_rgba(12,18,34,0.06),0_1px_1px_rgba(12,18,34,0.04)] dark:shadow-none">
+
+      <h1 class="font-['Outfit'] text-5xl font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+        The future of infrastructure is serverless
+      </h1>
+
+      <h2 class="font-['Outfit'] text-4xl font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+        Rethinking how teams deploy software
+      </h2>
+
+      <h3 class="font-['Outfit'] text-3xl font-semibold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
+        Continuous delivery without the overhead
+      </h3>
+
+      <h4 class="font-['Outfit'] text-2xl font-semibold text-slate-900 dark:text-slate-100 leading-snug">
+        Configure your deployment pipeline
+      </h4>
+
+      <h5 class="font-['Outfit'] text-xl font-medium text-slate-900 dark:text-slate-100 leading-normal">
+        Environment variables and secrets
+      </h5>
+
+      <h6 class="font-['Outfit'] text-base font-medium text-slate-700 dark:text-slate-300 leading-normal">
+        Setting a production secret
+      </h6>
+
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

@@ -51,28 +51,39 @@ AI agents are excellent at writing 5 lines of toggle logic for a dropdown. They 
 ```
 fiord/
 ├── CLAUDE.md                    ← You are here
-├── site/                        ← Static site (GitHub Pages root)
-│   ├── manifest.md              ← Human-readable discovery document
+├── src/                         ← Astro source (human-readable pages)
+│   ├── layouts/
+│   │   └── SiteLayout.astro     ← Shared chrome: nav + footer
+│   ├── components/
+│   │   ├── Nav.astro            ← Fiord site nav with wordmark
+│   │   └── Footer.astro         ← Site footer
+│   └── pages/
+│       ├── index.astro          ← Homepage
+│       ├── base/
+│       │   ├── index.astro      ← Base components index
+│       │   ├── layout.astro
+│       │   ├── typography.astro
+│       │   ├── actions.astro
+│       │   ├── forms.astro
+│       │   ├── data.astro
+│       │   ├── navigation.astro
+│       │   ├── overlays.astro
+│       │   └── sections.astro
+│       └── aesthetics/
+│           └── slate/
+│               └── index.astro  ← Slate aesthetic showcase
+├── public/                      ← Served verbatim — agents scrape here
 │   ├── manifest.json            ← Machine-readable discovery document
-│   ├── base/                    ← Base structural templates
-│   │   ├── index.html           ← All base components on one page
-│   │   └── components/
-│   │       ├── button.html
-│   │       ├── card.html
-│   │       ├── modal.html
-│   │       └── ...
-│   ├── aesthetics/
-│   │   ├── basalt/
-│   │   │   ├── index.html       ← Full preview of all Basalt components
-│   │   │   ├── meta.json        ← Aesthetic metadata (palette, description, tokens)
-│   │   │   └── components/
-│   │   │       ├── button.html
-│   │   │       ├── card.html
-│   │   │       └── ...
-│   │   ├── cedar/
-│   │   ├── linen/
-│   │   └── slate/
-│   └── assets/                  ← Shared static assets (if any)
+│   ├── manifest.md              ← Human-readable discovery document
+│   ├── base/
+│   │   └── components/          ← All 42 component HTML files (unchanged)
+│   └── aesthetics/
+│       └── slate/
+│           ├── meta.json        ← Aesthetic metadata
+│           └── components/      ← Slate component HTML files
+├── astro.config.mjs             ← Astro config (static output, Tailwind)
+├── package.json                 ← Dev deps: astro, @astrojs/tailwind
+├── tailwind.config.mjs          ← Tailwind config
 ├── skills/                      ← AI agent instruction sets
 │   ├── claude/
 │   │   └── SKILL.md
@@ -83,9 +94,23 @@ fiord/
 └── README.md
 ```
 
-### The Static Site
+### The Key Invariant
 
-The entire library is a static site, deployable to GitHub Pages with zero build step. Each component page is a standalone HTML file that:
+Files in `public/` are copied verbatim to `dist/` by Astro with no transformation. Agent scraping paths like `/base/components/button.html` and `/manifest.json` work identically whether accessed on the built site or directly. The agent discovery protocol is unaffected by the build layer.
+
+Human-readable pages live in `src/pages/` and are built by Astro with a shared `SiteLayout.astro` that provides the branded nav and footer. Component files in `public/` remain as standalone HTML with Tailwind CDN — they are never processed by Astro.
+
+### Build
+
+```
+npm run build   → outputs to dist/
+npm run dev     → local dev server
+npm run preview → preview the built dist/
+```
+
+### The Static Component Files
+
+Component pages in `public/` are standalone HTML files that:
 
 - Includes Tailwind via CDN (`<script src="https://cdn.tailwindcss.com">`)
 - Renders the component in isolation with realistic example content
@@ -307,7 +332,7 @@ Think of it like this: if Fiord's base component set is a architectural blueprin
 
 Aesthetics are named after natural materials. The name should evoke the visual and tactile qualities of the design.
 
-**Slate** is the initial aesthetic — professional, measured, neutral. Cool grays with clean lines, Stripe-inspired polish. Suited for enterprise, SaaS, and B2B products. Additional aesthetics will be added over time, each co-designed with the user.
+**Slate** is the initial aesthetic — layered, decisive, geological. Cool blue-gray tones with sharp cleaved edges, matte surfaces, and indigo accents. Stratified shadows suggest metamorphic rock strata. Suited for developer tools, SaaS platforms, and technical products. Additional aesthetics will be added over time, each co-designed with the user.
 
 New aesthetics should:
 - Have a name drawn from natural materials, formations, or textures
@@ -319,10 +344,10 @@ New aesthetics should:
 
 To add an aesthetic:
 
-1. Create the directory: `site/aesthetics/<name>/`
+1. Create the directory: `public/aesthetics/<name>/`
 2. Write `meta.json` defining the full design language (see Aesthetic Metadata above)
 3. Build every component in the component catalog, following the HTML contract
-4. Create `index.html` as a full-page preview showcasing all components
+4. Create `src/pages/aesthetics/<name>/index.astro` as a full-page preview using `SiteLayout`
 5. Add the aesthetic to both `manifest.md` and `manifest.json`
 
 ---
@@ -458,3 +483,58 @@ The full set of components Fiord provides, organized by category. Every componen
 ## Roadmap
 
 See [ROADMAP.md](ROADMAP.md) for the development roadmap and milestone tracking.
+
+---
+
+## Working Notes for Claude
+
+### Project structure (post-Astro migration)
+
+- **Human-readable pages:** `src/pages/` — Astro files, build to `dist/`
+- **Agent-scraped component files:** `public/base/components/` — raw HTML, copied verbatim to `dist/base/components/`
+- **Aesthetic components:** `public/aesthetics/<name>/components/` — same pattern
+- **Manifests:** `public/manifest.json` and `public/manifest.md`
+- **Shared chrome:** `src/layouts/SiteLayout.astro`, `src/components/Nav.astro`, `src/components/Footer.astro`
+- **Build:** `npm run build` → `dist/`; `npm run dev` → local dev
+
+When creating a new aesthetic: add component HTML files to `public/aesthetics/<name>/components/`, then create `src/pages/aesthetics/<name>/index.astro` for the human-readable preview.
+
+**Astro template note:** When component files contain `{` and `}` characters in text content (e.g., code examples), add `is:raw` to the containing element to prevent Astro from interpreting them as JSX expressions. Example: `<div is:raw>...code with curly braces...</div>`
+
+### Context efficiency — follow these rules strictly
+
+This project contains 42+ HTML component files that are large. Loading them all into the main context window will exhaust the token budget fast. To avoid this:
+
+**Use subagents for bulk file work.**
+Any task that touches more than ~3 files — reading, creating, or editing — should be delegated to an `Agent` tool call (subagent_type omitted = general-purpose). The subagent does the heavy lifting in its own context; only the result comes back.
+
+**Use Grep to extract, not Read.**
+When you need the markup from inside a component file, use `Grep` with `output_mode: "content"` to pull just the lines between sentinel comments. Do not Read the whole file to get 10 lines of markup.
+
+**Use Read with offset + limit.**
+If you must read a component file, use `offset` and `limit` to target only the section you need — never load a full 150-line HTML file to read 20 lines.
+
+**Never read multiple component files sequentially in the main context.**
+If a task requires reading several component files (e.g., building a category page), delegate it to a subagent. Do not loop through files in the main conversation.
+
+**Confirm the approach before starting large tasks.**
+If a task will require reading or writing more than 3 files, briefly describe the plan and confirm before executing. This prevents wasted context on a wrong approach.
+
+### Scaffold-first pattern — use this for all multi-component pages
+
+When building a page that will contain multiple components (category pages, demo pages, index pages):
+
+1. **Scaffold first.** Write the complete page structure using concept placeholders — semantic `<div>` blocks with a comment like `<!-- COMPONENT: button -->` marking where each component will go. No real component markup yet. Commit this skeleton before touching any component files.
+
+2. **Fill one at a time.** Read a single component file, extract its markup with Grep, insert it into the placeholder, done. Repeat per component. Each fill step touches exactly one file.
+
+3. **Never pull all components first.** Do not read 6 files then write the page. Read one, write it in, move to the next.
+
+### Subagent scope — keep it tiny
+
+Subagents that are given too much work (read 10 files, create 8 pages) will time out or produce incomplete output. Scope each subagent to a single, well-defined deliverable:
+- One page created or updated
+- One file read and summarised
+- One component extracted and returned
+
+If a task has multiple deliverables, run multiple sequential subagent calls rather than one large one. Prefer doing work directly in the main context (with targeted Grep/Read) over spawning an agent, unless the file count would genuinely flood context.

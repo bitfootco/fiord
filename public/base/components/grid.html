@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Base / Grid</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-950 p-8">
+  <div class="max-w-2xl mx-auto space-y-12">
+
+    <!-- FIORD:COMPONENT_START aesthetic="base" component="grid" -->
+
+    <!-- 2-column grid -->
+    <div>
+      <p class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">2 columns</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">API Design</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Principles for building REST APIs that scale with your product over time.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Database Indexing</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">How B-tree and hash indexes affect query performance in PostgreSQL.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3-column grid -->
+    <div>
+      <p class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">3 columns</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Observability</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Logs, metrics, and traces as the three pillars of system visibility.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Load Balancing</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Round-robin, least-connections, and consistent hashing compared.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Caching Strategies</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Write-through, write-behind, and cache-aside patterns with trade-offs.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4-column grid -->
+    <div>
+      <p class="text-xs font-medium text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-4">4 columns</p>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Auth</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">OAuth 2.0 and OIDC fundamentals.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">Queues</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">When to reach for async messaging.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">CDN</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Edge caching and cache invalidation.</p>
+        </div>
+        <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5">
+          <div class="text-sm font-semibold text-gray-900 dark:text-gray-100">CI/CD</div>
+          <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Pipeline design for fast, safe deploys.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

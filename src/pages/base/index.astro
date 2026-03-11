@@ -1,0 +1,127 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout
+  title="Fiord — Base Components"
+  description="Structural reference templates. Neutral, unstyled, accessible. The unbranded foundation for all Fiord aesthetics."
+>
+
+  <!-- Page header -->
+  <header class="bg-white border-b border-gray-200 px-6 py-5">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex items-center justify-between">
+        <div>
+          <a href="/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Fiord</a>
+          <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Base Components</h1>
+        </div>
+        <a href="/manifest.json" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5 transition-colors font-mono">manifest.json</a>
+      </div>
+      <p class="mt-2 text-sm text-gray-500 max-w-2xl">
+        Structural reference templates. Neutral, unstyled, accessible. These are the unbranded foundation —
+        copy from individual component pages, not from this index.
+      </p>
+    </div>
+  </header>
+
+  <!-- Component Catalog -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+    <div class="border border-gray-200 rounded-lg overflow-hidden divide-y divide-gray-100">
+
+      <a id="layout" href="/base/layout/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Layout</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Max-width wrappers, grids, and structural primitives for organizing page content.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="typography" href="/base/typography/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Typography</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Headings, body text, and content containers that establish textual hierarchy.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="actions" href="/base/actions/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Actions</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Interactive controls that trigger user-initiated operations.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="forms" href="/base/forms/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Forms</span>
+            <span class="text-xs text-gray-400">7 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Input controls and composed layouts for collecting user data.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="data" href="/base/data/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Data Display</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Components for presenting structured information, metrics, and content collections.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="navigation" href="/base/navigation/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Navigation</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Wayfinding components that help users move through an application or site.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="overlays" href="/base/overlays/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Overlays</span>
+            <span class="text-xs text-gray-400">5 components</span>
+            <span class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">JS</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Floating layers that display content or interactions above the page. All include vanilla JS.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="sections" href="/base/sections/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Page Sections</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Full-page marketing and content sections ready to drop into landing pages.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+    </div>
+
+    <p class="mt-6 text-xs text-gray-400">
+      42 components across 8 categories. Copy from <a href="/base/components/" class="hover:text-gray-600 underline underline-offset-2">individual component pages</a>, not from here.
+    </p>
+  </main>
+
+</SiteLayout>
