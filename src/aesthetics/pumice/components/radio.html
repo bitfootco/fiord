@@ -1,0 +1,46 @@
+<fieldset class="space-y-3 max-w-sm">
+  <legend class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-3 dark:text-[#E8E3DC]">Billing cycle</legend>
+
+  <!-- Option 1 — pre-selected -->
+  <label class="flex items-start gap-3 cursor-pointer">
+    <input
+      type="radio"
+      name="billing-cycle"
+      value="monthly"
+      checked
+      class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+      Monthly
+      <span class="block text-xs text-[#78716C] mt-0.5">Billed every 30 days. Cancel anytime.</span>
+    </span>
+  </label>
+
+  <!-- Option 2 -->
+  <label class="flex items-start gap-3 cursor-pointer">
+    <input
+      type="radio"
+      name="billing-cycle"
+      value="annual"
+      class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+      Annual
+      <span class="block text-xs text-[#78716C] mt-0.5">Billed once per year — save 20% vs. monthly.</span>
+    </span>
+  </label>
+
+  <!-- Option 3 -->
+  <label class="flex items-start gap-3 cursor-pointer">
+    <input
+      type="radio"
+      name="billing-cycle"
+      value="lifetime"
+      class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+      Lifetime
+      <span class="block text-xs text-[#78716C] mt-0.5">One-time payment. Access forever, no renewals.</span>
+    </span>
+  </label>
+</fieldset>

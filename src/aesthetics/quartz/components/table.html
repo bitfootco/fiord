@@ -1,0 +1,126 @@
+<!-- fiord:wrapper max-w-4xl mx-auto -->
+    <div class="overflow-hidden rounded-lg border border-quartz-200 bg-white dark:border-quartz-700 dark:bg-quartz-800">
+
+      <!-- Table header with search/filter -->
+      <div class="flex flex-col gap-3 border-b border-quartz-200 p-4 sm:flex-row sm:items-center sm:justify-between dark:border-quartz-700">
+        <div>
+          <h2 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-quartz-900 dark:text-quartz-100">Transactions</h2>
+          <p class="text-xs text-quartz-500 dark:text-quartz-400">127 total transactions</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <div class="relative">
+            <svg class="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-quartz-400" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <input
+              type="text"
+              placeholder="Search transactions…"
+              class="rounded border border-quartz-300 bg-white py-1.5 pl-8 pr-3 text-sm text-quartz-900 placeholder-quartz-400 focus:border-[#0891B2] focus:outline-none focus:ring-1 focus:ring-[#0891B2] dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500"
+            >
+          </div>
+          <select class="rounded border border-quartz-300 bg-white py-1.5 pl-3 pr-8 text-sm text-quartz-700 focus:border-[#0891B2] focus:outline-none focus:ring-1 focus:ring-[#0891B2] dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-300">
+            <option>All types</option>
+            <option>Deposits</option>
+            <option>Withdrawals</option>
+            <option>Transfers</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Responsive table wrapper -->
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead>
+            <tr class="border-b border-quartz-200 bg-quartz-50 dark:border-quartz-700 dark:bg-quartz-800/60">
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-quartz-500 dark:text-quartz-400">Reference</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-quartz-500 dark:text-quartz-400">Date</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-quartz-500 dark:text-quartz-400">Counterparty</th>
+              <th class="px-4 py-3 text-right text-xs font-medium uppercase tracking-wide text-quartz-500 dark:text-quartz-400">Amount</th>
+              <th class="px-4 py-3 text-left text-xs font-medium uppercase tracking-wide text-quartz-500 dark:text-quartz-400">Status</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-quartz-200 dark:divide-quartz-700">
+            <tr class="bg-white hover:bg-quartz-50 dark:bg-transparent dark:hover:bg-quartz-700/40">
+              <td class="px-4 py-3 font-['IBM_Plex_Mono'] text-xs font-medium text-quartz-700 dark:text-quartz-300">TXN-2026-04821</td>
+              <td class="px-4 py-3 text-quartz-600 dark:text-quartz-400">Mar 8, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Meridian+Corp&background=0E7490&color=fff&size=24" alt="Meridian Corp" class="h-6 w-6 rounded-full">
+                  <span class="text-quartz-900 dark:text-quartz-100">Meridian Corp</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-quartz-900 dark:text-quartz-100">$42,500.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Settled</span>
+              </td>
+            </tr>
+            <tr class="bg-quartz-50/50 hover:bg-quartz-50 dark:bg-quartz-800/20 dark:hover:bg-quartz-700/40">
+              <td class="px-4 py-3 font-['IBM_Plex_Mono'] text-xs font-medium text-quartz-700 dark:text-quartz-300">TXN-2026-04820</td>
+              <td class="px-4 py-3 text-quartz-600 dark:text-quartz-400">Mar 7, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Apex+Capital&background=0E7490&color=fff&size=24" alt="Apex Capital" class="h-6 w-6 rounded-full">
+                  <span class="text-quartz-900 dark:text-quartz-100">Apex Capital</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-quartz-900 dark:text-quartz-100">$128,750.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-700 dark:bg-amber-900/30 dark:text-amber-400">Pending</span>
+              </td>
+            </tr>
+            <tr class="bg-white hover:bg-quartz-50 dark:bg-transparent dark:hover:bg-quartz-700/40">
+              <td class="px-4 py-3 font-['IBM_Plex_Mono'] text-xs font-medium text-quartz-700 dark:text-quartz-300">TXN-2026-04819</td>
+              <td class="px-4 py-3 text-quartz-600 dark:text-quartz-400">Mar 5, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Lena+Fischer&background=0E7490&color=fff&size=24" alt="Lena Fischer" class="h-6 w-6 rounded-full">
+                  <span class="text-quartz-900 dark:text-quartz-100">Lena Fischer</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-quartz-900 dark:text-quartz-100">$3,200.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700 dark:bg-red-900/30 dark:text-red-400">Failed</span>
+              </td>
+            </tr>
+            <tr class="bg-quartz-50/50 hover:bg-quartz-50 dark:bg-quartz-800/20 dark:hover:bg-quartz-700/40">
+              <td class="px-4 py-3 font-['IBM_Plex_Mono'] text-xs font-medium text-quartz-700 dark:text-quartz-300">TXN-2026-04818</td>
+              <td class="px-4 py-3 text-quartz-600 dark:text-quartz-400">Mar 4, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Priya+Nair&background=0E7490&color=fff&size=24" alt="Priya Nair" class="h-6 w-6 rounded-full">
+                  <span class="text-quartz-900 dark:text-quartz-100">Priya Nair</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-quartz-900 dark:text-quartz-100">$87,300.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-emerald-100 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Settled</span>
+              </td>
+            </tr>
+            <tr class="bg-white hover:bg-quartz-50 dark:bg-transparent dark:hover:bg-quartz-700/40">
+              <td class="px-4 py-3 font-['IBM_Plex_Mono'] text-xs font-medium text-quartz-700 dark:text-quartz-300">TXN-2026-04817</td>
+              <td class="px-4 py-3 text-quartz-600 dark:text-quartz-400">Mar 3, 2026</td>
+              <td class="px-4 py-3">
+                <div class="flex items-center gap-2">
+                  <img src="https://ui-avatars.com/api/?name=Nordic+Holdings&background=0E7490&color=fff&size=24" alt="Nordic Holdings" class="h-6 w-6 rounded-full">
+                  <span class="text-quartz-900 dark:text-quartz-100">Nordic Holdings</span>
+                </div>
+              </td>
+              <td class="px-4 py-3 text-right font-medium tabular-nums text-quartz-900 dark:text-quartz-100">$215,000.00</td>
+              <td class="px-4 py-3">
+                <span class="inline-flex items-center rounded-full bg-[#ECFEFF] px-2 py-0.5 text-xs font-medium text-[#0E7490] dark:bg-[#0891B2]/15 dark:text-[#06B6D4]">Processing</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Table footer -->
+      <div class="flex items-center justify-between border-t border-quartz-200 px-4 py-3 dark:border-quartz-700">
+        <p class="text-xs text-quartz-500 dark:text-quartz-400">Showing 5 of 127 transactions</p>
+        <div class="flex items-center gap-1">
+          <button class="rounded px-2 py-1 text-xs text-quartz-500 hover:bg-quartz-100 disabled:opacity-40 dark:text-quartz-400 dark:hover:bg-quartz-700" disabled>Previous</button>
+          <button class="rounded px-2 py-1 text-xs text-quartz-500 hover:bg-quartz-100 dark:text-quartz-400 dark:hover:bg-quartz-700">Next</button>
+        </div>
+      </div>
+
+    </div>

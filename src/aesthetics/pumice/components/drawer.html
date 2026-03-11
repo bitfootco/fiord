@@ -1,0 +1,128 @@
+<div class="space-y-4">
+  <button
+    data-fiord-drawer-open="settings-drawer"
+    class="inline-flex items-center gap-2 rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+  >
+    <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+    </svg>
+    Open settings
+  </button>
+</div>
+
+<!-- Drawer -->
+<div
+  id="settings-drawer"
+  data-fiord-drawer
+  class="hidden fixed inset-0 z-50 flex justify-end"
+  aria-hidden="true"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="drawer-title"
+>
+  <!-- Backdrop -->
+  <div data-fiord-backdrop class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+  <!-- Panel -->
+  <div
+    data-fiord-panel
+    class="relative flex h-full w-full max-w-sm translate-x-full flex-col bg-white transition-transform duration-300 ease-out dark:bg-[#1C1816]"
+    style="box-shadow: -4px 0 24px rgba(28,24,20,0.12)"
+  >
+    <!-- Header -->
+    <div class="flex items-center justify-between border-b border-[#E5DFD6] px-6 py-4 dark:border-[#3A3532]">
+      <h2 id="drawer-title" class="font-['Nunito'] text-lg font-extrabold text-[#1C1816] dark:text-white">
+        Notification Settings
+      </h2>
+      <button
+        data-fiord-close
+        class="rounded-lg p-1.5 text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] dark:hover:bg-[#2C2826] dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+        aria-label="Close panel"
+      >
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Body (scrollable) -->
+    <div class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+      <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">
+        Choose how and when you want to be notified about activity in your workspace.
+      </p>
+
+      <!-- Toggle group -->
+      <div class="space-y-4">
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Email notifications</p>
+            <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Daily digest of activity</p>
+          </div>
+          <button
+            role="switch"
+            aria-checked="true"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#D4440F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+          >
+            <span class="inline-block h-4 w-4 translate-x-6 rounded-full bg-white shadow transition-transform"></span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Push notifications</p>
+            <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Real-time alerts on your device</p>
+          </div>
+          <button
+            role="switch"
+            aria-checked="true"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#D4440F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+          >
+            <span class="inline-block h-4 w-4 translate-x-6 rounded-full bg-white shadow transition-transform"></span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">SMS notifications</p>
+            <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Critical alerts via text message</p>
+          </div>
+          <button
+            role="switch"
+            aria-checked="false"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#E5DFD6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 dark:bg-[#3A3532]"
+          >
+            <span class="inline-block h-4 w-4 translate-x-1 rounded-full bg-white shadow transition-transform"></span>
+          </button>
+        </div>
+
+        <div class="flex items-center justify-between">
+          <div>
+            <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Weekly summary</p>
+            <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Your team's progress report</p>
+          </div>
+          <button
+            role="switch"
+            aria-checked="false"
+            class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#E5DFD6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 dark:bg-[#3A3532]"
+          >
+            <span class="inline-block h-4 w-4 translate-x-1 rounded-full bg-white shadow transition-transform"></span>
+          </button>
+        </div>
+      </div>
+
+      <div class="rounded-xl border border-[#E5DFD6] bg-[#F3F0EA] p-4 dark:border-[#3A3532] dark:bg-[#2C2826]">
+        <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">
+          <strong class="font-medium text-[#1C1816] dark:text-white">Quiet hours:</strong> Notifications are paused from 10 PM to 8 AM in your local timezone.
+        </p>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="border-t border-[#E5DFD6] px-6 py-4 dark:border-[#3A3532]">
+      <button class="w-full rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2">
+        Save preferences
+      </button>
+    </div>
+  </div>
+</div>

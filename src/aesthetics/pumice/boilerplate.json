@@ -1,0 +1,8 @@
+{
+  "aesthetic": "pumice",
+  "display_name": "Pumice",
+  "tailwind_config": "{\n      theme: { extend: { colors: {\n        pumice: {\n          50: '#FAFAF8', 100: '#F3F0EA', 200: '#E5DFD6', 300: '#CFC6B8',\n          400: '#B5A99A', 500: '#978880', 600: '#78716C', 700: '#57504C',\n          800: '#3A3532', 900: '#1C1816', 950: '#0E0C0B'\n        }\n      }}}\n    }",
+  "font_import": "<link href=\"https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap\" rel=\"stylesheet\">",
+  "body_class": "bg-[#FAFAF8] p-8 dark:bg-[#1C1816] font-['DM_Sans']",
+  "wrapper_class": "max-w-2xl mx-auto space-y-8"
+}

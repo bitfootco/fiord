@@ -311,6 +311,22 @@
       "catalog": "/aesthetics/slate/catalog.html",
       "meta": "/aesthetics/slate/meta.json",
       "components_path": "/aesthetics/slate/components/"
+    },
+    {
+      "name": "pumice",
+      "display_name": "Pumice",
+      "description": "Warm, human, startup-confident. Cream backgrounds and rounded forms with humanist sans-serif type and a tomato-coral accent that radiates energy without aggression. Suited for consumer products, SaaS with a personality, and any product that wants to feel like it was built by people who give a damn.",
+      "preview": "/aesthetics/pumice/index.html",
+      "meta": "/aesthetics/pumice/meta.json",
+      "components_path": "/aesthetics/pumice/components/"
+    },
+    {
+      "name": "quartz",
+      "display_name": "Quartz",
+      "description": "Crystalline, precise, prismatic. A bright white foundation with cyan-teal accents and crisp geometry. Suited for fintech, analytics platforms, and enterprise products that refuse to look boring.",
+      "preview": "/aesthetics/quartz/index.html",
+      "meta": "/aesthetics/quartz/meta.json",
+      "components_path": "/aesthetics/quartz/components/"
     }
   ],
   "categories": [

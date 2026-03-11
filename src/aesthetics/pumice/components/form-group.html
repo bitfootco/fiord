@@ -1,0 +1,63 @@
+<div class="bg-[#F3F0EA] rounded-2xl p-6 max-w-md dark:bg-[#252220]" style="box-shadow: 0 2px 8px rgba(28,24,20,0.07), 0 1px 2px rgba(28,24,20,0.05);">
+  <h2 class="text-lg font-extrabold font-['Nunito'] text-[#1C1816] mb-1 dark:text-[#E8E3DC]">Send us a message</h2>
+  <p class="text-sm font-['DM_Sans'] text-[#78716C] mb-5">We read every message and reply within one business day.</p>
+
+  <form class="space-y-4" novalidate>
+    <!-- Full name -->
+    <div>
+      <label for="fg-name" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Full name</label>
+      <input
+        id="fg-name"
+        type="text"
+        placeholder="Ada Lovelace"
+        class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3532] dark:placeholder-[#5C5652]"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="fg-email" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Email address</label>
+      <input
+        id="fg-email"
+        type="email"
+        placeholder="ada@lovelace.io"
+        aria-describedby="fg-email-help"
+        class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3532] dark:placeholder-[#5C5652]"
+      />
+      <p id="fg-email-help" class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">We'll only use this to reply to your message.</p>
+    </div>
+
+    <!-- Message -->
+    <div>
+      <label for="fg-message" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Message</label>
+      <textarea
+        id="fg-message"
+        rows="4"
+        placeholder="Describe what you're working on or what you need help with…"
+        class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent resize-y transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3532] dark:placeholder-[#5C5652]"
+      ></textarea>
+    </div>
+
+    <!-- Terms checkbox -->
+    <label class="flex items-start gap-3 cursor-pointer">
+      <input
+        type="checkbox"
+        class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+      />
+      <span class="text-xs font-['DM_Sans'] text-[#78716C]">
+        I agree to the
+        <a href="#" class="text-[#D4440F] hover:text-[#B83A0C] underline underline-offset-2 transition-colors duration-150">Terms of Service</a>
+        and
+        <a href="#" class="text-[#D4440F] hover:text-[#B83A0C] underline underline-offset-2 transition-colors duration-150">Privacy Policy</a>.
+      </span>
+    </label>
+
+    <!-- Submit -->
+    <button
+      type="submit"
+      class="w-full px-5 py-2.5 bg-[#D4440F] text-white text-sm font-medium font-['DM_Sans'] rounded-lg hover:bg-[#B83A0C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-150"
+    >
+      Send message
+    </button>
+  </form>
+</div>

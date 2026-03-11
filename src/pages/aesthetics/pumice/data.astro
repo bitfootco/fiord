@@ -1,0 +1,344 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Data Display" description="Data display components in the Pumice aesthetic. 6 components.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Data Display</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm overflow-x-auto">
+      <a href="#card" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Card</a>
+      <a href="#table" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Table</a>
+      <a href="#stat" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Stat</a>
+      <a href="#badge" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Badge</a>
+      <a href="#avatar" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Avatar</a>
+      <a href="#list" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">List</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="card">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Card</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Content container in basic, elevated, and interactive variants with consistent padding.</p>
+        <a href="/aesthetics/pumice/components/card.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-4">
+          <!-- Basic Card -->
+          <div class="bg-white border border-[#E5DFD6] rounded-xl p-6 dark:bg-[#1C1816] dark:border-[#2C2520]">
+            <h3 class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] mb-2 dark:text-[#F3F0EA]">Quarterly Planning</h3>
+            <p class="font-['DM_Sans'] text-[#78716C] text-sm leading-relaxed mb-4 dark:text-[#A8A29E]">
+              Review OKRs from last quarter and align the team on priorities for Q3. Focus areas include shipping the new onboarding flow and reducing support ticket volume.
+            </p>
+            <a href="#" class="font-['DM_Sans'] font-medium text-sm text-[#D4440F] hover:text-[#B83A0C] transition-colors dark:text-[#F47040]">View notes →</a>
+          </div>
+
+          <!-- Elevated Card -->
+          <div class="bg-white border border-[#E5DFD6] rounded-xl p-6 dark:bg-[#1C1816] dark:border-[#2C2520]" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+            <div class="flex items-start justify-between mb-3">
+              <h3 class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] dark:text-[#F3F0EA]">Design System Audit</h3>
+              <span class="text-xs font-['DM_Sans'] font-medium bg-[#FEF0EC] text-[#D4440F] rounded-full px-2.5 py-1">In Progress</span>
+            </div>
+            <p class="font-['DM_Sans'] text-[#78716C] text-sm leading-relaxed mb-4 dark:text-[#A8A29E]">
+              Comprehensive review of component inconsistencies across the product suite. Identified 34 divergent patterns across web, iOS, and Android.
+            </p>
+            <div class="flex items-center gap-3 pt-3 border-t border-[#E5DFD6] dark:border-[#2C2520]">
+              <div class="w-6 h-6 rounded-full bg-[#F3F0EA] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#1C1816] dark:bg-[#2C2520] dark:text-[#F3F0EA]">MK</div>
+              <span class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Maya Kim · Due Mar 28</span>
+            </div>
+          </div>
+
+          <!-- Interactive Card (task) -->
+          <div class="bg-white border border-[#E5DFD6] rounded-xl p-6 cursor-pointer transition-all duration-150 hover:border-[#D4440F]/40 dark:bg-[#1C1816] dark:border-[#2C2520] dark:hover:border-[#D4440F]/40" style="box-shadow: 0 1px 3px rgba(28,24,20,0.04)" onmouseenter="this.style.boxShadow='0 4px 16px rgba(28,24,20,0.12)'" onmouseleave="this.style.boxShadow='0 1px 3px rgba(28,24,20,0.04)'">
+            <div class="flex items-start gap-3">
+              <div class="mt-0.5 w-5 h-5 rounded border-2 border-[#E5DFD6] flex-shrink-0 dark:border-[#3C3530]"></div>
+              <div class="flex-1 min-w-0">
+                <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] mb-1 dark:text-[#F3F0EA]">Write release notes for v2.4</h3>
+                <p class="font-['DM_Sans'] text-sm text-[#78716C] mb-3 dark:text-[#A8A29E]">Summarise breaking changes and migration steps for the new API endpoints.</p>
+                <div class="flex items-center gap-4">
+                  <span class="font-['DM_Sans'] text-xs text-[#B45309] bg-amber-50 rounded-full px-2.5 py-0.5 dark:bg-[#2C2000] dark:text-[#D97706]">High priority</span>
+                  <span class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Due tomorrow</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="table">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Table</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Data table with header row, striped rows, and horizontal scroll on small viewports.</p>
+        <a href="/aesthetics/pumice/components/table.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="bg-white border border-[#E5DFD6] rounded-xl overflow-hidden dark:bg-[#1C1816] dark:border-[#2C2520]">
+          <div class="px-6 py-4 border-b border-[#E5DFD6] dark:border-[#2C2520]">
+            <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] dark:text-[#F3F0EA]">Team Members</h3>
+            <p class="font-['DM_Sans'] text-sm text-[#78716C] mt-0.5 dark:text-[#A8A29E]">Manage your team and their access levels.</p>
+          </div>
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm font-['DM_Sans']">
+              <thead>
+                <tr class="bg-[#F3F0EA] dark:bg-[#252018]">
+                  <th class="text-left px-6 py-3 font-semibold text-[#1C1816] dark:text-[#D6D0C8]">Name</th>
+                  <th class="text-left px-6 py-3 font-semibold text-[#1C1816] dark:text-[#D6D0C8]">Role</th>
+                  <th class="text-left px-6 py-3 font-semibold text-[#1C1816] dark:text-[#D6D0C8]">Email</th>
+                  <th class="text-left px-6 py-3 font-semibold text-[#1C1816] dark:text-[#D6D0C8]">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-t border-[#E5DFD6] dark:bg-[#1C1816] dark:border-[#2C2520]">
+                  <td class="px-6 py-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#FEF0EC] flex items-center justify-center font-bold text-xs text-[#D4440F] flex-shrink-0">SR</div>
+                    <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">Sophie Renard</span>
+                  </td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">Product Designer</td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">sophie@ember.so</td>
+                  <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 bg-green-50 text-[#15803D] text-xs font-medium rounded-full px-2.5 py-1 dark:bg-[#0A2A18] dark:text-[#34D399]"><span class="w-1.5 h-1.5 rounded-full bg-[#15803D] dark:bg-[#34D399]"></span>Active</span></td>
+                </tr>
+                <tr class="bg-[#FAFAF8] border-t border-[#E5DFD6] dark:bg-[#201D18] dark:border-[#2C2520]">
+                  <td class="px-6 py-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#F3F0EA] flex items-center justify-center font-bold text-xs text-[#78716C] flex-shrink-0 dark:bg-[#2C2520]">JO</div>
+                    <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">James Okoro</span>
+                  </td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">Engineering Lead</td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">james@ember.so</td>
+                  <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 bg-green-50 text-[#15803D] text-xs font-medium rounded-full px-2.5 py-1 dark:bg-[#0A2A18] dark:text-[#34D399]"><span class="w-1.5 h-1.5 rounded-full bg-[#15803D] dark:bg-[#34D399]"></span>Active</span></td>
+                </tr>
+                <tr class="bg-white border-t border-[#E5DFD6] dark:bg-[#1C1816] dark:border-[#2C2520]">
+                  <td class="px-6 py-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#F3F0EA] flex items-center justify-center font-bold text-xs text-[#78716C] flex-shrink-0 dark:bg-[#2C2520]">LP</div>
+                    <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">Lena Papadaki</span>
+                  </td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">Head of Growth</td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">lena@ember.so</td>
+                  <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 bg-amber-50 text-[#B45309] text-xs font-medium rounded-full px-2.5 py-1 dark:bg-[#2A1A00] dark:text-[#FBB846]"><span class="w-1.5 h-1.5 rounded-full bg-[#B45309] dark:bg-[#FBB846]"></span>Pending</span></td>
+                </tr>
+                <tr class="bg-[#FAFAF8] border-t border-[#E5DFD6] dark:bg-[#201D18] dark:border-[#2C2520]">
+                  <td class="px-6 py-4 flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-[#F3F0EA] flex items-center justify-center font-bold text-xs text-[#78716C] flex-shrink-0 dark:bg-[#2C2520]">TW</div>
+                    <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">Tom Whitfield</span>
+                  </td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">Customer Success</td>
+                  <td class="px-6 py-4 text-[#78716C] dark:text-[#A8A29E]">tom@ember.so</td>
+                  <td class="px-6 py-4"><span class="inline-flex items-center gap-1.5 bg-green-50 text-[#15803D] text-xs font-medium rounded-full px-2.5 py-1 dark:bg-[#0A2A18] dark:text-[#34D399]"><span class="w-1.5 h-1.5 rounded-full bg-[#15803D] dark:bg-[#34D399]"></span>Active</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stat">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Stat</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Key metric display showing a headline number, label, and optional trend indicator.</p>
+        <a href="/aesthetics/pumice/components/stat.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <!-- Monthly Revenue -->
+          <div class="bg-[#F3F0EA] rounded-xl p-6 dark:bg-[#252018]">
+            <p class="font-['DM_Sans'] text-sm text-[#78716C] mb-1 dark:text-[#A8A29E]">Monthly Revenue</p>
+            <p class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] mb-2 dark:text-[#F3F0EA]">$48,291</p>
+            <div class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#15803D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+              </svg>
+              <span class="font-['DM_Sans'] text-sm font-medium text-[#15803D]">+12%</span>
+              <span class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">vs last month</span>
+            </div>
+          </div>
+
+          <!-- Active Users -->
+          <div class="bg-[#F3F0EA] rounded-xl p-6 dark:bg-[#252018]">
+            <p class="font-['DM_Sans'] text-sm text-[#78716C] mb-1 dark:text-[#A8A29E]">Active Users</p>
+            <p class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] mb-2 dark:text-[#F3F0EA]">1,284</p>
+            <div class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-[#15803D]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+              </svg>
+              <span class="font-['DM_Sans'] text-sm font-medium text-[#15803D]">+8%</span>
+              <span class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">vs last month</span>
+            </div>
+          </div>
+
+          <!-- Customer Satisfaction -->
+          <div class="bg-[#F3F0EA] rounded-xl p-6 dark:bg-[#252018]">
+            <p class="font-['DM_Sans'] text-sm text-[#78716C] mb-1 dark:text-[#A8A29E]">Customer Satisfaction</p>
+            <p class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] mb-2 dark:text-[#F3F0EA]">94%</p>
+            <div class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-red-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+              </svg>
+              <span class="font-['DM_Sans'] text-sm font-medium text-red-500">-2%</span>
+              <span class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">vs last month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="badge">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Badge</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Compact status indicator and label tag in multiple semantic color variants.</p>
+        <a href="/aesthetics/pumice/components/badge.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-6">
+          <!-- Badge variants -->
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="font-['DM_Sans'] text-xs font-medium bg-[#F3F0EA] text-[#1C1816] rounded-full px-3 py-1 dark:bg-[#2C2520] dark:text-[#D6D0C8]">Default</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-green-50 text-[#15803D] rounded-full px-3 py-1 dark:bg-[#0A2A18] dark:text-[#34D399]">Success</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-amber-50 text-[#B45309] rounded-full px-3 py-1 dark:bg-[#2A1A00] dark:text-[#FBB846]">Warning</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-red-50 text-red-600 rounded-full px-3 py-1 dark:bg-[#2A0A0A] dark:text-[#F87171]">Error</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-blue-50 text-blue-600 rounded-full px-3 py-1 dark:bg-[#0A1A2A] dark:text-[#60A5FA]">Info</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-[#FEF0EC] text-[#D4440F] rounded-full px-3 py-1 dark:bg-[#2A0E06] dark:text-[#F47040]">Action</span>
+          </div>
+
+          <!-- Badge with dot indicator -->
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="font-['DM_Sans'] text-xs font-medium inline-flex items-center gap-1.5 bg-green-50 text-[#15803D] rounded-full px-3 py-1 dark:bg-[#0A2A18] dark:text-[#34D399]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#15803D] dark:bg-[#34D399]"></span>Active
+            </span>
+            <span class="font-['DM_Sans'] text-xs font-medium inline-flex items-center gap-1.5 bg-amber-50 text-[#B45309] rounded-full px-3 py-1 dark:bg-[#2A1A00] dark:text-[#FBB846]">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#B45309] dark:bg-[#FBB846]"></span>Pending
+            </span>
+            <span class="font-['DM_Sans'] text-xs font-medium inline-flex items-center gap-1.5 bg-red-50 text-red-600 rounded-full px-3 py-1 dark:bg-[#2A0A0A] dark:text-[#F87171]">
+              <span class="w-1.5 h-1.5 rounded-full bg-red-500"></span>Suspended
+            </span>
+          </div>
+
+          <!-- "New" badge attached to a name -->
+          <div class="flex items-center gap-2">
+            <span class="font-['Nunito'] font-bold text-base text-[#1C1816] dark:text-[#F3F0EA]">Inbox View</span>
+            <span class="font-['DM_Sans'] text-xs font-medium bg-[#FEF0EC] text-[#D4440F] rounded-full px-2.5 py-0.5 dark:bg-[#2A0E06] dark:text-[#F47040]">New</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="avatar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Avatar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">User image in circle with fallback initials and size variants.</p>
+        <a href="/aesthetics/pumice/components/avatar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-8">
+          <!-- Size variants with initials -->
+          <div class="flex items-end gap-4">
+            <div class="w-8 h-8 rounded-full bg-[#F3F0EA] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#1C1816] dark:bg-[#2C2520] dark:text-[#D6D0C8]">SR</div>
+            <div class="w-10 h-10 rounded-full bg-[#FEF0EC] flex items-center justify-center text-sm font-['DM_Sans'] font-bold text-[#D4440F]">JO</div>
+            <div class="w-12 h-12 rounded-full bg-[#F3F0EA] flex items-center justify-center text-base font-['DM_Sans'] font-bold text-[#1C1816] dark:bg-[#2C2520] dark:text-[#D6D0C8]">LP</div>
+            <div class="w-16 h-16 rounded-full bg-[#FEF0EC] flex items-center justify-center text-xl font-['DM_Sans'] font-bold text-[#D4440F]">TW</div>
+            <div class="flex flex-col gap-0.5">
+              <span class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">sm / md / lg / xl</span>
+            </div>
+          </div>
+
+          <!-- Stacked avatar group -->
+          <div class="flex items-center gap-3">
+            <div class="flex -space-x-2">
+              <div class="w-9 h-9 rounded-full bg-[#FEF0EC] border-2 border-white flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#D4440F] dark:border-[#1C1816]">SR</div>
+              <div class="w-9 h-9 rounded-full bg-[#F3F0EA] border-2 border-white flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#78716C] dark:border-[#1C1816] dark:bg-[#2C2520]">JO</div>
+              <div class="w-9 h-9 rounded-full bg-[#FEF0EC] border-2 border-white flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#D4440F] dark:border-[#1C1816]">LP</div>
+              <div class="w-9 h-9 rounded-full bg-[#F3F0EA] border-2 border-white flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#78716C] dark:border-[#1C1816] dark:bg-[#2C2520]">TW</div>
+              <div class="w-9 h-9 rounded-full bg-[#E5DFD6] border-2 border-white flex items-center justify-center text-xs font-['DM_Sans'] font-medium text-[#78716C] dark:border-[#1C1816] dark:bg-[#3C3530]">+5</div>
+            </div>
+            <span class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">9 collaborators</span>
+          </div>
+
+          <!-- Avatar with name + role -->
+          <div class="flex items-center gap-3 p-4 bg-[#F3F0EA] rounded-xl dark:bg-[#252018]">
+            <div class="w-11 h-11 rounded-full bg-[#FEF0EC] flex items-center justify-center text-sm font-['DM_Sans'] font-bold text-[#D4440F] flex-shrink-0">SR</div>
+            <div>
+              <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Sophie Renard</p>
+              <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Product Designer · sophie@ember.so</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="list">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">List</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Structured list in simple, icon-prefixed, and description variants.</p>
+        <a href="/aesthetics/pumice/components/list.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-8">
+          <!-- Simple list with separators -->
+          <div class="bg-white border border-[#E5DFD6] rounded-xl overflow-hidden dark:bg-[#1C1816] dark:border-[#2C2520]">
+            <div class="px-5 py-3 border-b border-[#E5DFD6] dark:border-[#2C2520]">
+              <h4 class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Upcoming Meetings</h4>
+            </div>
+            <ul>
+              <li class="px-5 py-3.5 font-['DM_Sans'] text-sm text-[#1C1816] border-b border-[#E5DFD6] dark:text-[#D6D0C8] dark:border-[#2C2520]">Weekly design review — Monday 10:00 AM</li>
+              <li class="px-5 py-3.5 font-['DM_Sans'] text-sm text-[#1C1816] border-b border-[#E5DFD6] dark:text-[#D6D0C8] dark:border-[#2C2520]">Stakeholder sync — Tuesday 2:00 PM</li>
+              <li class="px-5 py-3.5 font-['DM_Sans'] text-sm text-[#1C1816] border-b border-[#E5DFD6] dark:text-[#D6D0C8] dark:border-[#2C2520]">Engineering standup — Wednesday 9:30 AM</li>
+              <li class="px-5 py-3.5 font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#D6D0C8]">Product retrospective — Friday 3:00 PM</li>
+            </ul>
+          </div>
+
+          <!-- List with icons (coral dot / checkmark) -->
+          <div class="bg-[#F3F0EA] rounded-xl p-5 dark:bg-[#252018]">
+            <h4 class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-3 dark:text-[#F3F0EA]">What's included</h4>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-3 font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#D6D0C8]">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#D4440F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Unlimited projects and workspaces
+              </li>
+              <li class="flex items-start gap-3 font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#D6D0C8]">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#D4440F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Priority support with 4-hour response SLA
+              </li>
+              <li class="flex items-start gap-3 font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#D6D0C8]">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#D4440F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                Advanced analytics and export to CSV
+              </li>
+              <li class="flex items-start gap-3 font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#D6D0C8]">
+                <svg class="w-4 h-4 mt-0.5 flex-shrink-0 text-[#D4440F]" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+                SSO and SAML 2.0 integration
+              </li>
+            </ul>
+          </div>
+
+          <!-- List with descriptions -->
+          <div class="bg-white border border-[#E5DFD6] rounded-xl divide-y divide-[#E5DFD6] dark:bg-[#1C1816] dark:border-[#2C2520] dark:divide-[#2C2520]">
+            <div class="px-5 py-4">
+              <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-0.5 dark:text-[#F3F0EA]">Email notifications</p>
+              <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Receive updates when someone comments on your work or assigns you a task.</p>
+            </div>
+            <div class="px-5 py-4">
+              <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-0.5 dark:text-[#F3F0EA]">Two-factor authentication</p>
+              <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Add an extra layer of security to your account with TOTP or SMS verification.</p>
+            </div>
+            <div class="px-5 py-4">
+              <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-0.5 dark:text-[#F3F0EA]">API access</p>
+              <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Generate personal access tokens to interact with Ember programmatically.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</SiteLayout>

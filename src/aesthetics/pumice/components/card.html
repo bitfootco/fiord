@@ -1,0 +1,38 @@
+<!-- Basic Card -->
+<div class="bg-white border border-[#E5DFD6] rounded-xl p-6 dark:bg-[#1C1816] dark:border-[#2C2826]">
+  <h3 class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] mb-2 dark:text-[#F3F0EA]">Quarterly Planning</h3>
+  <p class="font-['DM_Sans'] text-[#78716C] text-sm leading-relaxed mb-4 dark:text-[#A8A29E]">
+    Review OKRs from last quarter and align the team on priorities for Q3. Focus areas include shipping the new onboarding flow and reducing support ticket volume.
+  </p>
+  <a href="#" class="font-['DM_Sans'] font-medium text-sm text-[#D4440F] hover:text-[#B83A0C] transition-colors dark:text-[#F47040]">View notes →</a>
+</div>
+
+<!-- Elevated Card -->
+<div class="bg-white border border-[#E5DFD6] rounded-xl p-6 dark:bg-[#1C1816] dark:border-[#2C2826]" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+  <div class="flex items-start justify-between mb-3">
+    <h3 class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] dark:text-[#F3F0EA]">Design System Audit</h3>
+    <span class="text-xs font-['DM_Sans'] font-medium bg-[#FEF0EC] text-[#D4440F] rounded-full px-2.5 py-1">In Progress</span>
+  </div>
+  <p class="font-['DM_Sans'] text-[#78716C] text-sm leading-relaxed mb-4 dark:text-[#A8A29E]">
+    Comprehensive review of component inconsistencies across the product suite. Identified 34 divergent patterns across web, iOS, and Android.
+  </p>
+  <div class="flex items-center gap-3 pt-3 border-t border-[#E5DFD6] dark:border-[#2C2826]">
+    <div class="w-6 h-6 rounded-full bg-[#F3F0EA] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#1C1816] dark:bg-[#2C2826] dark:text-[#F3F0EA]">MK</div>
+    <span class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Maya Kim · Due Mar 28</span>
+  </div>
+</div>
+
+<!-- Interactive Card (task) -->
+<div class="bg-white border border-[#E5DFD6] rounded-xl p-6 cursor-pointer transition-all duration-150 hover:border-[#D4440F]/40 dark:bg-[#1C1816] dark:border-[#2C2826] dark:hover:border-[#D4440F]/40" style="box-shadow: 0 1px 3px rgba(28,24,20,0.04)" onmouseenter="this.style.boxShadow='0 4px 16px rgba(28,24,20,0.12)'" onmouseleave="this.style.boxShadow='0 1px 3px rgba(28,24,20,0.04)'">
+  <div class="flex items-start gap-3">
+    <div class="mt-0.5 w-5 h-5 rounded border-2 border-[#E5DFD6] flex-shrink-0 dark:border-[#3A3532]"></div>
+    <div class="flex-1 min-w-0">
+      <h3 class="font-['Nunito'] font-extrabold text-base text-[#1C1816] mb-1 dark:text-[#F3F0EA]">Write release notes for v2.4</h3>
+      <p class="font-['DM_Sans'] text-sm text-[#78716C] mb-3 dark:text-[#A8A29E]">Summarise breaking changes and migration steps for the new API endpoints.</p>
+      <div class="flex items-center gap-4">
+        <span class="font-['DM_Sans'] text-xs text-[#B45309] bg-amber-50 rounded-full px-2.5 py-0.5 dark:bg-[#2C2000] dark:text-[#D97706]">High priority</span>
+        <span class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Due tomorrow</span>
+      </div>
+    </div>
+  </div>
+</div>

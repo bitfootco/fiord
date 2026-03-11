@@ -1,0 +1,446 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Quartz / Demo" description="A realistic fintech product page showcasing the Quartz aesthetic as a cohesive design system.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- HERO -->
+  <section class="relative overflow-hidden bg-white dark:bg-[#0F1E2E]">
+
+    <!-- Subtle prismatic background -->
+    <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-[#0891B2]/8 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-[#7C3AED]/6 rounded-full -translate-x-1/4 translate-y-1/4 blur-3xl pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative px-8 pt-20 pb-12 sm:px-16 sm:pt-28 text-center">
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-6 text-xs font-semibold text-[#0E7490] dark:text-cyan-300 bg-[#ECFEFF] dark:bg-cyan-900/30 rounded-full border border-cyan-200 dark:border-cyan-800">
+        <span class="w-1.5 h-1.5 rounded-full bg-[#0891B2]"></span>
+        Now processing $2B+ monthly
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-['Bricolage_Grotesque'] text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-[#0C1222] dark:text-[#F1F5F9] leading-tight max-w-3xl mx-auto">
+        Financial operations,<br class="hidden sm:block"/>
+        <span class="text-[#0891B2]">finally clear</span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="mt-6 text-lg sm:text-xl text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed max-w-2xl mx-auto">
+        Clearwater brings expense management, approvals, and reporting into one
+        place. Your finance team will wonder how they ever managed without it.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-[#0891B2] rounded hover:bg-[#0E7490] transition-all shadow-lg shadow-[#0891B2]/25"
+        >
+          Start free trial
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-[#0C1222] dark:text-[#F1F5F9] border border-[#D9E2EA] dark:border-[#2D4050] rounded hover:bg-[#F0FDFA] dark:hover:bg-[#1A2D3D] transition-colors"
+        >
+          Book a demo
+        </a>
+      </div>
+
+      <!-- Social proof -->
+      <p class="mt-8 text-xs text-[#8A9DB0]">
+        Trusted by finance teams at Ramp, Mercury, Brex, and 2,000+ others
+      </p>
+    </div>
+
+    <!-- Mock product screenshot -->
+    <div class="relative mx-8 sm:mx-16 mb-10">
+      <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#1A2D3D] overflow-hidden shadow-2xl shadow-[#0F1E2E]/10 dark:shadow-[#081019]/50" is:raw>
+        <!-- Mock browser chrome -->
+        <div class="flex items-center gap-1.5 px-4 py-3 bg-[#EDF2F7] dark:bg-[#0F1E2E] border-b border-[#D9E2EA] dark:border-[#2D4050]">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+          <div class="ml-2 flex-1 max-w-xs h-5 bg-white dark:bg-[#243546] rounded-sm"></div>
+        </div>
+        <!-- Mock dashboard -->
+        <div class="p-6 grid grid-cols-3 gap-4">
+          <div class="col-span-3 sm:col-span-1 bg-[#F0FDFA] dark:bg-[#243546] rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] p-4">
+            <div class="h-2 w-16 bg-[#D9E2EA] dark:bg-[#2D4050] rounded mb-3"></div>
+            <div class="h-8 w-24 bg-[#0C1222] dark:bg-[#F1F5F9] rounded mb-1"></div>
+            <div class="h-2 w-20 bg-emerald-200 dark:bg-emerald-900 rounded"></div>
+          </div>
+          <div class="col-span-3 sm:col-span-1 bg-[#F0FDFA] dark:bg-[#243546] rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] p-4">
+            <div class="h-2 w-20 bg-[#D9E2EA] dark:bg-[#2D4050] rounded mb-3"></div>
+            <div class="h-8 w-20 bg-[#0C1222] dark:bg-[#F1F5F9] rounded mb-1"></div>
+            <div class="h-2 w-16 bg-[#0891B2]/30 rounded"></div>
+          </div>
+          <div class="col-span-3 sm:col-span-1 bg-[#F0FDFA] dark:bg-[#243546] rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] p-4">
+            <div class="h-2 w-14 bg-[#D9E2EA] dark:bg-[#2D4050] rounded mb-3"></div>
+            <div class="h-8 w-28 bg-[#0C1222] dark:bg-[#F1F5F9] rounded mb-1"></div>
+            <div class="h-2 w-12 bg-amber-200 dark:bg-amber-900 rounded"></div>
+          </div>
+          <div class="col-span-3 bg-[#F0FDFA] dark:bg-[#243546] rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] p-4 h-28">
+            <div class="h-2 w-24 bg-[#D9E2EA] dark:bg-[#2D4050] rounded mb-4"></div>
+            <div class="flex items-end gap-1 h-14">
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:40%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:60%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:45%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:80%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:55%"></div>
+              <div class="flex-1 bg-[#0891B2] rounded-t" style="height:90%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:70%"></div>
+              <div class="flex-1 bg-[#D9E2EA] dark:bg-[#2D4050] rounded-t" style="height:85%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- STATS -->
+  <section class="bg-[#F0FDFA] dark:bg-[#1A2D3D] px-6 py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-10">
+        <h2 class="font-['Bricolage_Grotesque'] text-3xl font-bold text-[#0C1222] dark:text-[#F1F5F9]">Numbers that speak for themselves</h2>
+        <p class="mt-3 text-base text-[#6B8094] dark:text-[#8A9DB0] max-w-xl mx-auto leading-relaxed">
+          Clearwater processes billions in transactions for finance teams who demand accuracy and speed.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#243546] p-5">
+          <div class="flex items-start justify-between">
+            <p class="text-xs font-medium uppercase tracking-wide text-[#6B8094]">Transactions</p>
+            <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+              </svg>
+              24%
+            </span>
+          </div>
+          <p class="mt-2 text-3xl font-bold tabular-nums text-[#0C1222] dark:text-[#F1F5F9]">$840M+</p>
+          <p class="mt-1 text-xs text-[#8A9DB0]">processed this quarter</p>
+        </div>
+
+        <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#243546] p-5">
+          <div class="flex items-start justify-between">
+            <p class="text-xs font-medium uppercase tracking-wide text-[#6B8094]">Teams</p>
+            <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+              </svg>
+              38%
+            </span>
+          </div>
+          <p class="mt-2 text-3xl font-bold tabular-nums text-[#0C1222] dark:text-[#F1F5F9]">2,100+</p>
+          <p class="mt-1 text-xs text-[#8A9DB0]">active finance teams</p>
+        </div>
+
+        <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#243546] p-5">
+          <div class="flex items-start justify-between">
+            <p class="text-xs font-medium uppercase tracking-wide text-[#6B8094]">Time Saved</p>
+            <span class="inline-flex items-center gap-0.5 rounded-full bg-[#ECFEFF] dark:bg-cyan-900/30 px-2 py-0.5 text-xs font-medium text-[#0E7490] dark:text-cyan-400">
+              avg
+            </span>
+          </div>
+          <p class="mt-2 text-3xl font-bold tabular-nums text-[#0C1222] dark:text-[#F1F5F9]">12hrs</p>
+          <p class="mt-1 text-xs text-[#8A9DB0]">saved per week per team</p>
+        </div>
+
+        <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#243546] p-5">
+          <div class="flex items-start justify-between">
+            <p class="text-xs font-medium uppercase tracking-wide text-[#6B8094]">Accuracy</p>
+            <span class="inline-flex items-center gap-0.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 px-2 py-0.5 text-xs font-medium text-emerald-700 dark:text-emerald-400">
+              <svg class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5L12 3m0 0l7.5 7.5M12 3v18" />
+              </svg>
+              0.02%
+            </span>
+          </div>
+          <p class="mt-2 text-3xl font-bold tabular-nums text-[#0C1222] dark:text-[#F1F5F9]">99.97%</p>
+          <p class="mt-1 text-xs text-[#8A9DB0]">transaction reconciliation rate</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="bg-white dark:bg-[#0F1E2E] border-y border-[#D9E2EA] dark:border-[#2D4050] px-8 py-14 sm:px-12">
+    <div class="max-w-5xl mx-auto">
+
+      <div class="text-center mb-12">
+        <h2 class="font-['Bricolage_Grotesque'] text-3xl font-bold text-[#0C1222] dark:text-[#F1F5F9]">
+          Everything your finance team needs
+        </h2>
+        <p class="mt-3 text-base text-[#6B8094] dark:text-[#8A9DB0] max-w-xl mx-auto leading-relaxed">
+          From expense tracking to audit-ready reporting, Clearwater covers the full financial operations lifecycle.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+        <!-- Feature 1 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Expense tracking</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Automatic receipt capture, smart categorization, and real-time spend visibility across every team and department.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Approval flows</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Multi-level approval workflows with configurable thresholds. Route expenses to the right approver automatically.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Real-time reporting</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Live dashboards, custom report builder, and scheduled exports. Always audit-ready without the month-end scramble.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Audit trails</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Every action logged, every change tracked. Complete audit history with one-click compliance exports for SOX and SOC 2.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m9.143-3.686a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">140+ integrations</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Connect to your ERP, accounting software, banks, and HR systems. QuickBooks, NetSuite, Xero, and more out of the box.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="flex flex-col gap-3">
+          <div class="inline-flex items-center justify-center w-10 h-10 rounded-lg bg-[#ECFEFF] dark:bg-cyan-900/20 shrink-0">
+            <svg class="w-5 h-5 text-[#0891B2]" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h3 class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Role-based access</h3>
+            <p class="mt-1 text-sm text-[#6B8094] dark:text-[#8A9DB0] leading-relaxed">
+              Granular permissions for every role — from submitters to CFOs. Departmental budgets with real-time enforcement.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section class="max-w-5xl mx-auto px-6 py-16 sm:py-20">
+    <div class="text-center mb-12">
+      <h2 class="font-['Bricolage_Grotesque'] text-3xl font-bold text-[#0C1222] dark:text-[#F1F5F9]">Loved by finance teams</h2>
+      <p class="mt-3 text-base text-[#6B8094] dark:text-[#8A9DB0]">
+        Hear from the people who rely on Clearwater every day.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Testimonial 1 -->
+      <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#1A2D3D] p-6">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <blockquote class="text-sm text-[#0C1222] dark:text-[#F1F5F9] leading-relaxed mb-4">
+          "Clearwater cut our month-end close from 8 days to 2. The approval workflows alone saved us from three audit findings last quarter."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=0891B2&color=fff&size=32" alt="Sarah Chen" class="h-8 w-8 rounded-full">
+          <div>
+            <p class="text-sm font-medium text-[#0C1222] dark:text-[#F1F5F9]">Sarah Chen</p>
+            <p class="text-xs text-[#8A9DB0]">CFO, Northpoint Capital</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 (Featured - dark cyan bg) -->
+      <div class="rounded-lg bg-[#0E7490] p-6 text-white">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-cyan-200" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <blockquote class="text-sm leading-relaxed mb-4">
+          "We evaluated six expense platforms. Clearwater was the only one where our entire finance team was productive on day one. The integrations with NetSuite just work."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Marcus+Webb&background=164E63&color=fff&size=32" alt="Marcus Webb" class="h-8 w-8 rounded-full">
+          <div>
+            <p class="text-sm font-medium text-white">Marcus Webb</p>
+            <p class="text-xs text-cyan-200">VP Finance, Ridgeline Systems</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="rounded-lg border border-[#D9E2EA] dark:border-[#2D4050] bg-white dark:bg-[#1A2D3D] p-6">
+        <div class="flex gap-1 mb-4">
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-amber-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <blockquote class="text-sm text-[#0C1222] dark:text-[#F1F5F9] leading-relaxed mb-4">
+          "The time our team saves on expense reports alone pays for Clearwater ten times over. We went from chasing receipts to having everything auto-categorized."
+        </blockquote>
+        <div class="flex items-center gap-3">
+          <img src="https://ui-avatars.com/api/?name=Priya+Sharma&background=0891B2&color=fff&size=32" alt="Priya Sharma" class="h-8 w-8 rounded-full">
+          <div>
+            <p class="text-sm font-medium text-[#0C1222] dark:text-[#F1F5F9]">Priya Sharma</p>
+            <p class="text-xs text-[#8A9DB0]">Controller, Apex Ventures</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="relative overflow-hidden bg-[#0E7490] px-8 py-14 sm:px-16 text-center">
+    <div class="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full translate-x-1/3 -translate-y-1/3 blur-3xl pointer-events-none" aria-hidden="true"></div>
+    <div class="relative">
+      <h2 class="font-['Bricolage_Grotesque'] text-3xl sm:text-4xl font-bold text-white leading-tight">
+        Ready to simplify your financial ops?
+      </h2>
+      <p class="mt-4 text-base sm:text-lg text-cyan-100 max-w-xl mx-auto leading-relaxed">
+        Join 2,000+ finance teams who trust Clearwater to manage their expenses, approvals, and reporting. Get started in under five minutes.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-[#0E7490] bg-white rounded hover:bg-cyan-50 transition-all shadow-lg shadow-black/10"
+        >
+          Start free trial
+        </a>
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white border border-white/40 rounded hover:bg-white/10 transition-colors"
+        >
+          Talk to sales
+        </a>
+      </div>
+      <p class="mt-5 text-sm text-cyan-200">SOC 2 Type II &middot; Bank-level encryption &middot; Free for teams under 10</p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-[#EDF2F7] dark:bg-[#0F1E2E] border-t border-[#D9E2EA] dark:border-[#2D4050] px-8 py-12 sm:px-16">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-8 mb-10">
+
+        <div>
+          <p class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9] mb-3">Product</p>
+          <ul class="space-y-2 text-sm text-[#6B8094] dark:text-[#8A9DB0]">
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Expense Management</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Approval Workflows</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Reporting</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Integrations</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9] mb-3">Solutions</p>
+          <ul class="space-y-2 text-sm text-[#6B8094] dark:text-[#8A9DB0]">
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Startups</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Mid-Market</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Enterprise</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Non-Profits</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9] mb-3">Company</p>
+          <ul class="space-y-2 text-sm text-[#6B8094] dark:text-[#8A9DB0]">
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">About</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Blog</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Careers</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <p class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9] mb-3">Legal</p>
+          <ul class="space-y-2 text-sm text-[#6B8094] dark:text-[#8A9DB0]">
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Privacy</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Terms</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Security</a></li>
+            <li><a href="#" class="hover:text-[#0891B2] transition-colors">Compliance</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[#D9E2EA] dark:border-[#2D4050] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="font-['Bricolage_Grotesque'] text-sm font-semibold text-[#0C1222] dark:text-[#F1F5F9]">Clearwater</p>
+        <p class="text-xs text-[#8A9DB0]">&copy; 2026 Clearwater Financial, Inc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</SiteLayout>

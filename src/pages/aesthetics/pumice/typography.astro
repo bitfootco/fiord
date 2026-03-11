@@ -1,0 +1,205 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Typography" description="Typography components in the Pumice aesthetic. 4 components.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Typography</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#heading" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Heading</a>
+      <a href="#paragraph" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Paragraph</a>
+      <a href="#prose" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Prose</a>
+      <a href="#code-block" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Code Block</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="heading">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Heading</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">h1–h6 headings with aesthetic-appropriate sizing, weight, and line height.</p>
+        <a href="/aesthetics/pumice/components/heading.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-5">
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h1 — 3rem / 48px</p>
+    <h1 class="font-['Nunito'] font-extrabold text-5xl text-[#1C1816] dark:text-[#F3F0EA] leading-tight">Build things people love</h1>
+  </div>
+
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h2 — 2.25rem / 36px</p>
+    <h2 class="font-['Nunito'] font-extrabold text-4xl text-[#1C1816] dark:text-[#F3F0EA] leading-tight">Why teams choose Pumice</h2>
+  </div>
+
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h3 — 1.875rem / 30px</p>
+    <h3 class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] dark:text-[#F3F0EA] leading-snug">Designing for real people</h3>
+  </div>
+
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h4 — 1.5rem / 24px</p>
+    <h4 class="font-['Nunito'] font-extrabold text-2xl text-[#1C1816] dark:text-[#F3F0EA] leading-snug">Getting started with your workspace</h4>
+  </div>
+
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h5 — 1.25rem / 20px</p>
+    <h5 class="font-['Nunito'] font-bold text-xl text-[#1C1816] dark:text-[#F3F0EA]">Notification preferences</h5>
+  </div>
+
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-1">h6 — 1rem / 16px</p>
+    <h6 class="font-['Nunito'] font-bold text-base text-[#1C1816] dark:text-[#F3F0EA] uppercase tracking-wide">Section label</h6>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section id="paragraph">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Paragraph</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Body text with proper line height, measure, and muted secondary variant.</p>
+        <a href="/aesthetics/pumice/components/paragraph.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-6">
+  <!-- Lead / intro text -->
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-2 uppercase tracking-wide font-medium">Lead</p>
+    <p class="font-['DM_Sans'] text-xl font-medium text-[#1C1816] dark:text-[#F3F0EA] leading-relaxed">
+      Pumice is a design library built for how teams actually work — fast, collaborative, and deeply human. It ships complete, opinionated components so you spend less time on pixel math and more time on problems that matter.
+    </p>
+  </div>
+
+  <!-- Regular body text -->
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-2 uppercase tracking-wide font-medium">Body</p>
+    <p class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-relaxed">
+      Every component in Pumice is designed to feel warm and approachable without sacrificing clarity. The palette leans into earthy tones — soft whites, warm grays, and a bold tomato-coral accent that draws the eye to the actions that matter most. Typography is set in Nunito and DM Sans for a friendly, readable finish at every size.
+    </p>
+  </div>
+
+  <!-- Muted / secondary text -->
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-2 uppercase tracking-wide font-medium">Muted</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8] leading-relaxed">
+      Last updated March 12, 2026 · 4 min read · Filed under Design Systems
+    </p>
+  </div>
+
+  <!-- Small / caption text -->
+  <div>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mb-2 uppercase tracking-wide font-medium">Caption</p>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] leading-relaxed">
+      All prices shown in USD. Taxes may apply depending on your billing country. See our <span class="underline underline-offset-2 text-[#D4440F]">pricing FAQ</span> for details.
+    </p>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section id="prose">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Prose</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Long-form content container for articles and blog posts with full typographic rhythm.</p>
+        <a href="/aesthetics/pumice/components/prose.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <article class="max-w-prose space-y-5">
+  <h2 class="font-['Nunito'] font-extrabold text-2xl text-[#1C1816] dark:text-[#F3F0EA] leading-snug">
+    The case for calm design in a noisy product landscape
+  </h2>
+
+  <p class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-[1.75]">
+    Most software is loud. Every screen competes for attention — badges, banners, tooltips, notifications. Over time, the noise becomes wallpaper and users stop seeing anything at all. Calm design takes a different bet: that restraint is a feature, not a limitation. When you reduce the visual volume, the things that actually matter get heard.
+  </p>
+
+  <blockquote class="border-l-4 border-[#D4440F] pl-5 py-1">
+    <p class="font-['DM_Sans'] text-base italic text-[#57504C] dark:text-[#CFC6B8] leading-relaxed">
+      "Good design, when it's done well, becomes invisible. It's only when it's done poorly that we notice it."
+    </p>
+    <cite class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#978880] not-italic mt-2 block">— Jared Spool</cite>
+  </blockquote>
+
+  <p class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-[1.75]">
+    This doesn't mean boring. Warmth, personality, and delight are entirely compatible with calm. The difference is intention — every visual element should earn its place. If it doesn't guide, inform, or reassure the user, ask whether it should exist at all.
+  </p>
+
+  <ul class="space-y-2 pl-1">
+    <li class="flex gap-3 items-start">
+      <span class="mt-1.5 w-2 h-2 rounded-full bg-[#D4440F] shrink-0"></span>
+      <span class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-relaxed">Use whitespace as a design material, not an afterthought</span>
+    </li>
+    <li class="flex gap-3 items-start">
+      <span class="mt-1.5 w-2 h-2 rounded-full bg-[#D4440F] shrink-0"></span>
+      <span class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-relaxed">Reserve accent colors for actions, not decoration</span>
+    </li>
+    <li class="flex gap-3 items-start">
+      <span class="mt-1.5 w-2 h-2 rounded-full bg-[#D4440F] shrink-0"></span>
+      <span class="font-['DM_Sans'] text-base text-[#1C1816] dark:text-[#E5DFD6] leading-relaxed">Write labels that inform rather than impress</span>
+    </li>
+  </ul>
+</article>
+      </div>
+    </section>
+
+    <section id="code-block">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Code Block</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Monospaced code display with syntax-highlighted appearance and copy affordance.</p>
+        <a href="/aesthetics/pumice/components/code-block.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#2E2A27] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden" is:raw>
+<div class="rounded-xl overflow-hidden" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+  <!-- Header bar -->
+  <div class="flex items-center justify-between px-4 py-3 bg-[#2E2A27] border-b border-[#3A3532]">
+    <div class="flex items-center gap-3">
+      <div class="flex gap-1.5">
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+      </div>
+      <span class="font-['Fira_Code'] text-xs text-[#978880]">formatCurrency.js</span>
+    </div>
+    <button class="font-['DM_Sans'] text-xs text-[#78716C] hover:text-[#CFC6B8] transition-colors px-2 py-1 rounded hover:bg-[#3A3532]">
+      Copy
+    </button>
+  </div>
+
+  <!-- Code body -->
+  <div class="bg-[#1C1816] px-5 py-5 overflow-x-auto">
+    <pre class="font-['Fira_Code'] text-sm leading-7"><code><span class="text-[#978880]">/**
+ * Format a number as a localized currency string.
+ * @param &#123;number&#125; amount - The value to format
+ * @param &#123;string&#125; currency - ISO 4217 currency code
+ */</span>
+<span class="text-[#D4440F]">function</span> <span class="text-[#F3CC8A]">formatCurrency</span><span class="text-[#CFC6B8]">(amount, currency =</span> <span class="text-[#A8C5A0]">'USD'</span><span class="text-[#CFC6B8]">) &#123;</span>
+  <span class="text-[#D4440F]">return</span> <span class="text-[#D4440F]">new</span> <span class="text-[#F3CC8A]">Intl.NumberFormat</span><span class="text-[#CFC6B8]">(</span><span class="text-[#A8C5A0]">'en-US'</span><span class="text-[#CFC6B8]">, &#123;</span>
+    <span class="text-[#CFC6B8]">style:</span> <span class="text-[#A8C5A0]">'currency'</span><span class="text-[#CFC6B8]">,</span>
+    <span class="text-[#CFC6B8]">currency,</span>
+    <span class="text-[#CFC6B8]">minimumFractionDigits:</span> <span class="text-[#B8D4FF]">2</span><span class="text-[#CFC6B8]">,</span>
+  <span class="text-[#CFC6B8]">&#125;).</span><span class="text-[#F3CC8A]">format</span><span class="text-[#CFC6B8]">(amount);</span>
+<span class="text-[#CFC6B8]">&#125;</span>
+
+<span class="text-[#978880]">// Usage</span>
+<span class="text-[#F3CC8A]">formatCurrency</span><span class="text-[#CFC6B8]">(</span><span class="text-[#B8D4FF]">4299</span><span class="text-[#CFC6B8]">);</span>  <span class="text-[#978880]">// → "$4,299.00"</span></code></pre>
+  </div>
+</div>
+      </div>
+    </section>
+
+  </main>
+</SiteLayout>

@@ -1,0 +1,57 @@
+{
+  "name": "quartz",
+  "display_name": "Quartz",
+  "description": "Crystalline, precise, prismatic. A bright white foundation with cyan-teal accents and crisp geometry. Suited for fintech, analytics platforms, and enterprise products that refuse to look boring.",
+  "palette": {
+    "primary": "#0C1222",
+    "primary_light": "#243546",
+    "background": "#FFFFFF",
+    "background_dark": "#0F1E2E",
+    "surface": "#F0FDFA",
+    "surface_dark": "#1A2D3D",
+    "text": "#0C1222",
+    "text_dark": "#F1F5F9",
+    "text_muted": "#6B8094",
+    "text_muted_dark": "#8A9DB0",
+    "border": "#D9E2EA",
+    "border_dark": "#2D4050",
+    "accent_action": "#0891B2",
+    "accent_action_hover": "#0E7490",
+    "accent_action_light": "#ECFEFF",
+    "accent_positive": "#059669",
+    "accent_attention": "#D97706",
+    "accent_secondary": "#7C3AED"
+  },
+  "typography": {
+    "heading_font": "Bricolage Grotesque",
+    "body_font": "Instrument Sans",
+    "mono_font": "IBM Plex Mono",
+    "scale": [12, 14, 16, 18, 20, 24, 30, 36, 48, 60],
+    "heading_weight": "600",
+    "body_weight": "400",
+    "line_height_body": "1.6",
+    "line_height_heading": "1.15"
+  },
+  "spacing": {
+    "unit": 4,
+    "rhythm": "compact",
+    "section_gap": "3.5rem",
+    "component_padding": "1.25rem"
+  },
+  "borders": {
+    "radius": "0.25rem",
+    "radius_lg": "0.5rem",
+    "width": "1px",
+    "style": "crisp"
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(15, 30, 46, 0.06), 0 1px 1px rgba(15, 30, 46, 0.04)",
+    "md": "0 2px 4px rgba(15, 30, 46, 0.05), 0 6px 12px -2px rgba(15, 30, 46, 0.08)",
+    "lg": "0 2px 4px rgba(15, 30, 46, 0.04), 0 8px 16px -4px rgba(15, 30, 46, 0.08), 0 20px 40px -8px rgba(15, 30, 46, 0.06)"
+  },
+  "motion": {
+    "duration_fast": "100ms",
+    "duration_normal": "180ms",
+    "easing": "cubic-bezier(0.2, 0, 0, 1)"
+  }
+}

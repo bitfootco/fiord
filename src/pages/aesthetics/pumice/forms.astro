@@ -1,0 +1,436 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Forms" description="Form components in the Pumice aesthetic. 7 components.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Forms</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#input" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Input</a>
+      <a href="#textarea" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Textarea</a>
+      <a href="#select" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Select</a>
+      <a href="#checkbox" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Checkbox</a>
+      <a href="#radio" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Radio</a>
+      <a href="#toggle" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Toggle</a>
+      <a href="#form-group" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Form Group</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Input -->
+    <section id="input">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Input</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Text input with label, placeholder, helper text, and error state.</p>
+        <a href="/aesthetics/pumice/components/input.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-5 max-w-sm">
+          <!-- Default -->
+          <div>
+            <label for="input-default" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Full name</label>
+            <input
+              id="input-default"
+              type="text"
+              placeholder="Ada Lovelace"
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+            />
+            <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">This will appear on your public profile.</p>
+          </div>
+
+          <!-- Filled / active (visual demo) -->
+          <div>
+            <label for="input-filled" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Email address</label>
+            <input
+              id="input-filled"
+              type="email"
+              value="ada@lovelace.io"
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530]"
+            />
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="input-error" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Username</label>
+            <input
+              id="input-error"
+              type="text"
+              value="ada lovelace"
+              aria-invalid="true"
+              aria-describedby="input-error-msg"
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC]"
+            />
+            <p id="input-error-msg" class="mt-1.5 text-xs font-['DM_Sans'] text-red-600">Username can't contain spaces.</p>
+          </div>
+
+          <!-- Disabled -->
+          <div>
+            <label for="input-disabled" class="block text-sm font-medium font-['DM_Sans'] text-[#78716C] mb-1.5">Account ID</label>
+            <input
+              id="input-disabled"
+              type="text"
+              value="usr_9f3a72c1"
+              disabled
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#78716C] bg-[#F3F0EA] border border-[#E5DFD6] rounded-lg cursor-not-allowed opacity-70 dark:bg-[#22201E] dark:border-[#3A3530]"
+            />
+            <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">Assigned automatically — cannot be changed.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Textarea -->
+    <section id="textarea">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Textarea</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Multiline text input with label, auto-resize affordance, and error state.</p>
+        <a href="/aesthetics/pumice/components/textarea.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-5 max-w-sm">
+          <!-- Default -->
+          <div>
+            <label for="textarea-default" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Your message</label>
+            <textarea
+              id="textarea-default"
+              rows="4"
+              placeholder="What's on your mind? We read every message."
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-xl placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent resize-y transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+            ></textarea>
+            <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">Maximum 1,000 characters. We typically reply within one business day.</p>
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="textarea-error" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Reason for cancellation</label>
+            <textarea
+              id="textarea-error"
+              rows="4"
+              aria-invalid="true"
+              aria-describedby="textarea-error-msg"
+              class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-red-400 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent resize-y transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC]"
+            ></textarea>
+            <p id="textarea-error-msg" class="mt-1.5 text-xs font-['DM_Sans'] text-red-600">Please tell us why you're leaving — it helps us improve.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Select -->
+    <section id="select">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Select</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Native select element with custom styled wrapper, label, and error state.</p>
+        <a href="/aesthetics/pumice/components/select.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-5 max-w-sm">
+          <!-- Default -->
+          <div>
+            <label for="select-default" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Country</label>
+            <div class="relative">
+              <select
+                id="select-default"
+                class="w-full appearance-none px-3.5 py-2.5 pr-10 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530]"
+              >
+                <option value="" disabled selected>Select a country…</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="gb">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="de">Germany</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg class="w-4 h-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+            <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">Used to determine your billing currency.</p>
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="select-error" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Time zone</label>
+            <div class="relative">
+              <select
+                id="select-error"
+                aria-invalid="true"
+                aria-describedby="select-error-msg"
+                class="w-full appearance-none px-3.5 py-2.5 pr-10 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC]"
+              >
+                <option value="" disabled selected>Select a time zone…</option>
+                <option value="et">Eastern Time (ET)</option>
+                <option value="ct">Central Time (CT)</option>
+                <option value="mt">Mountain Time (MT)</option>
+                <option value="pt">Pacific Time (PT)</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </div>
+            </div>
+            <p id="select-error-msg" class="mt-1.5 text-xs font-['DM_Sans'] text-red-600">Please select your time zone to continue.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkbox -->
+    <section id="checkbox">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Checkbox</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Styled checkbox with label, checked state, and indeterminate support.</p>
+        <a href="/aesthetics/pumice/components/checkbox.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <fieldset class="space-y-3 max-w-sm">
+          <legend class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-3 dark:text-[#E8E3DC]">Notification preferences</legend>
+
+          <!-- Unchecked -->
+          <label class="flex items-start gap-3 cursor-pointer group">
+            <input
+              type="checkbox"
+              class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] text-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+              Product updates
+              <span class="block text-xs text-[#78716C] mt-0.5">New features, improvements, and release notes.</span>
+            </span>
+          </label>
+
+          <!-- Checked -->
+          <label class="flex items-start gap-3 cursor-pointer group">
+            <input
+              type="checkbox"
+              checked
+              class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] text-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+              Security alerts
+              <span class="block text-xs text-[#78716C] mt-0.5">Sign-ins from new devices and password changes.</span>
+            </span>
+          </label>
+
+          <!-- Disabled -->
+          <label class="flex items-start gap-3 cursor-not-allowed opacity-50">
+            <input
+              type="checkbox"
+              disabled
+              class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] cursor-not-allowed"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#78716C]">
+              Marketing emails
+              <span class="block text-xs mt-0.5">Managed by your organization's admin.</span>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Radio -->
+    <section id="radio">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Radio</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Styled radio button group with label and selected state.</p>
+        <a href="/aesthetics/pumice/components/radio.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <fieldset class="space-y-3 max-w-sm">
+          <legend class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-3 dark:text-[#E8E3DC]">Billing cycle</legend>
+
+          <!-- Option 1 — pre-selected -->
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input
+              type="radio"
+              name="billing-cycle"
+              value="monthly"
+              checked
+              class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+              Monthly
+              <span class="block text-xs text-[#78716C] mt-0.5">Billed every 30 days. Cancel anytime.</span>
+            </span>
+          </label>
+
+          <!-- Option 2 -->
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input
+              type="radio"
+              name="billing-cycle"
+              value="annual"
+              class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+              Annual
+              <span class="block text-xs text-[#78716C] mt-0.5">Billed once per year — save 20% vs. monthly.</span>
+            </span>
+          </label>
+
+          <!-- Option 3 -->
+          <label class="flex items-start gap-3 cursor-pointer">
+            <input
+              type="radio"
+              name="billing-cycle"
+              value="lifetime"
+              class="mt-0.5 w-4 h-4 accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+            />
+            <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+              Lifetime
+              <span class="block text-xs text-[#78716C] mt-0.5">One-time payment. Access forever, no renewals.</span>
+            </span>
+          </label>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Toggle -->
+    <section id="toggle">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toggle</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">On/off switch with animated thumb and accessible checked state.</p>
+        <a href="/aesthetics/pumice/components/toggle.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-5 max-w-sm">
+          <!-- Off state -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">Desktop notifications</p>
+              <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Show alerts for new messages and activity.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="false"
+              aria-label="Desktop notifications"
+              class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-[#E5DFD6] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-200 dark:bg-[#3A3530]"
+            >
+              <span class="pointer-events-none inline-block h-5 w-5 translate-x-0 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+            </button>
+          </div>
+
+          <!-- On state -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">Email digest</p>
+              <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Weekly summary of your account activity.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-label="Email digest"
+              class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-[#D4440F] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-200"
+            >
+              <span class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+            </button>
+          </div>
+
+          <!-- Disabled -->
+          <div class="flex items-center justify-between opacity-50">
+            <div>
+              <p class="text-sm font-medium font-['DM_Sans'] text-[#78716C]">Two-factor authentication</p>
+              <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Enforced by your organization.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-label="Two-factor authentication"
+              disabled
+              class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-not-allowed rounded-full border-2 border-transparent bg-[#D4440F]"
+            >
+              <span class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow-sm" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Group -->
+    <section id="form-group">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Form Group</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Composed form layout combining label, input, helper text, and validation error.</p>
+        <a href="/aesthetics/pumice/components/form-group.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="bg-[#F3F0EA] rounded-2xl p-6 max-w-md dark:bg-[#22201E]" style="box-shadow: 0 2px 8px rgba(28,24,20,0.07), 0 1px 2px rgba(28,24,20,0.05);">
+          <h2 class="text-lg font-extrabold font-['Nunito'] text-[#1C1816] mb-1 dark:text-[#E8E3DC]">Send us a message</h2>
+          <p class="text-sm font-['DM_Sans'] text-[#78716C] mb-5">We read every message and reply within one business day.</p>
+
+          <form class="space-y-4" novalidate>
+            <!-- Full name -->
+            <div>
+              <label for="fg-name" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Full name</label>
+              <input
+                id="fg-name"
+                type="text"
+                placeholder="Ada Lovelace"
+                class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="fg-email" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Email address</label>
+              <input
+                id="fg-email"
+                type="email"
+                placeholder="ada@lovelace.io"
+                aria-describedby="fg-email-help"
+                class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+              />
+              <p id="fg-email-help" class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">We'll only use this to reply to your message.</p>
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label for="fg-message" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Message</label>
+              <textarea
+                id="fg-message"
+                rows="4"
+                placeholder="Describe what you're working on or what you need help with…"
+                class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-xl placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent resize-y transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+              ></textarea>
+            </div>
+
+            <!-- Terms checkbox -->
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+              />
+              <span class="text-xs font-['DM_Sans'] text-[#78716C]">
+                I agree to the
+                <a href="#" class="text-[#D4440F] hover:text-[#B83A0C] underline underline-offset-2 transition-colors duration-150">Terms of Service</a>
+                and
+                <a href="#" class="text-[#D4440F] hover:text-[#B83A0C] underline underline-offset-2 transition-colors duration-150">Privacy Policy</a>.
+              </span>
+            </label>
+
+            <!-- Submit -->
+            <button
+              type="submit"
+              class="w-full px-5 py-2.5 bg-[#D4440F] text-white text-sm font-medium font-['DM_Sans'] rounded-lg hover:bg-[#B83A0C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-150"
+            >
+              Send message
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</SiteLayout>

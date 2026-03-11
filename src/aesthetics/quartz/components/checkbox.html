@@ -1,0 +1,92 @@
+    <div class="space-y-6">
+
+      <!-- Single checkbox -->
+      <div>
+        <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Single</p>
+        <label class="flex items-start gap-3 cursor-pointer">
+          <input
+            type="checkbox"
+            class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div>
+            <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">I agree to the terms of service</span>
+            <span class="block text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">
+              By checking this box you confirm you have read and accept our
+              <a href="#" class="underline hover:text-[#0E7490] dark:hover:text-[#06B6D4]">Terms of Service</a>
+              and
+              <a href="#" class="underline hover:text-[#0E7490] dark:hover:text-[#06B6D4]">Privacy Policy</a>.
+            </span>
+          </div>
+        </label>
+      </div>
+
+      <!-- Checkbox group — notification preferences -->
+      <div>
+        <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Notification Preferences</p>
+        <fieldset>
+          <legend class="sr-only">Notification preferences</legend>
+          <div class="space-y-3">
+
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="notifications"
+                value="comments"
+                checked
+                class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div>
+                <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Comments</span>
+                <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get notified when someone comments on your posts.</span>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="notifications"
+                value="mentions"
+                checked
+                class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div>
+                <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Mentions</span>
+                <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get notified when someone mentions you in a discussion.</span>
+              </div>
+            </label>
+
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                name="notifications"
+                value="security"
+                class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div>
+                <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Security alerts</span>
+                <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get important alerts about your account security.</span>
+              </div>
+            </label>
+
+          </div>
+        </fieldset>
+      </div>
+
+      <!-- Checked + disabled state -->
+      <div>
+        <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Checked &amp; Disabled</p>
+        <label class="flex items-start gap-3 cursor-not-allowed opacity-60">
+          <input
+            type="checkbox"
+            checked
+            disabled
+            class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] cursor-not-allowed dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div>
+            <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Receive transactional emails</span>
+            <span class="block text-xs text-quartz-500 dark:text-quartz-400">Required for account notifications. Cannot be disabled.</span>
+          </div>
+        </label>
+      </div>
+
+    </div>

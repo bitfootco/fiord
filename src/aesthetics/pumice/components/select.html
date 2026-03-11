@@ -1,0 +1,46 @@
+<div class="space-y-5 max-w-sm">
+  <!-- Default -->
+  <div>
+    <label for="select-default" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Country</label>
+    <div class="relative">
+      <select
+        id="select-default"
+        class="w-full appearance-none px-3.5 py-2.5 pr-10 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3532]"
+      >
+        <option value="" disabled selected>Select a country…</option>
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="gb">United Kingdom</option>
+        <option value="au">Australia</option>
+        <option value="de">Germany</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+        <svg class="w-4 h-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+    </div>
+    <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">Used to determine your billing currency.</p>
+  </div>
+
+  <!-- Error state -->
+  <div>
+    <label for="select-error" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Time zone</label>
+    <div class="relative">
+      <select
+        id="select-error"
+        aria-invalid="true"
+        aria-describedby="select-error-msg"
+        class="w-full appearance-none px-3.5 py-2.5 pr-10 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC]"
+      >
+        <option value="" disabled selected>Select a time zone…</option>
+        <option value="et">Eastern Time (ET)</option>
+        <option value="ct">Central Time (CT)</option>
+        <option value="mt">Mountain Time (MT)</option>
+        <option value="pt">Pacific Time (PT)</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+        <svg class="w-4 h-4 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </div>
+    </div>
+    <p id="select-error-msg" class="mt-1.5 text-xs font-['DM_Sans'] text-red-600">Please select your time zone to continue.</p>
+  </div>
+</div>

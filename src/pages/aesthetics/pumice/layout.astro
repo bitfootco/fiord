@@ -1,0 +1,214 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Layout" description="Layout components in the Pumice aesthetic. 4 components.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Layout</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#container" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Container</a>
+      <a href="#grid" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Grid</a>
+      <a href="#section" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Section</a>
+      <a href="#divider" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Divider</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="container">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Container</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Max-width wrapper with responsive horizontal padding for centering page content.</p>
+        <a href="/aesthetics/pumice/components/container.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="w-full px-4 sm:px-6 lg:px-8">
+  <div class="max-w-5xl mx-auto">
+    <div class="rounded-2xl bg-[#F3F0EA] p-8 dark:bg-[#3A3532]" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+      <div class="mb-6">
+        <h2 class="font-['Nunito'] font-extrabold text-2xl text-[#1C1816] dark:text-[#F3F0EA] mb-1">Container</h2>
+        <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">Max-width wrapper with responsive horizontal padding</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="rounded-xl bg-white/60 dark:bg-[#57504C]/40 border border-[#E5DFD6] dark:border-[#57504C] p-5">
+          <div class="w-8 h-8 rounded-lg bg-[#FEF0EC] dark:bg-[#D4440F]/20 flex items-center justify-center mb-3">
+            <div class="w-4 h-4 rounded bg-[#D4440F]"></div>
+          </div>
+          <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Inbox</p>
+          <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mt-1">12 unread messages</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-[#57504C]/40 border border-[#E5DFD6] dark:border-[#57504C] p-5">
+          <div class="w-8 h-8 rounded-lg bg-[#F3F0EA] dark:bg-[#3A3532] flex items-center justify-center mb-3">
+            <div class="w-4 h-4 rounded bg-[#15803D]"></div>
+          </div>
+          <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Completed</p>
+          <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mt-1">34 tasks this week</p>
+        </div>
+        <div class="rounded-xl bg-white/60 dark:bg-[#57504C]/40 border border-[#E5DFD6] dark:border-[#57504C] p-5">
+          <div class="w-8 h-8 rounded-lg bg-[#F3F0EA] dark:bg-[#3A3532] flex items-center justify-center mb-3">
+            <div class="w-4 h-4 rounded bg-[#B45309]"></div>
+          </div>
+          <p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Pending</p>
+          <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8] mt-1">7 items awaiting review</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      </div>
+    </section>
+
+    <section id="grid">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Grid</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Responsive column grid with 2, 3, and 4 column variants and configurable gap.</p>
+        <a href="/aesthetics/pumice/components/grid.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto space-y-8">
+<!-- 2-column grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-6" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] dark:text-[#F3F0EA] mb-2">Customer Feedback</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">Analyze trends from support tickets and NPS surveys collected over the past quarter.</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-6" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-lg text-[#1C1816] dark:text-[#F3F0EA] mb-2">Usage Analytics</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">Track feature adoption, session duration, and drop-off points across your product flows.</p>
+  </div>
+</div>
+
+<!-- 3-column grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-6" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-base text-[#1C1816] dark:text-[#F3F0EA] mb-1">Design</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">Components, tokens, and visual guidelines for your team.</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-6" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-base text-[#1C1816] dark:text-[#F3F0EA] mb-1">Engineering</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">APIs, integrations, and developer tooling documentation.</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-6" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-base text-[#1C1816] dark:text-[#F3F0EA] mb-1">Operations</p>
+    <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8]">Runbooks, on-call schedules, and incident response playbooks.</p>
+  </div>
+</div>
+
+<!-- 4-column grid -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-5 text-center" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-2xl text-[#D4440F] mb-1">24</p>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8]">Active projects</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-5 text-center" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-2xl text-[#D4440F] mb-1">8</p>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8]">Team members</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-5 text-center" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-2xl text-[#D4440F] mb-1">142</p>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8]">Tasks done</p>
+  </div>
+  <div class="rounded-xl bg-[#F3F0EA] dark:bg-[#3A3532] border border-[#E5DFD6] dark:border-[#57504C] p-5 text-center" style="box-shadow: 0 1px 2px rgba(28,24,20,0.06), 0 1px 1px rgba(28,24,20,0.04)">
+    <p class="font-['Nunito'] font-extrabold text-2xl text-[#D4440F] mb-1">99%</p>
+    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#CFC6B8]">Uptime this month</p>
+  </div>
+</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="section">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Section</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Full-width content section with consistent vertical rhythm and optional background.</p>
+        <a href="/aesthetics/pumice/components/section.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="max-w-4xl mx-auto space-y-8">
+<!-- Light surface section -->
+<section class="rounded-2xl bg-[#FAFAF8] dark:bg-[#1C1816] border border-[#E5DFD6] dark:border-[#3A3532] px-8 py-12">
+  <div class="mb-8">
+    <h2 class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] dark:text-[#F3F0EA] mb-3">How it works</h2>
+    <p class="font-['DM_Sans'] text-base text-[#78716C] dark:text-[#CFC6B8] max-w-lg">Three steps is all it takes. No complicated setup, no steep learning curve — just a clear path from idea to shipped.</p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+    <div>
+      <p class="font-['Nunito'] font-bold text-sm text-[#D4440F] uppercase tracking-wide mb-2">Step 1</p>
+      <h3 class="font-['Nunito'] font-extrabold text-xl text-[#1C1816] dark:text-[#F3F0EA] mb-2">Write your idea down</h3>
+      <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8] leading-relaxed">Start with a single sentence. What problem are you solving, and for whom? Clarity here makes everything else easier.</p>
+    </div>
+    <div>
+      <p class="font-['Nunito'] font-bold text-sm text-[#D4440F] uppercase tracking-wide mb-2">Step 2</p>
+      <h3 class="font-['Nunito'] font-extrabold text-xl text-[#1C1816] dark:text-[#F3F0EA] mb-2">Share it with your team</h3>
+      <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#CFC6B8] leading-relaxed">Invite collaborators, collect feedback asynchronously, and refine the scope before writing a single line of code.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Warm surface section -->
+<section class="rounded-2xl bg-[#F3F0EA] dark:bg-[#3A3532] px-8 py-12" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+  <div class="mb-8">
+    <h2 class="font-['Nunito'] font-extrabold text-3xl text-[#1C1816] dark:text-[#F3F0EA] mb-3">Trusted by small teams everywhere</h2>
+    <p class="font-['DM_Sans'] text-base text-[#78716C] dark:text-[#CFC6B8] max-w-lg">Independent studios, bootstrapped startups, and lean in-house teams use Pumice to ship faster without sacrificing quality.</p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <div class="rounded-xl bg-white/50 dark:bg-[#57504C]/30 border border-[#E5DFD6] dark:border-[#57504C] p-5">
+      <p class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#F3F0EA] leading-relaxed mb-3">"We cut our design handoff time in half. Everything is just ready to paste in."</p>
+      <p class="font-['Nunito'] font-bold text-xs text-[#78716C] dark:text-[#CFC6B8]">Priya S. — Lead Designer, Fable Studio</p>
+    </div>
+    <div class="rounded-xl bg-white/50 dark:bg-[#57504C]/30 border border-[#E5DFD6] dark:border-[#57504C] p-5">
+      <p class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-[#F3F0EA] leading-relaxed mb-3">"Finally a design library that actually works with the AI tools we use every day."</p>
+      <p class="font-['Nunito'] font-bold text-xs text-[#78716C] dark:text-[#CFC6B8]">Marcus L. — Founder, Driftwood</p>
+    </div>
+  </div>
+</section>
+        </div>
+      </div>
+    </section>
+
+    <section id="divider">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Divider</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Horizontal rule and visual separator with optional label text.</p>
+        <a href="/aesthetics/pumice/components/divider.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <!-- Plain divider -->
+<div class="py-2">
+  <hr class="border-0 border-t border-[#E5DFD6] dark:border-[#57504C]" />
+</div>
+
+<!-- Divider with centered label -->
+<div class="relative flex items-center py-2">
+  <div class="flex-grow border-t border-[#E5DFD6] dark:border-[#57504C]"></div>
+  <span class="mx-4 font-['DM_Sans'] text-xs font-medium text-[#78716C] dark:text-[#CFC6B8] whitespace-nowrap">or continue with</span>
+  <div class="flex-grow border-t border-[#E5DFD6] dark:border-[#57504C]"></div>
+</div>
+
+<!-- Divider with left-aligned section label -->
+<div class="relative flex items-center gap-4 py-2">
+  <span class="font-['Nunito'] font-bold text-xs text-[#78716C] dark:text-[#CFC6B8] uppercase tracking-widest whitespace-nowrap">This week</span>
+  <div class="flex-grow border-t border-[#E5DFD6] dark:border-[#57504C]"></div>
+</div>
+
+<!-- Accent divider -->
+<div class="py-2">
+  <hr class="border-0 border-t-2 border-[#D4440F]/30 dark:border-[#D4440F]/20" />
+</div>
+      </div>
+    </section>
+
+  </main>
+</SiteLayout>
