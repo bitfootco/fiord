@@ -544,7 +544,7 @@ When creating a new aesthetic:
 4. Create `src/pages/aesthetics/<name>/index.astro` for the human-readable preview
 5. Add to `manifest.json` and `manifest.md`
 
-**Astro template note:** When component files contain `{` and `}` characters in text content (e.g., code examples), add `is:raw` to the containing element to prevent Astro from interpreting them as JSX expressions. Example: `<div is:raw>...code with curly braces...</div>`
+**Astro template note:** When component files contain `{` and `}` characters in text content (e.g., code examples), Astro's parser will try to evaluate them as template expressions at compile time — `is:raw` does NOT fully prevent this. The reliable fix is to HTML-encode the curly braces in the `.astro` source: use `&#123;` for `{` and `&#125;` for `}`. This applies to any category page that inlines the `code-block` component or any other markup containing literal braces.
 
 ### Context efficiency — follow these rules strictly
 

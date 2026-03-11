@@ -1,0 +1,365 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Navigation" description="Navigation components in the Pumice aesthetic. 6 components.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Navigation</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm overflow-x-auto">
+      <a href="#navbar" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Navbar</a>
+      <a href="#sidebar" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Sidebar</a>
+      <a href="#breadcrumb" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Breadcrumb</a>
+      <a href="#tabs" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Tabs</a>
+      <a href="#pagination" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Pagination</a>
+      <a href="#footer" class="text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-100 py-2 whitespace-nowrap">Footer</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="navbar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Navbar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Top navigation bar with logo, link list, and action slot.</p>
+        <a href="/aesthetics/pumice/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <nav class="bg-white border border-[#E5DFD6] rounded-xl px-5 py-3 flex items-center justify-between dark:bg-[#1C1816] dark:border-[#2C2520]" style="box-shadow: 0 1px 3px rgba(28,24,20,0.05)">
+          <!-- Logo -->
+          <div class="flex items-center gap-2 flex-shrink-0">
+            <div class="w-7 h-7 rounded-lg bg-[#D4440F] flex items-center justify-center">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              </svg>
+            </div>
+            <span class="font-['Nunito'] font-bold text-lg text-[#1C1816] dark:text-[#F3F0EA]">Ember</span>
+          </div>
+
+          <!-- Nav links -->
+          <div class="hidden md:flex items-center gap-1">
+            <a href="#" class="font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] rounded-lg px-3 py-1.5 transition-colors dark:text-[#D6D0C8] dark:hover:bg-[#252018]">Home</a>
+            <a href="#" class="font-['DM_Sans'] text-sm font-medium text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] rounded-lg px-3 py-1.5 transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018] dark:hover:text-[#D6D0C8]">Features</a>
+            <a href="#" class="font-['DM_Sans'] text-sm font-medium text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] rounded-lg px-3 py-1.5 transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018] dark:hover:text-[#D6D0C8]">Pricing</a>
+            <a href="#" class="font-['DM_Sans'] text-sm font-medium text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] rounded-lg px-3 py-1.5 transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018] dark:hover:text-[#D6D0C8]">Blog</a>
+          </div>
+
+          <!-- CTA actions -->
+          <div class="flex items-center gap-2">
+            <a href="#" class="font-['DM_Sans'] text-sm font-medium text-[#78716C] hover:text-[#1C1816] px-3 py-1.5 rounded-lg transition-colors dark:text-[#A8A29E] dark:hover:text-[#D6D0C8]">Sign in</a>
+            <a href="#" class="font-['DM_Sans'] text-sm font-semibold bg-[#D4440F] hover:bg-[#B83A0C] text-white px-4 py-1.5 rounded-lg transition-colors">Get started</a>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <section id="sidebar">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Sidebar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Vertical navigation panel with grouped links, icons, and active state.</p>
+        <a href="/aesthetics/pumice/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="w-60 bg-[#F3F0EA] rounded-xl p-4 flex flex-col gap-6 dark:bg-[#252018]" style="min-height: 520px">
+          <!-- Logo -->
+          <div class="flex items-center gap-2 px-1">
+            <div class="w-7 h-7 rounded-lg bg-[#D4440F] flex items-center justify-center flex-shrink-0">
+              <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+              </svg>
+            </div>
+            <span class="font-['Nunito'] font-bold text-base text-[#1C1816] dark:text-[#F3F0EA]">Ember</span>
+          </div>
+
+          <!-- Main nav section -->
+          <div class="flex-1 space-y-0.5">
+            <p class="font-['DM_Sans'] text-xs font-semibold text-[#78716C] uppercase tracking-wider px-3 mb-2 dark:text-[#A8A29E]">Main</p>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg bg-[#FEF0EC] text-[#D4440F] font-['DM_Sans'] text-sm font-medium dark:bg-[#2A0E06] dark:text-[#F47040]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              Dashboard
+            </a>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[#78716C] hover:bg-white hover:text-[#1C1816] font-['DM_Sans'] text-sm transition-colors dark:text-[#A8A29E] dark:hover:bg-[#1C1816] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 7h18M3 12h18M3 17h18"/></svg>
+              Projects
+            </a>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[#78716C] hover:bg-white hover:text-[#1C1816] font-['DM_Sans'] text-sm transition-colors dark:text-[#A8A29E] dark:hover:bg-[#1C1816] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H4v-2a4 4 0 014-4h1m4-4a4 4 0 100-8 4 4 0 000 8z"/></svg>
+              Team
+            </a>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[#78716C] hover:bg-white hover:text-[#1C1816] font-['DM_Sans'] text-sm transition-colors dark:text-[#A8A29E] dark:hover:bg-[#1C1816] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg>
+              Settings
+            </a>
+
+            <p class="font-['DM_Sans'] text-xs font-semibold text-[#78716C] uppercase tracking-wider px-3 pt-4 mb-2 dark:text-[#A8A29E]">Account</p>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[#78716C] hover:bg-white hover:text-[#1C1816] font-['DM_Sans'] text-sm transition-colors dark:text-[#A8A29E] dark:hover:bg-[#1C1816] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path stroke-linecap="round" d="M6 20v-1a6 6 0 0112 0v1"/></svg>
+              Profile
+            </a>
+            <a href="#" class="flex items-center gap-2.5 px-3 py-2 rounded-lg text-[#78716C] hover:bg-white hover:text-[#1C1816] font-['DM_Sans'] text-sm transition-colors dark:text-[#A8A29E] dark:hover:bg-[#1C1816] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"/></svg>
+              Billing
+            </a>
+          </div>
+
+          <!-- User footer -->
+          <div class="flex items-center gap-2.5 px-1 pt-3 border-t border-[#E5DFD6] dark:border-[#3C3530]">
+            <div class="w-8 h-8 rounded-full bg-[#FEF0EC] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#D4440F] flex-shrink-0">SR</div>
+            <div class="flex-1 min-w-0">
+              <p class="font-['Nunito'] font-bold text-xs text-[#1C1816] truncate dark:text-[#F3F0EA]">Sophie Renard</p>
+              <a href="#" class="font-['DM_Sans'] text-xs text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E]">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="breadcrumb">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Breadcrumb</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hierarchical path indicator with separator glyphs and truncation on long paths.</p>
+        <a href="/aesthetics/pumice/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-6">
+          <!-- Standard breadcrumb -->
+          <nav aria-label="Breadcrumb">
+            <ol class="flex items-center gap-1.5 font-['DM_Sans'] text-sm flex-wrap">
+              <li>
+                <a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Home</a>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Projects</a>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Design System</a>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">Components</span>
+              </li>
+            </ol>
+          </nav>
+
+          <!-- Truncated breadcrumb with ellipsis -->
+          <nav aria-label="Breadcrumb truncated">
+            <ol class="flex items-center gap-1.5 font-['DM_Sans'] text-sm">
+              <li>
+                <a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Home</a>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <span class="inline-flex items-center gap-0.5 text-[#78716C] dark:text-[#A8A29E]">
+                  <span class="bg-[#F3F0EA] rounded px-1.5 py-0.5 text-xs dark:bg-[#2C2520]">···</span>
+                </span>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Design System</a>
+              </li>
+              <li class="text-[#E5DFD6] select-none dark:text-[#3C3530]">›</li>
+              <li>
+                <span class="font-medium text-[#1C1816] dark:text-[#F3F0EA]">Components</span>
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section id="tabs">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tabs</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Tabbed content switcher with active underline and keyboard arrow-key navigation.</p>
+        <a href="/aesthetics/pumice/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="bg-white border border-[#E5DFD6] rounded-xl overflow-hidden dark:bg-[#1C1816] dark:border-[#2C2520]">
+          <!-- Tab bar -->
+          <div class="flex border-b border-[#E5DFD6] dark:border-[#2C2520] px-4 gap-0">
+            <button data-fiord-tab="overview" class="font-['DM_Sans'] text-sm font-medium px-4 py-3 border-b-2 border-[#D4440F] text-[#D4440F] -mb-px transition-colors" aria-selected="true">Overview</button>
+            <button data-fiord-tab="activity" class="font-['DM_Sans'] text-sm font-medium px-4 py-3 border-b-2 border-transparent text-[#78716C] hover:text-[#1C1816] -mb-px transition-colors dark:text-[#A8A29E] dark:hover:text-[#D6D0C8]" aria-selected="false">Activity</button>
+            <button data-fiord-tab="team" class="font-['DM_Sans'] text-sm font-medium px-4 py-3 border-b-2 border-transparent text-[#78716C] hover:text-[#1C1816] -mb-px transition-colors dark:text-[#A8A29E] dark:hover:text-[#D6D0C8]" aria-selected="false">Team</button>
+            <button data-fiord-tab="settings" class="font-['DM_Sans'] text-sm font-medium px-4 py-3 border-b-2 border-transparent text-[#78716C] hover:text-[#1C1816] -mb-px transition-colors dark:text-[#A8A29E] dark:hover:text-[#D6D0C8]" aria-selected="false">Settings</button>
+          </div>
+
+          <!-- Tab panels -->
+          <div data-fiord-tab-panel="overview" class="p-6">
+            <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] mb-2 dark:text-[#F3F0EA]">Project Overview</h3>
+            <p class="font-['DM_Sans'] text-sm text-[#78716C] leading-relaxed mb-4 dark:text-[#A8A29E]">Ember's design system covers core UI patterns across web and mobile. Current milestone: consolidating the component library ahead of the v3.0 release. 34 of 42 components reviewed.</p>
+            <div class="flex items-center gap-4">
+              <div class="flex-1 bg-[#F3F0EA] rounded-full h-2 dark:bg-[#2C2520]">
+                <div class="bg-[#D4440F] h-2 rounded-full" style="width: 81%"></div>
+              </div>
+              <span class="font-['DM_Sans'] text-xs font-medium text-[#78716C] dark:text-[#A8A29E]">81%</span>
+            </div>
+          </div>
+
+          <div data-fiord-tab-panel="activity" class="p-6 hidden">
+            <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] mb-3 dark:text-[#F3F0EA]">Recent Activity</h3>
+            <ul class="space-y-3 font-['DM_Sans'] text-sm">
+              <li class="flex items-start gap-2.5 text-[#78716C] dark:text-[#A8A29E]"><span class="w-1.5 h-1.5 rounded-full bg-[#D4440F] mt-1.5 flex-shrink-0"></span><span><strong class="text-[#1C1816] dark:text-[#D6D0C8]">Sophie</strong> merged the button redesign into main — 2h ago</span></li>
+              <li class="flex items-start gap-2.5 text-[#78716C] dark:text-[#A8A29E]"><span class="w-1.5 h-1.5 rounded-full bg-[#D4440F] mt-1.5 flex-shrink-0"></span><span><strong class="text-[#1C1816] dark:text-[#D6D0C8]">James</strong> opened a review on the new form components — 5h ago</span></li>
+              <li class="flex items-start gap-2.5 text-[#78716C] dark:text-[#A8A29E]"><span class="w-1.5 h-1.5 rounded-full bg-[#D4440F] mt-1.5 flex-shrink-0"></span><span><strong class="text-[#1C1816] dark:text-[#D6D0C8]">Lena</strong> updated the brand colour token set — yesterday</span></li>
+            </ul>
+          </div>
+
+          <div data-fiord-tab-panel="team" class="p-6 hidden">
+            <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] mb-3 dark:text-[#F3F0EA]">Team</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#FEF0EC] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#D4440F]">SR</div>
+                <div><p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">Sophie Renard</p><p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Product Designer · Owner</p></div>
+              </li>
+              <li class="flex items-center gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#F3F0EA] flex items-center justify-center text-xs font-['DM_Sans'] font-bold text-[#78716C] dark:bg-[#2C2520]">JO</div>
+                <div><p class="font-['Nunito'] font-bold text-sm text-[#1C1816] dark:text-[#F3F0EA]">James Okoro</p><p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Engineering Lead · Editor</p></div>
+              </li>
+            </ul>
+          </div>
+
+          <div data-fiord-tab-panel="settings" class="p-6 hidden">
+            <h3 class="font-['Nunito'] font-bold text-base text-[#1C1816] mb-3 dark:text-[#F3F0EA]">Settings</h3>
+            <div class="space-y-4">
+              <div>
+                <label class="font-['DM_Sans'] text-xs font-semibold text-[#78716C] uppercase tracking-wide mb-1.5 block dark:text-[#A8A29E]">Project name</label>
+                <input type="text" value="Ember Design System" class="w-full font-['DM_Sans'] text-sm border border-[#E5DFD6] rounded-lg px-3 py-2 text-[#1C1816] bg-white focus:outline-none focus:ring-2 focus:ring-[#D4440F]/30 focus:border-[#D4440F] dark:bg-[#1C1816] dark:border-[#2C2520] dark:text-[#F3F0EA]">
+              </div>
+              <div>
+                <label class="font-['DM_Sans'] text-xs font-semibold text-[#78716C] uppercase tracking-wide mb-1.5 block dark:text-[#A8A29E]">Visibility</label>
+                <select class="w-full font-['DM_Sans'] text-sm border border-[#E5DFD6] rounded-lg px-3 py-2 text-[#1C1816] bg-white dark:bg-[#1C1816] dark:border-[#2C2520] dark:text-[#F3F0EA]"><option>Private</option><option>Team only</option><option>Public</option></select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/tabs.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+    <section id="pagination">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Pagination</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Page navigation controls with previous, next, and numbered page buttons.</p>
+        <a href="/aesthetics/pumice/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-6">
+          <!-- Full pagination -->
+          <nav class="flex items-center gap-1 font-['DM_Sans'] text-sm" aria-label="Pagination">
+            <button disabled class="flex items-center gap-1 px-3 py-2 rounded-lg text-[#E5DFD6] cursor-not-allowed bg-[#F3F0EA] dark:bg-[#252018] dark:text-[#3C3530]" aria-disabled="true">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+              Prev
+            </button>
+            <button class="w-9 h-9 rounded-lg flex items-center justify-center font-medium text-[#78716C] hover:bg-[#F3F0EA] transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018]">1</button>
+            <button class="w-9 h-9 rounded-lg flex items-center justify-center font-medium text-[#78716C] hover:bg-[#F3F0EA] transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018]">2</button>
+            <button class="w-9 h-9 rounded-lg flex items-center justify-center font-semibold bg-[#D4440F] text-white" aria-current="page">3</button>
+            <button class="w-9 h-9 rounded-lg flex items-center justify-center font-medium text-[#78716C] hover:bg-[#F3F0EA] transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018]">4</button>
+            <button class="w-9 h-9 rounded-lg flex items-center justify-center font-medium text-[#78716C] hover:bg-[#F3F0EA] transition-colors dark:text-[#A8A29E] dark:hover:bg-[#252018]">5</button>
+            <button class="flex items-center gap-1 px-3 py-2 rounded-lg font-medium text-[#1C1816] hover:bg-[#F3F0EA] border border-[#E5DFD6] transition-colors dark:text-[#D6D0C8] dark:border-[#2C2520] dark:hover:bg-[#252018]">
+              Next
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </nav>
+
+          <!-- Compact pagination -->
+          <nav class="flex items-center justify-between bg-[#F3F0EA] rounded-xl px-4 py-3 font-['DM_Sans'] text-sm dark:bg-[#252018]" aria-label="Compact pagination">
+            <button class="flex items-center gap-1.5 font-medium text-[#78716C] hover:text-[#1C1816] transition-colors dark:text-[#A8A29E] dark:hover:text-[#D6D0C8]">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+              Previous
+            </button>
+            <span class="text-[#78716C] dark:text-[#A8A29E]">Page <strong class="text-[#1C1816] dark:text-[#F3F0EA]">3</strong> of 12</span>
+            <button class="flex items-center gap-1.5 font-medium text-[#1C1816] hover:text-[#D4440F] transition-colors dark:text-[#D6D0C8] dark:hover:text-[#F47040]">
+              Next
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </button>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <section id="footer">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Footer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Site footer with multi-column link groups, logo, and copyright line.</p>
+        <a href="/aesthetics/pumice/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <footer class="bg-[#F3F0EA] border-t border-[#E5DFD6] rounded-2xl px-8 pt-10 pb-6 dark:bg-[#252018] dark:border-[#2C2520]">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+            <!-- Brand column -->
+            <div class="space-y-4">
+              <div class="flex items-center gap-2">
+                <div class="w-7 h-7 rounded-lg bg-[#D4440F] flex items-center justify-center flex-shrink-0">
+                  <svg class="w-4 h-4 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.657 18.657A8 8 0 016.343 7.343S7 9 9 10c0-2 .5-5 2.986-7C14 5 16.09 5.777 17.656 7.343A7.975 7.975 0 0120 13a7.975 7.975 0 01-2.343 5.657z"/>
+                  </svg>
+                </div>
+                <span class="font-['Nunito'] font-bold text-base text-[#1C1816] dark:text-[#F3F0EA]">Ember</span>
+              </div>
+              <p class="font-['DM_Sans'] text-sm text-[#78716C] leading-relaxed dark:text-[#A8A29E]">Warm, human software for teams who care about the details.</p>
+              <div class="flex items-center gap-3">
+                <a href="#" aria-label="Twitter" class="w-8 h-8 rounded-lg bg-white border border-[#E5DFD6] flex items-center justify-center text-[#78716C] hover:text-[#D4440F] transition-colors dark:bg-[#1C1816] dark:border-[#2C2520]">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.252 5.621zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </a>
+                <a href="#" aria-label="GitHub" class="w-8 h-8 rounded-lg bg-white border border-[#E5DFD6] flex items-center justify-center text-[#78716C] hover:text-[#D4440F] transition-colors dark:bg-[#1C1816] dark:border-[#2C2520]">
+                  <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Products -->
+            <div>
+              <h4 class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-4 dark:text-[#F3F0EA]">Products</h4>
+              <ul class="space-y-2.5 font-['DM_Sans'] text-sm">
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Workspace</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Analytics</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Automations</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Integrations</a></li>
+              </ul>
+            </div>
+
+            <!-- Company -->
+            <div>
+              <h4 class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-4 dark:text-[#F3F0EA]">Company</h4>
+              <ul class="space-y-2.5 font-['DM_Sans'] text-sm">
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">About</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Blog</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Careers</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Press</a></li>
+              </ul>
+            </div>
+
+            <!-- Legal -->
+            <div>
+              <h4 class="font-['Nunito'] font-bold text-sm text-[#1C1816] mb-4 dark:text-[#F3F0EA]">Legal</h4>
+              <ul class="space-y-2.5 font-['DM_Sans'] text-sm">
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Privacy Policy</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Terms of Service</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Cookie Policy</a></li>
+                <li><a href="#" class="text-[#78716C] hover:text-[#D4440F] transition-colors dark:text-[#A8A29E] dark:hover:text-[#F47040]">Security</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Bottom bar -->
+          <div class="pt-6 border-t border-[#E5DFD6] dark:border-[#2C2520]">
+            <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">© 2026 Ember Inc. All rights reserved.</p>
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+</SiteLayout>

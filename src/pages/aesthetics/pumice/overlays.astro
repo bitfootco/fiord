@@ -1,0 +1,455 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Pumice / Overlays" description="Overlay components in the Pumice aesthetic. 5 components. All include vanilla JS.">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/pumice/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Pumice</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Overlays</h1>
+      </div>
+      <a href="/aesthetics/pumice/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
+    </div>
+  </header>
+
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
+    <div class="max-w-4xl mx-auto flex gap-5 text-sm">
+      <a href="#modal" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Modal</a>
+      <a href="#drawer" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Drawer</a>
+      <a href="#tooltip" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Tooltip</a>
+      <a href="#popover" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Popover</a>
+      <a href="#toast" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Toast</a>
+    </div>
+  </nav>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <section id="modal">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Modal</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Dialog overlay with backdrop, close button, focus trap, and Escape key dismissal.</p>
+        <a href="/aesthetics/pumice/components/modal.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-4">
+          <button
+            data-fiord-modal-open="confirm-delete"
+            class="inline-flex items-center gap-2 rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors"
+          >
+            Delete item
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div
+          id="confirm-delete"
+          data-fiord-modal
+          class="hidden fixed inset-0 z-50 flex items-center justify-center p-4"
+          aria-hidden="true"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="modal-title"
+        >
+          <!-- Backdrop -->
+          <div data-fiord-backdrop class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+          <!-- Panel -->
+          <div
+            class="relative w-full max-w-md rounded-2xl bg-white p-6 dark:bg-[#1C1816]"
+            style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)"
+          >
+            <!-- Close button -->
+            <button
+              data-fiord-close
+              class="absolute right-4 top-4 rounded-lg p-1.5 text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] dark:hover:bg-[#2C2420] dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+              aria-label="Close dialog"
+            >
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+
+            <!-- Icon -->
+            <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-[#FEF0EC]">
+              <svg class="h-6 w-6 text-[#D4440F]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+              </svg>
+            </div>
+
+            <!-- Header -->
+            <h2 id="modal-title" class="mb-2 font-['Nunito'] text-xl font-extrabold text-[#1C1816] dark:text-white">
+              Are you sure?
+            </h2>
+
+            <!-- Body -->
+            <p class="mb-6 font-['DM_Sans'] text-sm leading-relaxed text-[#78716C] dark:text-[#A8A29E]">
+              This will permanently delete <strong class="font-medium text-[#1C1816] dark:text-white">Q3 Campaign Assets</strong>. This action cannot be undone and all associated files will be removed from your workspace.
+            </p>
+
+            <!-- Footer -->
+            <div class="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+              <button
+                data-fiord-close
+                class="rounded-lg border border-[#E5DFD6] bg-white px-5 py-2.5 font-['DM_Sans'] font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-transparent dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-1"
+              >
+                Cancel
+              </button>
+              <button
+                class="rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-1"
+              >
+                Delete item
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/modal.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+    <section id="drawer">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Drawer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Slide-in panel from screen edge with backdrop and animated entrance.</p>
+        <a href="/aesthetics/pumice/components/drawer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="space-y-4">
+          <button
+            data-fiord-drawer-open="settings-drawer"
+            class="inline-flex items-center gap-2 rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+          >
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+            </svg>
+            Open settings
+          </button>
+        </div>
+
+        <!-- Drawer -->
+        <div
+          id="settings-drawer"
+          data-fiord-drawer
+          class="hidden fixed inset-0 z-50 flex justify-end"
+          aria-hidden="true"
+          role="dialog"
+          aria-modal="true"
+          aria-labelledby="drawer-title"
+        >
+          <!-- Backdrop -->
+          <div data-fiord-backdrop class="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+
+          <!-- Panel -->
+          <div
+            data-fiord-panel
+            class="relative flex h-full w-full max-w-sm translate-x-full flex-col bg-white transition-transform duration-300 ease-out dark:bg-[#1C1816]"
+            style="box-shadow: -4px 0 24px rgba(28,24,20,0.12)"
+          >
+            <!-- Header -->
+            <div class="flex items-center justify-between border-b border-[#E5DFD6] px-6 py-4 dark:border-[#3C3430]">
+              <h2 id="drawer-title" class="font-['Nunito'] text-lg font-extrabold text-[#1C1816] dark:text-white">
+                Notification Settings
+              </h2>
+              <button
+                data-fiord-close
+                class="rounded-lg p-1.5 text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] dark:hover:bg-[#2C2420] dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+                aria-label="Close panel"
+              >
+                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Body (scrollable) -->
+            <div class="flex-1 overflow-y-auto px-6 py-6 space-y-6">
+              <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E]">
+                Choose how and when you want to be notified about activity in your workspace.
+              </p>
+
+              <!-- Toggle group -->
+              <div class="space-y-4">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Email notifications</p>
+                    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Daily digest of activity</p>
+                  </div>
+                  <button
+                    role="switch"
+                    aria-checked="true"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#D4440F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+                  >
+                    <span class="inline-block h-4 w-4 translate-x-6 rounded-full bg-white shadow transition-transform"></span>
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Push notifications</p>
+                    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Real-time alerts on your device</p>
+                  </div>
+                  <button
+                    role="switch"
+                    aria-checked="true"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#D4440F] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+                  >
+                    <span class="inline-block h-4 w-4 translate-x-6 rounded-full bg-white shadow transition-transform"></span>
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">SMS notifications</p>
+                    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Critical alerts via text message</p>
+                  </div>
+                  <button
+                    role="switch"
+                    aria-checked="false"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#E5DFD6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 dark:bg-[#3C3430]"
+                  >
+                    <span class="inline-block h-4 w-4 translate-x-1 rounded-full bg-white shadow transition-transform"></span>
+                  </button>
+                </div>
+
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="font-['DM_Sans'] font-medium text-[#1C1816] dark:text-white">Weekly summary</p>
+                    <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">Your team's progress report</p>
+                  </div>
+                  <button
+                    role="switch"
+                    aria-checked="false"
+                    class="relative inline-flex h-6 w-11 items-center rounded-full bg-[#E5DFD6] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 dark:bg-[#3C3430]"
+                  >
+                    <span class="inline-block h-4 w-4 translate-x-1 rounded-full bg-white shadow transition-transform"></span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="rounded-xl border border-[#E5DFD6] bg-[#F3F0EA] p-4 dark:border-[#3C3430] dark:bg-[#2C2420]">
+                <p class="font-['DM_Sans'] text-xs text-[#78716C] dark:text-[#A8A29E]">
+                  <strong class="font-medium text-[#1C1816] dark:text-white">Quiet hours:</strong> Notifications are paused from 10 PM to 8 AM in your local timezone.
+                </p>
+              </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-[#E5DFD6] px-6 py-4 dark:border-[#3C3430]">
+              <button class="w-full rounded-lg bg-[#D4440F] px-5 py-2.5 font-['DM_Sans'] font-medium text-white hover:bg-[#B83A0C] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2">
+                Save preferences
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/drawer.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+    <section id="tooltip">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tooltip</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hover-triggered short text label anchored to a target element.</p>
+        <a href="/aesthetics/pumice/components/tooltip.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="flex flex-wrap items-center gap-6 py-8">
+          <!-- Tooltip above -->
+          <div class="flex flex-col items-center gap-2">
+            <button
+              data-fiord-tooltip="Copy to clipboard"
+              data-fiord-tooltip-position="top"
+              class="inline-flex items-center gap-2 rounded-lg border border-[#E5DFD6] bg-white px-4 py-2 font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-[#1C1816] dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+            >
+              <svg class="h-4 w-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Copy
+            </button>
+            <span class="font-['DM_Sans'] text-xs text-[#78716C]">Tooltip top</span>
+          </div>
+
+          <!-- Tooltip below -->
+          <div class="flex flex-col items-center gap-2">
+            <button
+              data-fiord-tooltip="Remove from favorites"
+              data-fiord-tooltip-position="bottom"
+              class="inline-flex items-center gap-2 rounded-lg border border-[#E5DFD6] bg-white px-4 py-2 font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-[#1C1816] dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+            >
+              <svg class="h-4 w-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+              </svg>
+              Favorite
+            </button>
+            <span class="font-['DM_Sans'] text-xs text-[#78716C]">Tooltip bottom</span>
+          </div>
+
+          <!-- Tooltip right -->
+          <div class="flex flex-col items-center gap-2">
+            <button
+              data-fiord-tooltip="Share with your team"
+              data-fiord-tooltip-position="right"
+              class="inline-flex items-center gap-2 rounded-lg border border-[#E5DFD6] bg-white px-4 py-2 font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-[#1C1816] dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+            >
+              <svg class="h-4 w-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+              </svg>
+              Share
+            </button>
+            <span class="font-['DM_Sans'] text-xs text-[#78716C]">Tooltip right</span>
+          </div>
+
+          <!-- Icon-only with tooltip -->
+          <div class="flex flex-col items-center gap-2">
+            <button
+              data-fiord-tooltip="More options"
+              data-fiord-tooltip-position="top"
+              class="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-[#E5DFD6] bg-white text-[#78716C] hover:bg-[#F3F0EA] hover:text-[#1C1816] dark:border-[#3C3430] dark:bg-[#1C1816] dark:hover:bg-[#2C2420] dark:hover:text-white transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+              aria-label="More options"
+            >
+              <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z" />
+              </svg>
+            </button>
+            <span class="font-['DM_Sans'] text-xs text-[#78716C]">Icon button</span>
+          </div>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/tooltip.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+    <section id="popover">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Popover</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click-triggered rich content popup with arrow and outside-click dismissal.</p>
+        <a href="/aesthetics/pumice/components/popover.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="flex flex-wrap items-start gap-8 py-4">
+          <!-- Trigger + popover wrapper -->
+          <div class="relative">
+            <button
+              data-fiord-popover-trigger="filter-popover"
+              class="inline-flex items-center gap-2 rounded-lg border border-[#E5DFD6] bg-white px-4 py-2 font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-[#1C1816] dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <svg class="h-4 w-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+              </svg>
+              Filter options
+              <svg class="h-3.5 w-3.5 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+
+            <!-- Popover content -->
+            <div
+              id="filter-popover"
+              data-fiord-popover-content
+              class="hidden absolute left-0 top-full mt-2 z-30 w-64 rounded-xl border border-[#E5DFD6] bg-[#F3F0EA] p-4 dark:border-[#3C3430] dark:bg-[#2C2420]"
+              style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)"
+              role="dialog"
+              aria-label="Filter options"
+            >
+              <h3 class="mb-3 font-['Nunito'] text-sm font-bold text-[#1C1816] dark:text-white">
+                Filter by type
+              </h3>
+
+              <div class="space-y-2.5">
+                <label class="flex cursor-pointer items-center gap-3">
+                  <input type="checkbox" checked class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+                  <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Documents</span>
+                  <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">24</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3">
+                  <input type="checkbox" checked class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+                  <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Images</span>
+                  <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">91</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3">
+                  <input type="checkbox" class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+                  <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Videos</span>
+                  <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">7</span>
+                </label>
+                <label class="flex cursor-pointer items-center gap-3">
+                  <input type="checkbox" class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+                  <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Spreadsheets</span>
+                  <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">13</span>
+                </label>
+              </div>
+
+              <div class="mt-4 flex gap-2 border-t border-[#E5DFD6] pt-4 dark:border-[#3C3430]">
+                <button class="flex-1 rounded-lg border border-[#E5DFD6] bg-white px-3 py-1.5 font-['DM_Sans'] text-xs font-medium text-[#78716C] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-transparent dark:text-[#A8A29E] dark:hover:bg-[#3C3430] transition-colors">
+                  Reset
+                </button>
+                <button class="flex-1 rounded-lg bg-[#D4440F] px-3 py-1.5 font-['DM_Sans'] text-xs font-medium text-white hover:bg-[#B83A0C] transition-colors">
+                  Apply
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E] pt-2">
+            Click "Filter options" to open the popover.
+          </p>
+        </div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/popover.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+    <section id="toast">
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toast</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Transient notification message that auto-dismisses with success, warning, and error variants.</p>
+        <a href="/aesthetics/pumice/components/toast.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
+      </div>
+      <div class="bg-[#FAFAF8] dark:bg-[#1C1816] rounded-lg border border-gray-200 dark:border-gray-700 p-6 overflow-hidden">
+        <div class="flex flex-wrap gap-3">
+          <button
+            data-fiord-toast-trigger
+            data-fiord-toast-type="success"
+            data-fiord-toast-message="Project saved successfully."
+            class="inline-flex items-center gap-2 rounded-lg bg-[#15803D] px-4 py-2.5 font-['DM_Sans'] text-sm font-medium text-white hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#15803D] focus:ring-offset-2"
+          >
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg>
+            Show success
+          </button>
+
+          <button
+            data-fiord-toast-trigger
+            data-fiord-toast-type="warning"
+            data-fiord-toast-message="Storage is 90% full. Free up space soon."
+            class="inline-flex items-center gap-2 rounded-lg bg-[#B45309] px-4 py-2.5 font-['DM_Sans'] text-sm font-medium text-white hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#B45309] focus:ring-offset-2"
+          >
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            Show warning
+          </button>
+
+          <button
+            data-fiord-toast-trigger
+            data-fiord-toast-type="error"
+            data-fiord-toast-message="Failed to upload. Check your connection."
+            class="inline-flex items-center gap-2 rounded-lg bg-[#D4440F] px-4 py-2.5 font-['DM_Sans'] text-sm font-medium text-white hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2"
+          >
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+            Show error
+          </button>
+        </div>
+
+        <!-- Toast container -->
+        <div id="fiord-toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-3 pointer-events-none" aria-live="polite" aria-atomic="false"></div>
+      </div>
+      <p class="mt-2 text-xs text-gray-400">Requires JS — <a href="/aesthetics/pumice/components/toast.html" class="underline">view standalone</a> for interactive behavior.</p>
+    </section>
+
+  </main>
+</SiteLayout>
