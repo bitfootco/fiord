@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
+    "predev": "node scripts/generate.js",
     "build": "astro build",
     "preview": "astro preview",
     "generate": "node scripts/generate.js",
