@@ -1,0 +1,308 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Slate / Typography" description="Slate aesthetic typography components: headings, paragraphs, prose containers, and code blocks.">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white border-b border-gray-200 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/slate/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Slate</a>
+        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Typography</h1>
+      </div>
+      <a href="/aesthetics/slate/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <!-- Component sections -->
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Heading -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Heading</h2>
+        <p class="text-sm text-gray-500">h1–h6 headings with aesthetic-appropriate sizing, weight, and line height.</p>
+        <a href="/aesthetics/slate/components/heading.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="space-y-6 bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 p-8 shadow-[0_1px_2px_rgba(15,23,42,0.05)] dark:shadow-none">
+
+          <h1 class="text-5xl font-bold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+            The future of infrastructure is serverless
+          </h1>
+
+          <h2 class="text-4xl font-bold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+            Rethinking how teams deploy software
+          </h2>
+
+          <h3 class="text-3xl font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
+            Continuous delivery without the overhead
+          </h3>
+
+          <h4 class="text-2xl font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 leading-snug">
+            Configure your deployment pipeline
+          </h4>
+
+          <h5 class="text-xl font-medium font-['Outfit'] text-slate-900 dark:text-slate-100 leading-normal">
+            Environment variables and secrets
+          </h5>
+
+          <h6 class="text-base font-medium font-['Outfit'] text-slate-700 dark:text-slate-300 leading-normal">
+            Setting a production secret
+          </h6>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Paragraph -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Paragraph</h2>
+        <p class="text-sm text-gray-500">Body text with proper line height, measure, and muted secondary variant.</p>
+        <a href="/aesthetics/slate/components/paragraph.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="space-y-8">
+
+          <!-- Lead paragraph -->
+          <div>
+            <p class="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">Lead</p>
+            <p class="text-xl text-slate-700 dark:text-slate-300 leading-relaxed max-w-prose">
+              Most outages aren't caused by exotic failure modes. They happen because a configuration change
+              was applied to production before staging, a retry loop overwhelmed a downstream service, or
+              a migration ran without a rollback plan.
+            </p>
+          </div>
+
+          <!-- Body paragraph -->
+          <div>
+            <p class="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">Body</p>
+            <p class="text-base text-slate-600 dark:text-slate-400 leading-relaxed max-w-prose">
+              Rate limiting protects your API from both accidental and intentional overuse. A well-designed
+              rate limiter communicates its limits clearly through response headers, returns meaningful error
+              messages when the limit is reached, and uses a sliding window algorithm to avoid the thundering
+              herd problem that fixed-window approaches can cause at interval boundaries.
+            </p>
+          </div>
+
+          <!-- Small / muted paragraph -->
+          <div>
+            <p class="text-xs font-medium text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">Small / Muted</p>
+            <p class="text-sm text-slate-500 dark:text-slate-500 leading-relaxed max-w-prose">
+              Billing is calculated at the end of each calendar month based on your peak active connections
+              during that period. Charges appear on your invoice within 3 business days of month close.
+              For questions about your bill, contact <span class="underline underline-offset-2 cursor-pointer hover:text-[#3D4FB8] dark:hover:text-[#6B7BE0] transition-colors">billing support</span>.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Prose -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Prose</h2>
+        <p class="text-sm text-gray-500">Long-form content container for articles and blog posts with full typographic rhythm.</p>
+        <a href="/aesthetics/slate/components/prose.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <article class="max-w-prose mx-auto bg-white dark:bg-slate-900 rounded-lg border border-slate-200 dark:border-slate-800 px-8 py-10 shadow-[0_1px_2px_rgba(15,23,42,0.05)] dark:shadow-none">
+
+          <h1 class="text-3xl font-bold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight leading-tight mb-2">
+            How connection pooling actually works
+          </h1>
+          <p class="text-sm text-slate-500 dark:text-slate-500 mb-8">
+            Published March 11, 2026 · 8 min read
+          </p>
+
+          <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+            Opening a database connection is expensive. The TCP handshake, TLS negotiation, and PostgreSQL
+            authentication sequence can take 30–100ms — longer than many queries themselves. Connection
+            pooling solves this by keeping a set of established connections ready for reuse.
+          </p>
+
+          <h2 class="text-xl font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight mt-10 mb-4">
+            The pool lifecycle
+          </h2>
+
+          <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+            When your application starts, the pool opens a configurable number of connections — the
+            <em>minimum pool size</em>. As load increases, the pool grows up to a <strong>maximum</strong>.
+            Connections that sit idle longer than the idle timeout are closed and removed.
+          </p>
+
+          <h3 class="text-lg font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 mt-8 mb-3">
+            Choosing pool size
+          </h3>
+
+          <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+            A common mistake is setting the pool size to match your thread count. This ignores how
+            PostgreSQL handles connections on the server side. Each connection consumes roughly 5–10 MB
+            of server memory. Better heuristics include:
+          </p>
+
+          <div is:raw>
+            <ul class="list-disc list-inside space-y-2 text-base text-slate-700 dark:text-slate-300 mb-6 pl-2">
+              <li>Start with <code class="text-sm font-['JetBrains_Mono'] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300">2 × CPU cores</code> on the database host</li>
+              <li>Monitor <code class="text-sm font-['JetBrains_Mono'] bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded text-slate-700 dark:text-slate-300">pg_stat_activity</code> in production</li>
+              <li>Tune down if most connections are in the <em>idle</em> state</li>
+            </ul>
+          </div>
+
+          <h3 class="text-lg font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 mt-8 mb-3">
+            PgBouncer vs application-level pooling
+          </h3>
+
+          <ol class="list-decimal list-inside space-y-2 text-base text-slate-700 dark:text-slate-300 mb-6 pl-2">
+            <li>Application-level poolers (HikariCP, pgx) live in your process — lowest latency</li>
+            <li>PgBouncer runs as a sidecar — survives app restarts and consolidates connections</li>
+            <li>RDS Proxy manages credentials rotation without connection churn</li>
+          </ol>
+
+          <blockquote class="border-l-4 border-[#4F63D2] dark:border-[#6B7BE0] pl-5 my-8">
+            <p class="text-base text-slate-600 dark:text-slate-400 italic leading-relaxed">
+              "The right pool size is the smallest one that keeps your p99 latency acceptable under peak load.
+              Bigger pools cause more contention, not less."
+            </p>
+            <footer class="mt-2 text-sm text-slate-500 dark:text-slate-500">— Brandur Leach, Crunchy Data</footer>
+          </blockquote>
+
+          <p class="text-base text-slate-700 dark:text-slate-300 leading-relaxed mb-6">
+            Before reaching for a proxy, instrument your application. Add connection acquisition time to
+            your traces. If p99 acquisition time is under 5ms, your current setup is likely fine.
+            Optimize the queries, not the pool.
+          </p>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- Code Block -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800">Code Block</h2>
+        <p class="text-sm text-gray-500">Monospaced code display with syntax-highlighted appearance and copy affordance.</p>
+        <a href="/aesthetics/slate/components/code-block.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="rounded-lg overflow-hidden border border-slate-700 bg-slate-950 shadow-[0_4px_6px_-1px_rgba(15,23,42,0.07),0_2px_4px_-2px_rgba(15,23,42,0.05)]">
+
+          <!-- Header bar -->
+          <div class="flex items-center justify-between px-4 py-3 bg-slate-900 border-b border-slate-700/80">
+            <span class="text-xs font-medium text-slate-400 font-['JetBrains_Mono'] uppercase tracking-widest">JavaScript</span>
+            <button
+              type="button"
+              aria-label="Copy code"
+              class="flex items-center gap-1.5 text-xs text-slate-400 hover:text-slate-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[#4F63D2] rounded px-2 py-1 font-['Plus_Jakarta_Sans']"
+            >
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              Copy
+            </button>
+          </div>
+
+          <!-- Code area with line numbers -->
+          <div class="overflow-x-auto" is:raw>
+            <table class="w-full text-sm font-['JetBrains_Mono'] leading-6">
+              <tbody>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600 w-8">1</td>
+                  <td class="pr-6 text-slate-300"><span class="text-purple-400">async</span> <span class="text-[#6B7BE0]">function</span> <span class="text-yellow-300">fetchWithRetry</span><span class="text-slate-300">(url, options = {}) {</span></td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">2</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;<span class="text-purple-400">const</span> { <span class="text-blue-300">maxRetries</span> = <span class="text-orange-300">3</span>, <span class="text-blue-300">baseDelay</span> = <span class="text-orange-300">200</span> } = options;</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">3</td>
+                  <td class="pr-6 text-slate-300">&nbsp;</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">4</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;<span class="text-purple-400">for</span> (<span class="text-purple-400">let</span> <span class="text-blue-300">attempt</span> = <span class="text-orange-300">0</span>; <span class="text-blue-300">attempt</span> &lt;= <span class="text-blue-300">maxRetries</span>; <span class="text-blue-300">attempt</span>++) {</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">5</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">try</span> {</td>
+                </tr>
+                <tr class="bg-[#6B7BE0]/5 hover:bg-[#6B7BE0]/10">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">6</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">const</span> <span class="text-blue-300">response</span> = <span class="text-purple-400">await</span> <span class="text-yellow-300">fetch</span>(url, options);</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">7</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">if</span> (!<span class="text-blue-300">response</span>.<span class="text-blue-300">ok</span> &amp;&amp; <span class="text-blue-300">attempt</span> &lt; <span class="text-blue-300">maxRetries</span>) {</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">8</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">const</span> <span class="text-blue-300">delay</span> = <span class="text-blue-300">baseDelay</span> * <span class="text-yellow-300">Math</span>.<span class="text-yellow-300">pow</span>(<span class="text-orange-300">2</span>, <span class="text-blue-300">attempt</span>);</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">9</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">await</span> <span class="text-purple-400">new</span> <span class="text-yellow-300">Promise</span>(<span class="text-blue-300">r</span> =&gt; <span class="text-yellow-300">setTimeout</span>(<span class="text-blue-300">r</span>, <span class="text-blue-300">delay</span>));</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">10</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">continue</span>;</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">11</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">12</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">return</span> <span class="text-blue-300">response</span>;</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">13</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;} <span class="text-purple-400">catch</span> (<span class="text-blue-300">err</span>) {</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">14</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="text-purple-400">if</span> (<span class="text-blue-300">attempt</span> === <span class="text-blue-300">maxRetries</span>) <span class="text-purple-400">throw</span> <span class="text-blue-300">err</span>;</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">15</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;&nbsp;&nbsp;}</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600">16</td>
+                  <td class="pr-6 text-slate-300">&nbsp;&nbsp;}</td>
+                </tr>
+                <tr class="hover:bg-slate-800/50">
+                  <td class="select-none pl-4 pr-4 text-right text-slate-600 pb-4">17</td>
+                  <td class="pr-6 pb-4 text-slate-300">}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script is:inline>
+    document.querySelectorAll('[aria-label="Copy code"]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const block = btn.closest('[data-fiord-code]') || btn.closest('.rounded-lg');
+        const rows = block ? block.querySelectorAll('tbody tr td:last-child') : [];
+        const text = Array.from(rows).map(td => td.textContent).join('\n').trim();
+        if (text) {
+          navigator.clipboard.writeText(text).then(() => {
+            const original = btn.innerHTML;
+            btn.textContent = 'Copied!';
+            setTimeout(() => { btn.innerHTML = original; }, 2000);
+          });
+        }
+      });
+    });
+  </script>
+
+</SiteLayout>

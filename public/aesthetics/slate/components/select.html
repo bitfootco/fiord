@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Slate / Select</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        slate: {
+          50: '#F7F8FA', 100: '#EEF0F4', 200: '#D2D7E2', 300: '#A3ADBE',
+          400: '#7B8598', 500: '#5B6578', 600: '#3A4459', 700: '#2A3550',
+          800: '#1A2235', 900: '#131927', 950: '#0A0F1A'
+        }
+      }}}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 p-8 dark:bg-slate-900 font-['Plus_Jakarta_Sans']">
+  <div class="max-w-2xl mx-auto space-y-8">
+
+    <!-- FIORD:COMPONENT_START aesthetic="slate" component="select" -->
+    <div class="space-y-5">
+
+      <!-- Country select -->
+      <div>
+        <label for="select-country" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+          Country
+        </label>
+        <div class="relative">
+          <select
+            id="select-country"
+            name="country"
+            class="block w-full appearance-none rounded-md border border-slate-300 bg-white py-2 pl-3 pr-10 text-sm text-slate-900 shadow-sm focus:border-[#4F63D2] focus:outline-none focus:ring-2 focus:ring-[#4F63D2] focus:ring-offset-0 transition-colors dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-[#6B7BE0] dark:focus:ring-[#6B7BE0]"
+          >
+            <option value="">Select a country…</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="gb">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+            <option value="fr">France</option>
+            <option value="jp">Japan</option>
+            <option value="sg">Singapore</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <svg class="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">Used for billing and tax purposes.</p>
+      </div>
+
+      <!-- Plan type select -->
+      <div>
+        <label for="select-plan" class="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">
+          Subscription plan
+        </label>
+        <div class="relative">
+          <select
+            id="select-plan"
+            name="plan"
+            class="block w-full appearance-none rounded-md border border-slate-300 bg-white py-2 pl-3 pr-10 text-sm text-slate-900 shadow-sm focus:border-[#4F63D2] focus:outline-none focus:ring-2 focus:ring-[#4F63D2] focus:ring-offset-0 transition-colors dark:border-slate-600 dark:bg-slate-800 dark:text-slate-100 dark:focus:border-[#6B7BE0] dark:focus:ring-[#6B7BE0]"
+          >
+            <option value="starter">Starter — Free</option>
+            <option value="pro" selected>Pro — $12 / month</option>
+            <option value="team">Team — $49 / month</option>
+            <option value="enterprise">Enterprise — Contact us</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <svg class="w-4 h-4 text-slate-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-1.5 text-xs text-slate-500 dark:text-slate-400">
+          You can upgrade or downgrade at any time.
+          <a href="#" class="text-[#3D4FB8] underline hover:text-[#3545A0] dark:text-[#6B7BE0] dark:hover:text-[#4F63D2]">Compare plans</a>
+        </p>
+      </div>
+
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+</body>
+</html>

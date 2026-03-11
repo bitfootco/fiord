@@ -4,8 +4,10 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
 <SiteLayout
   title="Fiord — Slate Aesthetic"
-  description="Slate: professional, measured, neutral. Cool grays with clean lines, Stripe-inspired polish. Suited for enterprise, SaaS, and B2B products."
+  description="Layered, decisive, geological. Cool blue-gray tones with sharp cleaved edges and matte surfaces."
 >
+
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Page header -->
   <header class="bg-white border-b border-gray-200 px-6 py-5">
@@ -18,35 +20,117 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
         <a href="/aesthetics/slate/meta.json" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5 transition-colors font-mono">meta.json</a>
       </div>
       <p class="mt-2 text-sm text-gray-500 max-w-2xl">
-        Professional, measured, neutral. Cool grays with clean lines, Stripe-inspired polish.
-        Suited for enterprise, SaaS, and B2B products.
+        Layered, decisive, geological. Cool blue-gray tones with sharp cleaved edges and matte surfaces.
+        Built for enterprise dashboards, SaaS products, and B2B platforms
+        where clarity and credibility matter most.
       </p>
+      <div class="mt-3">
+        <a href="/aesthetics/slate/demo/" class="inline-flex items-center gap-1.5 text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
+          View demo
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
     </div>
   </header>
 
-  <!-- Status -->
-  <main class="max-w-4xl mx-auto px-6 py-16">
-    <div class="bg-white border border-gray-200 rounded-lg p-8 text-center">
-      <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center mx-auto mb-4">
-        <svg class="w-5 h-5 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/>
-        </svg>
-      </div>
-      <h2 class="text-sm font-semibold text-gray-900 mb-2">Slate components in progress</h2>
-      <p class="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
-        The Slate aesthetic is being built out. Component files will appear at
-        <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">/aesthetics/slate/components/</code>
-        as they're completed.
-      </p>
-      <div class="mt-6 flex items-center justify-center gap-4">
-        <a href="/base/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
-          Browse base components →
-        </a>
-        <a href="https://github.com/bitfootco/fiord" target="_blank" rel="noopener noreferrer" class="text-sm text-gray-400 hover:text-gray-600 transition-colors">
-          Track progress on GitHub
-        </a>
-      </div>
+  <!-- Component Catalog -->
+  <main class="max-w-4xl mx-auto px-6 py-10">
+    <div class="border border-gray-200 rounded-lg overflow-hidden divide-y divide-gray-100">
+
+      <a id="layout" href="/aesthetics/slate/layout/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Layout</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Max-width wrappers, grids, and structural primitives for organizing page content.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="typography" href="/aesthetics/slate/typography/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Typography</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Headings, body text, and content containers that establish textual hierarchy.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="actions" href="/aesthetics/slate/actions/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Actions</span>
+            <span class="text-xs text-gray-400">4 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Interactive controls that trigger user-initiated operations.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="forms" href="/aesthetics/slate/forms/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Forms</span>
+            <span class="text-xs text-gray-400">7 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Input controls and composed layouts for collecting user data.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="data" href="/aesthetics/slate/data/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Data Display</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Components for presenting structured information, metrics, and content collections.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="navigation" href="/aesthetics/slate/navigation/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Navigation</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Wayfinding components that help users move through an application or site.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="overlays" href="/aesthetics/slate/overlays/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Overlays</span>
+            <span class="text-xs text-gray-400">5 components</span>
+            <span class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">JS</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Floating layers that display content or interactions above the page. All include vanilla JS.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
+      <a id="sections" href="/aesthetics/slate/sections/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+        <div>
+          <div class="flex items-center gap-2">
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Page Sections</span>
+            <span class="text-xs text-gray-400">6 components</span>
+          </div>
+          <p class="text-sm text-gray-400 mt-0.5">Full-page marketing and content sections ready to drop into landing pages.</p>
+        </div>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </a>
+
     </div>
+
+    <p class="mt-6 text-xs text-gray-400">
+      42 components across 8 categories. Copy from <a href="/aesthetics/slate/components/" class="hover:text-gray-600 underline underline-offset-2">individual component pages</a>, not from here.
+    </p>
 
     <!-- Design language preview -->
     <div class="mt-10">
@@ -57,7 +141,7 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
           <div class="space-y-2">
             {[
               { name: 'Primary', value: '#0F172A', hex: '#0F172A' },
-              { name: 'Accent', value: '#3B82F6', hex: '#3B82F6' },
+              { name: 'Accent', value: '#4F63D2', hex: '#4F63D2' },
               { name: 'Background', value: '#FFFFFF', hex: '#FFFFFF' },
               { name: 'Surface', value: '#F8FAFC', hex: '#F8FAFC' },
               { name: 'Border', value: '#E2E8F0', hex: '#E2E8F0' },
@@ -75,11 +159,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
           <div class="space-y-3">
             <div>
               <p class="text-xs text-gray-400 mb-1">Heading</p>
-              <p class="font-semibold text-gray-900 text-sm" style="font-family: Inter, sans-serif;">Inter 600</p>
+              <p class="font-semibold text-gray-900 text-sm" style="font-family: Outfit, sans-serif;">Outfit 600</p>
             </div>
             <div>
               <p class="text-xs text-gray-400 mb-1">Body</p>
-              <p class="text-gray-600 text-sm leading-relaxed" style="font-family: Inter, sans-serif;">Inter 400 · 1.6 line height</p>
+              <p class="text-gray-600 text-sm leading-relaxed" style="font-family: 'Plus Jakarta Sans', sans-serif;">Plus Jakarta Sans 400 · 1.6 line height</p>
             </div>
             <div>
               <p class="text-xs text-gray-400 mb-1">Mono</p>

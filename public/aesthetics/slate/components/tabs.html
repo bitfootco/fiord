@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiord — Slate / Tabs</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: { colors: {
+        slate: {
+          50: '#F7F8FA', 100: '#EEF0F4', 200: '#D2D7E2', 300: '#A3ADBE',
+          400: '#7B8598', 500: '#5B6578', 600: '#3A4459', 700: '#2A3550',
+          800: '#1A2235', 900: '#131927', 950: '#0A0F1A'
+        }
+      }}}
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body class="bg-slate-100 p-8 font-['Plus_Jakarta_Sans'] dark:bg-slate-900">
+  <div class="max-w-2xl mx-auto">
+
+    <!-- FIORD:COMPONENT_START aesthetic="slate" component="tabs" -->
+    <div class="rounded-lg border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
+
+      <!-- Tab list -->
+      <div class="flex border-b border-slate-200 dark:border-slate-700" role="tablist" aria-label="Account sections">
+        <button
+          role="tab"
+          data-fiord-tab="overview"
+          aria-selected="true"
+          aria-controls="panel-overview"
+          id="tab-overview"
+          class="relative px-5 py-3.5 text-sm font-medium text-[#3D4FB8] border-b-2 border-[#3D4FB8] -mb-px focus:outline-none dark:text-[#6B7BE0] dark:border-[#6B7BE0]"
+        >
+          Overview
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="activity"
+          aria-selected="false"
+          aria-controls="panel-activity"
+          id="tab-activity"
+          class="relative px-5 py-3.5 text-sm font-medium text-slate-500 border-b-2 border-transparent -mb-px hover:text-slate-700 hover:border-slate-300 focus:outline-none dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-600"
+        >
+          Activity
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="settings"
+          aria-selected="false"
+          aria-controls="panel-settings"
+          id="tab-settings"
+          class="relative px-5 py-3.5 text-sm font-medium text-slate-500 border-b-2 border-transparent -mb-px hover:text-slate-700 hover:border-slate-300 focus:outline-none dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-600"
+        >
+          Settings
+        </button>
+        <button
+          role="tab"
+          data-fiord-tab="billing"
+          aria-selected="false"
+          aria-controls="panel-billing"
+          id="tab-billing"
+          class="relative px-5 py-3.5 text-sm font-medium text-slate-500 border-b-2 border-transparent -mb-px hover:text-slate-700 hover:border-slate-300 focus:outline-none dark:text-slate-400 dark:hover:text-slate-200 dark:hover:border-slate-600"
+        >
+          Billing
+        </button>
+      </div>
+
+      <!-- Tab panels -->
+      <div class="p-6">
+
+        <div role="tabpanel" data-fiord-panel="overview" id="panel-overview" aria-labelledby="tab-overview">
+          <h3 class="font-['Outfit'] mb-3 text-sm font-semibold text-slate-900 dark:text-slate-100">Project Overview</h3>
+          <p class="mb-4 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+            Meridian is on track for a Q2 launch. The core API is feature-complete, and the frontend team has shipped all P0 components. Three outstanding integration tests need to be resolved before the release candidate is cut.
+          </p>
+          <div class="grid grid-cols-3 gap-4">
+            <div class="rounded-md bg-slate-50 p-3 dark:bg-slate-700/50">
+              <p class="text-xs text-slate-500 dark:text-slate-400">Open issues</p>
+              <p class="text-2xl font-bold text-slate-900 dark:text-slate-100">14</p>
+            </div>
+            <div class="rounded-md bg-slate-50 p-3 dark:bg-slate-700/50">
+              <p class="text-xs text-slate-500 dark:text-slate-400">PRs merged</p>
+              <p class="text-2xl font-bold text-slate-900 dark:text-slate-100">238</p>
+            </div>
+            <div class="rounded-md bg-slate-50 p-3 dark:bg-slate-700/50">
+              <p class="text-xs text-slate-500 dark:text-slate-400">Contributors</p>
+              <p class="text-2xl font-bold text-slate-900 dark:text-slate-100">8</p>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="activity" id="panel-activity" aria-labelledby="tab-activity" hidden>
+          <h3 class="font-['Outfit'] mb-3 text-sm font-semibold text-slate-900 dark:text-slate-100">Recent Activity</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Tom+Ridley&background=10b981&color=fff&size=24" alt="Tom Ridley" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-slate-900 dark:text-slate-100">Tom Ridley</span>
+                <span class="text-slate-600 dark:text-slate-400"> merged PR #412 — </span>
+                <span class="font-medium text-slate-800 dark:text-slate-200">Fix race condition in auth refresh</span>
+                <p class="mt-0.5 text-xs text-slate-400 dark:text-slate-500">2 hours ago</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Priya+Nair&background=f59e0b&color=fff&size=24" alt="Priya Nair" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-slate-900 dark:text-slate-100">Priya Nair</span>
+                <span class="text-slate-600 dark:text-slate-400"> opened issue #418 — </span>
+                <span class="font-medium text-slate-800 dark:text-slate-200">Pagination breaks on mobile Safari</span>
+                <p class="mt-0.5 text-xs text-slate-400 dark:text-slate-500">5 hours ago</p>
+              </div>
+            </li>
+            <li class="flex items-start gap-3 text-sm">
+              <img src="https://ui-avatars.com/api/?name=Sarah+Chen&background=6366f1&color=fff&size=24" alt="Sarah Chen" class="mt-0.5 h-6 w-6 rounded-full shrink-0">
+              <div>
+                <span class="font-medium text-slate-900 dark:text-slate-100">Sarah Chen</span>
+                <span class="text-slate-600 dark:text-slate-400"> deployed to </span>
+                <span class="font-medium text-slate-800 dark:text-slate-200">staging-v2.meridian.io</span>
+                <p class="mt-0.5 text-xs text-slate-400 dark:text-slate-500">Yesterday at 4:12 PM</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="settings" id="panel-settings" aria-labelledby="tab-settings" hidden>
+          <h3 class="font-['Outfit'] mb-3 text-sm font-semibold text-slate-900 dark:text-slate-100">Project Settings</h3>
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1" for="project-name">Project name</label>
+              <input id="project-name" type="text" value="Meridian" class="w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-[#4F63D2] focus:outline-none focus:ring-1 focus:ring-[#4F63D2] dark:border-slate-600 dark:bg-slate-700 dark:text-slate-100">
+            </div>
+            <div>
+              <label class="block text-xs font-medium text-slate-700 dark:text-slate-300 mb-1" for="project-slug">URL slug</label>
+              <div class="flex rounded-md border border-slate-300 overflow-hidden dark:border-slate-600">
+                <span class="flex items-center bg-slate-50 px-3 text-xs text-slate-500 border-r border-slate-300 dark:bg-slate-700/50 dark:border-slate-600 dark:text-slate-400">app.meridian.io/</span>
+                <input id="project-slug" type="text" value="meridian-core" class="flex-1 bg-white px-3 py-2 text-sm text-slate-900 focus:outline-none dark:bg-slate-700 dark:text-slate-100">
+              </div>
+            </div>
+            <div class="pt-2">
+              <button class="rounded-md bg-[#3D4FB8] px-4 py-2 text-sm font-medium text-white hover:bg-[#3545A0] focus:outline-none dark:bg-[#4F63D2] dark:hover:bg-[#3D4FB8]">Save changes</button>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" data-fiord-panel="billing" id="panel-billing" aria-labelledby="tab-billing" hidden>
+          <h3 class="font-['Outfit'] mb-3 text-sm font-semibold text-slate-900 dark:text-slate-100">Billing & Plan</h3>
+          <div class="mb-4 rounded-md border border-slate-200 p-4 dark:border-slate-700">
+            <div class="flex items-center justify-between">
+              <div>
+                <p class="text-sm font-medium text-slate-900 dark:text-slate-100">Pro Plan</p>
+                <p class="text-xs text-slate-500 dark:text-slate-400">$79/month · renews April 1, 2026</p>
+              </div>
+              <span class="inline-flex items-center rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">Active</span>
+            </div>
+          </div>
+          <p class="text-sm text-slate-600 dark:text-slate-400">Payment method: Visa ending in 4821</p>
+          <div class="mt-4 flex gap-2">
+            <button class="rounded-md border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-700">Update payment</button>
+            <button class="rounded-md border border-slate-300 px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 dark:border-slate-600 dark:text-slate-300 dark:hover:bg-slate-700">Download invoices</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- FIORD:COMPONENT_END -->
+
+  </div>
+
+  <!-- FIORD:JS_START -->
+  <script>
+    (function () {
+      const tabs = document.querySelectorAll('[data-fiord-tab]');
+      const panels = document.querySelectorAll('[data-fiord-panel]');
+
+      const activeTabClasses = [
+        'text-[#3D4FB8]', 'border-[#3D4FB8]',
+        'dark:text-[#6B7BE0]', 'dark:border-[#6B7BE0]'
+      ];
+      const inactiveTabClasses = [
+        'text-slate-500', 'border-transparent',
+        'hover:text-slate-700', 'hover:border-slate-300',
+        'dark:text-slate-400', 'dark:hover:text-slate-200', 'dark:hover:border-slate-600'
+      ];
+
+      function activateTab(targetTab) {
+        tabs.forEach(tab => {
+          const isTarget = tab.dataset.fiordTab === targetTab;
+          tab.setAttribute('aria-selected', isTarget ? 'true' : 'false');
+          if (isTarget) {
+            inactiveTabClasses.forEach(c => tab.classList.remove(c));
+            activeTabClasses.forEach(c => tab.classList.add(c));
+          } else {
+            activeTabClasses.forEach(c => tab.classList.remove(c));
+            inactiveTabClasses.forEach(c => tab.classList.add(c));
+          }
+        });
+
+        panels.forEach(panel => {
+          if (panel.dataset.fiordPanel === targetTab) {
+            panel.removeAttribute('hidden');
+          } else {
+            panel.setAttribute('hidden', '');
+          }
+        });
+      }
+
+      tabs.forEach(tab => {
+        tab.addEventListener('click', () => activateTab(tab.dataset.fiordTab));
+      });
+
+      // Keyboard navigation
+      tabs.forEach((tab, index) => {
+        tab.addEventListener('keydown', e => {
+          if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const next = tabs[(index + 1) % tabs.length];
+            next.focus();
+            activateTab(next.dataset.fiordTab);
+          } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prev = tabs[(index - 1 + tabs.length) % tabs.length];
+            prev.focus();
+            activateTab(prev.dataset.fiordTab);
+          }
+        });
+      });
+    })();
+  </script>
+  <!-- FIORD:JS_END -->
+
+</body>
+</html>
