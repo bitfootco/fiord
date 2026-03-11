@@ -491,19 +491,40 @@ See [ROADMAP.md](ROADMAP.md) for the development roadmap and milestone tracking.
 ### Project structure (post-Astro migration)
 
 - **Human-readable pages:** `src/pages/` — Astro files, build to `dist/`
-- **Agent-scraped component files:** `public/base/components/` — raw HTML, copied verbatim to `dist/base/components/`
-- **Aesthetic components:** `public/aesthetics/<name>/components/` — same pattern
+- **Component definition files:** `src/{base,aesthetics/<name>}/components/` — authored here (pure HTML, ~20–60 lines each)
+- **Aesthetic boilerplate:** `src/{base,aesthetics/<name>}/boilerplate.json` — page chrome config (Tailwind config, fonts, body/wrapper classes)
+- **Agent-scraped component files:** `public/{base,aesthetics/<name>}/components/` — **GENERATED** by `scripts/generate.js`, not hand-edited
 - **Manifests:** `public/manifest.json` and `public/manifest.md`
 - **Shared chrome:** `src/layouts/SiteLayout.astro`, `src/components/Nav.astro`, `src/components/Footer.astro`
-- **Build:** `npm run build` → `dist/`; `npm run dev` → local dev
+- **Build:** `npm run build` → runs generator first (via `prebuild`), then Astro → `dist/`
+- **Generate only:** `npm run generate` → rebuilds `public/*/components/` from `src/` definitions
 
-When creating a new aesthetic: add component HTML files to `public/aesthetics/<name>/components/`, then create `src/pages/aesthetics/<name>/index.astro` for the human-readable preview.
+### Component authoring workflow
+
+**Never edit files in `public/*/components/` directly.** They are generated and will be overwritten.
+
+**Definition files** (`src/{base,aesthetics/<name>}/components/<name>.html`) contain only the component markup — no boilerplate, no sentinels. The generator wraps them in the full page HTML and adds sentinel comments.
+
+**JS files** (`src/{base,aesthetics/<name>}/components/<name>.js`) contain just the script body for interactive components — no `<script>` tags. The generator wraps them.
+
+**Wrapper override:** if a component needs a wider preview container than the aesthetic default (`max-w-2xl mx-auto space-y-8`), add this as the first line of the definition file:
+```html
+<!-- fiord:wrapper max-w-4xl mx-auto space-y-8 -->
+```
+The generator reads and strips this comment, using its value as the wrapper div class.
+
+When creating a new aesthetic:
+1. Create `src/aesthetics/<name>/boilerplate.json` (copy from Slate, update values)
+2. Create `src/aesthetics/<name>/components/` with 42 definition files
+3. Run `npm run generate` to produce `public/aesthetics/<name>/components/`
+4. Create `src/pages/aesthetics/<name>/index.astro` for the human-readable preview
+5. Add to `manifest.json` and `manifest.md`
 
 **Astro template note:** When component files contain `{` and `}` characters in text content (e.g., code examples), add `is:raw` to the containing element to prevent Astro from interpreting them as JSX expressions. Example: `<div is:raw>...code with curly braces...</div>`
 
 ### Context efficiency — follow these rules strictly
 
-This project contains 42+ HTML component files that are large. Loading them all into the main context window will exhaust the token budget fast. To avoid this:
+Component definition files in `src/` are small (~20–60 lines), but there are 42+ per aesthetic and they can still flood context if read in bulk. The generated files in `public/` are larger (~130 lines) but should never need to be read directly. To avoid context exhaustion:
 
 **Use subagents for bulk file work.**
 Any task that touches more than ~3 files — reading, creating, or editing — should be delegated to an `Agent` tool call (subagent_type omitted = general-purpose). The subagent does the heavy lifting in its own context; only the result comes back.

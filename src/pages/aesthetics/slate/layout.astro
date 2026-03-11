@@ -6,13 +6,13 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Page header -->
-  <header class="bg-white border-b border-gray-200 px-6 py-5">
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="/aesthetics/slate/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Slate</a>
-        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Layout</h1>
+        <a href="/aesthetics/slate/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Slate</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Layout</h1>
       </div>
-      <a href="/aesthetics/slate/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">&larr; All categories</a>
+      <a href="/aesthetics/slate/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
     </div>
   </header>
 
@@ -22,11 +22,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
     <!-- Container -->
     <section>
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Container</h2>
-        <p class="text-sm text-gray-500">Max-width wrapper with responsive horizontal padding for centering page content.</p>
-        <a href="/aesthetics/slate/components/container.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Container</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Max-width wrapper with responsive horizontal padding for centering page content.</p>
+        <a href="/aesthetics/slate/components/container.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:border-gray-700 p-6">
         <div class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 class="text-2xl font-semibold font-['Outfit'] text-slate-900 dark:text-slate-100 tracking-tight">
             Getting started with distributed systems
@@ -51,11 +51,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
     <!-- Grid -->
     <section>
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Grid</h2>
-        <p class="text-sm text-gray-500">Responsive column grid with 2, 3, and 4 column variants and configurable gap.</p>
-        <a href="/aesthetics/slate/components/grid.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Grid</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Responsive column grid with 2, 3, and 4 column variants and configurable gap.</p>
+        <a href="/aesthetics/slate/components/grid.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:border-gray-700 p-6">
         <div class="space-y-12">
 
           <!-- 2-column grid -->
@@ -122,11 +122,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
     <!-- Section -->
     <section>
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Section</h2>
-        <p class="text-sm text-gray-500">Full-width content section with consistent vertical rhythm and optional background.</p>
-        <a href="/aesthetics/slate/components/section.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Section</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Full-width content section with consistent vertical rhythm and optional background.</p>
+        <a href="/aesthetics/slate/components/section.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
       </div>
-      <div class="rounded-lg border border-gray-200 overflow-hidden">
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
         <section class="w-full py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900 bg-gradient-to-b from-white to-slate-50/50 dark:from-slate-900 dark:to-slate-900">
           <div class="max-w-5xl mx-auto">
             <div class="max-w-2xl">
@@ -179,11 +179,11 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
     <!-- Divider -->
     <section>
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Divider</h2>
-        <p class="text-sm text-gray-500">Horizontal rule and visual separator with optional label text.</p>
-        <a href="/aesthetics/slate/components/divider.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone &rarr;</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Divider</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Horizontal rule and visual separator with optional label text.</p>
+        <a href="/aesthetics/slate/components/divider.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:border-gray-700 p-6">
         <div class="space-y-10">
 
           <!-- Plain divider -->

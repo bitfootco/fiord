@@ -53,7 +53,7 @@ Read the palette, typography, spacing, borders, and shadows. Use this to extrapo
 
 ### Step 4: Identify Needed Components
 
-Based on the user's task, identify which components from the catalog are required. Reference the `"categories"` array in the manifest for the full component list.
+Based on the user's task, identify which components from the catalog are required. Reference the `"categories"` array in the manifest for the full component list. Most page builds need 3–8 components — identify only what the current task actually requires, not the full set. If you need to understand the aesthetic's design language, use `meta.json` — you do not need to fetch component files for that.
 
 Use the **aesthetic's component directory** when available:
 ```
@@ -65,9 +65,9 @@ Fall back to **base components** for any component not yet implemented in the ae
 https://fiord.design/base/components/{component}.html
 ```
 
-### Step 5: Fetch Each Component Page
+### Step 5: Fetch and Integrate Components One at a Time
 
-Fetch each component HTML page you need. The full page includes a preview wrapper and CDN scripts — these are for humans browsing the library. You only need the content between the sentinel comments.
+Fetch one component, extract its markup, integrate it into the codebase, then move to the next. Do not pre-fetch all needed components before starting — each file is ~130 lines and batching them wastes context before you've written anything. The full page includes a preview wrapper and CDN scripts for human browsing; ignore those.
 
 ### Step 6: Extract Component Markup
 
@@ -130,6 +130,8 @@ Some components use inline `style` attributes for values Tailwind can't express 
 **Never embed component markup in this skill file.** Always fetch fresh from the library. The library is updated independently — stale embedded markup defeats the purpose.
 
 **Never hardcode an aesthetic choice without basis.** Always select based on project context (domain, tone, existing design language, user preference). If uncertain, ask.
+
+**Fetch lazily, not greedily.** Fetch one component at a time as you need it. Never pre-fetch the full component set to "understand the aesthetic" — that's what `meta.json` is for. Fetching 42 × 130-line HTML files before writing any code wastes context budget.
 
 **Use the aesthetic's meta.json to extrapolate.** When a user needs a component or pattern not in the library, use the aesthetic's design tokens (palette, typography, spacing, borders) to create matching markup from scratch.
 

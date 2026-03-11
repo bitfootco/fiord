@@ -6,24 +6,25 @@ function isActive(path: string) {
 }
 ---
 
-<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+<header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-50">
   <div class="max-w-5xl mx-auto px-6">
     <div class="flex items-center justify-between h-14">
 
       <!-- Wordmark -->
       <a href="/" aria-label="Fiord home">
-        <img src="/assets/logo-light.svg" alt="Fiord" class="h-12 w-auto" />
+        <img src="/assets/logo-light.svg" alt="Fiord" class="h-12 w-auto dark:hidden" />
+        <img src="/assets/logo-dark.svg" alt="Fiord" class="h-12 w-auto hidden dark:block" />
       </a>
 
-      <!-- Nav links -->
-      <nav class="flex items-center gap-1" aria-label="Site navigation">
+      <!-- Desktop nav links + actions -->
+      <div class="hidden md:flex items-center gap-1">
         <a
           href="/base/"
           class:list={[
             'px-3 py-1.5 text-sm rounded-md transition-colors',
             isActive('/base')
-              ? 'text-[#0F1C2E] bg-gray-100 font-medium'
-              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+              ? 'text-[#0F1C2E] bg-gray-100 font-medium dark:text-white dark:bg-gray-800'
+              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800'
           ]}
         >
           Components
@@ -33,25 +34,116 @@ function isActive(path: string) {
           class:list={[
             'px-3 py-1.5 text-sm rounded-md transition-colors',
             isActive('/aesthetics')
-              ? 'text-[#0F1C2E] bg-gray-100 font-medium'
-              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+              ? 'text-[#0F1C2E] bg-gray-100 font-medium dark:text-white dark:bg-gray-800'
+              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800'
           ]}
         >
           Aesthetics
         </a>
+
+        <!-- Dark mode toggle -->
+        <button id="theme-toggle" aria-label="Toggle dark mode"
+          class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors dark:text-gray-500 dark:hover:text-gray-300 dark:hover:bg-gray-800">
+          <svg id="theme-icon-sun" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+          </svg>
+          <svg id="theme-icon-moon" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
+          </svg>
+        </button>
+
+        <!-- GitHub pill -->
         <a
           href="https://github.com/bitfootco/fiord"
           target="_blank"
           rel="noopener noreferrer"
-          class="px-3 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors flex items-center gap-1.5"
+          class="inline-flex items-center gap-2 bg-gray-900 text-white text-sm font-medium px-3.5 py-1.5 rounded-full hover:bg-gray-700 transition-colors dark:bg-white dark:text-gray-900 dark:hover:bg-gray-100 ml-2"
         >
-          GitHub
-          <svg class="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+          <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
           </svg>
+          bitfootco/fiord
         </a>
-      </nav>
+      </div>
+
+      <!-- Mobile: theme toggle + hamburger -->
+      <div class="flex items-center gap-1 md:hidden">
+        <button id="theme-toggle-mobile" aria-label="Toggle dark mode"
+          class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors dark:text-gray-500 dark:hover:text-gray-300 dark:hover:bg-gray-800">
+          <svg id="theme-icon-sun-mobile" class="w-4 h-4 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"/>
+          </svg>
+          <svg id="theme-icon-moon-mobile" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"/>
+          </svg>
+        </button>
+        <button id="mobile-menu-btn" aria-expanded="false" aria-label="Open navigation"
+          class="p-1.5 rounded-md text-gray-400 hover:text-gray-600 hover:bg-gray-100 transition-colors dark:text-gray-500 dark:hover:text-gray-300 dark:hover:bg-gray-800">
+          <svg id="hamburger-icon" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/>
+          </svg>
+          <svg id="close-icon" class="w-5 h-5 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12"/>
+          </svg>
+        </button>
+      </div>
 
     </div>
   </div>
 </header>
+
+<!-- Mobile menu drawer -->
+<div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+  <div class="max-w-5xl mx-auto px-6 py-3 flex flex-col gap-1">
+    <a href="/base/" class="px-3 py-2 text-sm rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors">Components</a>
+    <a href="/aesthetics/slate/" class="px-3 py-2 text-sm rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors">Aesthetics</a>
+    <a href="https://github.com/bitfootco/fiord" target="_blank" rel="noopener noreferrer" class="px-3 py-2 text-sm rounded-md text-gray-500 hover:text-gray-900 hover:bg-gray-50 dark:text-gray-400 dark:hover:text-gray-100 dark:hover:bg-gray-800 transition-colors flex items-center gap-2">
+      <svg class="w-4 h-4" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/>
+      </svg>
+      GitHub
+    </a>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', function() {
+    function syncIcons(dark) {
+      var sunD = document.getElementById('theme-icon-sun');
+      var moonD = document.getElementById('theme-icon-moon');
+      var sunM = document.getElementById('theme-icon-sun-mobile');
+      var moonM = document.getElementById('theme-icon-moon-mobile');
+      if (sunD) sunD.classList.toggle('hidden', !dark);
+      if (moonD) moonD.classList.toggle('hidden', dark);
+      if (sunM) sunM.classList.toggle('hidden', !dark);
+      if (moonM) moonM.classList.toggle('hidden', dark);
+    }
+    syncIcons(document.documentElement.classList.contains('dark'));
+
+    function toggleTheme() {
+      var nowDark = document.documentElement.classList.toggle('dark');
+      localStorage.setItem('fiord-theme', nowDark ? 'dark' : 'light');
+      syncIcons(nowDark);
+    }
+
+    var toggle = document.getElementById('theme-toggle');
+    var toggleMobile = document.getElementById('theme-toggle-mobile');
+    if (toggle) toggle.addEventListener('click', toggleTheme);
+    if (toggleMobile) toggleMobile.addEventListener('click', toggleTheme);
+
+    // Mobile menu
+    var btn = document.getElementById('mobile-menu-btn');
+    var menu = document.getElementById('mobile-menu');
+    var hamburger = document.getElementById('hamburger-icon');
+    var closeIcon = document.getElementById('close-icon');
+    if (btn && menu) {
+      btn.addEventListener('click', function() {
+        var isOpen = !menu.classList.contains('hidden');
+        menu.classList.toggle('hidden', isOpen);
+        btn.setAttribute('aria-expanded', String(!isOpen));
+        if (hamburger) hamburger.classList.toggle('hidden', !isOpen);
+        if (closeIcon) closeIcon.classList.toggle('hidden', isOpen);
+      });
+    }
+  });
+</script>

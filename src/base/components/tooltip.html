@@ -1,0 +1,48 @@
+    <div class="flex flex-wrap items-center gap-8 p-8 bg-white dark:bg-gray-800 rounded-lg">
+
+      <!-- Tooltip example 1: Icon button -->
+      <div class="flex flex-col items-center gap-2">
+        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-medium">Icon button</p>
+        <button
+          data-fiord-tooltip="Download as CSV"
+          class="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
+          aria-label="Download as CSV"
+        >
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Tooltip example 2: Help icon -->
+      <div class="flex flex-col items-center gap-2">
+        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-medium">Help icon</p>
+        <span
+          data-fiord-tooltip="Retention rate measures the percentage of users who return after their first visit within a 30-day window."
+          class="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs font-semibold cursor-default select-none"
+          tabindex="0"
+          aria-label="More information"
+        >
+          ?
+        </span>
+      </div>
+
+      <!-- Tooltip example 3: Disabled button -->
+      <div class="flex flex-col items-center gap-2">
+        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-medium">Disabled action</p>
+        <span
+          data-fiord-tooltip="You don't have permission to publish. Contact your admin."
+          class="inline-block"
+          tabindex="0"
+        >
+          <button
+            disabled
+            class="px-4 py-2 text-sm font-medium text-gray-400 dark:text-gray-500 bg-gray-100 dark:bg-gray-700 rounded-md cursor-not-allowed select-none"
+            aria-disabled="true"
+          >
+            Publish
+          </button>
+        </span>
+      </div>
+
+    </div>

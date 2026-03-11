@@ -24,11 +24,11 @@ Fetch `https://fiord.design/aesthetics/{name}/meta.json` to get the aesthetic's 
 
 ### 4. Identify Needed Components
 
-Match the user's task to components in the manifest's `"categories"` array. Use the aesthetic's component path when available: `https://fiord.design/aesthetics/{name}/components/{component}.html`. Fall back to base: `https://fiord.design/base/components/{component}.html`.
+Match the user's task to components in the manifest's `"categories"` array. Identify only what the current task requires — most page builds use 3–8 components. To understand the aesthetic's design language, use `meta.json`; do not fetch component files for that purpose. Use the aesthetic's component path when available: `https://fiord.design/aesthetics/{name}/components/{component}.html`. Fall back to base: `https://fiord.design/base/components/{component}.html`.
 
-### 5. Fetch Component Pages
+### 5. Fetch and Integrate Components One at a Time
 
-Fetch each component HTML page. The full page includes preview chrome and CDN scripts — ignore those. You only need the content between sentinel comments.
+Fetch one component, extract and integrate it, then move to the next. Do not batch-fetch all components before starting — each file is ~130 lines and loading them all upfront wastes context. The full page includes preview chrome and CDN scripts for human browsing — ignore those.
 
 ### 6. Extract Markup
 
@@ -47,6 +47,7 @@ Paste extracted markup into the codebase. Apply framework adaptations:
 
 - Never embed component markup in project rules or prompts. Always fetch fresh from the library.
 - Never hardcode an aesthetic choice without basis. Select based on project context or ask the user.
+- Fetch lazily, not greedily. Fetch one component at a time as you need it — never pre-fetch the full set. Use `meta.json` to understand the aesthetic, not component files.
 - Use `meta.json` to extrapolate. When building components not in the library, use the aesthetic's design tokens to create matching markup.
 - Dark mode is included. All components have `dark:` prefixed classes. One file handles both modes.
 - Components are self-contained. No shared CSS, no imports between components.

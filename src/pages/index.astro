@@ -5,14 +5,14 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 <SiteLayout title="Fiord — AI-native design library" description="Production-ready component markup that AI agents discover via manifest, select by aesthetic, and copy-paste directly into any project.">
 
   <!-- Hero -->
-  <section class="bg-white border-b border-gray-100">
+  <section class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
     <div class="max-w-5xl mx-auto px-6 py-20 md:py-28">
       <div class="max-w-2xl">
-        <p class="text-sm font-medium text-[#4A7FA5] tracking-wide uppercase mb-4">AI-native design library</p>
-        <h1 class="text-4xl md:text-5xl font-semibold text-[#0F1C2E] leading-tight tracking-tight mb-5">
+        <p class="text-sm font-medium text-[#4A7FA5] dark:text-slate-400 tracking-wide uppercase mb-4">AI-native design library</p>
+        <h1 class="text-4xl md:text-5xl font-semibold text-[#0F1C2E] dark:text-white leading-tight tracking-tight mb-5">
           The design system<br>built for AI agents.
         </h1>
-        <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-xl">
+        <p class="text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8 max-w-xl">
           Fiord ships production-ready markup that agents discover via manifest,
           select by aesthetic, and copy-paste directly into any project.
           No packages. No props. No build step.
@@ -20,7 +20,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
         <div class="flex flex-wrap items-center gap-3">
           <a
             href="/base/"
-            class="inline-flex items-center gap-2 bg-[#0F1C2E] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#1a2e45] transition-colors"
+            class="inline-flex items-center gap-2 bg-[#0F1C2E] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#1a2e45] transition-colors dark:bg-slate-200 dark:text-slate-900 dark:hover:bg-white"
           >
             Browse Components
             <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -29,7 +29,7 @@ import SiteLayout from '../layouts/SiteLayout.astro';
           </a>
           <a
             href="/manifest.json"
-            class="inline-flex items-center gap-2 bg-white text-gray-600 text-sm font-medium px-5 py-2.5 rounded-md border border-gray-200 hover:bg-gray-50 hover:text-gray-900 transition-colors font-mono"
+            class="inline-flex items-center gap-2 bg-white text-gray-600 text-sm font-medium px-5 py-2.5 rounded-md border border-gray-200 hover:bg-gray-50 hover:text-gray-900 transition-colors font-mono dark:bg-gray-800 dark:text-gray-300 dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:text-white"
           >
             manifest.json
             <svg class="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
@@ -46,83 +46,197 @@ import SiteLayout from '../layouts/SiteLayout.astro';
     <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Discover -->
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
-          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
           </svg>
         </div>
-        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Discover</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">
-          Agents fetch <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">manifest.json</code> to get the full catalog — 42 components across 8 categories, with every aesthetic listed and described.
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">Discover</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          Agents fetch <code class="text-xs font-mono bg-gray-100 dark:bg-gray-700 dark:text-gray-300 px-1 py-0.5 rounded">manifest.json</code> to get the full catalog — 42 components across 8 categories, with every aesthetic listed and described.
         </p>
       </div>
 
       <!-- Select -->
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
-          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/>
           </svg>
         </div>
-        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Select</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">
-          Each aesthetic ships a complete <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">meta.json</code> — palette, typography, spacing, borders, shadows. Agents read the design language to make informed choices.
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">Select</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          Each aesthetic ships a complete <code class="text-xs font-mono bg-gray-100 dark:bg-gray-700 dark:text-gray-300 px-1 py-0.5 rounded">meta.json</code> — palette, typography, spacing, borders, shadows. Agents read the design language to make informed choices.
         </p>
       </div>
 
       <!-- Copy -->
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
-        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
-          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <div class="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 dark:bg-gray-700 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600 dark:text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
           </svg>
         </div>
-        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Copy</h3>
-        <p class="text-sm text-gray-500 leading-relaxed">
-          Markup lives between <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">FIORD:COMPONENT_START</code> sentinel comments. Extract, paste, ship. Works in React, Vue, Svelte, Astro, or plain HTML.
+        <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-1.5">Copy</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
+          Markup lives between <code class="text-xs font-mono bg-gray-100 dark:bg-gray-700 dark:text-gray-300 px-1 py-0.5 rounded">FIORD:COMPONENT_START</code> sentinel comments. Extract, paste, ship. Works in React, Vue, Svelte, Astro, or plain HTML.
         </p>
       </div>
 
     </div>
   </section>
 
-  <!-- How it works -->
-  <section class="border-t border-gray-100 bg-white">
+  <!-- Get Started -->
+  <section class="border-t border-gray-100 dark:border-gray-800">
     <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
-      <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-10">How an agent uses Fiord</h2>
+      <p class="text-xs font-semibold text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-3">Get Started</p>
+      <h2 class="text-2xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Add Fiord to your agent</h2>
+      <p class="text-base text-gray-500 dark:text-gray-400 mb-10 max-w-2xl">
+        One command installs the skill into your agent. It reads the manifest, picks an aesthetic,
+        and fetches the markup it needs — no npm install, no configuration. Re-run anytime to get the latest version.
+</p>
+
+      <!-- Skill install cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-10">
+
+        <!-- Claude Code -->
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col">
+          <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">Claude Code</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Adds Fiord to your global Claude Code instructions. Available in every project.</p>
+          <div class="relative flex-1 mb-3" data-copy-target>
+            <pre class="bg-gray-900 dark:bg-slate-950 rounded-md px-3 py-3 overflow-x-auto"><code class="text-xs text-gray-300 leading-relaxed font-mono whitespace-pre">curl -fsSL https://raw.githubusercontent.com/bitfootco/fiord/main/skills/claude/SKILL.md \
+  -o ~/.claude/fiord.md && printf '\n@~/.claude/fiord.md\n' >> ~/.claude/CLAUDE.md</code></pre>
+            <button
+              data-copy-btn
+              class="absolute top-2 right-2 flex items-center gap-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs font-medium px-2 py-1 rounded transition-colors"
+              aria-label="Copy command"
+            >
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
+              </svg>
+              <span data-label>Copy</span>
+            </button>
+          </div>
+          <a
+            href="https://raw.githubusercontent.com/bitfootco/fiord/main/skills/claude/SKILL.md"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs font-medium text-[#4A7FA5] hover:text-[#0F1C2E] dark:hover:text-white transition-colors mt-auto"
+          >
+            View skill file →
+          </a>
+        </div>
+
+        <!-- Cursor -->
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col">
+          <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">Cursor</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Places <code class="font-mono bg-gray-100 dark:bg-gray-700 px-1 rounded">.cursorrules</code> in your project root. Cursor picks it up automatically.</p>
+          <div class="relative flex-1 mb-3" data-copy-target>
+            <pre class="bg-gray-900 dark:bg-slate-950 rounded-md px-3 py-3 overflow-x-auto"><code class="text-xs text-gray-300 leading-relaxed font-mono whitespace-pre">curl -fsSL https://raw.githubusercontent.com/bitfootco/fiord/main/skills/cursor/.cursorrules \
+  -o .cursorrules</code></pre>
+            <button
+              data-copy-btn
+              class="absolute top-2 right-2 flex items-center gap-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs font-medium px-2 py-1 rounded transition-colors"
+              aria-label="Copy command"
+            >
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
+              </svg>
+              <span data-label>Copy</span>
+            </button>
+          </div>
+          <a
+            href="https://raw.githubusercontent.com/bitfootco/fiord/main/skills/cursor/.cursorrules"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-xs font-medium text-[#4A7FA5] hover:text-[#0F1C2E] dark:hover:text-white transition-colors mt-auto"
+          >
+            View skill file →
+          </a>
+        </div>
+
+        <!-- Other agents -->
+        <div class="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4 flex flex-col">
+          <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-2">Other Agents</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Paste this URL into your agent's system prompt or instruction file.</p>
+          <div class="relative flex-1 mb-3" data-copy-target>
+            <pre class="bg-gray-900 dark:bg-slate-950 rounded-md px-3 py-3 overflow-x-auto"><code class="text-xs text-gray-300 leading-relaxed font-mono whitespace-pre-wrap break-all">https://raw.githubusercontent.com/bitfootco/fiord/main/skills/generic/AGENT.md</code></pre>
+            <button
+              data-copy-btn
+              class="absolute top-2 right-2 flex items-center gap-1 bg-gray-700 hover:bg-gray-600 text-gray-300 hover:text-white text-xs font-medium px-2 py-1 rounded transition-colors"
+              aria-label="Copy URL"
+            >
+              <svg class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
+              </svg>
+              <span data-label>Copy URL</span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Example prompt -->
+      <div class="max-w-2xl">
+        <p class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Then just ask:</p>
+        <div class="font-mono text-sm bg-gray-50 dark:bg-gray-900 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg px-4 py-3">
+          "Add a pricing section using Fiord / Slate components"
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script is:inline>
+    document.querySelectorAll('[data-copy-btn]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var text = btn.closest('[data-copy-target]').querySelector('code').textContent;
+        navigator.clipboard.writeText(text.trim()).then(function() {
+          var label = btn.querySelector('[data-label]');
+          var orig = label.textContent;
+          label.textContent = 'Copied!';
+          setTimeout(function() { label.textContent = orig; }, 2000);
+        });
+      });
+    });
+  </script>
+
+  <!-- How it works -->
+  <section class="border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="text-xs font-semibold text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-10">How an agent uses Fiord</h2>
       <div class="grid md:grid-cols-3 gap-10">
         <div>
-          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">01</div>
-          <h3 class="text-sm font-semibold text-gray-900 mb-2">Read the manifest</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Fetch <code class="font-mono text-xs">/manifest.json</code> to get the full component catalog, aesthetic list, and URL paths to every component page.</p>
+          <div class="text-2xl font-semibold text-[#0F1C2E] dark:text-white mb-3 font-mono">01</div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Read the manifest</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Fetch <code class="font-mono text-xs">/manifest.json</code> to get the full component catalog, aesthetic list, and URL paths to every component page.</p>
         </div>
         <div>
-          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">02</div>
-          <h3 class="text-sm font-semibold text-gray-900 mb-2">Choose an aesthetic</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Read <code class="font-mono text-xs">meta.json</code> for the selected aesthetic to understand its design language — palette, fonts, spacing, and border treatment.</p>
+          <div class="text-2xl font-semibold text-[#0F1C2E] dark:text-white mb-3 font-mono">02</div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Choose an aesthetic</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Read <code class="font-mono text-xs">meta.json</code> for the selected aesthetic to understand its design language — palette, fonts, spacing, and border treatment.</p>
         </div>
         <div>
-          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">03</div>
-          <h3 class="text-sm font-semibold text-gray-900 mb-2">Extract and integrate</h3>
-          <p class="text-sm text-gray-500 leading-relaxed">Fetch the component page, extract markup between sentinel comments, paste into the target codebase. Includes dark mode. Zero dependencies.</p>
+          <div class="text-2xl font-semibold text-[#0F1C2E] dark:text-white mb-3 font-mono">03</div>
+          <h3 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-2">Extract and integrate</h3>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Fetch the component page, extract markup between sentinel comments, paste into the target codebase. Includes dark mode. Zero dependencies.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA strip -->
-  <section class="border-t border-gray-100">
+  <section class="border-t border-gray-100 dark:border-gray-800">
     <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div>
-        <p class="text-sm font-medium text-gray-900">42 components · 1 aesthetic · MIT license</p>
-        <p class="text-sm text-gray-400 mt-0.5">Base templates plus the Slate aesthetic. More aesthetics coming.</p>
+        <p class="text-sm font-medium text-gray-900 dark:text-gray-100">42 components · 1 aesthetic · MIT license</p>
+        <p class="text-sm text-gray-400 dark:text-gray-600 mt-0.5">Base templates plus the Slate aesthetic. More aesthetics coming.</p>
       </div>
       <div class="flex items-center gap-3 flex-shrink-0">
-        <a href="/base/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
+        <a href="/base/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] dark:hover:text-white transition-colors">
           Browse Components →
         </a>
-        <a href="/aesthetics/slate/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
+        <a href="/aesthetics/slate/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] dark:hover:text-white transition-colors">
           View Slate →
         </a>
       </div>
