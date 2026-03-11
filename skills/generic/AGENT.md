@@ -40,7 +40,7 @@ This file defines the aesthetic's palette, typography (fonts, scale, weights), s
 
 ### Step 4: Identify Needed Components
 
-Based on the user's task, determine which components are required. The manifest's `"categories"` array lists every available component organized by type (layout, typography, actions, forms, data display, navigation, overlays, page sections).
+Based on the user's task, determine which components are required. The manifest's `"categories"` array lists every available component organized by type (layout, typography, actions, forms, data display, navigation, overlays, page sections). Identify only what the current task actually requires — most page builds use 3–8 components. If you need to understand the aesthetic's design language before committing to components, use `meta.json`; you do not need to fetch component files for that purpose.
 
 Use the aesthetic's component directory when available:
 ```
@@ -52,9 +52,9 @@ Fall back to base (unstyled) components for anything not yet implemented in the 
 https://fiord.design/base/components/{component}.html
 ```
 
-### Step 5: Fetch Component Pages
+### Step 5: Fetch and Integrate Components One at a Time
 
-Fetch each HTML page for the components you need. Each page is a standalone document with a Tailwind CDN script, preview wrapper, and the component markup. The page chrome is for human browsing — you only need the content between the sentinel comments.
+Fetch one component, extract its markup, integrate it into the codebase, then move to the next. Do not batch-fetch all needed components before starting — each file is approximately 130 lines, and loading them all before writing any code wastes context. Each page is a standalone document with a Tailwind CDN script and preview wrapper for human browsing — ignore those.
 
 ### Step 6: Extract Component Markup
 
@@ -95,8 +95,10 @@ Some components use inline `style` attributes for values Tailwind cannot express
 
 2. **Never hardcode an aesthetic without basis.** Select based on project context (domain, tone, existing design) or ask the user. If uncertain, present the options.
 
-3. **Use meta.json to extrapolate.** When the user needs a component or pattern not in the library, use the aesthetic's design tokens (palette, typography, spacing, borders, shadows) to create matching markup from scratch.
+3. **Fetch lazily, not greedily.** Fetch one component at a time as you need it. Never pre-fetch the entire component set to "understand the aesthetic" — that's what `meta.json` is for. Fetching 42 × 130-line HTML files before writing any code is unnecessary and wasteful.
 
-4. **Dark mode is built in.** All components include `dark:` prefixed Tailwind classes. A single component file handles both light and dark modes — no separate variants needed.
+4. **Use meta.json to extrapolate.** When the user needs a component or pattern not in the library, use the aesthetic's design tokens (palette, typography, spacing, borders, shadows) to create matching markup from scratch.
 
-5. **Components are self-contained.** No shared CSS files, no shared layouts, no imports between components. Each extracted block works independently in any project that includes Tailwind.
+5. **Dark mode is built in.** All components include `dark:` prefixed Tailwind classes. A single component file handles both light and dark modes — no separate variants needed.
+
+6. **Components are self-contained.** No shared CSS files, no shared layouts, no imports between components. Each extracted block works independently in any project that includes Tailwind.
