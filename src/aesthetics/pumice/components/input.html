@@ -1,0 +1,51 @@
+<div class="space-y-5 max-w-sm">
+  <!-- Default -->
+  <div>
+    <label for="input-default" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Full name</label>
+    <input
+      id="input-default"
+      type="text"
+      placeholder="Ada Lovelace"
+      class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg placeholder-[#78716C] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530] dark:placeholder-[#5C5652]"
+    />
+    <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">This will appear on your public profile.</p>
+  </div>
+
+  <!-- Filled / active (visual demo) -->
+  <div>
+    <label for="input-filled" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Email address</label>
+    <input
+      id="input-filled"
+      type="email"
+      value="ada@lovelace.io"
+      class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-[#E5DFD6] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC] dark:border-[#3A3530]"
+    />
+  </div>
+
+  <!-- Error state -->
+  <div>
+    <label for="input-error" class="block text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-1.5 dark:text-[#E8E3DC]">Username</label>
+    <input
+      id="input-error"
+      type="text"
+      value="ada lovelace"
+      aria-invalid="true"
+      aria-describedby="input-error-msg"
+      class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#1C1816] bg-white border border-red-400 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400 focus:border-transparent transition duration-150 dark:bg-[#1C1816] dark:text-[#E8E3DC]"
+    />
+    <p id="input-error-msg" class="mt-1.5 text-xs font-['DM_Sans'] text-red-600">Username can't contain spaces.</p>
+  </div>
+
+  <!-- Disabled -->
+  <div>
+    <label for="input-disabled" class="block text-sm font-medium font-['DM_Sans'] text-[#78716C] mb-1.5">Account ID</label>
+    <input
+      id="input-disabled"
+      type="text"
+      value="usr_9f3a72c1"
+      disabled
+      class="w-full px-3.5 py-2.5 text-sm font-['DM_Sans'] text-[#78716C] bg-[#F3F0EA] border border-[#E5DFD6] rounded-lg cursor-not-allowed opacity-70 dark:bg-[#22201E] dark:border-[#3A3530]"
+    />
+    <p class="mt-1.5 text-xs font-['DM_Sans'] text-[#78716C]">Assigned automatically — cannot be changed.</p>
+  </div>
+</div>

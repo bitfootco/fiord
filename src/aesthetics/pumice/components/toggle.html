@@ -1,0 +1,53 @@
+<div class="space-y-5 max-w-sm">
+  <!-- Off state -->
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">Desktop notifications</p>
+      <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Show alerts for new messages and activity.</p>
+    </div>
+    <button
+      type="button"
+      role="switch"
+      aria-checked="false"
+      aria-label="Desktop notifications"
+      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-[#E5DFD6] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-200 dark:bg-[#3A3530]"
+    >
+      <span class="pointer-events-none inline-block h-5 w-5 translate-x-0 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+    </button>
+  </div>
+
+  <!-- On state -->
+  <div class="flex items-center justify-between">
+    <div>
+      <p class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">Email digest</p>
+      <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Weekly summary of your account activity.</p>
+    </div>
+    <button
+      type="button"
+      role="switch"
+      aria-checked="true"
+      aria-label="Email digest"
+      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-[#D4440F] focus:outline-none focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 transition-colors duration-200"
+    >
+      <span class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow-sm transition duration-200 ease-in-out" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+    </button>
+  </div>
+
+  <!-- Disabled -->
+  <div class="flex items-center justify-between opacity-50">
+    <div>
+      <p class="text-sm font-medium font-['DM_Sans'] text-[#78716C]">Two-factor authentication</p>
+      <p class="text-xs font-['DM_Sans'] text-[#78716C] mt-0.5">Enforced by your organization.</p>
+    </div>
+    <button
+      type="button"
+      role="switch"
+      aria-checked="true"
+      aria-label="Two-factor authentication"
+      disabled
+      class="relative inline-flex h-6 w-11 flex-shrink-0 cursor-not-allowed rounded-full border-2 border-transparent bg-[#D4440F]"
+    >
+      <span class="pointer-events-none inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow-sm" style="box-shadow: 0 1px 3px rgba(28,24,20,0.18);"></span>
+    </button>
+  </div>
+</div>

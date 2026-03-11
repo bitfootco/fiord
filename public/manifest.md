@@ -169,6 +169,23 @@ Slate button: https://fiord.design/aesthetics/slate/components/button.html
 
 ---
 
+### Pumice
+
+**Warm, human, startup-confident.** Cream backgrounds and rounded forms with humanist sans-serif type and a tomato-coral accent that radiates energy without aggression. Suited for consumer products, SaaS with a personality, and any product that wants to feel like it was built by people who give a damn.
+
+- [Full preview](https://fiord.design/aesthetics/pumice/index.html)
+- [Design metadata](https://fiord.design/aesthetics/pumice/meta.json)
+- [Component directory](https://fiord.design/aesthetics/pumice/components/)
+
+To use a Pumice component instead of a base component, replace `/base/components/` with `/aesthetics/pumice/components/` in any path. For example:
+
+```
+Base button:   https://fiord.design/base/components/button.html
+Pumice button: https://fiord.design/aesthetics/pumice/components/button.html
+```
+
+---
+
 ## Agent Usage
 
 This section describes the protocol AI agents use to discover and consume Fiord components.

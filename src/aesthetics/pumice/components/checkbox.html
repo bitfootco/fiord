@@ -1,0 +1,41 @@
+<fieldset class="space-y-3 max-w-sm">
+  <legend class="text-sm font-medium font-['DM_Sans'] text-[#1C1816] mb-3 dark:text-[#E8E3DC]">Notification preferences</legend>
+
+  <!-- Unchecked -->
+  <label class="flex items-start gap-3 cursor-pointer group">
+    <input
+      type="checkbox"
+      class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] text-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+      Product updates
+      <span class="block text-xs text-[#78716C] mt-0.5">New features, improvements, and release notes.</span>
+    </span>
+  </label>
+
+  <!-- Checked -->
+  <label class="flex items-start gap-3 cursor-pointer group">
+    <input
+      type="checkbox"
+      checked
+      class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] text-[#D4440F] focus:ring-2 focus:ring-[#D4440F] focus:ring-offset-2 cursor-pointer"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#1C1816] dark:text-[#E8E3DC]">
+      Security alerts
+      <span class="block text-xs text-[#78716C] mt-0.5">Sign-ins from new devices and password changes.</span>
+    </span>
+  </label>
+
+  <!-- Disabled -->
+  <label class="flex items-start gap-3 cursor-not-allowed opacity-50">
+    <input
+      type="checkbox"
+      disabled
+      class="mt-0.5 w-4 h-4 rounded accent-[#D4440F] border-[#E5DFD6] cursor-not-allowed"
+    />
+    <span class="text-sm font-['DM_Sans'] text-[#78716C]">
+      Marketing emails
+      <span class="block text-xs mt-0.5">Managed by your organization's admin.</span>
+    </span>
+  </label>
+</fieldset>

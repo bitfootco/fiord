@@ -1,0 +1,51 @@
+{
+  "name": "pumice",
+  "display_name": "Pumice",
+  "description": "Warm, human, startup-confident. Cream backgrounds and rounded forms with humanist sans-serif type and a tomato-coral accent that radiates energy without aggression. Suited for consumer products, SaaS with a personality, and any product that wants to feel like it was built by people who give a damn.",
+  "palette": {
+    "primary": "#1C1816",
+    "primary_light": "#57504C",
+    "background": "#FAFAF8",
+    "surface": "#F3F0EA",
+    "text": "#1C1816",
+    "text_muted": "#78716C",
+    "border": "#E5DFD6",
+    "accent_action": "#D4440F",
+    "accent_action_hover": "#B83A0C",
+    "accent_action_light": "#FEF0EC",
+    "accent_positive": "#15803D",
+    "accent_attention": "#B45309"
+  },
+  "typography": {
+    "heading_font": "Nunito",
+    "body_font": "DM Sans",
+    "mono_font": "Fira Code",
+    "scale": [12, 14, 16, 18, 20, 24, 30, 36, 48, 60],
+    "heading_weight": "800",
+    "body_weight": "400",
+    "line_height_body": "1.65",
+    "line_height_heading": "1.2"
+  },
+  "spacing": {
+    "unit": 4,
+    "rhythm": "relaxed",
+    "section_gap": "5rem",
+    "component_padding": "1.5rem"
+  },
+  "borders": {
+    "radius": "0.5rem",
+    "radius_lg": "0.75rem",
+    "width": "1px",
+    "style": "soft"
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(28, 24, 20, 0.06), 0 1px 1px rgba(28, 24, 20, 0.04)",
+    "md": "0 2px 4px rgba(28, 24, 20, 0.05), 0 6px 12px -2px rgba(28, 24, 20, 0.08)",
+    "lg": "0 2px 4px rgba(28, 24, 20, 0.04), 0 8px 16px -4px rgba(28, 24, 20, 0.08), 0 20px 40px -8px rgba(28, 24, 20, 0.06)"
+  },
+  "motion": {
+    "duration_fast": "150ms",
+    "duration_normal": "250ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  }
+}

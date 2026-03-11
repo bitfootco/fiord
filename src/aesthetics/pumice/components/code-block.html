@@ -1,0 +1,35 @@
+<div class="rounded-xl overflow-hidden" style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)">
+  <!-- Header bar -->
+  <div class="flex items-center justify-between px-4 py-3 bg-[#2E2A27] border-b border-[#3A3532]">
+    <div class="flex items-center gap-3">
+      <div class="flex gap-1.5">
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+        <span class="w-3 h-3 rounded-full bg-[#57504C]"></span>
+      </div>
+      <span class="font-['Fira_Code'] text-xs text-[#978880]">formatCurrency.js</span>
+    </div>
+    <button class="font-['DM_Sans'] text-xs text-[#78716C] hover:text-[#CFC6B8] transition-colors px-2 py-1 rounded hover:bg-[#3A3532]">
+      Copy
+    </button>
+  </div>
+
+  <!-- Code body -->
+  <div class="bg-[#1C1816] px-5 py-5 overflow-x-auto">
+    <pre class="font-['Fira_Code'] text-sm leading-7"><code><span class="text-[#978880]">/**
+ * Format a number as a localized currency string.
+ * @param {number} amount - The value to format
+ * @param {string} currency - ISO 4217 currency code
+ */</span>
+<span class="text-[#D4440F]">function</span> <span class="text-[#F3CC8A]">formatCurrency</span><span class="text-[#CFC6B8]">(amount, currency =</span> <span class="text-[#A8C5A0]">'USD'</span><span class="text-[#CFC6B8]">) {</span>
+  <span class="text-[#D4440F]">return</span> <span class="text-[#D4440F]">new</span> <span class="text-[#F3CC8A]">Intl.NumberFormat</span><span class="text-[#CFC6B8]">(</span><span class="text-[#A8C5A0]">'en-US'</span><span class="text-[#CFC6B8]">, {</span>
+    <span class="text-[#CFC6B8]">style:</span> <span class="text-[#A8C5A0]">'currency'</span><span class="text-[#CFC6B8]">,</span>
+    <span class="text-[#CFC6B8]">currency,</span>
+    <span class="text-[#CFC6B8]">minimumFractionDigits:</span> <span class="text-[#B8D4FF]">2</span><span class="text-[#CFC6B8]">,</span>
+  <span class="text-[#CFC6B8]">}).</span><span class="text-[#F3CC8A]">format</span><span class="text-[#CFC6B8]">(amount);</span>
+<span class="text-[#CFC6B8]">}</span>
+
+<span class="text-[#978880]">// Usage</span>
+<span class="text-[#F3CC8A]">formatCurrency</span><span class="text-[#CFC6B8]">(</span><span class="text-[#B8D4FF]">4299</span><span class="text-[#CFC6B8]">);</span>  <span class="text-[#978880]">// → "$4,299.00"</span></code></pre>
+  </div>
+</div>

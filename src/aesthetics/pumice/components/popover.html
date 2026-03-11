@@ -1,0 +1,69 @@
+<div class="flex flex-wrap items-start gap-8 py-4">
+  <!-- Trigger + popover wrapper -->
+  <div class="relative">
+    <button
+      data-fiord-popover-trigger="filter-popover"
+      class="inline-flex items-center gap-2 rounded-lg border border-[#E5DFD6] bg-white px-4 py-2 font-['DM_Sans'] text-sm font-medium text-[#1C1816] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-[#1C1816] dark:text-white dark:hover:bg-[#2C2420] transition-colors focus:outline-none focus:ring-2 focus:ring-[#D4440F]"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      <svg class="h-4 w-4 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+      </svg>
+      Filter options
+      <svg class="h-3.5 w-3.5 text-[#78716C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+      </svg>
+    </button>
+
+    <!-- Popover content -->
+    <div
+      id="filter-popover"
+      data-fiord-popover-content
+      class="hidden absolute left-0 top-full mt-2 z-30 w-64 rounded-xl border border-[#E5DFD6] bg-[#F3F0EA] p-4 dark:border-[#3C3430] dark:bg-[#2C2420]"
+      style="box-shadow: 0 2px 4px rgba(28,24,20,0.05), 0 6px 12px -2px rgba(28,24,20,0.08)"
+      role="dialog"
+      aria-label="Filter options"
+    >
+      <h3 class="mb-3 font-['Nunito'] text-sm font-bold text-[#1C1816] dark:text-white">
+        Filter by type
+      </h3>
+
+      <div class="space-y-2.5">
+        <label class="flex cursor-pointer items-center gap-3">
+          <input type="checkbox" checked class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+          <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Documents</span>
+          <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">24</span>
+        </label>
+        <label class="flex cursor-pointer items-center gap-3">
+          <input type="checkbox" checked class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+          <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Images</span>
+          <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">91</span>
+        </label>
+        <label class="flex cursor-pointer items-center gap-3">
+          <input type="checkbox" class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+          <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Videos</span>
+          <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">7</span>
+        </label>
+        <label class="flex cursor-pointer items-center gap-3">
+          <input type="checkbox" class="h-4 w-4 rounded border-[#E5DFD6] accent-[#D4440F]" />
+          <span class="font-['DM_Sans'] text-sm text-[#1C1816] dark:text-white">Spreadsheets</span>
+          <span class="ml-auto rounded-full bg-[#FEF0EC] px-2 py-0.5 font-['DM_Sans'] text-xs font-medium text-[#D4440F]">13</span>
+        </label>
+      </div>
+
+      <div class="mt-4 flex gap-2 border-t border-[#E5DFD6] pt-4 dark:border-[#3C3430]">
+        <button class="flex-1 rounded-lg border border-[#E5DFD6] bg-white px-3 py-1.5 font-['DM_Sans'] text-xs font-medium text-[#78716C] hover:bg-[#F3F0EA] dark:border-[#3C3430] dark:bg-transparent dark:text-[#A8A29E] dark:hover:bg-[#3C3430] transition-colors">
+          Reset
+        </button>
+        <button class="flex-1 rounded-lg bg-[#D4440F] px-3 py-1.5 font-['DM_Sans'] text-xs font-medium text-white hover:bg-[#B83A0C] transition-colors">
+          Apply
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <p class="font-['DM_Sans'] text-sm text-[#78716C] dark:text-[#A8A29E] pt-2">
+    Click "Filter options" to open the popover.
+  </p>
+</div>
