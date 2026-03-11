@@ -54,7 +54,7 @@
 
 - [x] 1.12 — Slate: Design system
       meta.json defining palette, typography, spacing, borders, shadows, motion
-      Sharp, decisive, professional. Vercel-inspired precision with 3-color accent system.
+      Layered, decisive, geological. Cool indigo accents, matte surfaces, stratified shadows.
       Files: public/aesthetics/slate/meta.json
 
 - [x] 1.13 — Slate: Layout + Typography (8 components)

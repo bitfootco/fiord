@@ -332,7 +332,7 @@ Think of it like this: if Fiord's base component set is a architectural blueprin
 
 Aesthetics are named after natural materials. The name should evoke the visual and tactile qualities of the design.
 
-**Slate** is the initial aesthetic — professional, measured, neutral. Cool grays with clean lines, Stripe-inspired polish. Suited for enterprise, SaaS, and B2B products. Additional aesthetics will be added over time, each co-designed with the user.
+**Slate** is the initial aesthetic — layered, decisive, geological. Cool blue-gray tones with sharp cleaved edges, matte surfaces, and indigo accents. Stratified shadows suggest metamorphic rock strata. Suited for developer tools, SaaS platforms, and technical products. Additional aesthetics will be added over time, each co-designed with the user.
 
 New aesthetics should:
 - Have a name drawn from natural materials, formations, or textures

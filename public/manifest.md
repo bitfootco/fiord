@@ -153,7 +153,7 @@ Aesthetics are complete visual identities applied across the entire component se
 
 ### Slate
 
-**Professional, measured, neutral.** Cool grays with clean lines, Stripe-inspired polish. Suited for enterprise, SaaS, and B2B products.
+**Layered, decisive, geological.** Cool blue-gray tones with sharp cleaved edges, matte surfaces, and indigo accents. Stratified shadows suggest metamorphic rock strata. Suited for developer tools, SaaS platforms, and technical products.
 
 - [Full preview](https://fiord.design/aesthetics/slate/index.html)
 - [Component catalog](https://fiord.design/aesthetics/slate/catalog.html)
