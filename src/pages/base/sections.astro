@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiord — Base / Page Sections</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Base / Page Sections" description="Full-page marketing and content sections ready to drop into landing pages. 6 components.">
 
   <header class="bg-white border-b border-gray-200 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
         <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Page Sections</h1>
       </div>
-      <a href="index.html" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -35,7 +31,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Hero</h2>
         <p class="text-sm text-gray-500">Full-width intro section with headline, subheading, and primary call-to-action.</p>
-        <a href="components/hero.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/hero.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <section class="relative overflow-hidden bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800">
@@ -144,10 +140,10 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">CTA</h2>
         <p class="text-sm text-gray-500">Call-to-action banner with headline, supporting text, and one or two action buttons.</p>
-        <a href="components/cta.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/cta.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
-        
+
     <!-- Variant 1: Full-width banner CTA -->
     <section class="relative overflow-hidden bg-slate-900 dark:bg-slate-800 rounded-xl px-8 py-14 sm:px-16 text-center">
       <div class="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 dark:from-slate-800 dark:via-slate-700 dark:to-slate-800 pointer-events-none" aria-hidden="true"></div>
@@ -215,7 +211,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Feature Grid</h2>
         <p class="text-sm text-gray-500">Multi-feature showcase grid with icon, title, and short description per feature.</p>
-        <a href="components/feature-grid.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/feature-grid.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <section class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 px-8 py-14 sm:px-12">
@@ -332,7 +328,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Testimonial</h2>
         <p class="text-sm text-gray-500">Pull quote with attribution name, title, and optional avatar.</p>
-        <a href="components/testimonial.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/testimonial.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <section class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 px-8 py-14 sm:px-12">
@@ -428,7 +424,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Pricing Table</h2>
         <p class="text-sm text-gray-500">Tier comparison layout with feature lists, price display, and highlighted recommended plan.</p>
-        <a href="components/pricing-table.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/pricing-table.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <section class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 px-8 py-14 sm:px-12">
@@ -603,7 +599,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">FAQ</h2>
         <p class="text-sm text-gray-500">Collapsible question-and-answer list with accordion expand and collapse behavior.</p>
-        <a href="components/faq.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/faq.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <section class="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700 px-8 py-12">
@@ -762,15 +758,7 @@
 
   </main>
 
-  <footer class="border-t border-gray-100 mt-8 px-6 py-5">
-    <div class="max-w-4xl mx-auto flex items-center justify-between text-xs text-gray-400">
-      <span>Fiord — Base / Page Sections</span>
-      <a href="index.html" class="hover:text-gray-600">← All categories</a>
-    </div>
-  </footer>
-
-    <!-- JS: faq -->
-  <script>
+  <script is:inline>
     (function () {
       document.querySelectorAll('[data-fiord-faq-item]').forEach(function (item) {
         var trigger = item.querySelector('[data-fiord-faq-trigger]');
@@ -808,5 +796,4 @@
     })();
   </script>
 
-</body>
-</html>
+</SiteLayout>

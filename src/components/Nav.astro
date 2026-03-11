@@ -1,0 +1,63 @@
+---
+const currentPath = Astro.url.pathname;
+
+function isActive(path: string) {
+  return currentPath.startsWith(path);
+}
+---
+
+<header class="bg-white border-b border-gray-200 sticky top-0 z-50">
+  <div class="max-w-5xl mx-auto px-6">
+    <div class="flex items-center justify-between h-14">
+
+      <!-- Wordmark -->
+      <a href="/" class="flex items-center gap-3 group" aria-label="Fiord home">
+        <!-- Topographic mark: three decreasing bars -->
+        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect y="0" width="16" height="3" rx="0.5" fill="#0F1C2E"/>
+          <rect y="6" width="12" height="3" rx="0.5" fill="#0F1C2E"/>
+          <rect y="12" width="8" height="3" rx="0.5" fill="#0F1C2E"/>
+        </svg>
+        <span class="text-[#0F1C2E] font-semibold text-base tracking-tight leading-none">fiord</span>
+      </a>
+
+      <!-- Nav links -->
+      <nav class="flex items-center gap-1" aria-label="Site navigation">
+        <a
+          href="/base/"
+          class:list={[
+            'px-3 py-1.5 text-sm rounded-md transition-colors',
+            isActive('/base')
+              ? 'text-[#0F1C2E] bg-gray-100 font-medium'
+              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+          ]}
+        >
+          Components
+        </a>
+        <a
+          href="/aesthetics/slate/"
+          class:list={[
+            'px-3 py-1.5 text-sm rounded-md transition-colors',
+            isActive('/aesthetics')
+              ? 'text-[#0F1C2E] bg-gray-100 font-medium'
+              : 'text-gray-500 hover:text-gray-900 hover:bg-gray-50'
+          ]}
+        >
+          Aesthetics
+        </a>
+        <a
+          href="https://github.com/bitfootco/fiord"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="px-3 py-1.5 text-sm text-gray-500 hover:text-gray-900 hover:bg-gray-50 rounded-md transition-colors flex items-center gap-1.5"
+        >
+          GitHub
+          <svg class="w-3 h-3 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+          </svg>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+</header>

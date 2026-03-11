@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiord — Base / Actions</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Base / Actions" description="Button, button group, link, and dropdown components for triggering actions and navigation.">
 
   <!-- Page header -->
   <header class="bg-white border-b border-gray-200 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
         <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Actions</h1>
       </div>
-      <a href="index.html" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -27,7 +23,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Button</h2>
         <p class="text-sm text-gray-500">Primary, secondary, ghost, and destructive button variants with hover and focus states.</p>
-        <a href="components/button.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/button.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="space-y-6">
@@ -72,7 +68,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Button Group</h2>
         <p class="text-sm text-gray-500">Horizontally grouped action buttons with joined borders and shared context.</p>
-        <a href="components/button-group.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/button-group.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="space-y-6">
@@ -124,7 +120,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Link</h2>
         <p class="text-sm text-gray-500">Styled anchor with underline, hover, and focus states for inline and standalone use.</p>
-        <a href="components/link.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/link.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="space-y-6">
@@ -179,7 +175,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Dropdown</h2>
         <p class="text-sm text-gray-500">Click-triggered action menu with keyboard navigation and outside-click dismissal.</p>
-        <a href="components/dropdown.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/dropdown.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6 min-h-64">
         <div class="relative inline-block text-left">
@@ -230,15 +226,7 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-100 mt-8 px-6 py-5">
-    <div class="max-w-4xl mx-auto flex items-center justify-between text-xs text-gray-400">
-      <span>Fiord — Base / Actions</span>
-      <a href="index.html" class="hover:text-gray-600">← All categories</a>
-    </div>
-  </footer>
-
-  <script>
+  <script is:inline>
     (function () {
       const triggers = document.querySelectorAll('[data-fiord-toggle]');
 
@@ -287,5 +275,4 @@
     })();
   </script>
 
-</body>
-</html>
+</SiteLayout>

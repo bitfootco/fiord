@@ -1,0 +1,132 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — AI-native design library" description="Production-ready component markup that AI agents discover via manifest, select by aesthetic, and copy-paste directly into any project.">
+
+  <!-- Hero -->
+  <section class="bg-white border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-20 md:py-28">
+      <div class="max-w-2xl">
+        <p class="text-sm font-medium text-[#4A7FA5] tracking-wide uppercase mb-4">AI-native design library</p>
+        <h1 class="text-4xl md:text-5xl font-semibold text-[#0F1C2E] leading-tight tracking-tight mb-5">
+          The design system<br>built for AI agents.
+        </h1>
+        <p class="text-lg text-gray-500 leading-relaxed mb-8 max-w-xl">
+          Fiord ships production-ready markup that agents discover via manifest,
+          select by aesthetic, and copy-paste directly into any project.
+          No packages. No props. No build step.
+        </p>
+        <div class="flex flex-wrap items-center gap-3">
+          <a
+            href="/base/"
+            class="inline-flex items-center gap-2 bg-[#0F1C2E] text-white text-sm font-medium px-5 py-2.5 rounded-md hover:bg-[#1a2e45] transition-colors"
+          >
+            Browse Components
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"/>
+            </svg>
+          </a>
+          <a
+            href="/manifest.json"
+            class="inline-flex items-center gap-2 bg-white text-gray-600 text-sm font-medium px-5 py-2.5 rounded-md border border-gray-200 hover:bg-gray-50 hover:text-gray-900 transition-colors font-mono"
+          >
+            manifest.json
+            <svg class="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value props -->
+  <section class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+    <div class="grid md:grid-cols-3 gap-6">
+
+      <!-- Discover -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Discover</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Agents fetch <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">manifest.json</code> to get the full catalog — 42 components across 8 categories, with every aesthetic listed and described.
+        </p>
+      </div>
+
+      <!-- Select -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Select</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Each aesthetic ships a complete <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">meta.json</code> — palette, typography, spacing, borders, shadows. Agents read the design language to make informed choices.
+        </p>
+      </div>
+
+      <!-- Copy -->
+      <div class="bg-white rounded-lg border border-gray-200 p-6">
+        <div class="w-8 h-8 rounded-md bg-gray-100 flex items-center justify-center mb-4">
+          <svg class="w-4 h-4 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 0 1-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 0 1 1.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 0 0-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 0 1-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 0 0-3.375-3.375h-1.5a1.125 1.125 0 0 1-1.125-1.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H9.75"/>
+          </svg>
+        </div>
+        <h3 class="text-sm font-semibold text-gray-900 mb-1.5">Copy</h3>
+        <p class="text-sm text-gray-500 leading-relaxed">
+          Markup lives between <code class="text-xs font-mono bg-gray-100 px-1 py-0.5 rounded">FIORD:COMPONENT_START</code> sentinel comments. Extract, paste, ship. Works in React, Vue, Svelte, Astro, or plain HTML.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="border-t border-gray-100 bg-white">
+    <div class="max-w-5xl mx-auto px-6 py-16 md:py-20">
+      <h2 class="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-10">How an agent uses Fiord</h2>
+      <div class="grid md:grid-cols-3 gap-10">
+        <div>
+          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">01</div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">Read the manifest</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Fetch <code class="font-mono text-xs">/manifest.json</code> to get the full component catalog, aesthetic list, and URL paths to every component page.</p>
+        </div>
+        <div>
+          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">02</div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">Choose an aesthetic</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Read <code class="font-mono text-xs">meta.json</code> for the selected aesthetic to understand its design language — palette, fonts, spacing, and border treatment.</p>
+        </div>
+        <div>
+          <div class="text-2xl font-semibold text-[#0F1C2E] mb-3 font-mono">03</div>
+          <h3 class="text-sm font-semibold text-gray-900 mb-2">Extract and integrate</h3>
+          <p class="text-sm text-gray-500 leading-relaxed">Fetch the component page, extract markup between sentinel comments, paste into the target codebase. Includes dark mode. Zero dependencies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="border-t border-gray-100">
+    <div class="max-w-5xl mx-auto px-6 py-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div>
+        <p class="text-sm font-medium text-gray-900">42 components · 1 aesthetic · MIT license</p>
+        <p class="text-sm text-gray-400 mt-0.5">Base templates plus the Slate aesthetic. More aesthetics coming.</p>
+      </div>
+      <div class="flex items-center gap-3 flex-shrink-0">
+        <a href="/base/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
+          Browse Components →
+        </a>
+        <a href="/aesthetics/slate/" class="text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] transition-colors">
+          View Slate →
+        </a>
+      </div>
+    </div>
+  </section>
+
+</SiteLayout>

@@ -1,21 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiord — Base / Typography</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Base / Typography" description="Headings, paragraphs, prose containers, and code blocks for typographic content.">
 
   <!-- Page header -->
   <header class="bg-white border-b border-gray-200 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
         <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Typography</h1>
       </div>
-      <a href="index.html" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -27,7 +23,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Heading</h2>
         <p class="text-sm text-gray-500">h1–h6 headings with aesthetic-appropriate sizing, weight, and line height.</p>
-        <a href="components/heading.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/heading.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="space-y-6 bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 p-8">
@@ -65,7 +61,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Paragraph</h2>
         <p class="text-sm text-gray-500">Body text with proper line height, measure, and muted secondary variant.</p>
-        <a href="components/paragraph.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/paragraph.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="space-y-8">
@@ -110,7 +106,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Prose</h2>
         <p class="text-sm text-gray-500">Long-form content container for articles and blog posts with full typographic rhythm.</p>
-        <a href="components/prose.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/prose.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <article class="max-w-prose mx-auto bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-700 px-8 py-10">
@@ -177,7 +173,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Code Block</h2>
         <p class="text-sm text-gray-500">Monospaced code display with syntax-highlighted appearance and copy affordance.</p>
-        <a href="components/code-block.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/code-block.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
         <div class="rounded-lg overflow-hidden border border-gray-700 bg-gray-900 shadow-md">
@@ -198,7 +194,7 @@
           </div>
 
           <!-- Code area with line numbers -->
-          <div class="overflow-x-auto">
+          <div class="overflow-x-auto" is:raw>
             <table class="w-full text-sm font-mono leading-6">
               <tbody>
                 <tr class="hover:bg-gray-800/50">
@@ -279,15 +275,7 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-gray-100 mt-8 px-6 py-5">
-    <div class="max-w-4xl mx-auto flex items-center justify-between text-xs text-gray-400">
-      <span>Fiord — Base / Typography</span>
-      <a href="index.html" class="hover:text-gray-600">← All categories</a>
-    </div>
-  </footer>
-
-  <script>
+  <script is:inline>
     document.querySelectorAll('[aria-label="Copy code"]').forEach(btn => {
       btn.addEventListener('click', () => {
         const block = btn.closest('[data-fiord-code]') || btn.closest('.rounded-lg');
@@ -304,5 +292,4 @@
     });
   </script>
 
-</body>
-</html>
+</SiteLayout>

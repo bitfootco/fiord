@@ -1,20 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fiord — Base / Navigation</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+---
 
+<SiteLayout title="Fiord — Base / Navigation" description="Wayfinding components that help users move through an application or site. 6 components.">
+
+  <!-- Page header -->
   <header class="bg-white border-b border-gray-200 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="index.html" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
         <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Navigation</h1>
       </div>
-      <a href="index.html" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -35,7 +32,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Navbar</h2>
         <p class="text-sm text-gray-500">Top navigation bar with logo, link list, and action slot.</p>
-        <a href="components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <nav class="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800" aria-label="Main navigation">
@@ -89,7 +86,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Sidebar</h2>
         <p class="text-sm text-gray-500">Vertical navigation panel with grouped links, icons, and active state.</p>
-        <a href="components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden" style="max-height: 400px;">
             <aside class="flex h-[600px] w-64 flex-col rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Sidebar navigation">
@@ -194,10 +191,10 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Breadcrumb</h2>
         <p class="text-sm text-gray-500">Hierarchical path indicator with separator glyphs and truncation on long paths.</p>
-        <a href="components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
-        
+
     <!-- Simple text breadcrumb -->
     <nav aria-label="Breadcrumb">
       <ol class="flex items-center gap-1.5 text-sm">
@@ -298,7 +295,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Tabs</h2>
         <p class="text-sm text-gray-500">Tabbed content switcher with active underline and keyboard arrow-key navigation.</p>
-        <a href="components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
             <div class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
@@ -451,7 +448,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Pagination</h2>
         <p class="text-sm text-gray-500">Page navigation controls with previous, next, and numbered page buttons.</p>
-        <a href="components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 p-6">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
@@ -554,7 +551,7 @@
       <div class="mb-4">
         <h2 class="text-sm font-semibold text-gray-800">Footer</h2>
         <p class="text-sm text-gray-500">Site footer with multi-column link groups, logo, and copyright line.</p>
-        <a href="components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <a href="/base/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="rounded-lg border border-gray-200 overflow-hidden">
             <footer class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Site footer">
@@ -681,15 +678,8 @@
 
   </main>
 
-  <footer class="border-t border-gray-100 mt-8 px-6 py-5">
-    <div class="max-w-4xl mx-auto flex items-center justify-between text-xs text-gray-400">
-      <span>Fiord — Base / Navigation</span>
-      <a href="index.html" class="hover:text-gray-600">← All categories</a>
-    </div>
-  </footer>
-
-    <!-- JS: tabs -->
-  <script>
+  <!-- JS: tabs -->
+  <script is:inline>
     (function () {
       const tabs = document.querySelectorAll('[data-fiord-tab]');
       const panels = document.querySelectorAll('[data-fiord-panel]');
@@ -749,5 +739,4 @@
     })();
   </script>
 
-</body>
-</html>
+</SiteLayout>
