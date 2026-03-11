@@ -8,16 +8,16 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 >
 
   <!-- Page header -->
-  <header class="bg-white border-b border-gray-200 px-6 py-5">
+  <header class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 px-6 py-5">
     <div class="max-w-4xl mx-auto">
       <div class="flex items-center justify-between">
         <div>
-          <a href="/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Fiord</a>
-          <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Base Components</h1>
+          <a href="/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Fiord</a>
+          <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Base Components</h1>
         </div>
-        <a href="/manifest.json" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5 transition-colors font-mono">manifest.json</a>
+        <a href="/manifest.json" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:border-gray-600 rounded px-3 py-1.5 transition-colors font-mono">manifest.json</a>
       </div>
-      <p class="mt-2 text-sm text-gray-500 max-w-2xl">
+      <p class="mt-2 text-sm text-gray-500 dark:text-gray-400 max-w-2xl">
         Structural reference templates. Neutral, unstyled, accessible. These are the unbranded foundation —
         copy from individual component pages, not from this index.
       </p>
@@ -26,95 +26,95 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
   <!-- Component Catalog -->
   <main class="max-w-4xl mx-auto px-6 py-10">
-    <div class="border border-gray-200 rounded-lg overflow-hidden divide-y divide-gray-100">
+    <div class="border border-gray-200 rounded-lg overflow-hidden divide-y divide-gray-100 dark:border-gray-700 dark:divide-gray-800">
 
-      <a id="layout" href="/base/layout/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="layout" href="/base/layout/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Layout</span>
-            <span class="text-xs text-gray-400">4 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Layout</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">4 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Max-width wrappers, grids, and structural primitives for organizing page content.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Max-width wrappers, grids, and structural primitives for organizing page content.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="typography" href="/base/typography/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="typography" href="/base/typography/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Typography</span>
-            <span class="text-xs text-gray-400">4 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Typography</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">4 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Headings, body text, and content containers that establish textual hierarchy.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Headings, body text, and content containers that establish textual hierarchy.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="actions" href="/base/actions/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="actions" href="/base/actions/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Actions</span>
-            <span class="text-xs text-gray-400">4 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Actions</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">4 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Interactive controls that trigger user-initiated operations.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Interactive controls that trigger user-initiated operations.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="forms" href="/base/forms/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="forms" href="/base/forms/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Forms</span>
-            <span class="text-xs text-gray-400">7 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Forms</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">7 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Input controls and composed layouts for collecting user data.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Input controls and composed layouts for collecting user data.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="data" href="/base/data/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="data" href="/base/data/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Data Display</span>
-            <span class="text-xs text-gray-400">6 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Data Display</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">6 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Components for presenting structured information, metrics, and content collections.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Components for presenting structured information, metrics, and content collections.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="navigation" href="/base/navigation/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="navigation" href="/base/navigation/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Navigation</span>
-            <span class="text-xs text-gray-400">6 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Navigation</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">6 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Wayfinding components that help users move through an application or site.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Wayfinding components that help users move through an application or site.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="overlays" href="/base/overlays/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="overlays" href="/base/overlays/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Overlays</span>
-            <span class="text-xs text-gray-400">5 components</span>
-            <span class="text-xs bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded font-mono">JS</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Overlays</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">5 components</span>
+            <span class="text-xs bg-gray-100 text-gray-500 dark:bg-gray-700 dark:text-gray-400 px-1.5 py-0.5 rounded font-mono">JS</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Floating layers that display content or interactions above the page. All include vanilla JS.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Floating layers that display content or interactions above the page. All include vanilla JS.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
-      <a id="sections" href="/base/sections/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 transition-colors group">
+      <a id="sections" href="/base/sections/" class="flex items-center justify-between px-5 py-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors group">
         <div>
           <div class="flex items-center gap-2">
-            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900">Page Sections</span>
-            <span class="text-xs text-gray-400">6 components</span>
+            <span class="text-sm font-medium text-gray-800 group-hover:text-gray-900 dark:text-gray-200 dark:group-hover:text-gray-100">Page Sections</span>
+            <span class="text-xs text-gray-400 dark:text-gray-600">6 components</span>
           </div>
-          <p class="text-sm text-gray-400 mt-0.5">Full-page marketing and content sections ready to drop into landing pages.</p>
+          <p class="text-sm text-gray-400 mt-0.5 dark:text-gray-600">Full-page marketing and content sections ready to drop into landing pages.</p>
         </div>
-        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+        <svg class="w-4 h-4 text-gray-300 group-hover:text-gray-500 dark:text-gray-600 dark:group-hover:text-gray-400 flex-shrink-0 ml-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </a>
 
     </div>

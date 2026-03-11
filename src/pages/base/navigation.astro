@@ -5,13 +5,13 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 <SiteLayout title="Fiord — Base / Navigation" description="Wayfinding components that help users move through an application or site. 6 components.">
 
   <!-- Page header -->
-  <header class="bg-white border-b border-gray-200 px-6 py-5">
+  <header class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
-        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Navigation</h1>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Base Components</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Navigation</h1>
       </div>
-      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -30,11 +30,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="navbar">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Navbar</h2>
-        <p class="text-sm text-gray-500">Top navigation bar with logo, link list, and action slot.</p>
-        <a href="/base/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Navbar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Top navigation bar with logo, link list, and action slot.</p>
+        <a href="/base/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="rounded-lg border border-gray-200 overflow-hidden">
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
             <nav class="rounded-lg border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800" aria-label="Main navigation">
       <div class="mx-auto max-w-7xl px-4 sm:px-6">
         <div class="flex h-16 items-center justify-between">
@@ -84,11 +84,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="sidebar">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Sidebar</h2>
-        <p class="text-sm text-gray-500">Vertical navigation panel with grouped links, icons, and active state.</p>
-        <a href="/base/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Sidebar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Vertical navigation panel with grouped links, icons, and active state.</p>
+        <a href="/base/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="rounded-lg border border-gray-200 overflow-hidden" style="max-height: 400px;">
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden" style="max-height: 400px;">
             <aside class="flex h-[600px] w-64 flex-col rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Sidebar navigation">
 
       <!-- Logo -->
@@ -189,11 +189,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="breadcrumb">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Breadcrumb</h2>
-        <p class="text-sm text-gray-500">Hierarchical path indicator with separator glyphs and truncation on long paths.</p>
-        <a href="/base/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Breadcrumb</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hierarchical path indicator with separator glyphs and truncation on long paths.</p>
+        <a href="/base/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
 
     <!-- Simple text breadcrumb -->
     <nav aria-label="Breadcrumb">
@@ -293,11 +293,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="tabs">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Tabs</h2>
-        <p class="text-sm text-gray-500">Tabbed content switcher with active underline and keyboard arrow-key navigation.</p>
-        <a href="/base/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tabs</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Tabbed content switcher with active underline and keyboard arrow-key navigation.</p>
+        <a href="/base/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800">
 
       <!-- Tab list -->
@@ -446,11 +446,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="pagination">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Pagination</h2>
-        <p class="text-sm text-gray-500">Page navigation controls with previous, next, and numbered page buttons.</p>
-        <a href="/base/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Pagination</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Page navigation controls with previous, next, and numbered page buttons.</p>
+        <a href="/base/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
 
       <!-- Results summary + items per page -->
@@ -549,11 +549,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="footer">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Footer</h2>
-        <p class="text-sm text-gray-500">Site footer with multi-column link groups, logo, and copyright line.</p>
-        <a href="/base/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Footer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Site footer with multi-column link groups, logo, and copyright line.</p>
+        <a href="/base/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="rounded-lg border border-gray-200 overflow-hidden">
+      <div class="rounded-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
             <footer class="rounded-lg border border-gray-200 bg-white dark:border-gray-700 dark:bg-gray-800" aria-label="Site footer">
 
       <!-- Newsletter signup -->

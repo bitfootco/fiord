@@ -5,13 +5,13 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 <SiteLayout title="Fiord — Base / Overlays" description="Floating layers that display content or interactions above the page. All 5 components include vanilla JS.">
 
   <!-- Page header -->
-  <header class="bg-white border-b border-gray-200 px-6 py-5">
+  <header class="bg-white border-b border-gray-200 dark:bg-gray-900 dark:border-gray-700 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Base Components</a>
-        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Overlays</h1>
+        <a href="/base/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Base Components</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Overlays</h1>
       </div>
-      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/base/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 dark:text-gray-400 dark:hover:text-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -29,11 +29,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="modal">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Modal</h2>
-        <p class="text-sm text-gray-500">Dialog overlay with backdrop, close button, focus trap, and Escape key dismissal.</p>
-        <a href="/base/components/modal.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Modal</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Dialog overlay with backdrop, close button, focus trap, and Escape key dismissal.</p>
+        <a href="/base/components/modal.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div
       id="modal-demo"
       data-fiord-modal
@@ -97,11 +97,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="drawer">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Drawer</h2>
-        <p class="text-sm text-gray-500">Slide-in panel from screen edge with backdrop and animated entrance.</p>
-        <a href="/base/components/drawer.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Drawer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Slide-in panel from screen edge with backdrop and animated entrance.</p>
+        <a href="/base/components/drawer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div
       id="drawer-demo"
       data-fiord-drawer
@@ -214,11 +214,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="tooltip">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Tooltip</h2>
-        <p class="text-sm text-gray-500">Hover-triggered short text label anchored to a target element.</p>
-        <a href="/base/components/tooltip.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tooltip</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hover-triggered short text label anchored to a target element.</p>
+        <a href="/base/components/tooltip.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div class="flex flex-wrap items-center gap-8 p-8 bg-white dark:bg-gray-800 rounded-lg">
 
       <!-- Tooltip example 1: Icon button -->
@@ -272,11 +272,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="popover">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Popover</h2>
-        <p class="text-sm text-gray-500">Click-triggered rich content popup with arrow and outside-click dismissal.</p>
-        <a href="/base/components/popover.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Popover</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click-triggered rich content popup with arrow and outside-click dismissal.</p>
+        <a href="/base/components/popover.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div class="flex flex-wrap items-start gap-10 p-8 bg-white dark:bg-gray-800 rounded-lg">
 
       <!-- Popover example 1: Info popover -->
@@ -363,11 +363,11 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
 
     <section id="toast">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Toast</h2>
-        <p class="text-sm text-gray-500">Transient notification message that auto-dismisses with success, warning, and error variants.</p>
-        <a href="/base/components/toast.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toast</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Transient notification message that auto-dismisses with success, warning, and error variants.</p>
+        <a href="/base/components/toast.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
-      <div class="bg-white rounded-lg border border-gray-200 p-6">
+      <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
             <div class="flex flex-wrap gap-3 p-8 bg-white dark:bg-gray-800 rounded-lg">
       <button
         data-fiord-toast

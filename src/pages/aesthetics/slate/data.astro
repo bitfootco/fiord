@@ -6,13 +6,13 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Page header -->
-  <header class="bg-white border-b border-gray-200 px-6 py-5">
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
     <div class="max-w-4xl mx-auto flex items-center justify-between">
       <div>
-        <a href="/aesthetics/slate/" class="text-xs text-gray-400 hover:text-gray-600 uppercase tracking-widest font-medium">Slate</a>
-        <h1 class="text-xl font-semibold text-gray-900 mt-0.5">Data Display</h1>
+        <a href="/aesthetics/slate/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Slate</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Data Display</h1>
       </div>
-      <a href="/aesthetics/slate/" class="text-xs text-gray-500 hover:text-gray-800 border border-gray-200 rounded px-3 py-1.5">← All categories</a>
+      <a href="/aesthetics/slate/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">← All categories</a>
     </div>
   </header>
 
@@ -31,9 +31,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="card">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Card</h2>
-        <p class="text-sm text-gray-500">Content container in basic, elevated, and interactive variants with consistent padding.</p>
-        <a href="/aesthetics/slate/components/card.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Card</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Content container in basic, elevated, and interactive variants with consistent padding.</p>
+        <a href="/aesthetics/slate/components/card.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="space-y-6">
         <!-- Basic card -->
@@ -109,9 +109,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="table">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Table</h2>
-        <p class="text-sm text-gray-500">Data table with header row, striped rows, and horizontal scroll on small viewports.</p>
-        <a href="/aesthetics/slate/components/table.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Table</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Data table with header row, striped rows, and horizontal scroll on small viewports.</p>
+        <a href="/aesthetics/slate/components/table.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="overflow-hidden rounded-lg border border-slate-200 bg-white dark:border-slate-700 dark:bg-slate-800">
         <!-- Table header with search/filter -->
@@ -238,9 +238,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="stat">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Stat</h2>
-        <p class="text-sm text-gray-500">Key metric display showing a headline number, label, and optional trend indicator.</p>
-        <a href="/aesthetics/slate/components/stat.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Stat</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Key metric display showing a headline number, label, and optional trend indicator.</p>
+        <a href="/aesthetics/slate/components/stat.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
         <!-- Total Revenue -->
@@ -304,9 +304,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="badge">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Badge</h2>
-        <p class="text-sm text-gray-500">Compact status indicator and label tag in multiple semantic color variants.</p>
-        <a href="/aesthetics/slate/components/badge.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Badge</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Compact status indicator and label tag in multiple semantic color variants.</p>
+        <a href="/aesthetics/slate/components/badge.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="space-y-8">
         <!-- Status badges — pill -->
@@ -423,9 +423,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="avatar">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">Avatar</h2>
-        <p class="text-sm text-gray-500">User image in circle with fallback initials and size variants.</p>
-        <a href="/aesthetics/slate/components/avatar.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Avatar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">User image in circle with fallback initials and size variants.</p>
+        <a href="/aesthetics/slate/components/avatar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="space-y-8">
         <!-- Avatar with image -->
@@ -536,9 +536,9 @@ import SiteLayout from '../../../layouts/SiteLayout.astro';
 
     <section id="list">
       <div class="mb-4">
-        <h2 class="text-sm font-semibold text-gray-800">List</h2>
-        <p class="text-sm text-gray-500">Structured list in simple, icon-prefixed, and description variants.</p>
-        <a href="/aesthetics/slate/components/list.html" class="text-xs text-gray-400 hover:text-gray-600 mt-0.5 inline-block">View standalone →</a>
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">List</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Structured list in simple, icon-prefixed, and description variants.</p>
+        <a href="/aesthetics/slate/components/list.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="space-y-8">
         <!-- Simple nav list -->

@@ -20,8 +20,17 @@ const { title, description = 'Fiord — AI-native design library. Production-rea
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script is:inline>
+    (function() {
+      var stored = localStorage.getItem('fiord-theme');
+      var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
 </head>
-<body class="bg-gray-50 text-gray-900 font-sans min-h-screen flex flex-col">
+<body class="bg-gray-50 dark:bg-slate-950 text-gray-900 dark:text-slate-100 font-sans min-h-screen flex flex-col">
   <Nav />
   <div class="flex-1">
     <slot />
