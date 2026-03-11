@@ -5,9 +5,9 @@
         var el = document.createElement('div');
         el.setAttribute('role', 'tooltip');
         el.className = [
-          'fixed z-50 px-2.5 py-1.5 text-xs font-medium',
+          'fixed z-[9999] px-2.5 py-1.5 text-xs font-medium',
           'text-white bg-gray-900 dark:bg-gray-700 rounded-md shadow-sm',
-          'pointer-events-none whitespace-nowrap max-w-xs',
+          'pointer-events-none whitespace-nowrap',
           'transition-opacity duration-150'
         ].join(' ');
         el.textContent = text;
@@ -20,12 +20,12 @@
         var tooltipRect = tooltip.getBoundingClientRect();
         var gap = 8;
 
-        var top = rect.top - tooltipRect.height - gap + window.scrollY;
-        var left = rect.left + rect.width / 2 - tooltipRect.width / 2 + window.scrollX;
+        var top = rect.top - tooltipRect.height - gap;
+        var left = rect.left + rect.width / 2 - tooltipRect.width / 2;
 
         // Flip to below if not enough space above
-        if (top < window.scrollY + gap) {
-          top = rect.bottom + gap + window.scrollY;
+        if (top < gap) {
+          top = rect.bottom + gap;
         }
 
         // Keep within horizontal bounds

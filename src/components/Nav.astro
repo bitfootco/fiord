@@ -107,7 +107,7 @@ function isActive(path: string) {
 </div>
 
 <script is:inline>
-  document.addEventListener('DOMContentLoaded', function() {
+  (function() {
     function syncIcons(dark) {
       var sunD = document.getElementById('theme-icon-sun');
       var moonD = document.getElementById('theme-icon-moon');
@@ -145,5 +145,5 @@ function isActive(path: string) {
         if (closeIcon) closeIcon.classList.toggle('hidden', isOpen);
       });
     }
-  });
+  })();
 </script>

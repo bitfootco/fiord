@@ -15,13 +15,13 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
     </div>
   </header>
 
-  <nav class="bg-white border-b border-gray-100 px-6 py-2">
+  <nav class="bg-white border-b border-gray-100 dark:bg-gray-900 dark:border-gray-700 px-6 py-2">
     <div class="max-w-4xl mx-auto flex gap-5 text-sm">
-      <a href="#modal" class="text-gray-400 hover:text-gray-700 py-1">Modal</a>
-      <a href="#drawer" class="text-gray-400 hover:text-gray-700 py-1">Drawer</a>
-      <a href="#tooltip" class="text-gray-400 hover:text-gray-700 py-1">Tooltip</a>
-      <a href="#popover" class="text-gray-400 hover:text-gray-700 py-1">Popover</a>
-      <a href="#toast" class="text-gray-400 hover:text-gray-700 py-1">Toast</a>
+      <a href="#modal" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Modal</a>
+      <a href="#drawer" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Drawer</a>
+      <a href="#tooltip" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Tooltip</a>
+      <a href="#popover" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Popover</a>
+      <a href="#toast" class="text-gray-400 hover:text-gray-700 dark:text-gray-500 dark:hover:text-gray-300 py-1">Toast</a>
     </div>
   </nav>
 
@@ -34,6 +34,14 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         <a href="/base/components/modal.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+        <div class="flex justify-center py-6">
+          <button
+            data-fiord-modal-open="modal-demo"
+            class="px-4 py-2 text-sm font-medium text-white bg-slate-800 rounded-md hover:bg-slate-700 transition-colors"
+          >
+            Open Modal
+          </button>
+        </div>
             <div
       id="modal-demo"
       data-fiord-modal
@@ -102,6 +110,14 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         <a href="/base/components/drawer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone →</a>
       </div>
       <div class="bg-white rounded-lg border border-gray-200 dark:bg-gray-800 dark:border-gray-700 p-6">
+        <div class="flex justify-center py-6">
+          <button
+            data-fiord-drawer-open="drawer-demo"
+            class="px-4 py-2 text-sm font-medium text-white bg-slate-800 rounded-md hover:bg-slate-700 transition-colors"
+          >
+            Open Drawer
+          </button>
+        </div>
             <div
       id="drawer-demo"
       data-fiord-drawer
@@ -520,9 +536,9 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         var el = document.createElement('div');
         el.setAttribute('role', 'tooltip');
         el.className = [
-          'fixed z-50 px-2.5 py-1.5 text-xs font-medium',
+          'fixed z-[9999] px-2.5 py-1.5 text-xs font-medium',
           'text-white bg-gray-900 dark:bg-gray-700 rounded-md shadow-sm',
-          'pointer-events-none whitespace-nowrap max-w-xs',
+          'pointer-events-none whitespace-nowrap',
           'transition-opacity duration-150'
         ].join(' ');
         el.textContent = text;
@@ -535,12 +551,12 @@ import SiteLayout from '../../layouts/SiteLayout.astro';
         var tooltipRect = tooltip.getBoundingClientRect();
         var gap = 8;
 
-        var top = rect.top - tooltipRect.height - gap + window.scrollY;
-        var left = rect.left + rect.width / 2 - tooltipRect.width / 2 + window.scrollX;
+        var top = rect.top - tooltipRect.height - gap;
+        var left = rect.left + rect.width / 2 - tooltipRect.width / 2;
 
         // Flip to below if not enough space above
-        if (top < window.scrollY + gap) {
-          top = rect.bottom + gap + window.scrollY;
+        if (top < gap) {
+          top = rect.bottom + gap;
         }
 
         // Keep within horizontal bounds
