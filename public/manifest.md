@@ -186,6 +186,23 @@ Pumice button: https://fiord.design/aesthetics/pumice/components/button.html
 
 ---
 
+### Quartz
+
+**Crystalline, precise, prismatic.** A bright white foundation with cyan-teal accents and crisp geometry. Suited for fintech, analytics platforms, and enterprise products that refuse to look boring.
+
+- [Full preview](https://fiord.design/aesthetics/quartz/index.html)
+- [Design metadata](https://fiord.design/aesthetics/quartz/meta.json)
+- [Component directory](https://fiord.design/aesthetics/quartz/components/)
+
+To use a Quartz component instead of a base component, replace `/base/components/` with `/aesthetics/quartz/components/` in any path. For example:
+
+```
+Base button:   https://fiord.design/base/components/button.html
+Quartz button: https://fiord.design/aesthetics/quartz/components/button.html
+```
+
+---
+
 ## Agent Usage
 
 This section describes the protocol AI agents use to discover and consume Fiord components.

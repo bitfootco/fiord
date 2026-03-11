@@ -1,0 +1,38 @@
+    <div class="flex flex-wrap gap-3 p-8 bg-white dark:bg-quartz-800 rounded-lg border border-quartz-200 dark:border-quartz-700">
+      <button
+        data-fiord-toast
+        data-fiord-toast-type="success"
+        class="px-4 py-2 text-sm font-medium text-white bg-[#059669] hover:bg-emerald-700 rounded transition-colors"
+      >
+        Show Success
+      </button>
+      <button
+        data-fiord-toast
+        data-fiord-toast-type="error"
+        class="px-4 py-2 text-sm font-medium text-white bg-red-600 hover:bg-red-700 rounded transition-colors"
+      >
+        Show Error
+      </button>
+      <button
+        data-fiord-toast
+        data-fiord-toast-type="warning"
+        class="px-4 py-2 text-sm font-medium text-quartz-900 bg-amber-400 hover:bg-[#D97706] rounded transition-colors"
+      >
+        Show Warning
+      </button>
+      <button
+        data-fiord-toast
+        data-fiord-toast-type="info"
+        class="px-4 py-2 text-sm font-medium text-white bg-[#0891B2] hover:bg-[#0E7490] rounded transition-colors"
+      >
+        Show Info
+      </button>
+    </div>
+
+    <!-- Toast container (rendered into by JS) -->
+    <div
+      id="fiord-toast-container"
+      aria-live="polite"
+      aria-atomic="false"
+      class="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"
+    ></div>

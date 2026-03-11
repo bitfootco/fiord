@@ -1,0 +1,632 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Quartz / Forms" description="Quartz aesthetic form components: inputs, textareas, selects, checkboxes, radios, toggles, and composed form layouts.">
+
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/quartz/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Quartz</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Forms</h1>
+      </div>
+      <a href="/aesthetics/quartz/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <!-- Component sections -->
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Input -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Input</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Text input with label, placeholder, helper text, and error state.</p>
+        <a href="/aesthetics/quartz/components/input.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-5">
+
+          <!-- Default input -->
+          <div>
+            <label for="input-email" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Email address
+            </label>
+            <input
+              type="email"
+              id="input-email"
+              name="email"
+              placeholder="you@example.com"
+              class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+            />
+          </div>
+
+          <!-- Focused state -->
+          <div>
+            <label for="input-name" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Full name
+            </label>
+            <input
+              type="text"
+              id="input-name"
+              name="name"
+              value="Jordan Reeves"
+              class="block w-full rounded border border-[#0891B2] bg-white px-3 py-2 text-sm text-quartz-900 shadow-sm outline-none ring-2 ring-[#0891B2] ring-offset-0 transition-colors dark:border-[#06B6D4] dark:bg-quartz-800 dark:text-quartz-100 dark:ring-[#06B6D4]"
+            />
+            <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">This field is shown in a focused state.</p>
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="input-username" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Username
+            </label>
+            <input
+              type="text"
+              id="input-username"
+              name="username"
+              value="j reeves!"
+              aria-describedby="input-username-error"
+              aria-invalid="true"
+              class="block w-full rounded border border-red-400 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 transition-colors dark:border-red-500 dark:bg-quartz-800 dark:text-quartz-100"
+            />
+            <p id="input-username-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+              Username can only contain letters, numbers, hyphens, and underscores.
+            </p>
+          </div>
+
+          <!-- Disabled state -->
+          <div>
+            <label for="input-account-id" class="block text-sm font-medium text-quartz-400 dark:text-quartz-500 mb-1.5">
+              Account ID
+            </label>
+            <input
+              type="text"
+              id="input-account-id"
+              name="account_id"
+              value="acc_8f3k92mxp1"
+              disabled
+              class="block w-full rounded border border-quartz-200 bg-quartz-50 px-3 py-2 text-sm text-quartz-400 shadow-sm cursor-not-allowed select-none dark:border-quartz-700 dark:bg-quartz-900 dark:text-quartz-600"
+            />
+            <p class="mt-1.5 text-xs text-quartz-400 dark:text-quartz-500">Your account ID cannot be changed.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Textarea -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Textarea</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Multiline text input with label, auto-resize affordance, and error state.</p>
+        <a href="/aesthetics/quartz/components/textarea.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-5">
+
+          <div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <label for="textarea-bio" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">
+                Bio
+              </label>
+              <span class="text-xs text-quartz-400 dark:text-quartz-500">Max 280 characters</span>
+            </div>
+            <textarea
+              id="textarea-bio"
+              name="bio"
+              rows="4"
+              placeholder="Tell us a bit about yourself — your role, interests, or what you're working on."
+              class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 resize-y transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+            ></textarea>
+            <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">Your bio will appear on your public profile.</p>
+          </div>
+
+          <div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <label for="textarea-description" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">
+                Project description
+              </label>
+              <span class="text-xs text-red-500 dark:text-red-400">312 / 300</span>
+            </div>
+            <textarea
+              id="textarea-description"
+              name="description"
+              rows="4"
+              aria-describedby="textarea-description-error"
+              aria-invalid="true"
+              class="block w-full rounded border border-red-400 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 resize-y transition-colors dark:border-red-500 dark:bg-quartz-800 dark:text-quartz-100"
+            >We're building a distributed caching layer that intelligently prefetches data based on historical access patterns. The system uses a combination of LRU eviction and predictive warming to dramatically reduce cache misses in high-throughput API environments where latency is critical.</textarea>
+            <p id="textarea-description-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+              Description must be 300 characters or fewer. Please shorten your text by 12 characters.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Select -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Select</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Native select element with custom styled wrapper, label, and error state.</p>
+        <a href="/aesthetics/quartz/components/select.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-5">
+
+          <div>
+            <label for="select-country" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Country
+            </label>
+            <div class="relative">
+              <select
+                id="select-country"
+                name="country"
+                class="block w-full appearance-none rounded border border-quartz-300 bg-white py-2 pl-3 pr-10 text-sm text-quartz-900 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+              >
+                <option value="">Select a country…</option>
+                <option value="us">United States</option>
+                <option value="ca">Canada</option>
+                <option value="gb">United Kingdom</option>
+                <option value="au">Australia</option>
+                <option value="de">Germany</option>
+                <option value="fr">France</option>
+                <option value="jp">Japan</option>
+                <option value="sg">Singapore</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg class="w-4 h-4 text-quartz-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </div>
+            </div>
+            <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">Used for billing and tax purposes.</p>
+          </div>
+
+          <div>
+            <label for="select-plan" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Subscription plan
+            </label>
+            <div class="relative">
+              <select
+                id="select-plan"
+                name="plan"
+                class="block w-full appearance-none rounded border border-quartz-300 bg-white py-2 pl-3 pr-10 text-sm text-quartz-900 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+              >
+                <option value="starter">Starter — Free</option>
+                <option value="pro" selected>Pro — $12 / month</option>
+                <option value="team">Team — $49 / month</option>
+                <option value="enterprise">Enterprise — Contact us</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+                <svg class="w-4 h-4 text-quartz-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+                </svg>
+              </div>
+            </div>
+            <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+              You can upgrade or downgrade at any time.
+              <a href="#" class="text-[#0E7490] underline hover:text-[#0891B2] dark:text-[#06B6D4] dark:hover:text-[#0891B2]">Compare plans</a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkbox -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Checkbox</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Styled checkbox with label, checked state, and indeterminate support.</p>
+        <a href="/aesthetics/quartz/components/checkbox.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6">
+
+          <!-- Single checkbox -->
+          <div>
+            <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Single</p>
+            <label class="flex items-start gap-3 cursor-pointer">
+              <input
+                type="checkbox"
+                class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div>
+                <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">I agree to the terms of service</span>
+                <span class="block text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">
+                  By checking this box you confirm you have read and accept our
+                  <a href="#" class="underline hover:text-[#0E7490] dark:hover:text-[#06B6D4]">Terms of Service</a>
+                  and
+                  <a href="#" class="underline hover:text-[#0E7490] dark:hover:text-[#06B6D4]">Privacy Policy</a>.
+                </span>
+              </div>
+            </label>
+          </div>
+
+          <!-- Checkbox group -->
+          <div>
+            <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Notification Preferences</p>
+            <fieldset>
+              <legend class="sr-only">Notification preferences</legend>
+              <div class="space-y-3">
+
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="notifications"
+                    value="comments"
+                    checked
+                    class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+                  />
+                  <div>
+                    <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Comments</span>
+                    <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get notified when someone comments on your posts.</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="notifications"
+                    value="mentions"
+                    checked
+                    class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+                  />
+                  <div>
+                    <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Mentions</span>
+                    <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get notified when someone mentions you in a discussion.</span>
+                  </div>
+                </label>
+
+                <label class="flex items-start gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="notifications"
+                    value="security"
+                    class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+                  />
+                  <div>
+                    <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Security alerts</span>
+                    <span class="block text-xs text-quartz-500 dark:text-quartz-400">Get important alerts about your account security.</span>
+                  </div>
+                </label>
+
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- Checked & Disabled state -->
+          <div>
+            <p class="text-xs font-medium text-quartz-500 dark:text-quartz-400 uppercase tracking-wide mb-3">Checked &amp; Disabled</p>
+            <label class="flex items-start gap-3 cursor-not-allowed opacity-60">
+              <input
+                type="checkbox"
+                checked
+                disabled
+                class="mt-0.5 h-4 w-4 shrink-0 rounded border-quartz-300 text-[#0E7490] accent-[#0E7490] cursor-not-allowed dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div>
+                <span class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">Receive transactional emails</span>
+                <span class="block text-xs text-quartz-500 dark:text-quartz-400">Required for account notifications. Cannot be disabled.</span>
+              </div>
+            </label>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Radio -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Radio</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Styled radio button group with label and selected state.</p>
+        <a href="/aesthetics/quartz/components/radio.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <fieldset>
+          <legend class="text-sm font-medium text-quartz-700 dark:text-quartz-300">Subscription plan</legend>
+          <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5 mb-4">Choose the plan that works best for you.</p>
+
+          <div class="space-y-3">
+
+            <!-- Monthly -->
+            <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:hover:bg-quartz-750 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+              <input
+                type="radio"
+                name="plan"
+                value="monthly"
+                class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">Monthly</span>
+                  <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$12 / mo</span>
+                </div>
+                <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Billed monthly. Cancel anytime.</p>
+              </div>
+            </label>
+
+            <!-- Annual -->
+            <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+              <input
+                type="radio"
+                name="plan"
+                value="annual"
+                checked
+                class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">
+                    Annual
+                    <span class="ml-2 inline-flex items-center rounded-full bg-[#ECFEFF] px-2 py-0.5 text-xs font-medium text-[#0E7490] dark:bg-[#0891B2]/20 dark:text-[#06B6D4]">Save 20%</span>
+                  </span>
+                  <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$9.60 / mo</span>
+                </div>
+                <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Billed as $115 per year.</p>
+              </div>
+            </label>
+
+            <!-- Lifetime -->
+            <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+              <input
+                type="radio"
+                name="plan"
+                value="lifetime"
+                class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">Lifetime</span>
+                  <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$299 once</span>
+                </div>
+                <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">One-time payment. All future updates included.</p>
+              </div>
+            </label>
+
+            <!-- Team (disabled) -->
+            <label class="flex items-start gap-3 cursor-not-allowed opacity-50 rounded border border-quartz-200 bg-quartz-50 px-4 py-3 dark:border-quartz-700 dark:bg-quartz-800">
+              <input
+                type="radio"
+                name="plan"
+                value="team"
+                disabled
+                class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] cursor-not-allowed dark:border-quartz-600 dark:accent-[#0891B2]"
+              />
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center justify-between">
+                  <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">
+                    Team
+                    <span class="ml-2 inline-flex items-center rounded-full bg-quartz-100 px-2 py-0.5 text-xs font-medium text-quartz-500 dark:bg-quartz-700 dark:text-quartz-400">Coming soon</span>
+                  </span>
+                  <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$49 / mo</span>
+                </div>
+                <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Up to 10 team members, shared workspace and billing.</p>
+              </div>
+            </label>
+
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- Toggle -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toggle</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">On/off switch with animated thumb and accessible checked state.</p>
+        <a href="/aesthetics/quartz/components/toggle.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-4">
+
+          <!-- Off state -->
+          <div class="flex items-center justify-between py-3 border-b border-quartz-200 dark:border-quartz-700">
+            <div>
+              <p class="text-sm font-medium text-quartz-700 dark:text-quartz-300">Email notifications</p>
+              <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Receive updates and activity summaries by email.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="false"
+              aria-label="Email notifications"
+              class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent bg-quartz-200 transition-colors focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:bg-quartz-700 dark:focus:ring-offset-quartz-900"
+            >
+              <span
+                aria-hidden="true"
+                class="inline-block h-5 w-5 translate-x-0 transform rounded-full bg-white shadow ring-0 transition-transform"
+              ></span>
+            </button>
+          </div>
+
+          <!-- On state -->
+          <div class="flex items-center justify-between py-3 border-b border-quartz-200 dark:border-quartz-700">
+            <div>
+              <p class="text-sm font-medium text-quartz-700 dark:text-quartz-300">Marketing emails</p>
+              <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Receive product announcements, tips, and offers.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-label="Marketing emails"
+              class="relative inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent bg-[#0E7490] transition-colors focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:bg-[#0891B2] dark:focus:ring-offset-quartz-900"
+            >
+              <span
+                aria-hidden="true"
+                class="inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow ring-0 transition-transform"
+              ></span>
+            </button>
+          </div>
+
+          <!-- Disabled state -->
+          <div class="flex items-center justify-between py-3 opacity-50">
+            <div>
+              <p class="text-sm font-medium text-quartz-700 dark:text-quartz-300">Security alerts</p>
+              <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Critical alerts about your account. Always enabled.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-label="Security alerts"
+              disabled
+              class="relative inline-flex h-6 w-11 shrink-0 cursor-not-allowed items-center rounded-full border-2 border-transparent bg-[#0E7490] transition-colors dark:bg-[#0891B2]"
+            >
+              <span
+                aria-hidden="true"
+                class="inline-block h-5 w-5 translate-x-5 transform rounded-full bg-white shadow ring-0 transition-transform"
+              ></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Group -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Form Group</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Composed form layout combining label, input, helper text, and validation error.</p>
+        <a href="/aesthetics/quartz/components/form-group.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <form class="bg-white rounded-lg border border-quartz-200 shadow-sm dark:bg-quartz-800 dark:border-quartz-700" novalidate>
+
+          <div class="px-6 py-5 border-b border-quartz-200 dark:border-quartz-700">
+            <h2 class="font-['Bricolage_Grotesque'] text-base font-semibold text-quartz-900 dark:text-quartz-100">Profile information</h2>
+            <p class="text-sm text-quartz-500 dark:text-quartz-400 mt-1">Update your name, email address, and public bio.</p>
+          </div>
+
+          <div class="px-6 py-5 space-y-5">
+
+            <!-- Name — two column -->
+            <div class="grid grid-cols-2 gap-4">
+              <div>
+                <label for="fg-first-name" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+                  First name
+                </label>
+                <input
+                  type="text"
+                  id="fg-first-name"
+                  name="first_name"
+                  value="Jordan"
+                  autocomplete="given-name"
+                  class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+                />
+              </div>
+              <div>
+                <label for="fg-last-name" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+                  Last name
+                </label>
+                <input
+                  type="text"
+                  id="fg-last-name"
+                  name="last_name"
+                  value="Reeves"
+                  autocomplete="family-name"
+                  class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+                />
+              </div>
+            </div>
+
+            <!-- Email — with error -->
+            <div>
+              <label for="fg-email" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+                Email address
+                <span class="text-red-500 ml-0.5" aria-hidden="true">*</span>
+              </label>
+              <input
+                type="email"
+                id="fg-email"
+                name="email"
+                value="jordan.reeves@"
+                autocomplete="email"
+                aria-describedby="fg-email-error"
+                aria-invalid="true"
+                required
+                class="block w-full rounded border border-red-400 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 transition-colors dark:border-red-500 dark:bg-quartz-700 dark:text-quartz-100"
+              />
+              <p id="fg-email-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+                Please enter a valid email address.
+              </p>
+            </div>
+
+            <!-- Password -->
+            <div>
+              <label for="fg-password" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+                New password
+              </label>
+              <input
+                type="password"
+                id="fg-password"
+                name="password"
+                placeholder="Leave blank to keep current password"
+                autocomplete="new-password"
+                aria-describedby="fg-password-hint"
+                class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+              />
+              <p id="fg-password-hint" class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+                Must be at least 12 characters and include a number and a special character.
+              </p>
+            </div>
+
+            <!-- Bio -->
+            <div>
+              <div class="flex items-baseline justify-between mb-1.5">
+                <label for="fg-bio" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">
+                  Bio
+                </label>
+                <span class="text-xs text-quartz-400 dark:text-quartz-500">Optional · Max 280 chars</span>
+              </div>
+              <textarea
+                id="fg-bio"
+                name="bio"
+                rows="3"
+                placeholder="A short description that appears on your public profile."
+                aria-describedby="fg-bio-hint"
+                class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 resize-y transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+              ></textarea>
+              <p id="fg-bio-hint" class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+                Markdown is supported. Links will be auto-linked.
+              </p>
+            </div>
+
+          </div>
+
+          <div class="px-6 py-4 bg-quartz-50 rounded-b-lg flex items-center justify-between border-t border-quartz-200 dark:bg-quartz-800/50 dark:border-quartz-700">
+            <p class="text-xs text-quartz-500 dark:text-quartz-400">
+              <span class="text-red-500" aria-hidden="true">*</span> Required fields
+            </p>
+            <div class="flex items-center gap-3">
+              <button
+                type="button"
+                class="inline-flex items-center justify-center rounded px-4 py-2 text-sm font-medium text-quartz-600 hover:bg-quartz-100 hover:text-quartz-900 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 transition-colors dark:text-quartz-400 dark:hover:bg-quartz-700 dark:hover:text-quartz-100"
+              >
+                Cancel
+              </button>
+              <button
+                type="submit"
+                class="inline-flex items-center justify-center rounded bg-[#0891B2] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#0E7490] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 transition-all dark:focus:ring-offset-quartz-900"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+</SiteLayout>

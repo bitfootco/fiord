@@ -319,6 +319,14 @@
       "preview": "/aesthetics/pumice/index.html",
       "meta": "/aesthetics/pumice/meta.json",
       "components_path": "/aesthetics/pumice/components/"
+    },
+    {
+      "name": "quartz",
+      "display_name": "Quartz",
+      "description": "Crystalline, precise, prismatic. A bright white foundation with cyan-teal accents and crisp geometry. Suited for fintech, analytics platforms, and enterprise products that refuse to look boring.",
+      "preview": "/aesthetics/quartz/index.html",
+      "meta": "/aesthetics/quartz/meta.json",
+      "components_path": "/aesthetics/quartz/components/"
     }
   ],
   "categories": [

@@ -1,0 +1,124 @@
+    <form class="bg-white rounded-lg border border-quartz-200 shadow-sm dark:bg-quartz-800 dark:border-quartz-700" novalidate>
+
+      <div class="px-6 py-5 border-b border-quartz-200 dark:border-quartz-700">
+        <h2 class="font-['Bricolage_Grotesque'] text-base font-semibold text-quartz-900 dark:text-quartz-100">Profile information</h2>
+        <p class="text-sm text-quartz-500 dark:text-quartz-400 mt-1">Update your name, email address, and public bio.</p>
+      </div>
+
+      <div class="px-6 py-5 space-y-5">
+
+        <!-- Name — two column -->
+        <div class="grid grid-cols-2 gap-4">
+          <div>
+            <label for="fg-first-name" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              First name
+            </label>
+            <input
+              type="text"
+              id="fg-first-name"
+              name="first_name"
+              value="Jordan"
+              autocomplete="given-name"
+              class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+            />
+          </div>
+          <div>
+            <label for="fg-last-name" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+              Last name
+            </label>
+            <input
+              type="text"
+              id="fg-last-name"
+              name="last_name"
+              value="Reeves"
+              autocomplete="family-name"
+              class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+            />
+          </div>
+        </div>
+
+        <!-- Email — with error -->
+        <div>
+          <label for="fg-email" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+            Email address
+            <span class="text-red-500 ml-0.5" aria-hidden="true">*</span>
+          </label>
+          <input
+            type="email"
+            id="fg-email"
+            name="email"
+            value="jordan.reeves@"
+            autocomplete="email"
+            aria-describedby="fg-email-error"
+            aria-invalid="true"
+            required
+            class="block w-full rounded border border-red-400 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-0 transition-colors dark:border-red-500 dark:bg-quartz-700 dark:text-quartz-100"
+          />
+          <p id="fg-email-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">
+            Please enter a valid email address.
+          </p>
+        </div>
+
+        <!-- Password -->
+        <div>
+          <label for="fg-password" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+            New password
+          </label>
+          <input
+            type="password"
+            id="fg-password"
+            name="password"
+            placeholder="Leave blank to keep current password"
+            autocomplete="new-password"
+            aria-describedby="fg-password-hint"
+            class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+          />
+          <p id="fg-password-hint" class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+            Must be at least 12 characters and include a number and a special character.
+          </p>
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <div class="flex items-baseline justify-between mb-1.5">
+            <label for="fg-bio" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300">
+              Bio
+            </label>
+            <span class="text-xs text-quartz-400 dark:text-quartz-500">Optional · Max 280 chars</span>
+          </div>
+          <textarea
+            id="fg-bio"
+            name="bio"
+            rows="3"
+            placeholder="A short description that appears on your public profile."
+            aria-describedby="fg-bio-hint"
+            class="block w-full rounded border border-quartz-300 bg-white px-3 py-2 text-sm text-quartz-900 placeholder-quartz-400 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 resize-y transition-colors dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-100 dark:placeholder-quartz-500 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+          ></textarea>
+          <p id="fg-bio-hint" class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+            Markdown is supported. Links will be auto-linked.
+          </p>
+        </div>
+
+      </div>
+
+      <div class="px-6 py-4 bg-quartz-50 rounded-b-lg flex items-center justify-between border-t border-quartz-200 dark:bg-quartz-800/50 dark:border-quartz-700">
+        <p class="text-xs text-quartz-500 dark:text-quartz-400">
+          <span class="text-red-500" aria-hidden="true">*</span> Required fields
+        </p>
+        <div class="flex items-center gap-3">
+          <button
+            type="button"
+            class="inline-flex items-center justify-center rounded px-4 py-2 text-sm font-medium text-quartz-600 hover:bg-quartz-100 hover:text-quartz-900 focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 transition-colors dark:text-quartz-400 dark:hover:bg-quartz-700 dark:hover:text-quartz-100"
+          >
+            Cancel
+          </button>
+          <button
+            type="submit"
+            class="inline-flex items-center justify-center rounded bg-[#0891B2] px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-[#0E7490] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 transition-all dark:focus:ring-offset-quartz-900"
+          >
+            Save changes
+          </button>
+        </div>
+      </div>
+
+    </form>

@@ -1,0 +1,8 @@
+{
+  "aesthetic": "quartz",
+  "display_name": "Quartz",
+  "tailwind_config": "{\n      theme: { extend: { colors: {\n        quartz: {\n          50: '#F6FAFE', 100: '#EDF2F7', 200: '#D9E2EA', 300: '#B5C3D1',\n          400: '#8A9DB0', 500: '#6B8094', 600: '#4F6577', 700: '#3A4D5E',\n          800: '#243546', 900: '#0F1E2E', 950: '#081019'\n        }\n      }}}\n    }",
+  "font_import": "<link href=\"https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap\" rel=\"stylesheet\">",
+  "body_class": "bg-quartz-100 p-8 dark:bg-quartz-900 font-['Instrument_Sans']",
+  "wrapper_class": "max-w-2xl mx-auto space-y-8"
+}

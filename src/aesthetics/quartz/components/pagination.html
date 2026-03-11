@@ -1,0 +1,94 @@
+<!-- fiord:wrapper max-w-3xl mx-auto -->
+    <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+
+      <!-- Results summary + items per page -->
+      <div class="flex items-center gap-3">
+        <p class="text-sm text-quartz-600 dark:text-quartz-400">
+          Showing <span class="font-medium text-quartz-900 dark:text-quartz-100">76–100</span> of <span class="font-medium text-quartz-900 dark:text-quartz-100">689</span> results
+        </p>
+        <div class="flex items-center gap-1.5">
+          <label for="per-page" class="text-xs text-quartz-500 dark:text-quartz-400">Per page</label>
+          <select
+            id="per-page"
+            class="rounded border border-quartz-300 bg-white py-1 pl-2 pr-7 text-xs text-quartz-700 focus:border-[#06B6D4] focus:outline-none focus:ring-1 focus:ring-[#06B6D4] dark:border-quartz-600 dark:bg-quartz-700 dark:text-quartz-300"
+          >
+            <option>10</option>
+            <option>25</option>
+            <option selected>25</option>
+            <option>50</option>
+            <option>100</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Page navigation -->
+      <nav aria-label="Pagination">
+        <ol class="flex items-center gap-1">
+
+          <!-- Previous -->
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-1 rounded border border-quartz-300 bg-white px-3 py-1.5 text-sm font-medium text-quartz-700 hover:bg-quartz-50 focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:ring-offset-1 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700"
+              aria-label="Previous page"
+            >
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+              Prev
+            </a>
+          </li>
+
+          <!-- Page 2 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded border border-quartz-300 bg-white text-sm text-quartz-700 hover:bg-quartz-50 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700" aria-label="Page 2">2</a>
+          </li>
+
+          <!-- Page 3 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded border border-quartz-300 bg-white text-sm text-quartz-700 hover:bg-quartz-50 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700" aria-label="Page 3">3</a>
+          </li>
+
+          <!-- Current — Page 4 -->
+          <li>
+            <a
+              href="#"
+              class="flex h-9 w-9 items-center justify-center rounded border border-[#0891B2] bg-[#0891B2] text-sm font-medium text-white focus:outline-none dark:border-[#06B6D4] dark:bg-[#06B6D4]"
+              aria-label="Page 4"
+              aria-current="page"
+            >4</a>
+          </li>
+
+          <!-- Page 5 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded border border-quartz-300 bg-white text-sm text-quartz-700 hover:bg-quartz-50 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700" aria-label="Page 5">5</a>
+          </li>
+
+          <!-- Ellipsis -->
+          <li>
+            <span class="flex h-9 w-9 items-center justify-center text-sm text-quartz-500 dark:text-quartz-400" aria-hidden="true">&hellip;</span>
+          </li>
+
+          <!-- Last page — 28 -->
+          <li>
+            <a href="#" class="flex h-9 w-9 items-center justify-center rounded border border-quartz-300 bg-white text-sm text-quartz-700 hover:bg-quartz-50 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700" aria-label="Page 28">28</a>
+          </li>
+
+          <!-- Next -->
+          <li>
+            <a
+              href="#"
+              class="flex items-center gap-1 rounded border border-quartz-300 bg-white px-3 py-1.5 text-sm font-medium text-quartz-700 hover:bg-quartz-50 focus:outline-none focus:ring-2 focus:ring-[#06B6D4] focus:ring-offset-1 dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-300 dark:hover:bg-quartz-700"
+              aria-label="Next page"
+            >
+              Next
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </a>
+          </li>
+
+        </ol>
+      </nav>
+
+    </div>

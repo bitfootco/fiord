@@ -1,0 +1,84 @@
+    <fieldset>
+      <legend class="text-sm font-medium text-quartz-700 dark:text-quartz-300">Subscription plan</legend>
+      <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5 mb-4">Choose the plan that works best for you.</p>
+
+      <div class="space-y-3">
+
+        <!-- Monthly -->
+        <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:hover:bg-quartz-750 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+          <input
+            type="radio"
+            name="plan"
+            value="monthly"
+            class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">Monthly</span>
+              <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$12 / mo</span>
+            </div>
+            <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Billed monthly. Cancel anytime.</p>
+          </div>
+        </label>
+
+        <!-- Annual -->
+        <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+          <input
+            type="radio"
+            name="plan"
+            value="annual"
+            checked
+            class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">
+                Annual
+                <span class="ml-2 inline-flex items-center rounded-full bg-[#ECFEFF] px-2 py-0.5 text-xs font-medium text-[#0E7490] dark:bg-[#0891B2]/20 dark:text-[#06B6D4]">Save 20%</span>
+              </span>
+              <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$9.60 / mo</span>
+            </div>
+            <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Billed as $115 per year.</p>
+          </div>
+        </label>
+
+        <!-- Lifetime -->
+        <label class="flex items-start gap-3 cursor-pointer rounded border border-quartz-200 bg-white px-4 py-3 hover:border-quartz-300 hover:bg-quartz-50 has-[:checked]:border-[#0891B2] has-[:checked]:bg-[#ECFEFF] transition-colors dark:border-quartz-700 dark:bg-quartz-800 dark:hover:border-quartz-600 dark:has-[:checked]:border-[#0891B2] dark:has-[:checked]:bg-[#0891B2]/10">
+          <input
+            type="radio"
+            name="plan"
+            value="lifetime"
+            class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-2 dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">Lifetime</span>
+              <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$299 once</span>
+            </div>
+            <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">One-time payment. All future updates included.</p>
+          </div>
+        </label>
+
+        <!-- Team (disabled) -->
+        <label class="flex items-start gap-3 cursor-not-allowed opacity-50 rounded border border-quartz-200 bg-quartz-50 px-4 py-3 dark:border-quartz-700 dark:bg-quartz-800">
+          <input
+            type="radio"
+            name="plan"
+            value="team"
+            disabled
+            class="mt-0.5 h-4 w-4 shrink-0 border-quartz-300 text-[#0E7490] accent-[#0E7490] cursor-not-allowed dark:border-quartz-600 dark:accent-[#0891B2]"
+          />
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center justify-between">
+              <span class="text-sm font-medium text-quartz-900 dark:text-quartz-100">
+                Team
+                <span class="ml-2 inline-flex items-center rounded-full bg-quartz-100 px-2 py-0.5 text-xs font-medium text-quartz-500 dark:bg-quartz-700 dark:text-quartz-400">Coming soon</span>
+              </span>
+              <span class="text-sm font-semibold text-quartz-900 dark:text-quartz-100">$49 / mo</span>
+            </div>
+            <p class="text-xs text-quartz-500 dark:text-quartz-400 mt-0.5">Up to 10 team members, shared workspace and billing.</p>
+          </div>
+        </label>
+
+      </div>
+    </fieldset>

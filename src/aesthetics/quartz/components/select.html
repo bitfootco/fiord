@@ -1,0 +1,61 @@
+    <div class="space-y-5">
+
+      <!-- Country select -->
+      <div>
+        <label for="select-country" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+          Country
+        </label>
+        <div class="relative">
+          <select
+            id="select-country"
+            name="country"
+            class="block w-full appearance-none rounded border border-quartz-300 bg-white py-2 pl-3 pr-10 text-sm text-quartz-900 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+          >
+            <option value="">Select a country…</option>
+            <option value="us">United States</option>
+            <option value="ca">Canada</option>
+            <option value="gb">United Kingdom</option>
+            <option value="au">Australia</option>
+            <option value="de">Germany</option>
+            <option value="fr">France</option>
+            <option value="jp">Japan</option>
+            <option value="sg">Singapore</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <svg class="w-4 h-4 text-quartz-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">Used for billing and tax purposes.</p>
+      </div>
+
+      <!-- Plan type select -->
+      <div>
+        <label for="select-plan" class="block text-sm font-medium text-quartz-700 dark:text-quartz-300 mb-1.5">
+          Subscription plan
+        </label>
+        <div class="relative">
+          <select
+            id="select-plan"
+            name="plan"
+            class="block w-full appearance-none rounded border border-quartz-300 bg-white py-2 pl-3 pr-10 text-sm text-quartz-900 shadow-sm focus:border-[#0891B2] focus:outline-none focus:ring-2 focus:ring-[#0891B2] focus:ring-offset-0 transition-colors dark:border-quartz-600 dark:bg-quartz-800 dark:text-quartz-100 dark:focus:border-[#06B6D4] dark:focus:ring-[#06B6D4]"
+          >
+            <option value="starter">Starter — Free</option>
+            <option value="pro" selected>Pro — $12 / month</option>
+            <option value="team">Team — $49 / month</option>
+            <option value="enterprise">Enterprise — Contact us</option>
+          </select>
+          <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <svg class="w-4 h-4 text-quartz-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+            </svg>
+          </div>
+        </div>
+        <p class="mt-1.5 text-xs text-quartz-500 dark:text-quartz-400">
+          You can upgrade or downgrade at any time.
+          <a href="#" class="text-[#0E7490] underline hover:text-[#0891B2] dark:text-[#06B6D4] dark:hover:text-[#0891B2]">Compare plans</a>
+        </p>
+      </div>
+
+    </div>
