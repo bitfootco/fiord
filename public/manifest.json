@@ -327,6 +327,14 @@
       "preview": "/aesthetics/quartz/index.html",
       "meta": "/aesthetics/quartz/meta.json",
       "components_path": "/aesthetics/quartz/components/"
+    },
+    {
+      "name": "chalk",
+      "display_name": "Chalk",
+      "description": "Warm, considered, editorial. Chalk-white surface with Lora serif headings and deep forest green accents. The thinking-tool aesthetic — note-taking apps, reading apps, writing tools, PKM. Notion, Bear, Readwise, Superhuman territory.",
+      "preview": "/aesthetics/chalk/index.html",
+      "meta": "/aesthetics/chalk/meta.json",
+      "components_path": "/aesthetics/chalk/components/"
     }
   ],
   "categories": [

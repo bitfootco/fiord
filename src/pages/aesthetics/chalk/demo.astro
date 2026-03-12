@@ -1,0 +1,585 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Demo" description="A realistic product page showcasing the Chalk aesthetic as a cohesive design system — editorial, warm, serif-led. Featuring Marginalia, a fictional PKM app.">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-40 bg-chalk-50/95 dark:bg-[#1A1A1A]/95 border-b border-chalk-300 dark:border-[#2E2E2E] backdrop-blur-sm">
+    <div class="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
+      <a href="#" class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Marginalia</a>
+      <div class="hidden sm:flex items-center gap-6 text-sm text-chalk-600 dark:text-[#9B9690]">
+        <a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Features</a>
+        <a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Pricing</a>
+        <a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Changelog</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="hidden sm:inline-flex text-sm font-medium text-chalk-700 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors px-3 py-1.5">Log in</a>
+        <a href="#" class="inline-flex items-center px-4 py-1.5 text-sm font-semibold text-white bg-forest-500 rounded-lg hover:bg-forest-600 transition-colors">Start free</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+  <section class="bg-chalk-50 dark:bg-[#1A1A1A] px-6 sm:px-12 pt-16 pb-10 sm:pt-24 sm:pb-16">
+    <div class="max-w-3xl mx-auto text-center">
+
+      <!-- Eyebrow -->
+      <div class="inline-flex items-center gap-2 px-3 py-1 mb-8 text-xs font-medium text-forest-600 dark:text-forest-400 bg-forest-50 dark:bg-[#0F2F1E] rounded-full border border-forest-200 dark:border-[#1A3D2A]">
+        <span class="w-1.5 h-1.5 rounded-full bg-forest-500"></span>
+        Now in open beta
+      </div>
+
+      <!-- Headline -->
+      <h1 class="font-['Lora'] text-4xl sm:text-5xl lg:text-6xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight tracking-tight">
+        Your thinking,<br/>finally connected.
+      </h1>
+
+      <!-- Sub-headline: Lora italic -->
+      <p class="mt-6 font-['Lora'] italic text-lg sm:text-xl text-chalk-600 dark:text-[#9B9690] leading-relaxed max-w-xl mx-auto">
+        The note-taking app for people who think for a living.
+      </p>
+
+      <!-- CTAs -->
+      <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-white bg-forest-500 rounded-lg hover:bg-forest-600 transition-colors shadow-sm"
+          style="box-shadow: 0 2px 4px rgba(26, 92, 69, 0.2), 0 6px 12px -2px rgba(26, 92, 69, 0.12);"
+        >
+          Start writing free
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a
+          href="#"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3 text-base font-semibold text-chalk-700 dark:text-[#9B9690] border border-chalk-300 dark:border-[#2E2E2E] rounded-lg hover:bg-chalk-100 dark:hover:bg-[#222222] transition-colors"
+        >
+          See how it works
+        </a>
+      </div>
+
+      <!-- Social proof -->
+      <p class="mt-8 text-sm text-chalk-500 dark:text-[#6B6860]">
+        Trusted by 12,000+ writers, researchers, and thinkers
+      </p>
+    </div>
+
+    <!-- Mock product screenshot: note editor -->
+    <div class="relative max-w-4xl mx-auto mt-14" is:raw>
+      <div class="rounded-xl border border-chalk-300 dark:border-[#2E2E2E] bg-white dark:bg-[#222222] overflow-hidden" style="box-shadow: 0 2px 4px rgba(28, 24, 20, 0.05), 0 8px 16px -4px rgba(28, 24, 20, 0.08), 0 20px 40px -8px rgba(28, 24, 20, 0.06);">
+        <!-- Browser chrome -->
+        <div class="flex items-center gap-1.5 px-4 py-3 bg-chalk-100 dark:bg-[#1A1A1A] border-b border-chalk-300 dark:border-[#2E2E2E]">
+          <span class="w-2.5 h-2.5 rounded-full bg-red-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-yellow-400"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-green-400"></span>
+          <div class="ml-2 flex-1 max-w-xs h-5 bg-chalk-200 dark:bg-[#2E2E2E] rounded-sm"></div>
+        </div>
+        <!-- App layout -->
+        <div class="flex h-72 sm:h-80">
+          <!-- Sidebar: note list -->
+          <div class="w-48 shrink-0 border-r border-chalk-200 dark:border-[#2E2E2E] bg-chalk-50 dark:bg-[#1A1A1A] p-3 hidden sm:block">
+            <div class="h-2 w-16 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-3"></div>
+            <div class="space-y-1">
+              <div class="px-2 py-1.5 rounded-md bg-forest-50 dark:bg-[#0F2F1E] border border-forest-200 dark:border-[#1A3D2A]">
+                <div class="h-2 w-24 bg-forest-300 dark:bg-forest-700 rounded mb-1"></div>
+                <div class="h-1.5 w-16 bg-chalk-300 dark:bg-[#2E2E2E] rounded"></div>
+              </div>
+              <div class="px-2 py-1.5 rounded-md">
+                <div class="h-2 w-20 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-14 bg-chalk-200 dark:bg-[#222222] rounded"></div>
+              </div>
+              <div class="px-2 py-1.5 rounded-md">
+                <div class="h-2 w-28 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-12 bg-chalk-200 dark:bg-[#222222] rounded"></div>
+              </div>
+              <div class="px-2 py-1.5 rounded-md">
+                <div class="h-2 w-22 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-20 bg-chalk-200 dark:bg-[#222222] rounded"></div>
+              </div>
+              <div class="px-2 py-1.5 rounded-md">
+                <div class="h-2 w-16 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-10 bg-chalk-200 dark:bg-[#222222] rounded"></div>
+              </div>
+            </div>
+          </div>
+          <!-- Main note area -->
+          <div class="flex-1 p-6 overflow-hidden">
+            <!-- Note title (serif) -->
+            <div class="h-5 w-64 bg-chalk-800 dark:bg-[#EDEAE3]/80 rounded mb-2" style="font-family: Lora, serif;"></div>
+            <div class="h-2 w-32 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-6"></div>
+            <!-- Note body: simulated text lines -->
+            <div class="space-y-2">
+              <div class="h-2 w-full bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="h-2 w-5/6 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="h-2 w-full bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="h-2 w-4/5 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="h-2 w-full bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="mt-4 h-2 w-full bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              <div class="h-2 w-3/4 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+            </div>
+            <!-- Inline link / backlink pill -->
+            <div class="mt-5 inline-flex items-center gap-1.5 px-2.5 py-1 bg-forest-50 dark:bg-[#0F2F1E] border border-forest-200 dark:border-[#1A3D2A] rounded-md">
+              <div class="w-3 h-3 rounded-sm bg-forest-400"></div>
+              <div class="h-2 w-20 bg-forest-300 dark:bg-forest-700 rounded"></div>
+            </div>
+          </div>
+          <!-- Linked notes panel -->
+          <div class="w-52 shrink-0 border-l border-chalk-200 dark:border-[#2E2E2E] bg-chalk-50 dark:bg-[#1A1A1A] p-3 hidden lg:block">
+            <div class="h-2 w-20 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-3"></div>
+            <div class="space-y-2">
+              <div class="p-2 rounded-md bg-white dark:bg-[#222222] border border-chalk-200 dark:border-[#2E2E2E]">
+                <div class="h-1.5 w-16 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-24 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              </div>
+              <div class="p-2 rounded-md bg-white dark:bg-[#222222] border border-chalk-200 dark:border-[#2E2E2E]">
+                <div class="h-1.5 w-20 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-14 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              </div>
+              <div class="p-2 rounded-md bg-white dark:bg-[#222222] border border-chalk-200 dark:border-[#2E2E2E]">
+                <div class="h-1.5 w-18 bg-chalk-300 dark:bg-[#2E2E2E] rounded mb-1"></div>
+                <div class="h-1.5 w-20 bg-chalk-200 dark:bg-[#2E2E2E] rounded"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- STATS -->
+  <section class="bg-chalk-100 dark:bg-[#222222] border-y border-chalk-200 dark:border-[#2E2E2E] px-6 py-14 sm:py-18">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-10">
+
+        <div class="text-center">
+          <p class="font-['Lora'] text-4xl sm:text-5xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">12M+</p>
+          <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690]">notes captured</p>
+          <p class="mt-1 text-xs text-forest-600 dark:text-forest-400 font-medium">↑ growing daily</p>
+        </div>
+
+        <div class="text-center">
+          <p class="font-['Lora'] text-4xl sm:text-5xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">840K</p>
+          <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690]">highlights saved</p>
+          <p class="mt-1 text-xs text-forest-600 dark:text-forest-400 font-medium">↑ 31% this month</p>
+        </div>
+
+        <div class="text-center">
+          <p class="font-['Lora'] text-4xl sm:text-5xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">91%</p>
+          <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690]">weekly retention</p>
+          <p class="mt-1 text-xs text-forest-600 dark:text-forest-400 font-medium">↑ above industry avg</p>
+        </div>
+
+        <div class="text-center">
+          <p class="font-['Lora'] text-4xl sm:text-5xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">14</p>
+          <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690]">day avg writing streak</p>
+          <p class="mt-1 text-xs text-forest-600 dark:text-forest-400 font-medium">↑ longest ever: 214</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HOW IT WORKS -->
+  <section class="bg-chalk-50 dark:bg-[#1A1A1A] px-6 sm:px-12 py-16 sm:py-24">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="font-['Lora'] text-3xl sm:text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Three steps. No friction.</h2>
+        <p class="mt-3 text-base text-chalk-600 dark:text-[#9B9690] max-w-md mx-auto leading-relaxed">
+          Most tools get in the way. Marginalia stays out of it.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-8">
+
+        <div class="relative">
+          <p class="font-['Lora'] text-7xl font-semibold text-chalk-200 dark:text-[#2E2E2E] leading-none select-none mb-4">01</p>
+          <h3 class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Capture</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">
+            Write a note, clip a highlight, jot a passing thought. Marginalia accepts anything — no folders, no friction, no filing.
+          </p>
+          <div class="hidden sm:block absolute top-10 -right-4 text-chalk-300 dark:text-[#2E2E2E]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="relative">
+          <p class="font-['Lora'] text-7xl font-semibold text-chalk-200 dark:text-[#2E2E2E] leading-none select-none mb-4">02</p>
+          <h3 class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Connect</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">
+            Link notes with [[double brackets]]. Marginalia builds a graph of your thinking — surfacing connections you didn't know were there.
+          </p>
+          <div class="hidden sm:block absolute top-10 -right-4 text-chalk-300 dark:text-[#2E2E2E]">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </div>
+
+        <div>
+          <p class="font-['Lora'] text-7xl font-semibold text-chalk-200 dark:text-[#2E2E2E] leading-none select-none mb-4">03</p>
+          <h3 class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Review</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">
+            Daily digest resurfaces relevant notes from your past. Spaced review that feels like serendipity, not homework.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FEATURES -->
+  <section class="bg-white dark:bg-[#222222] border-y border-chalk-200 dark:border-[#2E2E2E] px-6 sm:px-12 py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-['Lora'] text-3xl sm:text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">
+          Built for the way you actually think
+        </h2>
+        <p class="mt-3 text-base text-chalk-600 dark:text-[#9B9690] max-w-xl mx-auto leading-relaxed">
+          Not for how productivity gurus say you should.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Daily notes</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">A fresh page every morning. One place for the stream of consciousness, no decisions required.</p>
+        </div>
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Bi-directional links</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">Every link is two-way. See not just where your notes point, but what points back to them.</p>
+        </div>
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Highlight capture</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">Save passages from the web, PDFs, and ebooks. Everything lands in your vault with source and context intact.</p>
+        </div>
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Full-text search</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">Search across every word in every note, instantly. Fuzzy matching catches what you were trying to remember.</p>
+        </div>
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Reading mode</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">A distraction-free, typeset view for long-form reading. Lora at comfortable measure. The way it should look.</p>
+        </div>
+
+        <div class="bg-chalk-50 dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-forest-50 dark:bg-[#0F2F1E] mb-4">
+            <svg class="w-5 h-5 text-forest-600 dark:text-forest-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+            </svg>
+          </div>
+          <h3 class="font-['Lora'] font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-2">Export anywhere</h3>
+          <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">Your notes are yours. Export to Markdown, PDF, or plain text any time. No lock-in, no proprietary formats.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- TESTIMONIALS -->
+  <section class="bg-chalk-100 dark:bg-[#222222] px-6 sm:px-12 py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">From people who think for a living</h2>
+        <p class="mt-2 font-['Lora'] italic text-chalk-600 dark:text-[#9B9690] text-base">Real words from real writers, researchers, and makers</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+
+        <!-- Featured testimonial -->
+        <div class="bg-white dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6 border-l-4 border-l-forest-500" style="box-shadow: 0 2px 4px rgba(28, 24, 20, 0.05), 0 6px 12px -2px rgba(28, 24, 20, 0.08);">
+          <blockquote class="font-['Lora'] italic text-lg text-chalk-700 dark:text-[#9B9690] leading-relaxed mb-5">
+            "I've tried every PKM tool on the market. Marginalia is the first one that feels like it was designed for how I actually think — not how I wish I thought."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-forest-100 dark:bg-[#0F2F1E] flex items-center justify-center text-sm font-semibold text-forest-700 dark:text-forest-400 shrink-0">RL</div>
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Robin Lao</p>
+              <p class="text-xs text-chalk-500 dark:text-[#6B6860]">Science journalist, The Atlantic</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6 border-l-4 border-l-forest-500">
+          <blockquote class="font-['Lora'] italic text-lg text-chalk-700 dark:text-[#9B9690] leading-relaxed mb-5">
+            "The daily digest is uncanny. It surfaces a note from six months ago that's exactly relevant to what I'm working on today. Every single time."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-forest-100 dark:bg-[#0F2F1E] flex items-center justify-center text-sm font-semibold text-forest-700 dark:text-forest-400 shrink-0">MK</div>
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Marcus Kwame</p>
+              <p class="text-xs text-chalk-500 dark:text-[#6B6860]">Independent researcher</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white dark:bg-[#1A1A1A] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6 border-l-4 border-l-forest-500">
+          <blockquote class="font-['Lora'] italic text-lg text-chalk-700 dark:text-[#9B9690] leading-relaxed mb-5">
+            "I write a newsletter, manage a podcast, and run a small press. Marginalia is the connective tissue between all of it. I don't know how I worked before."
+          </blockquote>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-forest-100 dark:bg-[#0F2F1E] flex items-center justify-center text-sm font-semibold text-forest-700 dark:text-forest-400 shrink-0">SF</div>
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Sabine Fuchs</p>
+              <p class="text-xs text-chalk-500 dark:text-[#6B6860]">Writer and publisher</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRICING -->
+  <section class="bg-white dark:bg-[#1A1A1A] px-6 sm:px-12 py-16 sm:py-20">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-['Lora'] text-3xl sm:text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Simple, honest pricing</h2>
+        <p class="mt-3 text-base text-chalk-600 dark:text-[#9B9690]">
+          Start free. Upgrade when Marginalia has earned it.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 items-start">
+
+        <!-- Free -->
+        <div class="flex flex-col bg-chalk-50 dark:bg-[#222222] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="mb-6">
+            <h3 class="text-xs font-semibold text-chalk-500 dark:text-[#6B6860] uppercase tracking-widest">Free</h3>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="font-['Lora'] text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">$0</span>
+              <span class="text-sm text-chalk-500">/month</span>
+            </div>
+            <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690] leading-snug">
+              For writers just getting started with connected notes.
+            </p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Up to 500 notes
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Bi-directional links
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Daily notes
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-400 dark:text-[#6B6860]">
+              <svg class="w-4 h-4 text-chalk-300 dark:text-[#2E2E2E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              Daily digest
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-400 dark:text-[#6B6860]">
+              <svg class="w-4 h-4 text-chalk-300 dark:text-[#2E2E2E] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+              Highlight capture
+            </li>
+          </ul>
+          <a href="#" class="block text-center px-4 py-2.5 text-sm font-semibold text-chalk-700 dark:text-[#9B9690] border border-chalk-300 dark:border-[#2E2E2E] rounded-lg hover:bg-chalk-100 dark:hover:bg-[#1A1A1A] transition-colors">
+            Get started free
+          </a>
+        </div>
+
+        <!-- Thinker (highlighted) -->
+        <div class="flex flex-col bg-chalk-50 dark:bg-[#222222] border-2 border-forest-500 rounded-xl p-6 relative" style="box-shadow: 0 2px 4px rgba(26, 92, 69, 0.08), 0 8px 16px -4px rgba(26, 92, 69, 0.12);">
+          <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+            <span class="inline-flex items-center px-3 py-1 text-xs font-semibold text-white bg-forest-500 rounded-full">
+              Most popular
+            </span>
+          </div>
+          <div class="mb-6">
+            <h3 class="text-xs font-semibold text-forest-600 dark:text-forest-400 uppercase tracking-widest">Thinker</h3>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="font-['Lora'] text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">$9</span>
+              <span class="text-sm text-chalk-500">/month</span>
+            </div>
+            <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690] leading-snug">
+              For writers and researchers who think in volume.
+            </p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Unlimited notes
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Daily digest
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Highlight capture
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Mobile app
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Markdown export
+            </li>
+          </ul>
+          <a href="#" class="block text-center px-4 py-2.5 text-sm font-semibold text-white bg-forest-500 rounded-lg hover:bg-forest-600 transition-colors">
+            Start free trial
+          </a>
+        </div>
+
+        <!-- Studio -->
+        <div class="flex flex-col bg-chalk-50 dark:bg-[#222222] border border-chalk-300 dark:border-[#2E2E2E] rounded-xl p-6">
+          <div class="mb-6">
+            <h3 class="text-xs font-semibold text-chalk-500 dark:text-[#6B6860] uppercase tracking-widest">Studio</h3>
+            <div class="mt-3 flex items-baseline gap-1">
+              <span class="font-['Lora'] text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">$19</span>
+              <span class="text-sm text-chalk-500">/month</span>
+            </div>
+            <p class="mt-2 text-sm text-chalk-600 dark:text-[#9B9690] leading-snug">
+              For teams building a shared knowledge base.
+            </p>
+          </div>
+          <ul class="space-y-3 mb-8 flex-1" role="list">
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Everything in Thinker
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Shared vaults (up to 10)
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Permissions and roles
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              API access
+            </li>
+            <li class="flex items-start gap-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+              <svg class="w-4 h-4 text-forest-500 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7"/></svg>
+              Priority support
+            </li>
+          </ul>
+          <a href="#" class="block text-center px-4 py-2.5 text-sm font-semibold text-chalk-700 dark:text-[#9B9690] border border-chalk-300 dark:border-[#2E2E2E] rounded-lg hover:bg-chalk-100 dark:hover:bg-[#1A1A1A] transition-colors">
+            Start free trial
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA BANNER -->
+  <section class="bg-chalk-100 dark:bg-[#222222] border-y border-chalk-200 dark:border-[#2E2E2E] px-6 sm:px-12 py-16 sm:py-20 text-center">
+    <div class="max-w-2xl mx-auto">
+      <h2 class="font-['Lora'] text-3xl sm:text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight">
+        Start with a blank page.<br/>End with a connected mind.
+      </h2>
+      <p class="mt-5 font-['Lora'] italic text-lg text-chalk-600 dark:text-[#9B9690]">
+        Your first 500 notes are free. No credit card.
+      </p>
+      <div class="mt-8">
+        <a
+          href="#"
+          class="inline-flex items-center gap-2 px-7 py-3.5 text-base font-semibold text-white bg-forest-500 rounded-lg hover:bg-forest-600 transition-colors"
+          style="box-shadow: 0 2px 4px rgba(26, 92, 69, 0.2), 0 6px 12px -2px rgba(26, 92, 69, 0.12);"
+        >
+          Start writing free
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </div>
+      <p class="mt-5 text-sm text-chalk-500 dark:text-[#6B6860]">
+        Free tier forever &middot; Markdown export &middot; Your data, always
+      </p>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="bg-white dark:bg-[#1A1A1A] border-t border-chalk-200 dark:border-[#2E2E2E] px-6 sm:px-12 py-10 sm:py-14">
+    <div class="max-w-5xl mx-auto">
+      <div class="flex flex-col sm:flex-row sm:justify-between gap-10">
+        <!-- Brand -->
+        <div class="max-w-xs">
+          <p class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Marginalia</p>
+          <p class="mt-2 font-['Lora'] italic text-sm text-chalk-600 dark:text-[#9B9690]">Your thinking, finally connected.</p>
+        </div>
+        <!-- Links -->
+        <div class="grid grid-cols-3 gap-8 text-sm">
+          <div>
+            <p class="font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">Product</p>
+            <ul class="space-y-2 text-chalk-600 dark:text-[#9B9690]">
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Features</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Pricing</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Changelog</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Roadmap</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">Company</p>
+            <ul class="space-y-2 text-chalk-600 dark:text-[#9B9690]">
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">About</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Blog</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Careers</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Press</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">Legal</p>
+            <ul class="space-y-2 text-chalk-600 dark:text-[#9B9690]">
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Privacy</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Terms</a></li>
+              <li><a href="#" class="hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Security</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="mt-10 pt-6 border-t border-chalk-200 dark:border-[#2E2E2E]">
+        <p class="text-xs text-chalk-400 dark:text-[#6B6860]">&copy; 2026 Marginalia. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</SiteLayout>

@@ -203,6 +203,33 @@ Quartz button: https://fiord.design/aesthetics/quartz/components/button.html
 
 ---
 
+### Chalk
+
+**Warm, considered, editorial.** A chalk-white surface with Lora serif headings and deep forest green accents. The thinking-tool aesthetic — for note-taking apps, reading apps, writing tools, and personal knowledge management. Notion, Bear, Readwise, Superhuman territory.
+
+**Suited for:** Note-taking and PKM (Notion, Obsidian, Bear, Craft), reading apps (Readwise, Matter), writing tools (Ghost, iA Writer), serious email (Superhuman, Mimestream), task management for power users (Things 3, OmniFocus), personal finance (Lunch Money, Actual Budget).
+
+**Design language highlights:**
+- Palette: chalk-white `#FAFAF7` surface, deep forest green `#1A5C45` accent, warm charcoal `#1C1B18` text
+- Headings: Lora (variable-weight serif) — the aesthetic's most distinctive feature
+- Body: DM Sans (humanist, clean)
+- Mono: Source Code Pro (editorial-quality)
+- Dark mode: warm charcoal-brown `#1E1B17` — not blue-shifted, feels like a reading app's night light
+- Shadows: warm brown-tinted multi-stop
+
+- [Full preview](https://fiord.design/aesthetics/chalk/index.html)
+- [Design metadata](https://fiord.design/aesthetics/chalk/meta.json)
+- [Component directory](https://fiord.design/aesthetics/chalk/components/)
+
+To use a Chalk component instead of a base component, replace `/base/components/` with `/aesthetics/chalk/components/` in any path. For example:
+
+```
+Base button:   https://fiord.design/base/components/button.html
+Chalk button:  https://fiord.design/aesthetics/chalk/components/button.html
+```
+
+---
+
 ## Agent Usage
 
 This section describes the protocol AI agents use to discover and consume Fiord components.

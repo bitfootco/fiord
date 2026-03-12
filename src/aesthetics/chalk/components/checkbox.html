@@ -1,0 +1,53 @@
+<div class="space-y-5 max-w-md">
+
+  <div>
+    <p class="text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-3">Notification preferences</p>
+    <div class="space-y-3">
+
+      <!-- Checked -->
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="notifications"
+          value="email"
+          checked
+          class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#2E2E2E] dark:bg-[#222222]"
+        />
+        <div>
+          <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Email</span>
+          <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Daily digest and important account alerts.</span>
+        </div>
+      </label>
+
+      <!-- Unchecked -->
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="notifications"
+          value="push"
+          class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#2E2E2E] dark:bg-[#222222]"
+        />
+        <div>
+          <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Push</span>
+          <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Real-time nudges when your streak is at risk.</span>
+        </div>
+      </label>
+
+      <!-- Unchecked with indeterminate note -->
+      <label class="flex items-start gap-3 cursor-pointer">
+        <input
+          type="checkbox"
+          name="notifications"
+          value="slack"
+          class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#2E2E2E] dark:bg-[#222222]"
+        />
+        <div>
+          <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Slack</span>
+          <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Post a summary to your connected workspace. Requires Slack integration — some channels may be in a partial state if permissions are limited.</span>
+        </div>
+      </label>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,469 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Navigation" description="Chalk navigation: navbar, sidebar, breadcrumbs, tabs with forest-green active underline, pagination, footer.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Navigation</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Navbar -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Navbar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Top navigation bar with serif wordmark, desktop links, avatar, and a forest-green CTA button.</p>
+        <a href="/aesthetics/chalk/components/navbar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <nav class="bg-white dark:bg-[#262219] border-b border-[#DDD9D0] dark:border-[#3A3630]" aria-label="Main navigation">
+          <div class="px-4 sm:px-6">
+            <div class="flex h-14 items-center justify-between">
+
+              <!-- Logo wordmark -->
+              <div class="flex items-center gap-2">
+                <span class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3] tracking-tight">Folio</span>
+              </div>
+
+              <!-- Desktop nav links -->
+              <div class="hidden items-center gap-1 md:flex">
+                <a href="#" class="px-3 py-2 text-sm text-[#6B6860] hover:text-[#1C1B18] dark:text-[#9B9690] dark:hover:text-[#EDEAE3] rounded-md hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Notes</a>
+                <a href="#" class="px-3 py-2 text-sm text-[#6B6860] hover:text-[#1C1B18] dark:text-[#9B9690] dark:hover:text-[#EDEAE3] rounded-md hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Reading</a>
+                <a href="#" class="px-3 py-2 text-sm text-[#6B6860] hover:text-[#1C1B18] dark:text-[#9B9690] dark:hover:text-[#EDEAE3] rounded-md hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Archive</a>
+                <a href="#" class="px-3 py-2 text-sm text-[#6B6860] hover:text-[#1C1B18] dark:text-[#9B9690] dark:hover:text-[#EDEAE3] rounded-md hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Settings</a>
+              </div>
+
+              <!-- Right slot: avatar + CTA -->
+              <div class="flex items-center gap-3">
+                <div class="h-8 w-8 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630] flex items-center justify-center overflow-hidden">
+                  <span class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690]">EL</span>
+                </div>
+                <a href="#" class="hidden sm:inline-flex items-center gap-1.5 rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-3.5 py-2 text-sm font-medium text-white transition-colors">
+                  <svg class="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+                  New Note
+                </a>
+                <!-- Mobile menu button -->
+                <button type="button" class="inline-flex items-center justify-center rounded-md p-2 text-[#6B6860] hover:bg-[#F2F0EB] dark:text-[#9B9690] dark:hover:bg-[#1E1B17] md:hidden" aria-label="Open menu">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                  </svg>
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Sidebar -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Sidebar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Vertical navigation panel with grouped sections, icon links, active state, and a pinned user footer.</p>
+        <a href="/aesthetics/chalk/components/sidebar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="flex h-[600px] w-64 flex-col bg-[#F2F0EB] dark:bg-[#262219] border-r border-[#DDD9D0] dark:border-[#3A3630]">
+
+          <!-- App wordmark -->
+          <div class="px-4 py-4 border-b border-[#DDD9D0] dark:border-[#3A3630]">
+            <span class="font-['Lora'] text-lg font-semibold text-[#1C1B18] dark:text-[#EDEAE3] tracking-tight">Folio</span>
+          </div>
+
+          <!-- Navigation -->
+          <nav class="flex-1 overflow-y-auto px-3 py-4 space-y-5">
+
+            <!-- Workspace group -->
+            <div>
+              <p class="px-3 mb-1 text-[10px] font-semibold uppercase tracking-widest text-[#6B6860] dark:text-[#9B9690]">Workspace</p>
+              <ul class="space-y-0.5">
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm bg-white dark:bg-[#1E1B17] text-[#1C1B18] dark:text-[#EDEAE3] font-medium shadow-sm">
+                    <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" /></svg>
+                    Notes
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] hover:bg-[#E8E5DE]/50 dark:hover:bg-[#1E1B17]/60 transition-colors">
+                    <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" /></svg>
+                    Journal
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] hover:bg-[#E8E5DE]/50 dark:hover:bg-[#1E1B17]/60 transition-colors">
+                    <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    Tasks
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Library group -->
+            <div>
+              <p class="px-3 mb-1 text-[10px] font-semibold uppercase tracking-widest text-[#6B6860] dark:text-[#9B9690]">Library</p>
+              <ul class="space-y-0.5">
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] hover:bg-[#E8E5DE]/50 dark:hover:bg-[#1E1B17]/60 transition-colors">
+                    <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.76c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.076-4.076a1.526 1.526 0 011.037-.443 48.282 48.282 0 005.68-.494c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                    Books
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] hover:bg-[#E8E5DE]/50 dark:hover:bg-[#1E1B17]/60 transition-colors">
+                    <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg>
+                    Articles
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] hover:bg-[#E8E5DE]/50 dark:hover:bg-[#1E1B17]/60 transition-colors">
+                    <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.122-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" /></svg>
+                    Highlights
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+
+          <!-- User footer -->
+          <div class="px-3 py-3 border-t border-[#DDD9D0] dark:border-[#3A3630] flex items-center gap-2.5">
+            <div class="h-7 w-7 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630] flex items-center justify-center shrink-0">
+              <span class="text-[10px] font-medium text-[#6B6860] dark:text-[#9B9690]">EL</span>
+            </div>
+            <span class="flex-1 text-sm text-[#1C1B18] dark:text-[#EDEAE3] truncate">Eleanor Lark</span>
+            <button class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Settings">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Breadcrumb</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hierarchical path indicator — full expanded and middle-truncated collapsed variants.</p>
+        <a href="/aesthetics/chalk/components/breadcrumb.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6">
+
+          <!-- Default breadcrumb -->
+          <div>
+            <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Default</p>
+            <nav aria-label="Breadcrumb">
+              <ol class="flex items-center gap-1 text-sm flex-wrap">
+                <li>
+                  <a href="#" class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Library</a>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <a href="#" class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Philosophy</a>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <a href="#" class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Personal Notes</a>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <span class="text-[#1C1B18] dark:text-[#EDEAE3] font-medium" aria-current="page">Seneca</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+          <!-- Collapsed breadcrumb with ellipsis -->
+          <div>
+            <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Collapsed (middle truncated)</p>
+            <nav aria-label="Breadcrumb">
+              <ol class="flex items-center gap-1 text-sm flex-wrap">
+                <li>
+                  <a href="#" class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Library</a>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <button class="px-1.5 py-0.5 rounded text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors text-sm" aria-label="Show hidden breadcrumbs">&#8230;</button>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <a href="#" class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Personal Notes</a>
+                </li>
+                <li class="text-[#DDD9D0] dark:text-[#3A3630] select-none">/</li>
+                <li>
+                  <span class="text-[#1C1B18] dark:text-[#EDEAE3] font-medium" aria-current="page">Seneca</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tabs</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Tabbed content switcher with forest-green active underline, ARIA roles, and panel show/hide behaviour.</p>
+        <a href="/aesthetics/chalk/components/tabs.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-0">
+
+          <!-- Tab bar -->
+          <div class="border-b border-[#DDD9D0] dark:border-[#3A3630]" role="tablist" aria-label="Notes filter">
+            <div class="flex gap-0">
+              <button
+                role="tab"
+                data-fiord-tab="tab-all"
+                aria-selected="true"
+                aria-controls="panel-all"
+                class="px-4 py-3 text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3] border-b-2 border-[#1A5C45] dark:border-[#24785C] -mb-px transition-colors"
+              >All</button>
+              <button
+                role="tab"
+                data-fiord-tab="tab-unread"
+                aria-selected="false"
+                aria-controls="panel-unread"
+                class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+              >Unread</button>
+              <button
+                role="tab"
+                data-fiord-tab="tab-favorites"
+                aria-selected="false"
+                aria-controls="panel-favorites"
+                class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+              >Favorites</button>
+              <button
+                role="tab"
+                data-fiord-tab="tab-archived"
+                aria-selected="false"
+                aria-controls="panel-archived"
+                class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+              >Archived</button>
+            </div>
+          </div>
+
+          <!-- Tab panels -->
+          <div
+            id="panel-all"
+            role="tabpanel"
+            data-fiord-panel="tab-all"
+            class="pt-5 space-y-3"
+          >
+            <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+              <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">On the Shortness of Life — Annotations</p>
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited 2 hours ago</p>
+            </div>
+            <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+              <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Weekly Writing Review — March 2026</p>
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited yesterday</p>
+            </div>
+            <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+              <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Reading log — February</p>
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited 3 days ago</p>
+            </div>
+          </div>
+
+          <div
+            id="panel-unread"
+            role="tabpanel"
+            data-fiord-panel="tab-unread"
+            class="pt-5 hidden"
+          >
+            <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+              <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Meditations — Book IV highlights</p>
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Added 1 hour ago</p>
+            </div>
+          </div>
+
+          <div
+            id="panel-favorites"
+            role="tabpanel"
+            data-fiord-panel="tab-favorites"
+            class="pt-5 hidden"
+          >
+            <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+              <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Deep Work — Chapter notes</p>
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Favorited 2 weeks ago</p>
+            </div>
+          </div>
+
+          <div
+            id="panel-archived"
+            role="tabpanel"
+            data-fiord-panel="tab-archived"
+            class="pt-5 hidden"
+          >
+            <p class="text-sm text-[#6B6860] dark:text-[#9B9690]">No archived notes.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Pagination -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Pagination</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Page navigation with forest-green active page, ellipsis for large ranges, and Prev/Next controls.</p>
+        <a href="/aesthetics/chalk/components/pagination.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <nav aria-label="Pagination" class="flex items-center justify-center gap-1">
+
+          <!-- Previous -->
+          <a href="#" class="flex items-center gap-1 border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Previous page">
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+            </svg>
+            Prev
+          </a>
+
+          <!-- Page 1 -->
+          <a href="#" class="border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Page 1">1</a>
+
+          <!-- Page 2 -->
+          <a href="#" class="border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Page 2">2</a>
+
+          <!-- Page 3 — active -->
+          <a href="#" class="border border-[#1A5C45] dark:border-[#24785C] rounded-lg px-3 py-2 text-sm bg-[#1A5C45] dark:bg-[#24785C] text-white font-medium" aria-label="Page 3" aria-current="page">3</a>
+
+          <!-- Page 4 -->
+          <a href="#" class="border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Page 4">4</a>
+
+          <!-- Page 5 -->
+          <a href="#" class="border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Page 5">5</a>
+
+          <!-- Ellipsis -->
+          <span class="px-2 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] select-none">&#8230;</span>
+
+          <!-- Page 12 -->
+          <a href="#" class="border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Page 12">12</a>
+
+          <!-- Next -->
+          <a href="#" class="flex items-center gap-1 border border-[#DDD9D0] dark:border-[#3A3630] rounded-lg px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Next page">
+            Next
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+            </svg>
+          </a>
+
+        </nav>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Footer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Site footer with serif wordmark, tagline, four-column link grid, and copyright bar.</p>
+        <a href="/aesthetics/chalk/components/footer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <footer class="bg-[#F2F0EB] dark:bg-[#262219] border-t border-[#DDD9D0] dark:border-[#3A3630]">
+          <div class="px-6 py-10">
+
+            <!-- Top row: logo + columns -->
+            <div class="grid grid-cols-2 gap-8 md:grid-cols-4">
+
+              <!-- Logo + tagline -->
+              <div class="col-span-2 md:col-span-1">
+                <span class="font-['Lora'] text-lg font-semibold text-[#1C1B18] dark:text-[#EDEAE3] tracking-tight">Folio</span>
+                <p class="mt-2 text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed max-w-xs">
+                  A quieter place to think, read, and write.
+                </p>
+              </div>
+
+              <!-- Product column -->
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-[#1C1B18] dark:text-[#EDEAE3] mb-3">Product</p>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Features</a></li>
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Pricing</a></li>
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Changelog</a></li>
+                </ul>
+              </div>
+
+              <!-- Company column -->
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-[#1C1B18] dark:text-[#EDEAE3] mb-3">Company</p>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">About</a></li>
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Blog</a></li>
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Careers</a></li>
+                </ul>
+              </div>
+
+              <!-- Legal column -->
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-[#1C1B18] dark:text-[#EDEAE3] mb-3">Legal</p>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Privacy</a></li>
+                  <li><a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">Terms</a></li>
+                </ul>
+              </div>
+
+            </div>
+
+            <!-- Bottom copyright -->
+            <div class="mt-8 pt-6 border-t border-[#DDD9D0] dark:border-[#3A3630]">
+              <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">&#169; 2026 Folio. All rights reserved.</p>
+            </div>
+
+          </div>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+
+  <script is:inline>
+    (function () {
+      var tabs = document.querySelectorAll('[data-fiord-tab]');
+      var panels = document.querySelectorAll('[data-fiord-panel]');
+
+      tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+          var targetId = tab.getAttribute('data-fiord-tab');
+
+          // Update tab states
+          tabs.forEach(function (t) {
+            var isActive = t.getAttribute('data-fiord-tab') === targetId;
+            t.setAttribute('aria-selected', isActive ? 'true' : 'false');
+            if (isActive) {
+              t.classList.add('text-[#1C1B18]', 'dark:text-[#EDEAE3]', 'border-[#1A5C45]', 'dark:border-[#24785C]', 'font-medium');
+              t.classList.remove('text-[#6B6860]', 'dark:text-[#9B9690]', 'border-transparent');
+            } else {
+              t.classList.remove('text-[#1C1B18]', 'dark:text-[#EDEAE3]', 'border-[#1A5C45]', 'dark:border-[#24785C]', 'font-medium');
+              t.classList.add('text-[#6B6860]', 'dark:text-[#9B9690]', 'border-transparent');
+            }
+          });
+
+          // Update panel visibility
+          panels.forEach(function (panel) {
+            if (panel.getAttribute('data-fiord-panel') === targetId) {
+              panel.classList.remove('hidden');
+            } else {
+              panel.classList.add('hidden');
+            }
+          });
+        });
+      });
+    })();
+  </script>
+
+</SiteLayout>

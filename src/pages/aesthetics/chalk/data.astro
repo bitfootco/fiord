@@ -1,0 +1,407 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Data Display" description="Chalk data display: cards with warm shadows, reading-list tables, serif stat numerals, badges, and avatars.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Data Display</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Card -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Card</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Content containers with warm chalk shadows — basic reading cards, elevated pricing, and interactive hover states.</p>
+        <a href="/aesthetics/chalk/components/card.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+          <!-- Basic reading card -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06),0_1px_1px_rgba(28,24,20,0.04)]">
+            <span class="inline-block text-xs font-medium px-2 py-0.5 rounded-md bg-chalk-100 dark:bg-[#3A3630] text-chalk-600 dark:text-[#9B9690] mb-4">Note-taking</span>
+            <h3 class="font-['Lora'] text-lg font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-snug mb-2">The Craft of Note-Taking</h3>
+            <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">Why the physical act of writing by hand encodes ideas differently than typing — and what that means for long-term recall.</p>
+            <div class="mt-4 flex items-center gap-2 text-xs text-chalk-600 dark:text-[#9B9690]">
+              <span>Saved 3 days ago</span>
+              <span>·</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+
+          <!-- Elevated pricing card -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-6 shadow-[0_2px_4px_rgba(28,24,20,0.05),0_6px_12px_-2px_rgba(28,24,20,0.08)]">
+            <h3 class="font-['Lora'] text-lg font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-1">Personal</h3>
+            <p class="text-sm text-chalk-600 dark:text-[#9B9690] mb-4">Everything you need to think clearly.</p>
+            <div class="mb-5">
+              <span class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">$9</span>
+              <span class="text-sm text-chalk-600 dark:text-[#9B9690]"> / month</span>
+            </div>
+            <ul class="space-y-2 mb-6">
+              <li class="flex items-center gap-2 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+                <svg class="h-4 w-4 text-forest-500 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Up to 5,000 notes
+              </li>
+              <li class="flex items-center gap-2 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+                <svg class="h-4 w-4 text-forest-500 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Daily digest delivery
+              </li>
+              <li class="flex items-center gap-2 text-sm text-chalk-700 dark:text-[#EDEAE3]">
+                <svg class="h-4 w-4 text-forest-500 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Highlight capture
+              </li>
+            </ul>
+            <button class="w-full px-4 py-2 rounded-lg text-sm font-medium text-white bg-forest-500 hover:bg-forest-600 dark:bg-[#1A5C45] dark:hover:bg-[#144A38] transition-colors">Get started</button>
+          </div>
+
+          <!-- Interactive hover card -->
+          <div class="group cursor-pointer bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06)] hover:shadow-[0_2px_4px_rgba(28,24,20,0.05),0_6px_12px_-2px_rgba(28,24,20,0.08)] hover:border-chalk-400 dark:hover:border-[#4A4640] transition-all">
+            <div class="flex items-start justify-between mb-3">
+              <span class="text-xs text-chalk-600 dark:text-[#9B9690]">Yesterday, 11:42 pm</span>
+              <svg class="h-4 w-4 text-chalk-300 dark:text-[#3A3630] group-hover:text-chalk-600 dark:group-hover:text-[#9B9690] transition-colors" fill="none" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-['Lora'] text-base font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-snug mb-2">Friction as a feature</h3>
+            <p class="text-sm text-chalk-600 dark:text-[#9B9690] leading-relaxed">The best tools aren't the fastest ones. Intentional slowness creates space for the thinking that actually matters.</p>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              <span class="text-xs px-2 py-0.5 rounded-md bg-chalk-100 dark:bg-[#3A3630] text-chalk-600 dark:text-[#9B9690]">productivity</span>
+              <span class="text-xs px-2 py-0.5 rounded-md bg-chalk-100 dark:bg-[#3A3630] text-chalk-600 dark:text-[#9B9690]">design</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Table -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Table</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Reading-list table with status badges, alternating row tints, and responsive column hiding.</p>
+        <a href="/aesthetics/chalk/components/table.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="rounded-xl border border-chalk-300 dark:border-[#3A3630] overflow-hidden shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+          <table class="w-full text-sm">
+            <thead class="border-b border-chalk-300 dark:border-[#3A3630] bg-chalk-50 dark:bg-[#1E1B17]">
+              <tr>
+                <th class="px-5 py-3 text-left font-sans text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide">Title</th>
+                <th class="px-5 py-3 text-left font-sans text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide">Source</th>
+                <th class="px-5 py-3 text-left font-sans text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide hidden sm:table-cell">Added</th>
+                <th class="px-5 py-3 text-left font-sans text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide">Status</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-chalk-200 dark:divide-[#3A3630]">
+              <tr class="bg-white dark:bg-[#262219]">
+                <td class="px-5 py-3.5">
+                  <span class="font-medium text-chalk-900 dark:text-[#EDEAE3]">How to Read a Book</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Adler &amp; Van Doren · 424 pp.</span>
+                </td>
+                <td class="px-5 py-3.5 text-chalk-700 dark:text-[#9B9690]">Kindle library</td>
+                <td class="px-5 py-3.5 text-chalk-600 dark:text-[#9B9690] hidden sm:table-cell">Mar 2</td>
+                <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md bg-forest-50 text-forest-600 dark:bg-[#24785C]/20 dark:text-[#5AA683]"><span class="h-1.5 w-1.5 rounded-full bg-forest-500 dark:bg-[#5AA683]"></span>Reading</span></td>
+              </tr>
+              <tr class="bg-chalk-50 dark:bg-[#1E1B17]">
+                <td class="px-5 py-3.5">
+                  <span class="font-medium text-chalk-900 dark:text-[#EDEAE3]">The Extended Mind</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Annie Murphy Paul · 352 pp.</span>
+                </td>
+                <td class="px-5 py-3.5 text-chalk-700 dark:text-[#9B9690]">Personal library</td>
+                <td class="px-5 py-3.5 text-chalk-600 dark:text-[#9B9690] hidden sm:table-cell">Feb 18</td>
+                <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400"><span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>In progress</span></td>
+              </tr>
+              <tr class="bg-white dark:bg-[#262219]">
+                <td class="px-5 py-3.5">
+                  <span class="font-medium text-chalk-900 dark:text-[#EDEAE3]">A Pattern Language</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Christopher Alexander · 1171 pp.</span>
+                </td>
+                <td class="px-5 py-3.5 text-chalk-700 dark:text-[#9B9690]">iBooks</td>
+                <td class="px-5 py-3.5 text-chalk-600 dark:text-[#9B9690] hidden sm:table-cell">Jan 30</td>
+                <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md bg-chalk-100 text-chalk-600 dark:bg-[#262219] dark:text-[#9B9690]"><span class="h-1.5 w-1.5 rounded-full bg-chalk-400 dark:bg-[#6B6860]"></span>Archived</span></td>
+              </tr>
+              <tr class="bg-chalk-50 dark:bg-[#1E1B17]">
+                <td class="px-5 py-3.5">
+                  <span class="font-medium text-chalk-900 dark:text-[#EDEAE3]">Thinking, Fast and Slow</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Daniel Kahneman · 499 pp.</span>
+                </td>
+                <td class="px-5 py-3.5 text-chalk-700 dark:text-[#9B9690]">Readwise</td>
+                <td class="px-5 py-3.5 text-chalk-600 dark:text-[#9B9690] hidden sm:table-cell">Jan 12</td>
+                <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md bg-chalk-100 text-chalk-600 dark:bg-[#262219] dark:text-[#9B9690]"><span class="h-1.5 w-1.5 rounded-full bg-chalk-400 dark:bg-[#6B6860]"></span>Archived</span></td>
+              </tr>
+              <tr class="bg-white dark:bg-[#262219]">
+                <td class="px-5 py-3.5">
+                  <span class="font-medium text-chalk-900 dark:text-[#EDEAE3]">Four Thousand Weeks</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Oliver Burkeman · 288 pp.</span>
+                </td>
+                <td class="px-5 py-3.5 text-chalk-700 dark:text-[#9B9690]">Kindle library</td>
+                <td class="px-5 py-3.5 text-chalk-600 dark:text-[#9B9690] hidden sm:table-cell">Dec 29</td>
+                <td class="px-5 py-3.5"><span class="inline-flex items-center gap-1.5 text-xs font-medium px-2 py-0.5 rounded-md bg-forest-50 text-forest-600 dark:bg-[#24785C]/20 dark:text-[#5AA683]"><span class="h-1.5 w-1.5 rounded-full bg-forest-500 dark:bg-[#5AA683]"></span>Reading</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stat -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Stat</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Key metric tiles with serif numerals, trend indicators, and muted context labels.</p>
+        <a href="/aesthetics/chalk/components/stat.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="grid grid-cols-2 gap-4">
+
+          <!-- Notes written -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-5 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Notes this week</p>
+            <p class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">12</p>
+            <p class="mt-1.5 text-xs text-forest-600 dark:text-[#5AA683]">↑ 4 from last week</p>
+          </div>
+
+          <!-- Reading time -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-5 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Reading time saved</p>
+            <p class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">3.2<span class="text-xl font-normal text-chalk-600 dark:text-[#9B9690]">h</span></p>
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">This month</p>
+          </div>
+
+          <!-- Highlights -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-5 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Highlights captured</p>
+            <p class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">48</p>
+            <p class="mt-1.5 text-xs text-forest-600 dark:text-[#5AA683]">↑ 18% vs last month</p>
+          </div>
+
+          <!-- Streak -->
+          <div class="bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-5 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Current streak</p>
+            <p class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">14<span class="text-xl font-normal text-chalk-600 dark:text-[#9B9690]"> days</span></p>
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Keep it going</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Badge -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Badge</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Status indicators with dot prefixes and plain tag labels in two sizes.</p>
+        <a href="/aesthetics/chalk/components/badge.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6">
+
+          <!-- Status badges with dot prefix -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Status</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1 rounded-full bg-forest-50 text-forest-600 dark:bg-[#24785C]/20 dark:text-[#5AA683]">
+                <span class="h-1.5 w-1.5 rounded-full bg-forest-500 dark:bg-[#5AA683]"></span>
+                Reading
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1 rounded-full bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400">
+                <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                In progress
+              </span>
+              <span class="inline-flex items-center gap-1.5 text-sm font-medium px-3 py-1 rounded-full bg-chalk-100 text-chalk-600 dark:bg-[#262219] dark:text-[#9B9690]">
+                <span class="h-1.5 w-1.5 rounded-full bg-chalk-400 dark:bg-[#6B6860]"></span>
+                Archived
+              </span>
+            </div>
+          </div>
+
+          <!-- Small size variants -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Small</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-md bg-forest-50 text-forest-600 dark:bg-[#24785C]/20 dark:text-[#5AA683]">
+                <span class="h-1.5 w-1.5 rounded-full bg-forest-500 dark:bg-[#5AA683]"></span>
+                Reading
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-md bg-amber-50 text-amber-700 dark:bg-amber-900/20 dark:text-amber-400">
+                <span class="h-1.5 w-1.5 rounded-full bg-amber-500"></span>
+                In progress
+              </span>
+              <span class="inline-flex items-center gap-1 text-xs font-medium px-2 py-0.5 rounded-md bg-chalk-100 text-chalk-600 dark:bg-[#262219] dark:text-[#9B9690]">
+                <span class="h-1.5 w-1.5 rounded-full bg-chalk-400 dark:bg-[#6B6860]"></span>
+                Archived
+              </span>
+            </div>
+          </div>
+
+          <!-- Plain label badges (no dot) -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Tags</p>
+            <div class="flex flex-wrap gap-2">
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-chalk-100 text-chalk-700 dark:bg-[#3A3630] dark:text-[#9B9690]">note-taking</span>
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-chalk-100 text-chalk-700 dark:bg-[#3A3630] dark:text-[#9B9690]">productivity</span>
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-chalk-100 text-chalk-700 dark:bg-[#3A3630] dark:text-[#9B9690]">writing</span>
+              <span class="text-xs font-medium px-2.5 py-0.5 rounded-full bg-chalk-100 text-chalk-700 dark:bg-[#3A3630] dark:text-[#9B9690]">deep work</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Avatar -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Avatar</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">User images with presence indicator, initials fallback, and grouped avatar stack with overflow count.</p>
+        <a href="/aesthetics/chalk/components/avatar.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-8">
+
+          <!-- Image avatar with online indicator -->
+          <div class="flex items-center gap-4">
+            <div class="relative inline-flex flex-shrink-0">
+              <img
+                src="https://ui-avatars.com/api/?name=James+Aldridge&background=DDD9D0&color=1C1B18&size=64"
+                alt="James Aldridge"
+                class="h-12 w-12 rounded-full object-cover ring-2 ring-chalk-200 dark:ring-[#3A3630]"
+              />
+              <span class="absolute bottom-0 right-0 h-3 w-3 rounded-full bg-forest-500 ring-2 ring-white dark:ring-[#1E1B17]"></span>
+            </div>
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">James Aldridge</p>
+              <p class="text-xs text-chalk-600 dark:text-[#9B9690]">Active now</p>
+            </div>
+          </div>
+
+          <!-- Initials fallback variants -->
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-full bg-chalk-200 dark:bg-[#3A3630] flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-medium text-chalk-700 dark:text-[#9B9690]">MA</span>
+            </div>
+            <div class="h-10 w-10 rounded-full bg-chalk-200 dark:bg-[#3A3630] flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-medium text-chalk-700 dark:text-[#9B9690]">RK</span>
+            </div>
+            <div class="h-10 w-10 rounded-full bg-chalk-200 dark:bg-[#3A3630] flex items-center justify-center flex-shrink-0">
+              <span class="text-sm font-medium text-chalk-700 dark:text-[#9B9690]">TP</span>
+            </div>
+            <p class="text-sm text-chalk-600 dark:text-[#9B9690] ml-1">Initials fallback</p>
+          </div>
+
+          <!-- Avatar group with overflow count -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wide mb-3">Shared with</p>
+            <div class="flex items-center">
+              <div class="flex -space-x-2.5">
+                <img src="https://ui-avatars.com/api/?name=James+Aldridge&background=DDD9D0&color=1C1B18&size=40" alt="James Aldridge" class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#1E1B17] object-cover" />
+                <img src="https://ui-avatars.com/api/?name=Margot+Ashfield&background=E5E1D8&color=1C1B18&size=40" alt="Margot Ashfield" class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#1E1B17] object-cover" />
+                <img src="https://ui-avatars.com/api/?name=Rafael+Kim&background=DDD9D0&color=4A4844&size=40" alt="Rafael Kim" class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#1E1B17] object-cover" />
+                <img src="https://ui-avatars.com/api/?name=Tara+Patel&background=E5E1D8&color=4A4844&size=40" alt="Tara Patel" class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#1E1B17] object-cover" />
+                <div class="h-8 w-8 rounded-full ring-2 ring-white dark:ring-[#1E1B17] bg-chalk-200 dark:bg-[#3A3630] flex items-center justify-center flex-shrink-0">
+                  <span class="text-xs font-medium text-chalk-700 dark:text-[#9B9690]">+3</span>
+                </div>
+              </div>
+              <p class="ml-3 text-sm text-chalk-600 dark:text-[#9B9690]">7 members</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- List -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">List</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Structured lists — divided rows with metadata, icon-prefixed feature lists, and description-heavy writing prompts.</p>
+        <a href="/aesthetics/chalk/components/list.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-8 max-w-lg">
+
+          <!-- 1. Simple list: recent notes -->
+          <div>
+            <h3 class="font-['Lora'] text-base font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">Recent notes</h3>
+            <ul class="divide-y divide-chalk-200 dark:divide-[#3A3630]">
+              <li class="py-3 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Friction as a feature</p>
+                  <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Ideas · 3 highlights</p>
+                </div>
+                <span class="text-xs text-chalk-600 dark:text-[#9B9690] flex-shrink-0 mt-0.5">Yesterday</span>
+              </li>
+              <li class="py-3 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">On the value of boredom</p>
+                  <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Reading · 7 highlights</p>
+                </div>
+                <span class="text-xs text-chalk-600 dark:text-[#9B9690] flex-shrink-0 mt-0.5">Mar 9</span>
+              </li>
+              <li class="py-3 flex items-start justify-between gap-4">
+                <div>
+                  <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">The slip-box method</p>
+                  <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Reference · 12 highlights</p>
+                </div>
+                <span class="text-xs text-chalk-600 dark:text-[#9B9690] flex-shrink-0 mt-0.5">Mar 7</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. With icon prefix: feature list -->
+          <div>
+            <h3 class="font-['Lora'] text-base font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">What you get</h3>
+            <ul class="space-y-2.5">
+              <li class="flex items-start gap-3">
+                <svg class="h-4 w-4 text-forest-500 dark:text-[#5AA683] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="text-sm text-chalk-700 dark:text-[#EDEAE3]">Unlimited notes and highlights</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-4 w-4 text-forest-500 dark:text-[#5AA683] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="text-sm text-chalk-700 dark:text-[#EDEAE3]">Daily digest delivered to your inbox</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-4 w-4 text-forest-500 dark:text-[#5AA683] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="text-sm text-chalk-700 dark:text-[#EDEAE3]">Reading streak tracking and protection</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <svg class="h-4 w-4 text-forest-500 dark:text-[#5AA683] mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 16 16"><path d="M3 8l3.5 3.5L13 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <span class="text-sm text-chalk-700 dark:text-[#EDEAE3]">Readwise, Kindle, and Instapaper sync</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. With descriptions: writing prompts -->
+          <div>
+            <h3 class="font-['Lora'] text-base font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-3">Writing prompts</h3>
+            <ul class="divide-y divide-chalk-200 dark:divide-[#3A3630]">
+              <li class="py-4">
+                <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3] mb-1">What did you change your mind about this week?</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] leading-relaxed">Track the evolution of your thinking. Note what new information shifted your view and what argument you find most compelling now.</p>
+              </li>
+              <li class="py-4">
+                <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3] mb-1">Describe a concept using only an analogy.</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] leading-relaxed">Choose something complex you're studying. Explain it entirely through a comparison to something tangible. The constraints reveal gaps in your understanding.</p>
+              </li>
+              <li class="py-4">
+                <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3] mb-1">What's the most useful thing you read last month?</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] leading-relaxed">Useful, not just interesting. What have you actually applied, referenced in conversation, or returned to more than once?</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</SiteLayout>

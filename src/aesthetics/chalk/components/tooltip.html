@@ -1,0 +1,60 @@
+<div class="flex flex-wrap items-start gap-16 py-8 px-4">
+
+  <!-- Above (default) -->
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Above</p>
+    <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+      <button
+        data-fiord-tooltip="tooltip-above"
+        class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#2E2E2E] bg-white dark:bg-[#222222] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1A1A1A] transition-colors"
+        aria-describedby="tooltip-above"
+      >Hover me</button>
+      <div
+        id="tooltip-above"
+        role="tooltip"
+        class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+      >Save to collection
+        <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1C1B18] dark:border-t-[#0F0E0C]"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Below -->
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Below</p>
+    <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+      <button
+        data-fiord-tooltip="tooltip-below"
+        class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#2E2E2E] bg-white dark:bg-[#222222] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1A1A1A] transition-colors"
+        aria-describedby="tooltip-below"
+      >Hover me</button>
+      <div
+        id="tooltip-below"
+        role="tooltip"
+        class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+      >Add a tag
+        <span class="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-[#1C1B18] dark:border-b-[#0F0E0C]"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right -->
+  <div class="flex flex-col items-center gap-2">
+    <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Right</p>
+    <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+      <button
+        data-fiord-tooltip="tooltip-right"
+        class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#2E2E2E] bg-white dark:bg-[#222222] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1A1A1A] transition-colors"
+        aria-describedby="tooltip-right"
+      >Hover me</button>
+      <div
+        id="tooltip-right"
+        role="tooltip"
+        class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+      >Open in new tab
+        <span class="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-[#1C1B18] dark:border-r-[#0F0E0C]"></span>
+      </div>
+    </div>
+  </div>
+
+</div>
