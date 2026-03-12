@@ -65,6 +65,27 @@ const aesthetics = [
     demo_href: '/aesthetics/quartz/demo/',
     meta_href: '/aesthetics/quartz/meta.json',
   },
+  {
+    name: 'chalk',
+    display_name: 'Chalk',
+    tagline: 'Warm, considered, editorial.',
+    description: 'A chalk-white surface with Lora serif headings and deep forest green accents. The thinking-tool aesthetic — note-taking apps, reading apps, writing tools, PKM.',
+    suited: 'Note-taking · PKM · Writing tools · Reading apps',
+    bg: '#FAFAF7',
+    surface: '#F2F0EB',
+    text: '#1C1B18',
+    text_muted: '#6B6860',
+    border: '#DDD9D0',
+    accent: '#1A5C45',
+    accent_light: '#E4F0EB',
+    radius_sm: '8px',
+    radius_md: '12px',
+    heading_font: 'Lora',
+    heading_weight: '600',
+    href: '/aesthetics/chalk/',
+    demo_href: null,
+    meta_href: '/aesthetics/chalk/meta.json',
+  },
 ];
 ---
 
@@ -73,7 +94,7 @@ const aesthetics = [
   description="Complete visual identities for the Fiord component library. Each aesthetic is a fully realized design system — palette, typography, spacing, and 42 components."
 >
 
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Nunito:wght@800&family=Bricolage+Grotesque:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@700&family=Nunito:wght@800&family=Bricolage+Grotesque:wght@600&family=Lora:wght@600&display=swap" rel="stylesheet">
 
   <!-- Page header -->
   <header class="bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 px-6 py-10 md:py-14">
@@ -141,12 +162,14 @@ const aesthetics = [
             <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
               <p class="text-xs text-gray-400 dark:text-gray-600">{a.suited}</p>
               <div class="flex items-center gap-4 flex-shrink-0 ml-4">
-                <a
-                  href={a.demo_href}
-                  class="text-sm font-medium text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors"
-                >
-                  Demo
-                </a>
+                {a.demo_href && (
+                  <a
+                    href={a.demo_href}
+                    class="text-sm font-medium text-gray-400 hover:text-gray-600 dark:text-gray-500 dark:hover:text-gray-300 transition-colors"
+                  >
+                    Demo
+                  </a>
+                )}
                 <a
                   href={a.href}
                   class="inline-flex items-center gap-1.5 text-sm font-medium text-[#4A7FA5] hover:text-[#0F1C2E] dark:hover:text-white transition-colors"
