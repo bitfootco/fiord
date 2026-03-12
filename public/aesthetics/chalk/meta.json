@@ -1,0 +1,58 @@
+{
+  "name": "chalk",
+  "display_name": "Chalk",
+  "description": "Warm, considered, editorial. A chalk-white surface with Lora serif headings and deep forest green accents. Generous whitespace, warm shadows, and a dark mode that feels like a reading app's night light — not a terminal. The thinking-tool aesthetic. Reach for Chalk when building note-taking apps, reading apps, writing tools, personal knowledge management, or any product where the design itself communicates that the makers care about reading and writing. Notion, Bear, Readwise, Superhuman territory.",
+  "suited_for": "Note-taking and PKM (Notion, Obsidian, Bear, Craft), reading apps (Readwise, Matter), writing tools (Ghost, iA Writer), serious email (Superhuman, Mimestream), task management for power users (Things 3, OmniFocus), personal finance (Lunch Money, Actual Budget).",
+  "palette": {
+    "primary": "#1C1B18",
+    "primary_light": "#6B6860",
+    "background": "#FAFAF7",
+    "background_dark": "#1E1B17",
+    "surface": "#F2F0EB",
+    "surface_dark": "#262219",
+    "text": "#1C1B18",
+    "text_dark": "#EDEAE3",
+    "text_muted": "#6B6860",
+    "text_muted_dark": "#9B9690",
+    "border": "#DDD9D0",
+    "border_dark": "#3A3630",
+    "accent_action": "#1A5C45",
+    "accent_action_hover": "#144A38",
+    "accent_action_light": "#E4F0EB",
+    "accent_action_dark": "#24785C",
+    "accent_positive": "#15803D",
+    "accent_attention": "#9A6B00"
+  },
+  "typography": {
+    "heading_font": "Lora",
+    "body_font": "DM Sans",
+    "mono_font": "Source Code Pro",
+    "scale": [12, 14, 16, 18, 20, 24, 30, 36, 48, 60],
+    "heading_weight": "600",
+    "body_weight": "400",
+    "line_height_body": "1.65",
+    "line_height_heading": "1.2"
+  },
+  "spacing": {
+    "unit": 4,
+    "rhythm": "considered",
+    "section_gap": "4.5rem",
+    "component_padding": "1.5rem"
+  },
+  "borders": {
+    "radius": "0.5rem",
+    "radius_lg": "0.75rem",
+    "width": "1px",
+    "style": "warm"
+  },
+  "shadows": {
+    "sm": "0 1px 2px rgba(28, 24, 20, 0.06), 0 1px 1px rgba(28, 24, 20, 0.04)",
+    "md": "0 2px 4px rgba(28, 24, 20, 0.05), 0 6px 12px -2px rgba(28, 24, 20, 0.08)",
+    "lg": "0 2px 4px rgba(28, 24, 20, 0.04), 0 8px 16px -4px rgba(28, 24, 20, 0.08), 0 20px 40px -8px rgba(28, 24, 20, 0.06)"
+  },
+  "motion": {
+    "duration_fast": "150ms",
+    "duration_normal": "220ms",
+    "easing": "cubic-bezier(0.4, 0, 0.2, 1)"
+  }
+}

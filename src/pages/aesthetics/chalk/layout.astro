@@ -1,0 +1,232 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Layout" description="Chalk layout components: containers, grids, sections, and dividers.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Layout</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <!-- Component sections -->
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Container -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Container</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Max-width wrapper with responsive padding at multiple size presets.</p>
+        <a href="/aesthetics/chalk/components/container.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6">
+          <h2 class="font-['Lora'] text-2xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Container</h2>
+          <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed">A max-width wrapper that centers content and provides consistent horizontal padding across breakpoints.</p>
+
+          <!-- Full width -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-2">Full width</p>
+            <div class="w-full bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-6 py-4">
+              <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] text-sm">w-full — stretches to fill its parent</p>
+            </div>
+          </div>
+
+          <!-- Max-w-7xl (xl) -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-2">Extra large — max-w-7xl</p>
+            <div class="max-w-7xl bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-6 py-4">
+              <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] text-sm">Suited for wide dashboards and data-heavy layouts</p>
+            </div>
+          </div>
+
+          <!-- Max-w-5xl (lg) -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-2">Large — max-w-5xl</p>
+            <div class="max-w-5xl bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-6 py-4">
+              <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] text-sm">Good for marketing pages and content-rich layouts</p>
+            </div>
+          </div>
+
+          <!-- Max-w-3xl (md) -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-2">Medium — max-w-3xl</p>
+            <div class="max-w-3xl bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-6 py-4">
+              <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] text-sm">Ideal for reading-focused pages and long-form content</p>
+            </div>
+          </div>
+
+          <!-- Max-w-xl (sm) -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-2">Small — max-w-xl</p>
+            <div class="max-w-xl bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-6 py-4">
+              <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] text-sm">Forms, sign-in flows, and focused single-column tasks</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Grid -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Grid</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Responsive column grid with 2, 3, and 4 column variants.</p>
+        <a href="/aesthetics/chalk/components/grid.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-8">
+          <h2 class="font-['Lora'] text-2xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Grid</h2>
+
+          <!-- 2-col -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">2 columns</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-5 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Column A</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Content goes here</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-5 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Column B</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Content goes here</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3-col -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">3 columns</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-5 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Column A</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Capture ideas quickly</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-5 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Column B</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Process and connect</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-5 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Column C</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Distill to insight</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4-col -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">4 columns</p>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-4 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Q1</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Jan – Mar</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-4 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Q2</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Apr – Jun</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-4 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Q3</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Jul – Sep</p>
+              </div>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg px-4 py-4">
+                <p class="font-['Lora'] text-sm font-semibold text-chalk-900 dark:text-[#EDEAE3]">Q4</p>
+                <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-1">Oct – Dec</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Section</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Full-width content sections with vertical rhythm and background surface variants.</p>
+        <a href="/aesthetics/chalk/components/section.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-4">
+          <!-- Light section -->
+          <section class="bg-chalk-50 dark:bg-[#1E1B17] rounded-xl px-8 py-10">
+            <div class="max-w-2xl">
+              <p class="text-xs font-medium text-forest-500 dark:text-[#24785C] uppercase tracking-wider mb-3">Writing practice</p>
+              <h2 class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight mb-4">The habit of putting things into words</h2>
+              <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mb-6">Writing isn't just recording thought — it's a method for thinking more clearly. When you sit with an idea long enough to describe it precisely, you discover what you actually believe about it.</p>
+              <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed">The blank page isn't an obstacle. It's the invitation to find out what you know.</p>
+            </div>
+          </section>
+
+          <!-- Surface section -->
+          <section class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-xl px-8 py-10">
+            <div class="max-w-2xl">
+              <p class="text-xs font-medium text-forest-500 dark:text-[#24785C] uppercase tracking-wider mb-3">On reading slowly</p>
+              <h2 class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight mb-4">What you gain by not rushing</h2>
+              <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mb-6">Speed reading optimizes for coverage. Slow reading optimizes for understanding. The book you read in a weekend and mostly forget served a different purpose than the one you spent a month with and changed you.</p>
+              <div class="flex items-center gap-4 mt-8">
+                <button class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-4 py-2 text-sm font-medium text-white hover:bg-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#24785C] dark:hover:bg-forest-500 dark:focus:ring-offset-[#262219]">
+                  Start reading
+                </button>
+                <button class="inline-flex items-center justify-center rounded-lg bg-transparent px-4 py-2 text-sm font-medium text-chalk-700 hover:bg-chalk-200 focus:outline-none transition-colors dark:text-[#EDEAE3] dark:hover:bg-[#2E2A22]">
+                  Browse library
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Divider</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Horizontal separators: plain, labeled, and decorative variants.</p>
+        <a href="/aesthetics/chalk/components/divider.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-10 max-w-xl">
+
+          <!-- Plain divider -->
+          <div>
+            <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] leading-relaxed mb-4">After each reading session, take a few minutes to write down what stayed with you. Not a summary — just the fragments that lingered.</p>
+            <hr class="border-t border-chalk-300 dark:border-[#3A3630]" />
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-4 text-sm">These fragments, revisited later, become the raw material for your own thinking.</p>
+          </div>
+
+          <!-- Divider with label -->
+          <div>
+            <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] leading-relaxed mb-4">Sign in with your existing account to continue.</p>
+            <div class="relative flex items-center gap-4">
+              <hr class="flex-1 border-t border-chalk-300 dark:border-[#3A3630]" />
+              <span class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] whitespace-nowrap">or continue with</span>
+              <hr class="flex-1 border-t border-chalk-300 dark:border-[#3A3630]" />
+            </div>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-4 text-sm">Use a social login or email link below.</p>
+          </div>
+
+          <!-- Decorative thick divider -->
+          <div>
+            <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] leading-relaxed mb-6">Part one explored the theory. What follows is practice.</p>
+            <div class="flex items-center gap-2">
+              <div class="h-0.5 w-8 bg-forest-500 dark:bg-[#24785C] rounded-full"></div>
+              <div class="h-0.5 w-4 bg-chalk-300 dark:bg-[#3A3630] rounded-full"></div>
+              <div class="h-0.5 w-2 bg-chalk-200 dark:border-[#3A3630] rounded-full"></div>
+            </div>
+            <p class="font-['Lora'] text-chalk-900 dark:text-[#EDEAE3] leading-relaxed mt-6">Every technique here has been tested in real writing sessions, refined over years.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</SiteLayout>

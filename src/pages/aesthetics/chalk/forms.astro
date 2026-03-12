@@ -1,0 +1,483 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Forms" description="Chalk form components: inputs, selects, checkboxes, toggles, and composed form layouts.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Forms</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Input -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Input</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Text input with label, helper text, and error state.</p>
+        <a href="/aesthetics/chalk/components/input.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6 max-w-md">
+
+          <!-- Default state -->
+          <div>
+            <label for="input-name" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Full name</label>
+            <input
+              type="text"
+              id="input-name"
+              name="name"
+              placeholder="Your full name"
+              class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+            />
+          </div>
+
+          <!-- With helper text -->
+          <div>
+            <label for="input-username" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Username</label>
+            <input
+              type="text"
+              id="input-username"
+              name="username"
+              placeholder="your-handle"
+              class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+            />
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">This is how you'll appear across your notes and shared workspaces.</p>
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="input-email" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Email address</label>
+            <input
+              type="email"
+              id="input-email"
+              name="email"
+              value="not-a-valid-email"
+              aria-describedby="input-email-error"
+              aria-invalid="true"
+              class="block w-full rounded-lg border border-red-400 bg-red-50 px-3 py-2 text-sm text-chalk-900 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-colors dark:border-red-500/60 dark:bg-[#2E1A1A] dark:text-[#EDEAE3]"
+            />
+            <p id="input-email-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">Please enter a valid email address.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Textarea -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Textarea</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Multiline text input with helper text, character count, and error state.</p>
+        <a href="/aesthetics/chalk/components/textarea.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6 max-w-md">
+
+          <!-- Default textarea -->
+          <div>
+            <label for="textarea-thoughts" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Your thoughts</label>
+            <textarea
+              id="textarea-thoughts"
+              name="thoughts"
+              rows="4"
+              placeholder="Start writing…"
+              class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors resize-none dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+            ></textarea>
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Max 500 characters.</p>
+          </div>
+
+          <!-- With character count -->
+          <div>
+            <div class="flex items-baseline justify-between mb-1.5">
+              <label for="textarea-note" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3]">Quick note</label>
+              <span class="text-xs text-chalk-600 dark:text-[#9B9690]">142 / 300</span>
+            </div>
+            <textarea
+              id="textarea-note"
+              name="note"
+              rows="4"
+              class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors resize-none dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+            >Reading "How to Take Smart Notes" — the idea of the slip-box as an external scaffold for thinking is clicking for me. Connections form differently when ideas are physically separate.</textarea>
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Appears in your daily digest.</p>
+          </div>
+
+          <!-- Error state -->
+          <div>
+            <label for="textarea-bio" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Bio</label>
+            <textarea
+              id="textarea-bio"
+              name="bio"
+              rows="4"
+              aria-describedby="textarea-bio-error"
+              aria-invalid="true"
+              class="block w-full rounded-lg border border-red-400 bg-red-50 px-3 py-2 text-sm text-chalk-900 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-colors resize-none dark:border-red-500/60 dark:bg-[#2E1A1A] dark:text-[#EDEAE3]"
+            >This bio is too long and exceeds the 160 character limit for profile display. You will need to shorten it before your profile can be saved successfully.</textarea>
+            <p id="textarea-bio-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">Bio must be 160 characters or fewer. Currently 168 characters.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Select -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Select</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Native select with a styled wrapper, custom chevron, and grouped options.</p>
+        <a href="/aesthetics/chalk/components/select.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-6 max-w-md">
+
+          <!-- Time zone select -->
+          <div>
+            <label for="select-timezone" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Time zone</label>
+            <div class="relative">
+              <select
+                id="select-timezone"
+                name="timezone"
+                class="block w-full appearance-none rounded-lg border border-chalk-300 bg-white px-3 py-2 pr-9 text-sm text-chalk-900 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors cursor-pointer dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+              >
+                <option value="">Select a time zone…</option>
+                <optgroup label="Americas">
+                  <option value="America/New_York">Eastern Time — New York (UTC−5)</option>
+                  <option value="America/Chicago">Central Time — Chicago (UTC−6)</option>
+                  <option value="America/Denver">Mountain Time — Denver (UTC−7)</option>
+                  <option value="America/Los_Angeles" selected>Pacific Time — Los Angeles (UTC−8)</option>
+                  <option value="America/Sao_Paulo">São Paulo (UTC−3)</option>
+                </optgroup>
+                <optgroup label="Europe">
+                  <option value="Europe/London">London (UTC±0)</option>
+                  <option value="Europe/Paris">Paris / Berlin (UTC+1)</option>
+                  <option value="Europe/Helsinki">Helsinki (UTC+2)</option>
+                </optgroup>
+                <optgroup label="Asia / Pacific">
+                  <option value="Asia/Tokyo">Tokyo (UTC+9)</option>
+                  <option value="Australia/Sydney">Sydney (UTC+11)</option>
+                </optgroup>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-chalk-600 dark:text-[#9B9690]">
+                <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+            <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Used for scheduling reminders and daily digest delivery.</p>
+          </div>
+
+          <!-- Default week start select -->
+          <div>
+            <label for="select-week-start" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Week starts on</label>
+            <div class="relative">
+              <select
+                id="select-week-start"
+                name="week_start"
+                class="block w-full appearance-none rounded-lg border border-chalk-300 bg-white px-3 py-2 pr-9 text-sm text-chalk-900 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors cursor-pointer dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+              >
+                <option value="sunday" selected>Sunday</option>
+                <option value="monday">Monday</option>
+              </select>
+              <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-chalk-600 dark:text-[#9B9690]">
+                <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Checkbox -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Checkbox</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Styled checkboxes with labels and supporting descriptions.</p>
+        <a href="/aesthetics/chalk/components/checkbox.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-5 max-w-md">
+
+          <div>
+            <p class="text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-3">Notification preferences</p>
+            <div class="space-y-3">
+
+              <!-- Checked -->
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="notifications"
+                  value="email"
+                  checked
+                  class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630] dark:bg-[#262219]"
+                />
+                <div>
+                  <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Email</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Daily digest and important account alerts.</span>
+                </div>
+              </label>
+
+              <!-- Unchecked -->
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="notifications"
+                  value="push"
+                  class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630] dark:bg-[#262219]"
+                />
+                <div>
+                  <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Push</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Real-time nudges when your streak is at risk.</span>
+                </div>
+              </label>
+
+              <!-- Unchecked with indeterminate note -->
+              <label class="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  name="notifications"
+                  value="slack"
+                  class="mt-0.5 h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630] dark:bg-[#262219]"
+                />
+                <div>
+                  <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Slack</span>
+                  <span class="block text-xs text-chalk-600 dark:text-[#9B9690]">Post a summary to your connected workspace. Requires Slack integration — some channels may be in a partial state if permissions are limited.</span>
+                </div>
+              </label>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Radio -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Radio</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Card-style radio group with selected and unselected states.</p>
+        <a href="/aesthetics/chalk/components/radio.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-3 max-w-md">
+
+          <p class="text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-3">Plan</p>
+
+          <!-- Selected option -->
+          <label class="flex items-start gap-4 bg-forest-50/50 border border-forest-500 dark:border-[#24785C] dark:bg-[#24785C]/10 rounded-lg p-4 cursor-pointer transition-colors">
+            <input
+              type="radio"
+              name="plan"
+              value="personal"
+              checked
+              class="mt-0.5 h-4 w-4 border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630]"
+            />
+            <div>
+              <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Personal</span>
+              <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">For individual writers and readers. Up to 5,000 notes.</span>
+            </div>
+          </label>
+
+          <!-- Unselected -->
+          <label class="flex items-start gap-4 bg-white dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg p-4 cursor-pointer hover:border-chalk-400 dark:hover:border-[#4A4640] transition-colors">
+            <input
+              type="radio"
+              name="plan"
+              value="team"
+              class="mt-0.5 h-4 w-4 border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630]"
+            />
+            <div>
+              <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Team</span>
+              <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Shared workspaces for up to 15 collaborators. Unlimited notes.</span>
+            </div>
+          </label>
+
+          <!-- Unselected -->
+          <label class="flex items-start gap-4 bg-white dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-lg p-4 cursor-pointer hover:border-chalk-400 dark:hover:border-[#4A4640] transition-colors">
+            <input
+              type="radio"
+              name="plan"
+              value="enterprise"
+              class="mt-0.5 h-4 w-4 border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630]"
+            />
+            <div>
+              <span class="block text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Enterprise</span>
+              <span class="block text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Custom seats, SSO, audit logs, and dedicated support.</span>
+            </div>
+          </label>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Toggle -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toggle</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">On/off switch with off, on, and disabled states.</p>
+        <a href="/aesthetics/chalk/components/toggle.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-5 max-w-md">
+
+          <!-- Off state -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Daily digest</p>
+              <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Receive a summary of your notes each morning.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="false"
+              aria-label="Enable daily digest"
+              class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-chalk-300 dark:bg-[#3A3630] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest-500/30 focus:ring-offset-2 focus:ring-offset-chalk-50 dark:focus:ring-offset-[#1E1B17]"
+            >
+              <span class="pointer-events-none inline-block h-4 w-4 translate-x-0 rounded-full bg-white shadow-sm ring-0 transition-transform duration-200"></span>
+            </button>
+          </div>
+
+          <!-- On state -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Streak protection</p>
+              <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Preserve your streak when you miss a single day.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="true"
+              aria-label="Disable streak protection"
+              class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-forest-500 dark:bg-[#24785C] transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-forest-500/30 focus:ring-offset-2 focus:ring-offset-chalk-50 dark:focus:ring-offset-[#1E1B17]"
+            >
+              <span class="pointer-events-none inline-block h-4 w-4 translate-x-4 rounded-full bg-white shadow-sm ring-0 transition-transform duration-200"></span>
+            </button>
+          </div>
+
+          <!-- Disabled state -->
+          <div class="flex items-center justify-between opacity-50">
+            <div>
+              <p class="text-sm font-medium text-chalk-900 dark:text-[#EDEAE3]">Public profile</p>
+              <p class="text-xs text-chalk-600 dark:text-[#9B9690] mt-0.5">Not available on the Personal plan.</p>
+            </div>
+            <button
+              type="button"
+              role="switch"
+              aria-checked="false"
+              aria-label="Public profile — unavailable"
+              disabled
+              class="relative inline-flex h-5 w-9 flex-shrink-0 cursor-not-allowed rounded-full border-2 border-transparent bg-chalk-300 dark:bg-[#3A3630] transition-colors duration-200 focus:outline-none"
+            >
+              <span class="pointer-events-none inline-block h-4 w-4 translate-x-0 rounded-full bg-white shadow-sm ring-0"></span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Form Group -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Form Group</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Composed profile edit form combining inputs, textarea, checkboxes, and action buttons.</p>
+        <a href="/aesthetics/chalk/components/form-group.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="max-w-md bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+
+          <h2 class="font-['Lora'] text-lg font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-5">Edit Profile</h2>
+
+          <div class="space-y-5">
+
+            <!-- Name -->
+            <div>
+              <label for="fg-name" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Name</label>
+              <input
+                type="text"
+                id="fg-name"
+                name="name"
+                value="Margot Ashfield"
+                class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors dark:border-[#3A3630] dark:bg-[#1E1B17] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="fg-email" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Email</label>
+              <input
+                type="email"
+                id="fg-email"
+                name="email"
+                value="margot@ashfield.co"
+                class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors dark:border-[#3A3630] dark:bg-[#1E1B17] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+              />
+              <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Used for sign-in and your digest delivery.</p>
+            </div>
+
+            <!-- Bio -->
+            <div>
+              <label for="fg-bio" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Bio</label>
+              <textarea
+                id="fg-bio"
+                name="bio"
+                rows="3"
+                class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors resize-none dark:border-[#3A3630] dark:bg-[#1E1B17] dark:text-[#EDEAE3]"
+              >Reader, writer, occasional thinker. Building tools for thought.</textarea>
+            </div>
+
+            <!-- Notifications -->
+            <div>
+              <p class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-2.5">Notifications</p>
+              <div class="space-y-2.5">
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="notify_digest"
+                    checked
+                    class="h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630] dark:bg-[#1E1B17]"
+                  />
+                  <span class="text-sm text-chalk-900 dark:text-[#EDEAE3]">Send me the weekly reading digest</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    name="notify_streak"
+                    class="h-4 w-4 rounded border-chalk-300 text-forest-500 focus:ring-forest-500/30 focus:ring-offset-0 dark:border-[#3A3630] dark:bg-[#1E1B17]"
+                  />
+                  <span class="text-sm text-chalk-900 dark:text-[#EDEAE3]">Remind me when my streak is at risk</span>
+                </label>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Actions -->
+          <div class="flex items-center justify-end gap-3 mt-6 pt-5 border-t border-chalk-200 dark:border-[#3A3630]">
+            <button
+              type="button"
+              class="px-4 py-2 rounded-lg text-sm font-medium text-chalk-700 dark:text-[#9B9690] hover:bg-chalk-100 dark:hover:bg-[#2E2B24] transition-colors"
+            >Cancel</button>
+            <button
+              type="submit"
+              class="px-4 py-2 rounded-lg text-sm font-medium text-white bg-forest-500 hover:bg-forest-600 dark:bg-[#1A5C45] dark:hover:bg-[#144A38] transition-colors shadow-[0_1px_2px_rgba(28,24,20,0.12)]"
+            >Save changes</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</SiteLayout>

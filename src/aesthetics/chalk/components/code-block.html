@@ -1,0 +1,71 @@
+<div class="max-w-2xl space-y-6">
+
+  <!-- Inline code span -->
+  <p class="text-chalk-700 dark:text-[#EDEAE3] leading-relaxed">
+    Call <code class="font-mono text-sm bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] px-1.5 py-0.5 rounded text-chalk-900 dark:text-[#EDEAE3]">createNote()</code> to add a new entry, or use <code class="font-mono text-sm bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] px-1.5 py-0.5 rounded text-chalk-900 dark:text-[#EDEAE3]">archiveNote(id)</code> to move older entries out of the active view.
+  </p>
+
+  <!-- Code block -->
+  <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(28,24,20,0.06),0_1px_1px_rgba(28,24,20,0.04)]">
+
+    <!-- Header bar -->
+    <div class="flex items-center justify-between px-4 py-3 border-b border-chalk-300 dark:border-[#3A3630]">
+      <div class="flex items-center gap-2">
+        <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        <span class="font-mono text-xs text-chalk-600 dark:text-[#9B9690]">notes.ts</span>
+      </div>
+      <button class="flex items-center gap-1.5 text-xs text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors rounded px-2 py-1 hover:bg-chalk-200 dark:hover:bg-[#2E2A22]">
+        <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+        Copy
+      </button>
+    </div>
+
+    <!-- Code body -->
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm">
+        <tbody>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">1</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">export type </span><span class="text-chalk-900 dark:text-[#EDEAE3]">Note</span><span class="text-chalk-600 dark:text-[#9B9690]"> = &#123;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">2</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  id</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">3</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  title</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">4</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  body</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">5</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  createdAt</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">Date</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">6</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">&#125;</span></td>
+          </tr>
+          <tr>
+            <td class="pl-4 pr-3 py-0.5" colspan="2"></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">8</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">export function </span><span class="text-chalk-900 dark:text-[#EDEAE3]">createNote</span><span class="text-chalk-600 dark:text-[#9B9690]">(title: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">, body: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">): </span><span class="text-chalk-900 dark:text-[#EDEAE3]">Note</span><span class="text-chalk-600 dark:text-[#9B9690]"> &#123;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">9</td>
+            <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">  return &#123; id: </span><span class="text-chalk-900 dark:text-[#EDEAE3]">crypto</span><span class="text-chalk-600 dark:text-[#9B9690]">.randomUUID(), title, body, createdAt: </span><span class="text-chalk-600 dark:text-[#9B9690]">new </span><span class="text-forest-500 dark:text-[#24785C]">Date</span><span class="text-chalk-600 dark:text-[#9B9690]">() &#125;;</span></td>
+          </tr>
+          <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+            <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">10</td>
+            <td class="pr-4 py-0.5 font-mono pb-3"><span class="text-chalk-600 dark:text-[#9B9690]">&#125;</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

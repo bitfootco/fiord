@@ -1,0 +1,91 @@
+<div class="space-y-0">
+
+  <!-- Tab bar -->
+  <div class="border-b border-[#DDD9D0] dark:border-[#3A3630]" role="tablist" aria-label="Notes filter">
+    <div class="flex gap-0">
+      <button
+        role="tab"
+        data-fiord-tab="tab-all"
+        aria-selected="true"
+        aria-controls="panel-all"
+        class="px-4 py-3 text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3] border-b-2 border-[#1A5C45] dark:border-[#24785C] -mb-px transition-colors"
+      >All</button>
+      <button
+        role="tab"
+        data-fiord-tab="tab-unread"
+        aria-selected="false"
+        aria-controls="panel-unread"
+        class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+      >Unread</button>
+      <button
+        role="tab"
+        data-fiord-tab="tab-favorites"
+        aria-selected="false"
+        aria-controls="panel-favorites"
+        class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+      >Favorites</button>
+      <button
+        role="tab"
+        data-fiord-tab="tab-archived"
+        aria-selected="false"
+        aria-controls="panel-archived"
+        class="px-4 py-3 text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] border-b-2 border-transparent -mb-px transition-colors"
+      >Archived</button>
+    </div>
+  </div>
+
+  <!-- Tab panels -->
+  <div
+    id="panel-all"
+    role="tabpanel"
+    data-fiord-panel="tab-all"
+    class="pt-5 space-y-3"
+  >
+    <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">On the Shortness of Life — Annotations</p>
+      <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited 2 hours ago</p>
+    </div>
+    <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Weekly Writing Review — March 2026</p>
+      <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited yesterday</p>
+    </div>
+    <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Reading log — February</p>
+      <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Edited 3 days ago</p>
+    </div>
+  </div>
+
+  <div
+    id="panel-unread"
+    role="tabpanel"
+    data-fiord-panel="tab-unread"
+    class="pt-5 hidden"
+  >
+    <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Meditations — Book IV highlights</p>
+      <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Added 1 hour ago</p>
+    </div>
+  </div>
+
+  <div
+    id="panel-favorites"
+    role="tabpanel"
+    data-fiord-panel="tab-favorites"
+    class="pt-5 hidden"
+  >
+    <div class="rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] px-4 py-3">
+      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Deep Work — Chapter notes</p>
+      <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Favorited 2 weeks ago</p>
+    </div>
+  </div>
+
+  <div
+    id="panel-archived"
+    role="tabpanel"
+    data-fiord-panel="tab-archived"
+    class="pt-5 hidden"
+  >
+    <p class="text-sm text-[#6B6860] dark:text-[#9B9690]">No archived notes.</p>
+  </div>
+
+</div>

@@ -1,0 +1,45 @@
+<div class="space-y-6 max-w-md">
+
+  <!-- Default textarea -->
+  <div>
+    <label for="textarea-thoughts" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Your thoughts</label>
+    <textarea
+      id="textarea-thoughts"
+      name="thoughts"
+      rows="4"
+      placeholder="Start writing…"
+      class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors resize-none dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3] dark:placeholder-[#6B6860]"
+    ></textarea>
+    <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Max 500 characters.</p>
+  </div>
+
+  <!-- With character count -->
+  <div>
+    <div class="flex items-baseline justify-between mb-1.5">
+      <label for="textarea-note" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3]">Quick note</label>
+      <span class="text-xs text-chalk-600 dark:text-[#9B9690]">142 / 300</span>
+    </div>
+    <textarea
+      id="textarea-note"
+      name="note"
+      rows="4"
+      class="block w-full rounded-lg border border-chalk-300 bg-white px-3 py-2 text-sm text-chalk-900 placeholder-chalk-400 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors resize-none dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+    >Reading "How to Take Smart Notes" — the idea of the slip-box as an external scaffold for thinking is clicking for me. Connections form differently when ideas are physically separate.</textarea>
+    <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Appears in your daily digest.</p>
+  </div>
+
+  <!-- Error state -->
+  <div>
+    <label for="textarea-bio" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Bio</label>
+    <textarea
+      id="textarea-bio"
+      name="bio"
+      rows="4"
+      aria-describedby="textarea-bio-error"
+      aria-invalid="true"
+      class="block w-full rounded-lg border border-red-400 bg-red-50 px-3 py-2 text-sm text-chalk-900 focus:border-red-500 focus:outline-none focus:ring-2 focus:ring-red-500/20 transition-colors resize-none dark:border-red-500/60 dark:bg-[#2E1A1A] dark:text-[#EDEAE3]"
+    >This bio is too long and exceeds the 160 character limit for profile display. You will need to shorten it before your profile can be saved successfully.</textarea>
+    <p id="textarea-bio-error" class="mt-1.5 text-xs text-red-600 dark:text-red-400" role="alert">Bio must be 160 characters or fewer. Currently 168 characters.</p>
+  </div>
+
+</div>

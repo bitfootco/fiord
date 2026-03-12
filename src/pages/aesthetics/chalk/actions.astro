@@ -1,0 +1,301 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Actions" description="Chalk action components: buttons, links, and dropdowns with forest green accents.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Actions</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Button -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Button</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Primary, secondary, ghost, and destructive button styles across sizes with disabled states.</p>
+        <a href="/aesthetics/chalk/components/button.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-8 max-w-2xl">
+
+          <!-- Sizes — Primary -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Primary</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <button class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-3 py-1.5 text-xs font-medium text-white hover:bg-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#24785C] dark:hover:bg-forest-500 dark:focus:ring-offset-[#1E1B17]">Save note</button>
+              <button class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-4 py-2 text-sm font-medium text-white hover:bg-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#24785C] dark:hover:bg-forest-500 dark:focus:ring-offset-[#1E1B17]">Save note</button>
+              <button class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-6 py-3 text-base font-medium text-white hover:bg-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#24785C] dark:hover:bg-forest-500 dark:focus:ring-offset-[#1E1B17]">Save note</button>
+              <button disabled class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-4 py-2 text-sm font-medium text-white opacity-40 cursor-not-allowed" aria-disabled="true">Save note</button>
+            </div>
+          </div>
+
+          <!-- Secondary -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Secondary</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <button class="inline-flex items-center justify-center rounded-lg bg-white px-3 py-1.5 text-xs font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 hover:bg-chalk-50 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630] dark:hover:bg-[#2E2A22]">Discard</button>
+              <button class="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 hover:bg-chalk-50 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630] dark:hover:bg-[#2E2A22]">Discard</button>
+              <button class="inline-flex items-center justify-center rounded-lg bg-white px-6 py-3 text-base font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 hover:bg-chalk-50 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630] dark:hover:bg-[#2E2A22]">Discard</button>
+              <button disabled class="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 opacity-40 cursor-not-allowed dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630]" aria-disabled="true">Discard</button>
+            </div>
+          </div>
+
+          <!-- Ghost -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Ghost</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <button class="inline-flex items-center justify-center rounded-lg px-3 py-1.5 text-xs font-medium text-chalk-600 hover:bg-chalk-100 hover:text-chalk-900 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:text-[#9B9690] dark:hover:bg-[#262219] dark:hover:text-[#EDEAE3]">View all</button>
+              <button class="inline-flex items-center justify-center rounded-lg px-4 py-2 text-sm font-medium text-chalk-600 hover:bg-chalk-100 hover:text-chalk-900 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:text-[#9B9690] dark:hover:bg-[#262219] dark:hover:text-[#EDEAE3]">View all</button>
+              <button class="inline-flex items-center justify-center rounded-lg px-6 py-3 text-base font-medium text-chalk-600 hover:bg-chalk-100 hover:text-chalk-900 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:text-[#9B9690] dark:hover:bg-[#262219] dark:hover:text-[#EDEAE3]">View all</button>
+            </div>
+          </div>
+
+          <!-- Destructive -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Destructive</p>
+            <div class="flex flex-wrap items-center gap-3">
+              <button class="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 transition-colors dark:focus:ring-offset-[#1E1B17]">Delete note</button>
+              <button disabled class="inline-flex items-center justify-center rounded-lg bg-red-600 px-4 py-2 text-sm font-medium text-white opacity-40 cursor-not-allowed" aria-disabled="true">Delete note</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Button Group -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Button Group</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Segmented controls and grouped action pairs for related operations.</p>
+        <a href="/aesthetics/chalk/components/button-group.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="space-y-8 max-w-xl">
+
+          <!-- Segmented control -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Segmented control</p>
+            <div class="inline-flex rounded-lg overflow-hidden border border-chalk-300 dark:border-[#3A3630] bg-white dark:bg-[#262219]">
+              <button class="px-4 py-2 text-sm font-medium bg-chalk-100 dark:bg-[#2E2A22] text-chalk-900 dark:text-[#EDEAE3] border-r border-chalk-300 dark:border-[#3A3630] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-forest-500 transition-colors" aria-pressed="true">All notes</button>
+              <button class="px-4 py-2 text-sm font-medium text-chalk-600 dark:text-[#9B9690] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] hover:text-chalk-900 dark:hover:text-[#EDEAE3] border-r border-chalk-300 dark:border-[#3A3630] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-forest-500 transition-colors">Starred</button>
+              <button class="px-4 py-2 text-sm font-medium text-chalk-600 dark:text-[#9B9690] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] hover:text-chalk-900 dark:hover:text-[#EDEAE3] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-forest-500 transition-colors">Archive</button>
+            </div>
+          </div>
+
+          <!-- Segmented — icon + label -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Segmented with icons</p>
+            <div class="inline-flex rounded-lg overflow-hidden border border-chalk-300 dark:border-[#3A3630] bg-white dark:bg-[#262219]">
+              <button class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-chalk-600 dark:text-[#9B9690] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] hover:text-chalk-900 dark:hover:text-[#EDEAE3] border-r border-chalk-300 dark:border-[#3A3630] focus:outline-none transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h16" /></svg>
+                List
+              </button>
+              <button class="flex items-center gap-2 px-4 py-2 text-sm font-medium bg-chalk-100 dark:bg-[#2E2A22] text-chalk-900 dark:text-[#EDEAE3] focus:outline-none transition-colors" aria-pressed="true">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM14 5a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1V5zM4 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1H5a1 1 0 01-1-1v-4zM14 15a1 1 0 011-1h4a1 1 0 011 1v4a1 1 0 01-1 1h-4a1 1 0 01-1-1v-4z" /></svg>
+                Grid
+              </button>
+            </div>
+          </div>
+
+          <!-- Action group: Cancel + Save -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Action group</p>
+            <div class="flex items-center gap-3">
+              <button class="inline-flex items-center justify-center rounded-lg bg-white px-4 py-2 text-sm font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 hover:bg-chalk-50 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630] dark:hover:bg-[#2E2A22]">
+                Cancel
+              </button>
+              <button class="inline-flex items-center justify-center rounded-lg bg-forest-500 px-4 py-2 text-sm font-medium text-white hover:bg-forest-600 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#24785C] dark:hover:bg-forest-500 dark:focus:ring-offset-[#1E1B17]">
+                Save changes
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Link -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Link</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Inline, standalone, muted, and breadcrumb-row link styles.</p>
+        <a href="/aesthetics/chalk/components/link.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="max-w-xl space-y-8">
+
+          <!-- Inline link in body text -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Inline link</p>
+            <p class="text-chalk-700 dark:text-[#EDEAE3] leading-relaxed">
+              Luhmann's <a href="#" class="text-forest-500 dark:text-[#24785C] hover:text-forest-600 underline underline-offset-2 transition-colors">Zettelkasten method</a> has seen a dramatic resurgence in popularity, largely due to tools like <a href="#" class="text-forest-500 dark:text-[#24785C] hover:text-forest-600 underline underline-offset-2 transition-colors">Obsidian</a> and <a href="#" class="text-forest-500 dark:text-[#24785C] hover:text-forest-600 underline underline-offset-2 transition-colors">Roam Research</a> making linked note-taking accessible.
+            </p>
+          </div>
+
+          <!-- Standalone link with arrow -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Standalone link</p>
+            <a href="#" class="inline-flex items-center gap-1.5 text-sm font-medium text-forest-500 dark:text-[#24785C] hover:text-forest-600 transition-colors group">
+              Read the full essay
+              <svg class="w-4 h-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+            </a>
+          </div>
+
+          <!-- Muted link -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Muted link</p>
+            <div class="flex items-center gap-4">
+              <a href="#" class="text-sm text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Privacy policy</a>
+              <a href="#" class="text-sm text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Terms of use</a>
+              <a href="#" class="text-sm text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Contact</a>
+            </div>
+          </div>
+
+          <!-- Breadcrumb-style row -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Breadcrumb row</p>
+            <nav aria-label="Breadcrumb">
+              <ol class="flex items-center gap-1.5 text-sm">
+                <li><a href="#" class="text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Library</a></li>
+                <li><span class="text-chalk-300 dark:text-[#3A3630]">/</span></li>
+                <li><a href="#" class="text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors">Philosophy</a></li>
+                <li><span class="text-chalk-300 dark:text-[#3A3630]">/</span></li>
+                <li><span class="text-chalk-900 dark:text-[#EDEAE3] font-medium" aria-current="page">Stoic practice</span></li>
+              </ol>
+            </nav>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Dropdown -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Dropdown</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click-triggered action menu with grouped items, icons, and a destructive action.</p>
+        <a href="/aesthetics/chalk/components/dropdown.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 pb-48">
+        <div class="max-w-xs space-y-6">
+
+          <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider">Dropdown menu</p>
+
+          <!-- Trigger + menu (pre-opened for preview) -->
+          <div class="relative inline-block">
+            <button
+              data-fiord-toggle="chalk-dropdown-demo"
+              aria-expanded="true"
+              aria-haspopup="true"
+              class="inline-flex items-center justify-center gap-2 rounded-lg bg-white px-4 py-2 text-sm font-medium text-chalk-700 ring-1 ring-inset ring-chalk-300 hover:bg-chalk-50 focus:outline-none focus:ring-2 focus:ring-forest-500 focus:ring-offset-2 transition-colors dark:bg-[#262219] dark:text-[#EDEAE3] dark:ring-[#3A3630] dark:hover:bg-[#2E2A22]"
+            >
+              More options
+              <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+            </button>
+
+            <!-- Dropdown menu -->
+            <div
+              id="chalk-dropdown-demo"
+              data-fiord-menu
+              class="absolute left-0 top-full mt-1.5 w-52 bg-white dark:bg-[#262219] rounded-xl border border-chalk-300 dark:border-[#3A3630] shadow-[0_2px_4px_rgba(28,24,20,0.05),0_6px_12px_-2px_rgba(28,24,20,0.08)] py-1 z-10"
+              role="menu"
+            >
+              <!-- Group 1 -->
+              <a href="#" role="menuitem" class="flex items-center gap-3 px-4 py-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] transition-colors">
+                <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" /></svg>
+                Rename note
+              </a>
+              <a href="#" role="menuitem" class="flex items-center gap-3 px-4 py-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] transition-colors">
+                <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                Duplicate
+              </a>
+              <a href="#" role="menuitem" class="flex items-center gap-3 px-4 py-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] transition-colors">
+                <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4" /></svg>
+                Move to archive
+              </a>
+
+              <!-- Divider -->
+              <div class="my-1 border-t border-chalk-300 dark:border-[#3A3630]"></div>
+
+              <!-- Group 2 -->
+              <a href="#" role="menuitem" class="flex items-center gap-3 px-4 py-2.5 text-sm text-chalk-700 dark:text-[#EDEAE3] hover:bg-chalk-50 dark:hover:bg-[#2E2A22] transition-colors">
+                <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" /></svg>
+                Share note
+              </a>
+              <a href="#" role="menuitem" class="flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 dark:text-red-400 hover:bg-chalk-50 dark:hover:bg-[#2E2A22] transition-colors">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" /></svg>
+                Delete note
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script is:inline>
+    (function () {
+      const triggers = document.querySelectorAll('[data-fiord-toggle]');
+
+      triggers.forEach(function (trigger) {
+        const targetId = trigger.dataset.fiordToggle;
+        const menu = document.getElementById(targetId);
+        if (!menu) return;
+
+        // Toggle on click
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const isOpen = !menu.classList.contains('hidden');
+
+          // Close all open menus first
+          document.querySelectorAll('[data-fiord-menu]').forEach(function (m) {
+            m.classList.add('hidden');
+          });
+          document.querySelectorAll('[data-fiord-toggle]').forEach(function (t) {
+            t.setAttribute('aria-expanded', 'false');
+          });
+
+          if (!isOpen) {
+            menu.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+        });
+      });
+
+      // Close when clicking outside
+      document.addEventListener('click', function () {
+        document.querySelectorAll('[data-fiord-menu]').forEach(function (menu) {
+          menu.classList.add('hidden');
+        });
+        document.querySelectorAll('[data-fiord-toggle]').forEach(function (trigger) {
+          trigger.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close on Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[data-fiord-menu]').forEach(function (menu) {
+            menu.classList.add('hidden');
+          });
+          document.querySelectorAll('[data-fiord-toggle]').forEach(function (trigger) {
+            trigger.setAttribute('aria-expanded', 'false');
+          });
+        }
+      });
+    })();
+  </script>
+
+</SiteLayout>

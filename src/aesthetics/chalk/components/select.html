@@ -1,0 +1,59 @@
+<div class="space-y-6 max-w-md">
+
+  <!-- Time zone select -->
+  <div>
+    <label for="select-timezone" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Time zone</label>
+    <div class="relative">
+      <select
+        id="select-timezone"
+        name="timezone"
+        class="block w-full appearance-none rounded-lg border border-chalk-300 bg-white px-3 py-2 pr-9 text-sm text-chalk-900 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors cursor-pointer dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+      >
+        <option value="">Select a time zone…</option>
+        <optgroup label="Americas">
+          <option value="America/New_York">Eastern Time — New York (UTC−5)</option>
+          <option value="America/Chicago">Central Time — Chicago (UTC−6)</option>
+          <option value="America/Denver">Mountain Time — Denver (UTC−7)</option>
+          <option value="America/Los_Angeles" selected>Pacific Time — Los Angeles (UTC−8)</option>
+          <option value="America/Sao_Paulo">São Paulo (UTC−3)</option>
+        </optgroup>
+        <optgroup label="Europe">
+          <option value="Europe/London">London (UTC±0)</option>
+          <option value="Europe/Paris">Paris / Berlin (UTC+1)</option>
+          <option value="Europe/Helsinki">Helsinki (UTC+2)</option>
+        </optgroup>
+        <optgroup label="Asia / Pacific">
+          <option value="Asia/Tokyo">Tokyo (UTC+9)</option>
+          <option value="Australia/Sydney">Sydney (UTC+11)</option>
+        </optgroup>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-chalk-600 dark:text-[#9B9690]">
+        <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+    <p class="mt-1.5 text-xs text-chalk-600 dark:text-[#9B9690]">Used for scheduling reminders and daily digest delivery.</p>
+  </div>
+
+  <!-- Default week start select -->
+  <div>
+    <label for="select-week-start" class="block text-sm font-medium text-chalk-700 dark:text-[#EDEAE3] mb-1.5">Week starts on</label>
+    <div class="relative">
+      <select
+        id="select-week-start"
+        name="week_start"
+        class="block w-full appearance-none rounded-lg border border-chalk-300 bg-white px-3 py-2 pr-9 text-sm text-chalk-900 shadow-[0_1px_2px_rgba(28,24,20,0.06)] focus:border-forest-500 focus:outline-none focus:ring-2 focus:ring-forest-500/20 transition-colors cursor-pointer dark:border-[#3A3630] dark:bg-[#262219] dark:text-[#EDEAE3]"
+      >
+        <option value="sunday" selected>Sunday</option>
+        <option value="monday">Monday</option>
+      </select>
+      <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2.5 text-chalk-600 dark:text-[#9B9690]">
+        <svg class="h-4 w-4" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 6l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+</div>

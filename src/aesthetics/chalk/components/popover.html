@@ -1,0 +1,52 @@
+<div class="flex items-start gap-8 py-4">
+
+  <!-- Trigger + popover -->
+  <div class="relative inline-block">
+    <button
+      data-fiord-toggle="chalk-popover-share"
+      class="flex items-center gap-1.5 rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-[#262219] px-3.5 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors"
+      aria-expanded="true"
+      aria-haspopup="true"
+    >
+      <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+      </svg>
+      Share note
+    </button>
+
+    <!-- Popover panel (pre-opened for preview) -->
+    <div
+      id="chalk-popover-share"
+      data-fiord-menu
+      class="absolute left-0 top-full mt-2 z-20 w-72 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] shadow-[0_2px_4px_rgba(28,24,20,0.05),_0_6px_12px_-2px_rgba(28,24,20,0.08)] p-4 space-y-4"
+    >
+      <!-- Copy link -->
+      <div>
+        <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Share link</p>
+        <div class="flex gap-2">
+          <input
+            type="text"
+            value="https://folio.app/note/seneca-shortness"
+            readonly
+            class="flex-1 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-[#FAFAF7] dark:bg-[#1E1B17] px-3 py-2 text-xs text-[#6B6860] dark:text-[#9B9690] focus:outline-none"
+          />
+          <button class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-3 py-2 text-xs font-medium text-white transition-colors whitespace-nowrap">Copy</button>
+        </div>
+      </div>
+
+      <!-- Share via email -->
+      <div>
+        <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Invite by email</p>
+        <div class="flex gap-2">
+          <input
+            type="email"
+            placeholder="colleague@example.com"
+            class="flex-1 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-[#FAFAF7] dark:bg-[#1E1B17] px-3 py-2 text-xs text-[#1C1B18] dark:text-[#EDEAE3] placeholder-[#6B6860] dark:placeholder-[#9B9690] focus:outline-none focus:ring-1 focus:ring-[#1A5C45] dark:focus:ring-[#24785C]"
+          />
+          <button class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-3 py-2 text-xs text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors whitespace-nowrap">Send</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

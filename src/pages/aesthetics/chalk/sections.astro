@@ -1,0 +1,578 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Page Sections" description="Chalk page sections: editorial hero with serif headline, feature grid, Lora italic testimonials, pricing, FAQ.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Page Sections</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Hero -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Hero</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Full-width editorial intro with serif headline, italic sub-heading, and a mock editor preview.</p>
+        <a href="/aesthetics/chalk/components/hero.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <section class="bg-[#FAFAF7] dark:bg-[#1E1B17] px-6 py-16 sm:py-20 rounded-xl overflow-hidden">
+
+          <!-- Accent bar -->
+          <div class="w-10 h-1 rounded-full bg-[#1A5C45] dark:bg-[#24785C] mb-8"></div>
+
+          <!-- Headline -->
+          <h1 class="font-['Lora'] text-5xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3] leading-tight max-w-2xl">
+            A quieter place to think, read, and write.
+          </h1>
+
+          <!-- Italic sub-headline in Lora -->
+          <p class="font-['Lora'] italic text-xl text-[#6B6860] dark:text-[#9B9690] mt-4 max-w-xl leading-relaxed">
+            Capture what matters. Connect what you know.
+          </p>
+
+          <!-- Body paragraph -->
+          <p class="mt-4 text-base text-[#6B6860] dark:text-[#9B9690] max-w-xl leading-relaxed">
+            Folio is a personal knowledge tool for writers, researchers, and readers who want a calm space to collect their thoughts — not a second inbox to manage.
+          </p>
+
+          <!-- CTAs -->
+          <div class="mt-8 flex flex-wrap items-center gap-3">
+            <a href="#" class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-5 py-2.5 text-sm font-medium text-white transition-colors">Start writing free</a>
+            <a href="#" class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-5 py-2.5 text-sm font-medium text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#262219] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors">See how it works</a>
+          </div>
+
+          <!-- Social proof -->
+          <p class="mt-6 text-xs text-[#6B6860] dark:text-[#9B9690]">
+            Trusted by <span class="font-medium text-[#1C1B18] dark:text-[#EDEAE3]">8,000+ writers</span> and researchers worldwide.
+          </p>
+
+          <!-- Mock editor UI -->
+          <div class="mt-12 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] overflow-hidden shadow-[0_1px_2px_rgba(28,24,20,0.06),_0_4px_8px_-2px_rgba(28,24,20,0.06)]">
+            <!-- Editor toolbar -->
+            <div class="flex items-center gap-2 border-b border-[#DDD9D0] dark:border-[#3A3630] px-4 py-2.5">
+              <div class="h-2.5 w-2.5 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630]"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630]"></div>
+              <div class="h-2.5 w-2.5 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630]"></div>
+              <div class="ml-2 h-4 w-px bg-[#DDD9D0] dark:bg-[#3A3630]"></div>
+              <span class="text-xs text-[#6B6860] dark:text-[#9B9690]">On the Shortness of Life</span>
+              <div class="ml-auto flex items-center gap-2">
+                <span class="rounded bg-[#1A5C45]/10 dark:bg-[#24785C]/20 px-2 py-0.5 text-[10px] font-medium text-[#1A5C45] dark:text-[#24785C]">Saved</span>
+              </div>
+            </div>
+            <!-- Editor body -->
+            <div class="px-6 py-5 space-y-3">
+              <div class="font-['Lora'] text-base font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Annotations — Chapter 1</div>
+              <div class="space-y-2">
+                <div class="h-2.5 rounded bg-[#F2F0EB] dark:bg-[#1E1B17] w-full"></div>
+                <div class="h-2.5 rounded bg-[#F2F0EB] dark:bg-[#1E1B17] w-5/6"></div>
+                <div class="h-2.5 rounded bg-[#F2F0EB] dark:bg-[#1E1B17] w-4/6"></div>
+              </div>
+              <div class="border-l-2 border-[#1A5C45] dark:border-[#24785C] pl-3 py-1">
+                <div class="h-2 rounded bg-[#1A5C45]/10 dark:bg-[#24785C]/20 w-3/4"></div>
+                <div class="h-2 rounded bg-[#1A5C45]/10 dark:bg-[#24785C]/20 w-1/2 mt-1.5"></div>
+              </div>
+              <div class="space-y-2">
+                <div class="h-2.5 rounded bg-[#F2F0EB] dark:bg-[#1E1B17] w-full"></div>
+                <div class="h-2.5 rounded bg-[#F2F0EB] dark:bg-[#1E1B17] w-2/3"></div>
+              </div>
+            </div>
+          </div>
+
+        </section>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">CTA</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Call-to-action banners — centered variant and two-column text-left layout.</p>
+        <a href="/aesthetics/chalk/components/cta.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-6">
+
+          <!-- Centered CTA banner -->
+          <div class="bg-[#F2F0EB] dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] px-8 py-12 text-center">
+            <h2 class="font-['Lora'] text-3xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3] leading-snug">Begin your writing practice.</h2>
+            <p class="mt-3 text-base text-[#6B6860] dark:text-[#9B9690] max-w-md mx-auto leading-relaxed">
+              Folio is free for individual writers. No credit card required — just open it and start.
+            </p>
+            <div class="mt-6 flex flex-col sm:flex-row items-center justify-center gap-3">
+              <a href="#" class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-5 py-2.5 text-sm font-medium text-white transition-colors">Get started free</a>
+              <a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors underline underline-offset-2 decoration-[#DDD9D0] dark:decoration-[#3A3630] hover:decoration-current">Read the story behind Folio &#8594;</a>
+            </div>
+          </div>
+
+          <!-- Two-column CTA: text left + button right -->
+          <div class="bg-[#F2F0EB] dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] px-8 py-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div>
+              <h3 class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Upgrade to Writer</h3>
+              <p class="mt-1.5 text-sm text-[#6B6860] dark:text-[#9B9690] max-w-sm leading-relaxed">
+                Unlimited notes, full-text search, and weekly review digests — for those who take their writing seriously.
+              </p>
+            </div>
+            <div class="shrink-0 flex items-center gap-3">
+              <a href="#" class="text-sm text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors whitespace-nowrap">See pricing</a>
+              <a href="#" class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-5 py-2.5 text-sm font-medium text-white transition-colors whitespace-nowrap">Upgrade now</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature Grid -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Feature Grid</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Six-feature showcase with forest-green icon blocks, serif headings, and a centered intro.</p>
+        <a href="/aesthetics/chalk/components/feature-grid.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-6">
+
+          <div class="text-center">
+            <h2 class="font-['Lora'] text-3xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Everything you need to think clearly</h2>
+            <p class="mt-2 text-base text-[#6B6860] dark:text-[#9B9690] max-w-xl mx-auto">Folio keeps your reading, writing, and thinking in one calm workspace.</p>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+            <!-- Capture -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931z" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Capture</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Quickly save passages, ideas, and observations before they slip away. Works from any device.</p>
+            </div>
+
+            <!-- Connect -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Connect</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Link related notes and see how your ideas relate over time. Discover unexpected connections.</p>
+            </div>
+
+            <!-- Review -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Review</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Weekly digests resurface past notes at the right moment, so your reading compounds over time.</p>
+            </div>
+
+            <!-- Export -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Export</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Your notes are yours. Export as Markdown, PDF, or plain text at any time — no lock-in.</p>
+            </div>
+
+            <!-- Search -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Search</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Full-text search across every note, highlight, and annotation — instantly, without leaving your flow.</p>
+            </div>
+
+            <!-- Share -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center mb-4" style="background-color: rgba(26,92,69,0.08);">
+                <svg class="h-5 w-5 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+                </svg>
+              </div>
+              <h3 class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3] mb-1.5">Share</h3>
+              <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Share individual notes or entire collections with a link — readable by anyone, even without an account.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Testimonial</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Three-column quote grid with Lora italic blockquotes and author attribution.</p>
+        <a href="/aesthetics/chalk/components/testimonial.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-4">
+
+          <div class="text-center mb-8">
+            <h2 class="font-['Lora'] text-3xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">What writers say</h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+
+            <!-- Testimonial 1 -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+              <blockquote>
+                <p class="font-['Lora'] italic text-lg text-[#6B6860] dark:text-[#9B9690] leading-relaxed">
+                  "Folio gave my reading life some dignity. I used to finish a book and forget it within a week. Now my annotations actually go somewhere."
+                </p>
+              </blockquote>
+              <div class="mt-5 flex items-center gap-3">
+                <div class="h-8 w-8 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630] flex items-center justify-center shrink-0">
+                  <span class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690]">SR</span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Sofia Reyes</p>
+                  <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">Essayist · Folio Writer plan</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+              <blockquote>
+                <p class="font-['Lora'] italic text-lg text-[#6B6860] dark:text-[#9B9690] leading-relaxed">
+                  "I research for long-form articles. Folio is the first tool that makes my notes feel like a conversation I can return to, not a pile I have to dig through."
+                </p>
+              </blockquote>
+              <div class="mt-5 flex items-center gap-3">
+                <div class="h-8 w-8 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630] flex items-center justify-center shrink-0">
+                  <span class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690]">JO</span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">James Okafor</p>
+                  <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">Journalist · Folio Studio plan</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] p-6 shadow-[0_1px_2px_rgba(28,24,20,0.06)]">
+              <blockquote>
+                <p class="font-['Lora'] italic text-lg text-[#6B6860] dark:text-[#9B9690] leading-relaxed">
+                  "The weekly review digest is quietly one of the best features I've encountered in any app. It doesn't overwhelm — it just reminds you that you've been thinking."
+                </p>
+              </blockquote>
+              <div class="mt-5 flex items-center gap-3">
+                <div class="h-8 w-8 rounded-full bg-[#DDD9D0] dark:bg-[#3A3630] flex items-center justify-center shrink-0">
+                  <span class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690]">NB</span>
+                </div>
+                <div>
+                  <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Nadia Bauer</p>
+                  <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">PhD researcher · Folio Writer plan</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Pricing Table</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Three-tier pricing layout with a highlighted Writer plan, feature lists, and forest-green accents.</p>
+        <a href="/aesthetics/chalk/components/pricing-table.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-6">
+
+          <div class="text-center">
+            <h2 class="font-['Lora'] text-3xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Simple, honest pricing</h2>
+            <p class="mt-2 text-base text-[#6B6860] dark:text-[#9B9690]">Free to start. Upgrade when you're ready.</p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+            <!-- Free tier -->
+            <div class="rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] p-6 flex flex-col">
+              <div>
+                <h3 class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Free</h3>
+                <p class="mt-1 text-sm text-[#6B6860] dark:text-[#9B9690]">For curious minds getting started.</p>
+                <div class="mt-4 flex items-end gap-1">
+                  <span class="font-['Lora'] text-4xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">$0</span>
+                  <span class="text-sm text-[#6B6860] dark:text-[#9B9690] mb-1.5">/month</span>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2.5 flex-1">
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Up to 100 notes
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Basic search
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  3 collections
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Markdown export
+                </li>
+              </ul>
+              <a href="#" class="mt-6 block text-center rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-4 py-2.5 text-sm font-medium text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Get started</a>
+            </div>
+
+            <!-- Writer tier — highlighted -->
+            <div class="rounded-xl border-2 border-[#1A5C45] dark:border-[#24785C] bg-white dark:bg-[#262219] p-6 flex flex-col relative">
+              <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+                <span class="rounded-full bg-[#1A5C45] dark:bg-[#24785C] px-3 py-1 text-xs font-medium text-white">Most popular</span>
+              </div>
+              <div>
+                <h3 class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Writer</h3>
+                <p class="mt-1 text-sm text-[#6B6860] dark:text-[#9B9690]">For those who take writing seriously.</p>
+                <div class="mt-4 flex items-end gap-1">
+                  <span class="font-['Lora'] text-4xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">$9</span>
+                  <span class="text-sm text-[#6B6860] dark:text-[#9B9690] mb-1.5">/month</span>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2.5 flex-1">
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Unlimited notes
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Full-text search
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Unlimited collections
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Weekly review digest
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  All export formats
+                </li>
+              </ul>
+              <a href="#" class="mt-6 block text-center rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-4 py-2.5 text-sm font-medium text-white transition-colors">Start free trial</a>
+            </div>
+
+            <!-- Studio tier -->
+            <div class="rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] p-6 flex flex-col">
+              <div>
+                <h3 class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Studio</h3>
+                <p class="mt-1 text-sm text-[#6B6860] dark:text-[#9B9690]">For researchers and collaborative teams.</p>
+                <div class="mt-4 flex items-end gap-1">
+                  <span class="font-['Lora'] text-4xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">$19</span>
+                  <span class="text-sm text-[#6B6860] dark:text-[#9B9690] mb-1.5">/month</span>
+                </div>
+              </div>
+              <ul class="mt-6 space-y-2.5 flex-1">
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Everything in Writer
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Up to 5 team members
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Shared collections
+                </li>
+                <li class="flex items-center gap-2 text-sm text-[#6B6860] dark:text-[#9B9690]">
+                  <svg class="h-4 w-4 text-[#1A5C45] dark:text-[#24785C] shrink-0" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                  Priority support
+                </li>
+              </ul>
+              <a href="#" class="mt-6 block text-center rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-4 py-2.5 text-sm font-medium text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Get started</a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">FAQ</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Collapsible question/answer list with serif question labels and a rotate-45 icon toggle.</p>
+        <a href="/aesthetics/chalk/components/faq.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-6">
+
+          <div class="text-center">
+            <h2 class="font-['Lora'] text-3xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Frequently asked questions</h2>
+            <p class="mt-2 text-base text-[#6B6860] dark:text-[#9B9690]">Everything you need to know about Folio.</p>
+          </div>
+
+          <div class="divide-y divide-[#DDD9D0] dark:divide-[#3A3630] border border-[#DDD9D0] dark:border-[#3A3630] rounded-xl overflow-hidden bg-white dark:bg-[#262219]">
+
+            <!-- Item 1 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-1"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="true"
+                aria-controls="faq-panel-1"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Is Folio really free to start?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] rotate-45 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-1" data-fiord-faq-panel="faq-1" class="px-6 pb-4">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Yes. The Free plan gives you 100 notes, 3 collections, and basic search — no credit card required. You can use Folio indefinitely on the free tier and only upgrade if you decide you need more.</p>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-2"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="false"
+                aria-controls="faq-panel-2"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Can I import notes from Notion or Bear?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-2" data-fiord-faq-panel="faq-2" class="px-6 pb-4 hidden">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Yes. Folio imports from Markdown files, plain text, and Notion exports. Bear exports are Markdown-compatible, so they import cleanly too. We're working on direct app-to-app connectors for the Studio plan.</p>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-3"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="false"
+                aria-controls="faq-panel-3"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">How does the weekly review work?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-3" data-fiord-faq-panel="faq-3" class="px-6 pb-4 hidden">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Each week, Folio surfaces a small selection of notes from your past — prioritizing things you haven't revisited in a while. It's intentionally short: 5–7 notes, delivered on Sunday morning. Think of it as a letter from your past self.</p>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-4"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="false"
+                aria-controls="faq-panel-4"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">What happens to my data if I cancel?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-4" data-fiord-faq-panel="faq-4" class="px-6 pb-4 hidden">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Your notes remain accessible in read-only mode for 90 days after cancellation. You can export everything as Markdown or plain text at any time — before or after cancelling. We'll never delete your notes without notice.</p>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-5"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="false"
+                aria-controls="faq-panel-5"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Is there a mobile app?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-5" data-fiord-faq-panel="faq-5" class="px-6 pb-4 hidden">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Yes — Folio has iOS and Android apps optimised for quick capture and reading. The web app is fully responsive and works well on mobile too. All apps sync in real time.</p>
+              </div>
+            </div>
+
+            <!-- Item 6 -->
+            <div>
+              <button
+                data-fiord-faq-trigger="faq-6"
+                class="flex w-full items-center justify-between px-6 py-4 text-left"
+                aria-expanded="false"
+                aria-controls="faq-panel-6"
+              >
+                <span class="font-['Lora'] font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Do you offer academic or student discounts?</span>
+                <svg data-faq-icon class="h-5 w-5 shrink-0 text-[#6B6860] dark:text-[#9B9690] transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                </svg>
+              </button>
+              <div id="faq-panel-6" data-fiord-faq-panel="faq-6" class="px-6 pb-4 hidden">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">Yes. Students and academic researchers get 50% off the Writer plan with a valid .edu email address. Contact us at <span class="text-[#1A5C45] dark:text-[#24785C]">hello@folio.app</span> and we'll set it up for you.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script is:inline>
+    // FAQ
+    (function () {
+      document.querySelectorAll('[data-fiord-faq-trigger]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var panelId = trigger.getAttribute('data-fiord-faq-trigger');
+          var panel = document.getElementById('faq-panel-' + panelId.replace('faq-', ''));
+          if (!panel) return;
+
+          var isOpen = !panel.classList.contains('hidden');
+          var icon = trigger.querySelector('[data-faq-icon]');
+
+          if (isOpen) {
+            panel.classList.add('hidden');
+            trigger.setAttribute('aria-expanded', 'false');
+            if (icon) icon.classList.remove('rotate-45');
+          } else {
+            panel.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
+            if (icon) icon.classList.add('rotate-45');
+          }
+        });
+      });
+    })();
+  </script>
+
+</SiteLayout>

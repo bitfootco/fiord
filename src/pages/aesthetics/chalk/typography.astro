@@ -1,0 +1,257 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Typography" description="Chalk typography: Lora serif headings, DM Sans body, Source Code Pro code blocks.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Page header -->
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Typography</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <!-- Component sections -->
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Heading -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Heading</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Lora serif headings at h1–h4 scale with appropriate sizing and weight.</p>
+        <a href="/aesthetics/chalk/components/heading.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="max-w-2xl space-y-10">
+
+          <!-- h1 -->
+          <div>
+            <h1 class="font-['Lora'] text-4xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight">The art of keeping a commonplace book</h1>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-3">Readers have kept commonplace books for centuries — personal anthologies of passages, quotations, and observations drawn from everything they encountered.</p>
+          </div>
+
+          <hr class="border-t border-chalk-300 dark:border-[#3A3630]" />
+
+          <!-- h2 -->
+          <div>
+            <h2 class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight">Why slow reading changes how you think</h2>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-3">When you read slowly enough to notice language, you begin to internalize the rhythms and structures that good writing uses. Speed is the enemy of retention.</p>
+          </div>
+
+          <hr class="border-t border-chalk-300 dark:border-[#3A3630]" />
+
+          <!-- h3 -->
+          <div>
+            <h3 class="font-['Lora'] text-2xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Building a note-taking practice</h3>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-3">The goal isn't to capture everything. It's to force yourself to decide what matters, and why.</p>
+          </div>
+
+          <hr class="border-t border-chalk-300 dark:border-[#3A3630]" />
+
+          <!-- h4 -->
+          <div>
+            <h4 class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3]">Choosing your tools wisely</h4>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed mt-3">The best tool is the one you'll actually use. Friction is the enemy of consistency — keep your note-taking system as simple as the task demands.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Paragraph -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Paragraph</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Body text styles: lead, regular, muted, and caption variants.</p>
+        <a href="/aesthetics/chalk/components/paragraph.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="max-w-2xl space-y-8">
+
+          <!-- Lead / intro paragraph -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Lead paragraph</p>
+            <p class="text-lg text-chalk-900 dark:text-[#EDEAE3] leading-relaxed">Most people treat note-taking as a filing system. The ones who get the most from it treat it as a thinking system — a place where ideas collide, combine, and become something new.</p>
+          </div>
+
+          <!-- Regular paragraph -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Body paragraph</p>
+            <p class="text-chalk-700 dark:text-[#EDEAE3] leading-relaxed">The difference shows up over time. A filing system gives you back exactly what you put in. A thinking system gives you connections you didn't know were there — links between books read years apart, between problems in different domains, between a question you had at twenty and an answer you found at thirty-five.</p>
+          </div>
+
+          <!-- Muted secondary paragraph -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Secondary / muted</p>
+            <p class="text-chalk-600 dark:text-[#9B9690] leading-relaxed">This is supplementary text — metadata, caveats, supporting context. Used for timestamps, author bylines, footnote-style content, and anything that shouldn't compete with the primary message.</p>
+          </div>
+
+          <!-- Small caption -->
+          <div>
+            <p class="text-xs font-medium text-chalk-600 dark:text-[#9B9690] uppercase tracking-wider mb-3">Caption</p>
+            <figure>
+              <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-xl h-24 flex items-center justify-center">
+                <span class="text-chalk-400 dark:text-[#9B9690] text-sm">Image placeholder</span>
+              </div>
+              <figcaption class="text-xs text-chalk-600 dark:text-[#9B9690] mt-2 leading-relaxed">A page from Marcus Aurelius' personal notebooks, circa 161–180 CE. One of the earliest surviving examples of private reflective writing.</figcaption>
+            </figure>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Prose -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Prose</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Long-form article container with Lora serif body, pull quote, and inline code.</p>
+        <a href="/aesthetics/chalk/components/prose.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <article class="max-w-2xl">
+
+          <!-- Title -->
+          <h1 class="font-['Lora'] text-3xl font-semibold text-chalk-900 dark:text-[#EDEAE3] leading-tight mb-3">The case for writing by hand</h1>
+
+          <!-- Meta -->
+          <div class="flex items-center gap-3 text-sm text-chalk-600 dark:text-[#9B9690] mb-8">
+            <span>Eleanor Marsh</span>
+            <span class="text-chalk-300 dark:text-[#3A3630]">·</span>
+            <time datetime="2026-02-18">18 February 2026</time>
+            <span class="text-chalk-300 dark:text-[#3A3630]">·</span>
+            <span>6 min read</span>
+          </div>
+
+          <!-- Body -->
+          <p class="font-['Lora'] leading-[1.75] text-chalk-900 dark:text-[#EDEAE3] mb-5">There is something that happens when pen meets paper that doesn't happen when fingers meet keys. The pace changes. Thought slows to the speed of the hand, and in that slowing, something clarifies. You cannot type as fast as you think, but you can write — in the cursive sense — only as fast as you decide.</p>
+
+          <p class="font-['Lora'] leading-[1.75] text-chalk-900 dark:text-[#EDEAE3] mb-8">Cognitive scientists have studied this. Note-takers who write by hand remember more, understand more deeply, and integrate new information more readily than those who type. The prevailing explanation is that handwriting forces <em>encoding</em> — because you can't write fast enough to transcribe, you must summarise, and summarising is understanding in miniature.</p>
+
+          <!-- Subheading -->
+          <h2 class="font-['Lora'] text-xl font-semibold text-chalk-900 dark:text-[#EDEAE3] mb-4">What the keyboard took from us</h2>
+
+          <p class="font-['Lora'] leading-[1.75] text-chalk-900 dark:text-[#EDEAE3] mb-8">This isn't a polemic against typing. It's an argument for <span class="font-mono text-sm bg-chalk-100 dark:bg-[#262219] px-1.5 py-0.5 rounded text-chalk-900 dark:text-[#EDEAE3]">intentional friction</span> — for choosing the tool that matches the purpose. When you need to write fast and accurately, type. When you need to think, consider reaching for the notebook instead.</p>
+
+          <!-- Pull quote -->
+          <blockquote class="border-l-4 border-forest-500 dark:border-[#24785C] pl-5 my-8">
+            <p class="font-['Lora'] italic text-chalk-700 dark:text-[#EDEAE3] text-lg leading-relaxed mb-3">"The hand is connected to the thinking mind in ways the keyboard is not. Writing by hand is a form of slow thinking made visible."</p>
+            <cite class="text-sm text-chalk-600 dark:text-[#9B9690] not-italic">— Maryanne Wolf, <em>Reader, Come Home</em></cite>
+          </blockquote>
+
+          <p class="font-['Lora'] leading-[1.75] text-chalk-900 dark:text-[#EDEAE3]">The notebook doesn't need a Wi-Fi connection. It doesn't send notifications. It doesn't suggest that you might also enjoy related content. It simply holds what you put into it, and waits.</p>
+
+        </article>
+      </div>
+    </section>
+
+    <!-- Code Block -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Code Block</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Inline code spans and a syntax-highlighted code block with copy button.</p>
+        <a href="/aesthetics/chalk/components/code-block.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6">
+        <div class="max-w-2xl space-y-6">
+
+          <!-- Inline code span -->
+          <p class="text-chalk-700 dark:text-[#EDEAE3] leading-relaxed">
+            Call <code class="font-mono text-sm bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] px-1.5 py-0.5 rounded text-chalk-900 dark:text-[#EDEAE3]">createNote()</code> to add a new entry, or use <code class="font-mono text-sm bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] px-1.5 py-0.5 rounded text-chalk-900 dark:text-[#EDEAE3]">archiveNote(id)</code> to move older entries out of the active view.
+          </p>
+
+          <!-- Code block -->
+          <div class="bg-chalk-100 dark:bg-[#262219] border border-chalk-300 dark:border-[#3A3630] rounded-xl overflow-hidden shadow-[0_1px_2px_rgba(28,24,20,0.06),0_1px_1px_rgba(28,24,20,0.04)]">
+
+            <!-- Header bar -->
+            <div class="flex items-center justify-between px-4 py-3 border-b border-chalk-300 dark:border-[#3A3630]">
+              <div class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-chalk-600 dark:text-[#9B9690]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+                <span class="font-mono text-xs text-chalk-600 dark:text-[#9B9690]">notes.ts</span>
+              </div>
+              <button data-copy-btn class="flex items-center gap-1.5 text-xs text-chalk-600 dark:text-[#9B9690] hover:text-chalk-900 dark:hover:text-[#EDEAE3] transition-colors rounded px-2 py-1 hover:bg-chalk-200 dark:hover:bg-[#2E2A22]">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" /></svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- Code body -->
+            <div class="overflow-x-auto">
+              <table is:raw class="w-full text-sm">
+                <tbody>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">1</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">export type </span><span class="text-chalk-900 dark:text-[#EDEAE3]">Note</span><span class="text-chalk-600 dark:text-[#9B9690]"> = &#123;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">2</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  id</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">3</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  title</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">4</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  body</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">5</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-700 dark:text-[#9B9690]">  createdAt</span><span class="text-chalk-600 dark:text-[#9B9690]">: </span><span class="text-forest-500 dark:text-[#24785C]">Date</span><span class="text-chalk-600 dark:text-[#9B9690]">;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">6</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">&#125;</span></td>
+                  </tr>
+                  <tr>
+                    <td class="pl-4 pr-3 py-0.5" colspan="2"></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">8</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">export function </span><span class="text-chalk-900 dark:text-[#EDEAE3]">createNote</span><span class="text-chalk-600 dark:text-[#9B9690]">(title: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">, body: </span><span class="text-forest-500 dark:text-[#24785C]">string</span><span class="text-chalk-600 dark:text-[#9B9690]">): </span><span class="text-chalk-900 dark:text-[#EDEAE3]">Note</span><span class="text-chalk-600 dark:text-[#9B9690]"> &#123;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">9</td>
+                    <td class="pr-4 py-0.5 font-mono"><span class="text-chalk-600 dark:text-[#9B9690]">  return &#123; id: </span><span class="text-chalk-900 dark:text-[#EDEAE3]">crypto</span><span class="text-chalk-600 dark:text-[#9B9690]">.randomUUID(), title, body, createdAt: </span><span class="text-chalk-600 dark:text-[#9B9690]">new </span><span class="text-forest-500 dark:text-[#24785C]">Date</span><span class="text-chalk-600 dark:text-[#9B9690]">() &#125;;</span></td>
+                  </tr>
+                  <tr class="hover:bg-chalk-200/40 dark:hover:bg-[#2E2A22]/40">
+                    <td class="select-none pl-4 pr-3 py-0.5 font-mono text-xs text-chalk-400 dark:text-[#9B9690] text-right w-8">10</td>
+                    <td class="pr-4 py-0.5 font-mono pb-3"><span class="text-chalk-600 dark:text-[#9B9690]">&#125;</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+</SiteLayout>
+
+<script is:inline>
+  document.querySelectorAll('[data-copy-btn]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const block = btn.closest('.overflow-hidden');
+      if (!block) return;
+      const rows = block.querySelectorAll('tbody tr');
+      const lines = [];
+      rows.forEach(row => {
+        const codeCell = row.querySelector('td:last-child');
+        if (codeCell) lines.push(codeCell.textContent || '');
+      });
+      navigator.clipboard.writeText(lines.join('\n').trimEnd()).then(() => {
+        const original = btn.innerHTML;
+        btn.innerHTML = '<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg> Copied';
+        setTimeout(() => { btn.innerHTML = original; }, 2000);
+      });
+    });
+  });
+</script>

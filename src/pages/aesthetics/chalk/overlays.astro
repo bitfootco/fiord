@@ -1,0 +1,606 @@
+---
+import SiteLayout from '../../../layouts/SiteLayout.astro';
+---
+
+<SiteLayout title="Fiord — Chalk / Overlays" description="Chalk overlays: modal, drawer, tooltip, popover, and toast with vanilla JS behavior.">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap" rel="stylesheet">
+
+  <header class="bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700 px-6 py-5">
+    <div class="max-w-4xl mx-auto flex items-center justify-between">
+      <div>
+        <a href="/aesthetics/chalk/" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 uppercase tracking-widest font-medium">Chalk</a>
+        <h1 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mt-0.5">Overlays</h1>
+      </div>
+      <a href="/aesthetics/chalk/" class="text-xs text-gray-500 hover:text-gray-800 dark:text-gray-400 dark:hover:text-gray-200 border border-gray-200 dark:border-gray-600 rounded px-3 py-1.5">&larr; All categories</a>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto px-6 py-10 space-y-16">
+
+    <!-- Modal -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Modal</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Dialog overlay with backdrop blur, collection picker, and accessible focus management.</p>
+        <a href="/aesthetics/chalk/components/modal.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-4">
+
+          <!-- Demo trigger -->
+          <button
+            data-fiord-modal-open="chalk-modal-collection"
+            class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-4 py-2 text-sm font-medium text-white transition-colors"
+          >Save to Collection</button>
+
+          <!-- Modal -->
+          <div
+            id="chalk-modal-collection"
+            data-fiord-modal
+            class="hidden fixed inset-0 z-50 flex items-center justify-center"
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="modal-title"
+            aria-hidden="true"
+          >
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-[#1C1B18]/40 dark:bg-[#0F0E0C]/60 backdrop-blur-sm" data-fiord-close></div>
+
+            <!-- Panel -->
+            <div class="relative bg-white dark:bg-[#262219] rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] shadow-[0_2px_4px_rgba(28,24,20,0.04),_0_8px_16px_-4px_rgba(28,24,20,0.08),_0_20px_40px_-8px_rgba(28,24,20,0.06)] w-full max-w-md mx-4">
+
+              <!-- Header -->
+              <div class="flex items-center justify-between px-6 py-4 border-b border-[#DDD9D0] dark:border-[#3A3630]">
+                <h2 id="modal-title" class="font-['Lora'] text-lg font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Save to Collection</h2>
+                <button data-fiord-close class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors rounded-md p-1" aria-label="Close">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Body -->
+              <div class="px-6 py-5 space-y-4">
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690]">Choose a collection to save <span class="font-medium text-[#1C1B18] dark:text-[#EDEAE3]">"On the Shortness of Life"</span> to.</p>
+                <div class="space-y-2">
+                  <label class="flex items-center gap-3 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] px-4 py-3 cursor-pointer hover:bg-[#FAFAF7] dark:hover:bg-[#1E1B17] transition-colors">
+                    <input type="radio" name="collection" class="accent-[#1A5C45]" checked />
+                    <div>
+                      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Philosophy</p>
+                      <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">14 notes</p>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] px-4 py-3 cursor-pointer hover:bg-[#FAFAF7] dark:hover:bg-[#1E1B17] transition-colors">
+                    <input type="radio" name="collection" class="accent-[#1A5C45]" />
+                    <div>
+                      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Reading List</p>
+                      <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">8 notes</p>
+                    </div>
+                  </label>
+                  <label class="flex items-center gap-3 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] px-4 py-3 cursor-pointer hover:bg-[#FAFAF7] dark:hover:bg-[#1E1B17] transition-colors">
+                    <input type="radio" name="collection" class="accent-[#1A5C45]" />
+                    <div>
+                      <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Inbox</p>
+                      <p class="text-xs text-[#6B6860] dark:text-[#9B9690]">3 notes</p>
+                    </div>
+                  </label>
+                </div>
+              </div>
+
+              <!-- Footer -->
+              <div class="flex items-center justify-end gap-3 px-6 py-4 border-t border-[#DDD9D0] dark:border-[#3A3630]">
+                <button data-fiord-close class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-4 py-2 text-sm font-medium text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Cancel</button>
+                <button data-fiord-close class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-4 py-2 text-sm font-medium text-white transition-colors">Save</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Drawer -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Drawer</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Slide-in panel from the right edge, showing note detail with metadata and actions.</p>
+        <a href="/aesthetics/chalk/components/drawer.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-4">
+
+          <!-- Demo trigger -->
+          <button
+            data-fiord-drawer-open="chalk-drawer-note"
+            class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-4 py-2 text-sm font-medium text-white transition-colors"
+          >Open Note Detail</button>
+
+          <!-- Drawer -->
+          <div
+            id="chalk-drawer-note"
+            data-fiord-drawer
+            class="hidden fixed inset-0 z-50"
+            aria-modal="true"
+            role="dialog"
+            aria-labelledby="drawer-title"
+          >
+            <!-- Backdrop -->
+            <div class="absolute inset-0 bg-[#1C1B18]/30 dark:bg-[#0F0E0C]/50 backdrop-blur-sm" data-fiord-close></div>
+
+            <!-- Panel -->
+            <div class="absolute inset-y-0 right-0 flex w-full max-w-sm flex-col bg-white dark:bg-[#262219] border-l border-[#DDD9D0] dark:border-[#3A3630] shadow-xl">
+
+              <!-- Header -->
+              <div class="flex items-center justify-between px-5 py-4 border-b border-[#DDD9D0] dark:border-[#3A3630]">
+                <h2 id="drawer-title" class="font-['Lora'] text-base font-semibold text-[#1C1B18] dark:text-[#EDEAE3]">Note Detail</h2>
+                <button data-fiord-close class="text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] rounded-md p-1 transition-colors" aria-label="Close panel">
+                  <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 overflow-y-auto px-5 py-5 space-y-5">
+
+                <!-- Title -->
+                <div>
+                  <h3 class="font-['Lora'] text-xl font-semibold text-[#1C1B18] dark:text-[#EDEAE3] leading-snug">On the Shortness of Life — Annotations</h3>
+                  <p class="mt-1 text-xs text-[#6B6860] dark:text-[#9B9690]">Last edited 2 hours ago</p>
+                </div>
+
+                <!-- Preview text -->
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">
+                  "It is not that we have a short time to live, but that we waste a good deal of it." Seneca writes this not as a lament but as an observation with practical consequence — we are the authors of our own brevity.
+                </p>
+                <p class="text-sm text-[#6B6860] dark:text-[#9B9690] leading-relaxed">
+                  The distinction Seneca draws between time <em>spent</em> and time <em>lived</em> is one I keep returning to. See also: his letter to Lucilius on possessing one's own time.
+                </p>
+
+                <!-- Tags -->
+                <div>
+                  <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Tags</p>
+                  <div class="flex flex-wrap gap-1.5">
+                    <span class="rounded-full bg-[#F2F0EB] dark:bg-[#1E1B17] px-2.5 py-1 text-xs text-[#6B6860] dark:text-[#9B9690]">philosophy</span>
+                    <span class="rounded-full bg-[#F2F0EB] dark:bg-[#1E1B17] px-2.5 py-1 text-xs text-[#6B6860] dark:text-[#9B9690]">seneca</span>
+                    <span class="rounded-full bg-[#F2F0EB] dark:bg-[#1E1B17] px-2.5 py-1 text-xs text-[#6B6860] dark:text-[#9B9690]">stoicism</span>
+                    <span class="rounded-full bg-[#F2F0EB] dark:bg-[#1E1B17] px-2.5 py-1 text-xs text-[#6B6860] dark:text-[#9B9690]">time</span>
+                  </div>
+                </div>
+
+                <!-- Metadata -->
+                <div class="space-y-2 pt-1 border-t border-[#DDD9D0] dark:border-[#3A3630]">
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-[#6B6860] dark:text-[#9B9690]">Collection</span>
+                    <span class="text-[#1C1B18] dark:text-[#EDEAE3]">Philosophy</span>
+                  </div>
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-[#6B6860] dark:text-[#9B9690]">Word count</span>
+                    <span class="text-[#1C1B18] dark:text-[#EDEAE3]">312 words</span>
+                  </div>
+                  <div class="flex items-center justify-between text-xs">
+                    <span class="text-[#6B6860] dark:text-[#9B9690]">Created</span>
+                    <span class="text-[#1C1B18] dark:text-[#EDEAE3]">11 Mar 2026</span>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Footer actions -->
+              <div class="px-5 py-4 border-t border-[#DDD9D0] dark:border-[#3A3630] flex gap-2">
+                <button class="flex-1 rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors">Edit</button>
+                <button class="flex-1 rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-3 py-2 text-sm font-medium text-white transition-colors">Open Full</button>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Tooltip -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Tooltip</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Hover-triggered info popup in three positions — above, below, and right.</p>
+        <a href="/aesthetics/chalk/components/tooltip.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="flex flex-wrap items-start gap-16 py-8 px-4">
+
+          <!-- Above (default) -->
+          <div class="flex flex-col items-center gap-2">
+            <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Above</p>
+            <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+              <button
+                data-fiord-tooltip="tooltip-above"
+                class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-[#262219] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors"
+                aria-describedby="tooltip-above"
+              >Hover me</button>
+              <div
+                id="tooltip-above"
+                role="tooltip"
+                class="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+              >Save to collection
+                <span class="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-[#1C1B18] dark:border-t-[#0F0E0C]"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Below -->
+          <div class="flex flex-col items-center gap-2">
+            <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Below</p>
+            <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+              <button
+                data-fiord-tooltip="tooltip-below"
+                class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-[#262219] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors"
+                aria-describedby="tooltip-below"
+              >Hover me</button>
+              <div
+                id="tooltip-below"
+                role="tooltip"
+                class="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+              >Add a tag
+                <span class="absolute bottom-full left-1/2 -translate-x-1/2 border-4 border-transparent border-b-[#1C1B18] dark:border-b-[#0F0E0C]"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="flex flex-col items-center gap-2">
+            <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mb-1">Right</p>
+            <div class="relative inline-flex" data-fiord-tooltip-wrapper>
+              <button
+                data-fiord-tooltip="tooltip-right"
+                class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-[#262219] px-3 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors"
+                aria-describedby="tooltip-right"
+              >Hover me</button>
+              <div
+                id="tooltip-right"
+                role="tooltip"
+                class="absolute left-full top-1/2 -translate-y-1/2 ml-2 px-2.5 py-1.5 rounded-lg bg-[#1C1B18] dark:bg-[#0F0E0C] text-[#EDEAE3] text-xs whitespace-nowrap pointer-events-none opacity-0 transition-opacity duration-150"
+              >Open in new tab
+                <span class="absolute right-full top-1/2 -translate-y-1/2 border-4 border-transparent border-r-[#1C1B18] dark:border-r-[#0F0E0C]"></span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Popover -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Popover</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Click-triggered rich content popup with share link and email invite fields.</p>
+        <a href="/aesthetics/chalk/components/popover.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="flex items-start gap-8 py-4">
+
+          <!-- Trigger + popover -->
+          <div class="relative inline-block">
+            <button
+              data-fiord-toggle="chalk-popover-share"
+              class="flex items-center gap-1.5 rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-[#262219] px-3.5 py-2 text-sm text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 100 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186l9.566-5.314m-9.566 7.5l9.566 5.314m0 0a2.25 2.25 0 103.935 2.186 2.25 2.25 0 00-3.935-2.186zm0-12.814a2.25 2.25 0 103.933-2.185 2.25 2.25 0 00-3.933 2.185z" />
+              </svg>
+              Share note
+            </button>
+
+            <!-- Popover panel -->
+            <div
+              id="chalk-popover-share"
+              data-fiord-menu
+              class="hidden absolute left-0 top-full mt-2 z-20 w-72 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] shadow-[0_2px_4px_rgba(28,24,20,0.05),_0_6px_12px_-2px_rgba(28,24,20,0.08)] p-4 space-y-4"
+            >
+              <!-- Copy link -->
+              <div>
+                <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Share link</p>
+                <div class="flex gap-2">
+                  <input
+                    type="text"
+                    value="https://folio.app/note/seneca-shortness"
+                    readonly
+                    class="flex-1 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-[#FAFAF7] dark:bg-[#1E1B17] px-3 py-2 text-xs text-[#6B6860] dark:text-[#9B9690] focus:outline-none"
+                  />
+                  <button class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-3 py-2 text-xs font-medium text-white transition-colors whitespace-nowrap">Copy</button>
+                </div>
+              </div>
+
+              <!-- Share via email -->
+              <div>
+                <p class="text-xs font-medium text-[#6B6860] dark:text-[#9B9690] uppercase tracking-wider mb-2">Invite by email</p>
+                <div class="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="colleague@example.com"
+                    class="flex-1 rounded-lg border border-[#DDD9D0] dark:border-[#3A3630] bg-[#FAFAF7] dark:bg-[#1E1B17] px-3 py-2 text-xs text-[#1C1B18] dark:text-[#EDEAE3] placeholder-[#6B6860] dark:placeholder-[#9B9690] focus:outline-none focus:ring-1 focus:ring-[#1A5C45] dark:focus:ring-[#24785C]"
+                  />
+                  <button class="rounded-lg ring-1 ring-[#DDD9D0] dark:ring-[#3A3630] bg-white dark:bg-transparent px-3 py-2 text-xs text-[#6B6860] dark:text-[#9B9690] hover:bg-[#F2F0EB] dark:hover:bg-[#1E1B17] transition-colors whitespace-nowrap">Send</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Toast -->
+    <section>
+      <div class="mb-4">
+        <h2 class="text-sm font-semibold text-gray-800 dark:text-gray-200">Toast</h2>
+        <p class="text-sm text-gray-500 dark:text-gray-400">Transient notification messages — success, warning, and error variants with auto-dismiss.</p>
+        <a href="/aesthetics/chalk/components/toast.html" class="text-xs text-gray-400 hover:text-gray-600 dark:text-gray-600 dark:hover:text-gray-400 mt-0.5 inline-block">View standalone &rarr;</a>
+      </div>
+      <div class="bg-white dark:bg-transparent rounded-lg border border-gray-200 dark:border-transparent p-6 min-h-48">
+        <div class="space-y-6">
+
+          <!-- Demo trigger -->
+          <button
+            data-fiord-toast-trigger="chalk-toast-success"
+            class="rounded-lg bg-[#1A5C45] hover:bg-[#144A38] px-4 py-2 text-sm font-medium text-white transition-colors"
+          >Show success toast</button>
+
+          <!-- Toast stack (visible for preview) -->
+          <div class="space-y-3 max-w-sm">
+
+            <!-- Success toast -->
+            <div id="chalk-toast-success" class="flex items-start gap-3 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] p-4 shadow-[0_2px_4px_rgba(28,24,20,0.05),_0_6px_12px_-2px_rgba(28,24,20,0.08)]" role="alert" aria-live="polite">
+              <div class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#1A5C45]/10 dark:bg-[#24785C]/20">
+                <svg class="h-3 w-3 text-[#1A5C45] dark:text-[#24785C]" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Note saved</p>
+                <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Changes saved to Philosophy collection.</p>
+              </div>
+              <button class="shrink-0 text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Dismiss">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Warning toast -->
+            <div class="flex items-start gap-3 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] p-4 shadow-[0_2px_4px_rgba(28,24,20,0.05),_0_6px_12px_-2px_rgba(28,24,20,0.08)]" role="alert">
+              <div class="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-amber-400 dark:bg-amber-500"></div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Auto-save paused</p>
+                <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">Check your connection and try again.</p>
+              </div>
+              <button class="shrink-0 text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Dismiss">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Error toast -->
+            <div class="flex items-start gap-3 rounded-xl border border-[#DDD9D0] dark:border-[#3A3630] bg-white dark:bg-[#262219] p-4 shadow-[0_2px_4px_rgba(28,24,20,0.05),_0_6px_12px_-2px_rgba(28,24,20,0.08)]" role="alert">
+              <div class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-red-50 dark:bg-red-900/20">
+                <svg class="h-3 w-3 text-red-500 dark:text-red-400" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </div>
+              <div class="flex-1 min-w-0">
+                <p class="text-sm font-medium text-[#1C1B18] dark:text-[#EDEAE3]">Could not sync</p>
+                <p class="text-xs text-[#6B6860] dark:text-[#9B9690] mt-0.5">
+                  Failed to sync with the server.
+                  <a href="#" class="text-[#1A5C45] dark:text-[#24785C] underline underline-offset-2 hover:no-underline">Retry</a>
+                </p>
+              </div>
+              <button class="shrink-0 text-[#6B6860] dark:text-[#9B9690] hover:text-[#1C1B18] dark:hover:text-[#EDEAE3] transition-colors" aria-label="Dismiss">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script is:inline>
+    // Modal
+    (function () {
+      function openModal(modal) {
+        modal.classList.remove('hidden');
+        modal.removeAttribute('aria-hidden');
+        document.body.style.overflow = 'hidden';
+        var firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus();
+      }
+
+      function closeModal(modal) {
+        modal.classList.add('hidden');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      // Open triggers
+      document.querySelectorAll('[data-fiord-modal-open]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var targetId = trigger.getAttribute('data-fiord-modal-open');
+          var modal = document.getElementById(targetId);
+          if (modal) openModal(modal);
+        });
+      });
+
+      // Close triggers (X button, Cancel, backdrop)
+      document.querySelectorAll('[data-fiord-modal]').forEach(function (modal) {
+        modal.querySelectorAll('[data-fiord-close]').forEach(function (closer) {
+          closer.addEventListener('click', function () {
+            closeModal(modal);
+          });
+        });
+
+        // Backdrop click
+        modal.addEventListener('click', function (e) {
+          if (e.target === modal) closeModal(modal);
+        });
+      });
+
+      // Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[data-fiord-modal]:not(.hidden)').forEach(function (modal) {
+            closeModal(modal);
+          });
+        }
+      });
+    })();
+
+    // Drawer
+    (function () {
+      function openDrawer(drawer) {
+        drawer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+        var firstFocusable = drawer.querySelector('button, [href], input, [tabindex]:not([tabindex="-1"])');
+        if (firstFocusable) firstFocusable.focus();
+      }
+
+      function closeDrawer(drawer) {
+        drawer.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+
+      // Open triggers
+      document.querySelectorAll('[data-fiord-drawer-open]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var targetId = trigger.getAttribute('data-fiord-drawer-open');
+          var drawer = document.getElementById(targetId);
+          if (drawer) openDrawer(drawer);
+        });
+      });
+
+      // Close triggers and backdrop click
+      document.querySelectorAll('[data-fiord-drawer]').forEach(function (drawer) {
+        drawer.querySelectorAll('[data-fiord-close]').forEach(function (closer) {
+          closer.addEventListener('click', function () {
+            closeDrawer(drawer);
+          });
+        });
+      });
+
+      // Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[data-fiord-drawer]:not(.hidden)').forEach(function (drawer) {
+            closeDrawer(drawer);
+          });
+        }
+      });
+    })();
+
+    // Tooltip
+    (function () {
+      document.querySelectorAll('[data-fiord-tooltip]').forEach(function (trigger) {
+        var tooltipId = trigger.getAttribute('data-fiord-tooltip');
+        var tooltip = document.getElementById(tooltipId);
+        if (!tooltip) return;
+
+        trigger.addEventListener('mouseenter', function () {
+          tooltip.style.opacity = '1';
+        });
+
+        trigger.addEventListener('mouseleave', function () {
+          tooltip.style.opacity = '0';
+        });
+
+        trigger.addEventListener('focus', function () {
+          tooltip.style.opacity = '1';
+        });
+
+        trigger.addEventListener('blur', function () {
+          tooltip.style.opacity = '0';
+        });
+      });
+    })();
+
+    // Popover
+    (function () {
+      document.querySelectorAll('[data-fiord-toggle]').forEach(function (trigger) {
+        trigger.addEventListener('click', function (e) {
+          e.stopPropagation();
+          var targetId = trigger.getAttribute('data-fiord-toggle');
+          var menu = document.getElementById(targetId);
+          if (!menu) return;
+          var isOpen = !menu.classList.contains('hidden');
+          // Close all other popovers first
+          document.querySelectorAll('[data-fiord-menu]').forEach(function (m) {
+            m.classList.add('hidden');
+          });
+          if (!isOpen) {
+            menu.classList.remove('hidden');
+            trigger.setAttribute('aria-expanded', 'true');
+          } else {
+            trigger.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+
+      // Close on outside click
+      document.addEventListener('click', function () {
+        document.querySelectorAll('[data-fiord-menu]').forEach(function (menu) {
+          menu.classList.add('hidden');
+        });
+        document.querySelectorAll('[data-fiord-toggle]').forEach(function (t) {
+          t.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelectorAll('[data-fiord-menu]').forEach(function (menu) {
+            menu.classList.add('hidden');
+          });
+        }
+      });
+    })();
+
+    // Toast
+    (function () {
+      document.querySelectorAll('[data-fiord-toast-trigger]').forEach(function (trigger) {
+        trigger.addEventListener('click', function () {
+          var toastId = trigger.getAttribute('data-fiord-toast-trigger');
+          var toast = document.getElementById(toastId);
+          if (!toast) return;
+
+          // Make visible
+          toast.classList.remove('hidden');
+          toast.style.opacity = '1';
+
+          // Auto-dismiss after 4 seconds
+          var timer = setTimeout(function () {
+            toast.style.opacity = '0';
+            setTimeout(function () { toast.classList.add('hidden'); toast.style.opacity = ''; }, 300);
+          }, 4000);
+
+          // Manual dismiss via close buttons inside the toast
+          toast.querySelectorAll('button[aria-label="Dismiss"]').forEach(function (btn) {
+            btn.addEventListener('click', function () {
+              clearTimeout(timer);
+              toast.style.opacity = '0';
+              setTimeout(function () { toast.classList.add('hidden'); toast.style.opacity = ''; }, 300);
+            }, { once: true });
+          });
+        });
+      });
+    })();
+  </script>
+
+</SiteLayout>
