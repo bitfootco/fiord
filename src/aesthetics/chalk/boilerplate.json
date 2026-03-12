@@ -3,6 +3,6 @@
   "display_name": "Chalk",
   "tailwind_config": "{\n      darkMode: 'class',\n      theme: { extend: { colors: {\n        chalk: {\n          50: '#FAFAF7', 100: '#F2F0EB', 200: '#E5E1D8', 300: '#DDD9D0',\n          400: '#C4BFB4', 500: '#9B9690', 600: '#6B6860', 700: '#4A4844',\n          800: '#353330', 900: '#1C1B18', 950: '#0F0E0C'\n        },\n        forest: {\n          50: '#E4F0EB', 100: '#C3DECE', 200: '#8FC2A8', 300: '#5AA683',\n          400: '#2D8A62', 500: '#1A5C45', 600: '#144A38', 700: '#0F3829',\n          800: '#0A261C', 900: '#05140E'\n        }\n      }, fontFamily: {\n        serif: ['Lora', 'Georgia', 'serif'],\n        sans: ['DM Sans', 'system-ui', 'sans-serif'],\n        mono: ['Source Code Pro', 'monospace']\n      }}}\n    }",
   "font_import": "<link href=\"https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@400;500;600&family=Source+Code+Pro:wght@400;500&display=swap\" rel=\"stylesheet\">",
-  "body_class": "bg-chalk-50 p-8 dark:bg-[#1E1B17] font-sans antialiased",
+  "body_class": "bg-chalk-50 p-8 dark:bg-[#1A1A1A] font-sans antialiased",
   "wrapper_class": "max-w-2xl mx-auto space-y-8"
 }
